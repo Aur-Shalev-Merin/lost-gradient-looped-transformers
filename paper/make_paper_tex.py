@@ -445,7 +445,8 @@ if '--preprint' in sys.argv:
     r = subprocess.run([tectonic, '--keep-intermediates', 'main.tex'], cwd=A, capture_output=True, text=True)
     print('[preprint]', r.stderr[-1500:])
     # arXiv does not run BibTeX: ship the .bbl with the sources
-    src_files = ['main.bbl', 'tmlr.sty', 'fancyhdr.sty'] + [f for f, _ in FIGS.values()]
+    # tmlr.bst is unused (main.bbl is shipped) but arXiv's scan flags ibliographystyle{tmlr} as missing without it
+    src_files = ['main.bbl', 'tmlr.sty', 'tmlr.bst', 'fancyhdr.sty'] + [f for f, _ in FIGS.values()]
     with tarfile.open(os.path.join(A, 'arxiv_source.tar.gz'), 'w:gz') as tf:
         data = ('\\pdfoutput=1\n' + pre).encode('utf-8')            # arXiv: compile with pdfLaTeX
         info = tarfile.TarInfo('main.tex')
