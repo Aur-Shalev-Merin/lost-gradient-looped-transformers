@@ -7,7 +7,7 @@ unicode math); it is not a general markdown converter. Style files: github.com/J
 import io, os, re, shutil, subprocess, sys, tarfile
 
 AUTHOR_NAME = 'Aur Shalev Merin'                   # preprint only; the submission stays anonymous
-AUTHOR_EMAIL = 'aush8009@colorado.edu'
+AUTHOR_EMAIL = 'aur.merin@gmail.com'
 AUTHOR_ADDR = 'Independent researcher'
 
 HERE = os.path.dirname(os.path.abspath(__file__))
