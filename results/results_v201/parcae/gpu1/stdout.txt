@@ -1,0 +1,14 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+v201 parcae | driver eac2ee89621e | R 32 | dev cuda | train chunks 2363 | 64 x 8 sequences, groups of 8, B=1 on 64 | k (1, 2, 4)
+  stage 300 fine-tune: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0003, 'seed': 2011, 'nonfinite': 0, 'clipped_frac': 0.9933, 'ok': True, 's': 775}
+  curve (step, loss, grad norm): [(0, 2.8265, 5.612), (50, 1.7458, 1.633), (100, 1.5286, 1.344), (150, 1.523, 1.324), (200, 1.4746, 1.136), (250, 1.5341, 1.254), (299, 1.4036, 1.187)]
+  selftest PASS | repeat-pass rel diff 4.88e-07 (< 0.001) | k=1 lost on batch 0 0.6005 (> 0.001) | params 144.3M
+    groups pass: 16/64 batches, 309s
+    groups pass: 32/64 batches, 620s
+    groups pass: 48/64 batches, 929s
+    groups pass: 64/64 batches, 1237s
+    total pass: 16/64 batches, 306s
+    total pass: 32/64 batches, 609s
+    total pass: 48/64 batches, 911s
+    total pass: 64/64 batches, 1215s
+  stage 300 measured after 3398s

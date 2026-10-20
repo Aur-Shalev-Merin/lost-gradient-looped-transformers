@@ -1,0 +1,64 @@
+[{"stream_name":"stdout","time":5.334422183,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.7/41.7 kB 2.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":6.680223382,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.2/11.2 MB 43.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":6.706603472,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 566.4/566.4 kB 29.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":6.782720048,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 50.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":22.129035109,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":22.129072475,"data":"gradio 6.26.0 requires huggingface-hub\u003c2.0,\u003e=1.16.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":22.129076632,"data":"diffusers 0.40.0 requires huggingface-hub\u003c2.0,\u003e=1.23.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":28.308351547,"data":"\rGenerating train split:   0%|          | 0/7473 [00:00\u003c?, ? examples/s]\rGenerating train split: 100%|██████████| 7473/7473 [00:00\u003c00:00, 72484.66 examples/s]\rGenerating train split: 100%|██████████| 7473/7473 [00:00\u003c00:00, 72179.70 examples/s]\n"}
+,{"stream_name":"stderr","time":28.313715676,"data":"\rGenerating test split:   0%|          | 0/1319 [00:00\u003c?, ? examples/s]\rGenerating test split: 100%|██████████| 1319/1319 [00:00\u003c00:00, 279959.87 examples/s]\n"}
+,{"stream_name":"stdout","time":28.763430126,"data":"setup done after 28s\n"}
+,{"stream_name":"stdout","time":394.436665025,"data":"job exit 0 elapsed 393s\n"}
+,{"stream_name":"stdout","time":475.156957713,"data":"job exit 0 elapsed 474s\n"}
+,{"stream_name":"stdout","time":475.157425372,"data":"---- gpu0 (tail)\n"}
+,{"stream_name":"stdout","time":475.157439861,"data":"A new version of the following files was downloaded from https://huggingface.co/ByteDance/Ouro-1.4B:\n"}
+,{"stream_name":"stdout","time":475.157445457,"data":"- configuration_ouro.py\n"}
+,{"stream_name":"stdout","time":475.157450188,"data":". Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.\n"}
+,{"stream_name":"stdout","time":475.157455839,"data":"A new version of the following files was downloaded from https://huggingface.co/ByteDance/Ouro-1.4B:\n"}
+,{"stream_name":"stdout","time":475.157460974,"data":"- modeling_ouro.py\n"}
+,{"stream_name":"stdout","time":475.157465315,"data":". Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.\n"}
+,{"stream_name":"stdout","time":475.157470835,"data":"/kaggle/working/v210_followups.py:149: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.\n"}
+,{"stream_name":"stdout","time":475.15747582,"data":"Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)\n"}
+,{"stream_name":"stdout","time":475.157481069,"data":"  stats.append((float(x.float().norm()), float(hn.float().norm())))\n"}
+,{"stream_name":"stdout","time":475.157485761,"data":"  check: repeated exit-objective pass, rel err 0.00e+00\n"}
+,{"stream_name":"stdout","time":475.157507088,"data":"seq 0: |x| ['674', '597', '546', '485'] |h| ['726', '864', '942', '1e+03'] | adj_x ['0.154', '0.144', '0.128', '0.088'] adj_h ['0.237', '0.194', '0.146', '0.0375'] | exit-objective lost k=3/2/1 ['0.627', '0.766', '0.907'] (44s)\n"}
+,{"stream_name":"stdout","time":475.157511418,"data":"seq 1: |x| ['662', '578', '554', '507'] |h| ['728', '889', '938', '972'] | adj_x ['0.124', '0.119', '0.111', '0.102'] adj_h ['0.177', '0.157', '0.116', '0.0458'] | exit-objective lost k=3/2/1 ['0.765', '0.869', '0.945'] (34s)\n"}
+,{"stream_name":"stdout","time":475.157514268,"data":"seq 2: |x| ['703', '610', '557', '488'] |h| ['704', '842', '914', '993'] | adj_x ['0.363', '0.188', '0.144', '0.0892'] adj_h ['0.49', '0.249', '0.169', '0.0379'] | exit-objective lost k=3/2/1 ['0.924', '0.965', '0.989'] (36s)\n"}
+,{"stream_name":"stdout","time":475.157516703,"data":"seq 3: |x| ['692', '593', '552', '504'] |h| ['712', '861', '946', '993'] | adj_x ['0.417', '0.183', '0.153', '0.093'] adj_h ['0.494', '0.247', '0.167', '0.041'] | exit-objective lost k=3/2/1 ['0.836', '0.924', '0.976'] (36s)\n"}
+,{"stream_name":"stdout","time":475.157519934,"data":"seq 4: |x| ['686', '600', '548', '497'] |h| ['708', '866', '944', '1e+03'] | adj_x ['0.161', '0.166', '0.145', '0.096'] adj_h ['0.235', '0.198', '0.141', '0.0413'] | exit-objective lost k=3/2/1 ['0.643', '0.818', '0.931'] (36s)\n"}
+,{"stream_name":"stdout","time":475.157522406,"data":"seq 5: |x| ['668', '587', '551', '503'] |h| ['723', '889', '948', '992'] | adj_x ['0.144', '0.144', '0.123', '0.0944'] adj_h ['0.193', '0.167', '0.12', '0.0425'] | exit-objective lost k=3/2/1 ['0.685', '0.807', '0.926'] (36s)\n"}
+,{"stream_name":"stdout","time":475.157524909,"data":"seq 6: |x| ['679', '605', '552', '505'] |h| ['720', '868', '946', '979'] | adj_x ['0.309', '0.259', '0.108', '0.098'] adj_h ['0.474', '0.36', '0.129', '0.0435'] | exit-objective lost k=3/2/1 ['0.758', '0.902', '0.972'] (36s)\n"}
+,{"stream_name":"stdout","time":475.157527325,"data":"seq 7: |x| ['656', '596', '546', '480'] |h| ['766', '874', '945', '1.03e+03'] | adj_x ['0.235', '0.217', '0.193', '0.0741'] adj_h ['0.33', '0.259', '0.201', '0.0321'] | exit-objective lost k=3/2/1 ['0.682', '0.805', '0.926'] (36s)\n"}
+,{"stream_name":"stdout","time":475.157529861,"data":"\n"}
+,{"stream_name":"stdout","time":475.15753192,"data":"---- gpu1 (tail)\n"}
+,{"stream_name":"stdout","time":475.157534109,"data":"/kaggle/working/v210_followups.py:149: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.\n"}
+,{"stream_name":"stdout","time":475.157536475,"data":"Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)\n"}
+,{"stream_name":"stdout","time":475.157538772,"data":"  stats.append((float(x.float().norm()), float(hn.float().norm())))\n"}
+,{"stream_name":"stdout","time":475.157540958,"data":"  check: repeated exit-objective pass, rel err 0.00e+00\n"}
+,{"stream_name":"stdout","time":475.157543162,"data":"seq 8: |x| ['657', '589', '554', '498'] |h| ['757', '886', '937', '988'] | adj_x ['0.33', '0.162', '0.133', '0.0881'] adj_h ['0.345', '0.201', '0.165', '0.0385'] | exit-objective lost k=3/2/1 ['0.830', '0.907', '0.969'] (42s)\n"}
+,{"stream_name":"stdout","time":475.157561594,"data":"seq 9: |x| ['693', '612', '551', '479'] |h| ['697', '852', '941', '1.04e+03'] | adj_x ['0.194', '0.188', '0.199', '0.0879'] adj_h ['0.279', '0.229', '0.213', '0.037'] | exit-objective lost k=3/2/1 ['0.709', '0.796', '0.901'] (31s)\n"}
+,{"stream_name":"stdout","time":475.157568977,"data":"seq 10: |x| ['681', '600', '554', '479'] |h| ['736', '871', '940', '1.03e+03'] | adj_x ['0.153', '0.166', '0.175', '0.0822'] adj_h ['0.216', '0.201', '0.185', '0.0352'] | exit-objective lost k=3/2/1 ['0.617', '0.731', '0.883'] (32s)\n"}
+,{"stream_name":"stdout","time":475.157577939,"data":"seq 11: |x| ['687', '589', '551', '494'] |h| ['705', '875', '942', '1.01e+03'] | adj_x ['0.25', '0.256', '0.19', '0.0902'] adj_h ['0.376', '0.365', '0.212', '0.0387'] | exit-objective lost k=3/2/1 ['0.772', '0.860', '0.940'] (32s)\n"}
+,{"stream_name":"stdout","time":475.157582342,"data":"seq 12: |x| ['706', '615', '554', '485'] |h| ['703', '837', '928', '1.01e+03'] | adj_x ['0.189', '0.19', '0.15', '0.0826'] adj_h ['0.262', '0.234', '0.154', '0.0351'] | exit-objective lost k=3/2/1 ['0.677', '0.839', '0.941'] (33s)\n"}
+,{"stream_name":"stdout","time":475.157586196,"data":"seq 13: |x| ['655', '587', '557', '513'] |h| ['738', '889', '949', '977'] | adj_x ['0.148', '0.119', '0.101', '0.0903'] adj_h ['0.2', '0.155', '0.118', '0.0407'] | exit-objective lost k=3/2/1 ['0.763', '0.858', '0.941'] (33s)\n"}
+,{"stream_name":"stdout","time":475.157590107,"data":"seq 14: |x| ['631', '581', '551', '513'] |h| ['778', '907', '950', '973'] | adj_x ['0.115', '0.0877', '0.0729', '0.0827'] adj_h ['0.166', '0.117', '0.0913', '0.0387'] | exit-objective lost k=3/2/1 ['0.771', '0.867', '0.952'] (35s)\n"}
+,{"stream_name":"stdout","time":475.15759398,"data":"seq 15: |x| ['678', '570', '533', '477'] |h| ['717', '890', '958', '1.03e+03'] | adj_x ['0.204', '0.164', '0.138', '0.0815'] adj_h ['0.275', '0.208', '0.145', '0.0346'] | exit-objective lost k=3/2/1 ['0.642', '0.797', '0.930'] (37s)\n"}
+,{"stream_name":"stdout","time":475.157603059,"data":"\n"}
+,{"stream_name":"stdout","time":476.897286776,"data":"PART A (held-out GSM8K test, per-sequence medians, k = 1 / 2 / 4)\n"}
+,{"stream_name":"stdout","time":476.897327524,"data":"  parcae incomplete: []\n"}
+,{"stream_name":"stdout","time":476.897333355,"data":"  pln5   incomplete: []\n"}
+,{"stream_name":"stdout","time":476.897341904,"data":"  r5     incomplete: []\n"}
+,{"stream_name":"stdout","time":476.897345898,"data":"VERDICT A1 (loop-only): INCOMPLETE | VERDICT A2 (truncated fine-tune): INCOMPLETE\n"}
+,{"stream_name":"stdout","time":476.897350175,"data":"PART B (Ouro, 16 sequences)\n"}
+,{"stream_name":"stdout","time":476.897354096,"data":"  median |x_t| [678.4, 594.9, 551.6, 495.8] | |h_t| [721.6, 872.7, 942.9, 997.4]\n"}
+,{"stream_name":"stdout","time":476.897357987,"data":"  rho of |dL/dh| 1.877 | scale-free rho on h 1.656, on pre-norm x 1.454 (medians)\n"}
+,{"stream_name":"stdout","time":476.897361453,"data":"  exit-weighted objective lost gradient k = 1 / 2 / 3: 0.941 / 0.849 / 0.733\n"}
+,{"stream_name":"stdout","time":476.897364806,"data":"VERDICT B1: GROWS-SCALE-FREE | VERDICT B2: MOST-LOST\n"}
+,{"stream_name":"stdout","time":477.279671612,"data":"total 476s\n"}
+,{"stream_name":"stderr","time":479.281479302,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":479.281512843,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":479.556253092,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":479.556283843,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":480.374547748,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":480.920165044,"data":"[NbConvertApp] Writing 312459 bytes to __results__.html\n"}
+]

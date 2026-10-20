@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper."
+title: "How Much Gradient Does Truncated Backprop Lose in Looped Transformers?"
+authors:
+  - family-names: "Shalev Merin"
+    given-names: "Aur"
+    email: "aush8009@colorado.edu"
+date-released: 2026-10-20
+url: "https://github.com/Aur-Shalev-Merin/lost-gradient-looped-transformers"
+license: MIT

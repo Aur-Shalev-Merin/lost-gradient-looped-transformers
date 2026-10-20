@@ -1,0 +1,21 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split:  13%|█▎        | 1000/7473 [00:00<00:00, 9345.18 examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 65660.93 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 240043.69 examples/s]
+pilot B: repo SandyResearch/parcae-370m | params 388.0M | driver feaf9a0ba438
+/kaggle/working/v163_parcae_damped_trunc.py:155: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  torch.manual_seed(0); x1 = float(v.loss_manual(m, ids, R, k))
+selftest a=1 vs v162 loss_manual R=32 k=32: 2.225531 2.225531
+selftest a=1 vs v162 loss_manual R=32 k=16: 2.225531 2.225531
+selftest a=1 vs v162 loss_manual R=32 k=0: 2.225531 2.225531
+selftest checkpointed vs plain grad (a=0.5, k=4): rel diff 3.35e-07
+selftest truncated grad fp16 vs fp32 a=1.0 k=1: {'rest': 0.0063, 'prelude': 0.0041, 'adapter': 0.005, 'core_block': 0.0053}
+selftest truncated grad fp16 vs fp32 a=1.0 k=4: {'rest': 0.0063, 'prelude': 0.0031, 'adapter': 0.0043, 'core_block': 0.004}
+selftest truncated grad fp16 vs fp32 a=0.5 k=1: {'rest': 0.0062, 'prelude': 0.0038, 'adapter': 0.0052, 'core_block': 0.005}
+selftest truncated grad fp16 vs fp32 a=0.5 k=4: {'rest': 0.0062, 'prelude': 0.0032, 'adapter': 0.0049, 'core_block': 0.0045}
+selftest OK
+a=1.0 R=32: rho 0.8681 err {2: 0.6739, 4: 0.4513, 8: 0.2382} | step-0 val/test 2.3138 / 2.3061
+a=0.5 R=32: rho 0.9053 err {2: 0.7894, 4: 0.6427, 8: 0.4171} | step-0 val/test 2.3134 / 2.3061
+peak GPU memory after check: 13.84 GB
+cell a=1.0 k=0 lr=0.0003 seed=9001: val 1.4592 test 1.4419 nonfinite 0 | 1523s | peak 9.62 GB
+cell a=1.0 k=0 lr=0.0009 seed=9001: val 1.4581 test 1.4358 nonfinite 0 | 1525s | peak 9.62 GB

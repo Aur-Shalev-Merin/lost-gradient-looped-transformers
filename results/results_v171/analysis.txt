@@ -1,0 +1,33 @@
+measured 35/35; missing []
+
+adam_def  (PRIMARY) c 0.100 p 0.10 | Parcae R2 0.063 | retro damped MAE 0.0580, calibrated False | Spearman(35) 0.313 -> -
+   retro a=1.0 k=1: d 0.0229 | obs +0.0087 pred 0.0687
+   retro a=1.0 k=2: d 0.0012 | obs -0.0012 pred 0.0513
+   retro a=0.5 k=1: d 0.0201 | obs +0.0113 pred 0.0678
+   retro a=0.5 k=2: d 0.0089 | obs +0.0019 pred 0.0625
+   retro a=0.3 k=1: d 0.0143 | obs +0.0087 pred 0.0655
+   retro a=0.3 k=2: d 0.0087 | obs +0.0042 pred 0.0624
+
+sgd_def   c 0.096 p 0.91 | Parcae R2 0.073 | retro damped MAE 0.0415, calibrated False | Spearman(35) 0.357 -> -
+   retro a=1.0 k=1: d 0.2100 | obs +0.0087 pred 0.0231
+   retro a=1.0 k=2: d 0.0562 | obs -0.0012 pred 0.0069
+   retro a=0.5 k=1: d 0.5403 | obs +0.0113 pred 0.0546
+   retro a=0.5 k=2: d 0.3095 | obs +0.0019 pred 0.0329
+   retro a=0.3 k=1: d 0.6180 | obs +0.0087 pred 0.0618
+   retro a=0.3 k=2: d 0.4136 | obs +0.0042 pred 0.0428
+
+err_mean  c 0.096 p 1.19 | Parcae R2 0.073 | retro damped MAE 0.0364, calibrated False | Spearman(35) 0.353 -> -
+   retro a=1.0 k=1: d 0.3608 | obs +0.0087 pred 0.0285
+   retro a=1.0 k=2: d 0.1289 | obs -0.0012 pred 0.0084
+   retro a=0.5 k=1: d 0.5764 | obs +0.0113 pred 0.0498
+   retro a=0.5 k=2: d 0.3476 | obs +0.0019 pred 0.0273
+   retro a=0.3 k=1: d 0.6569 | obs +0.0087 pred 0.0581
+   retro a=0.3 k=2: d 0.4463 | obs +0.0042 pred 0.0367
+
+adam_cos  c 0.186 p 0.47 | Parcae R2 0.085 | retro damped MAE 0.0192, calibrated False | Spearman(35) 0.478 -> -
+   retro a=1.0 k=1: d 0.0247 | obs +0.0087 pred 0.0326
+   retro a=1.0 k=2: d 0.0018 | obs -0.0012 pred 0.0096
+   retro a=0.5 k=1: d 0.0226 | obs +0.0113 pred 0.0313
+   retro a=0.5 k=2: d 0.0110 | obs +0.0019 pred 0.0223
+   retro a=0.3 k=1: d 0.0166 | obs +0.0087 pred 0.0271
+   retro a=0.3 k=2: d 0.0108 | obs +0.0042 pred 0.0221

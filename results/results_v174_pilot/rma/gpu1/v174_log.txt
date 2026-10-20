@@ -1,0 +1,8 @@
+v174 driver d5c2647126de (v163 d5c2647126de) dev cuda amp True R 32
+  k=4 lam=1.170 step 0: A 0.8241 A_loop 0.7000 |gR| 5.90 |gk| 4.79 S 65536 (3s)
+  k=4 lam=1.170 step 100: A 0.9834 A_loop 0.9569 |gR| 1.21 |gk| 1.12 S 32768 (370s)
+  k=4 lam=1.170 step 200: A 0.9803 A_loop 0.9527 |gR| 1.12 |gk| 1.05 S 32768 (738s)
+  k=4 lam=1.170 step 300: A 0.9757 A_loop 0.9447 |gR| 1.21 |gk| 1.12 S 32768 (1107s)
+  k=4 lam=1.170 step 400: A 0.9767 A_loop 0.9513 |gR| 1.00 |gk| 0.93 S 32768 (1475s)
+  k=4 lam=1.170 step 500: A 0.9778 A_loop 0.9577 |gR| 1.07 |gk| 1.00 S 32768 (1843s)
+pilot k=4 lam=1.170: Abar 0.9750 Abar_loop 0.9450 both-clipped 0.646 nonfinite 1 (2209s)

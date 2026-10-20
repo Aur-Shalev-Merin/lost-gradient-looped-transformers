@@ -1,0 +1,36 @@
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 79268.50 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 310227.50 examples/s]
+v196: SandyResearch/parcae-140m | dtype torch.float32
+R=96 seq  0 gsm8k    err k1/2/4/8 0.8418 0.7332 0.5059 0.2072 | rho 0.9272 | BCxW check 1.1e-16 (12s, total 41s)
+R=96 seq  1 gsm8k    err k1/2/4/8 0.7366 0.5447 0.2913 0.0974 | rho 0.8127 | BCxW check 1.1e-16 (12s, total 53s)
+R=96 seq  2 gsm8k    err k1/2/4/8 0.8292 0.6822 0.4178 0.1742 | rho 0.8989 | BCxW check 1.1e-16 (12s, total 65s)
+R=96 seq  3 gsm8k    err k1/2/4/8 0.7967 0.6391 0.3842 0.1592 | rho 0.9040 | BCxW check 1.1e-16 (12s, total 77s)
+R=96 seq  4 gsm8k    err k1/2/4/8 0.7781 0.6367 0.4250 0.2282 | rho 0.8880 | BCxW check 1.1e-16 (13s, total 90s)
+R=96 seq  5 gsm8k    err k1/2/4/8 0.8742 0.7241 0.4611 0.2046 | rho 0.8314 | BCxW check 1.1e-16 (12s, total 102s)
+R=96 seq  6 gsm8k    err k1/2/4/8 0.8446 0.7184 0.5097 0.2553 | rho 0.9118 | BCxW check 1.1e-16 (12s, total 114s)
+R=96 seq  7 gsm8k    err k1/2/4/8 0.8028 0.6445 0.3788 0.1381 | rho 0.8452 | BCxW check 1.1e-16 (11s, total 125s)
+R=96 seq  8 gsm8k    err k1/2/4/8 0.8141 0.6722 0.4313 0.1804 | rho 0.9011 | BCxW check 1.1e-16 (12s, total 137s)
+R=96 seq  9 gsm8k    err k1/2/4/8 0.7149 0.5301 0.3014 0.1030 | rho 0.8953 | BCxW check 1.1e-16 (12s, total 149s)
+R=96 seq 10 gsm8k    err k1/2/4/8 0.8101 0.6395 0.3910 0.1480 | rho 0.9037 | BCxW check 1.1e-16 (12s, total 162s)
+R=96 seq 11 gsm8k    err k1/2/4/8 0.8526 0.7095 0.4771 0.2166 | rho 0.8949 | BCxW check 1.1e-16 (12s, total 174s)
+R=96 seq 12 gsm8k    err k1/2/4/8 0.8328 0.6894 0.4853 0.2653 | rho 0.9146 | BCxW check 1.1e-16 (12s, total 187s)
+R=96 seq 13 gsm8k    err k1/2/4/8 0.8217 0.6846 0.5126 0.2987 | rho 0.8957 | BCxW check 1.1e-16 (12s, total 199s)
+R=96 seq 14 gsm8k    err k1/2/4/8 0.7837 0.6408 0.4261 0.2680 | rho 0.9092 | BCxW check 1.1e-16 (12s, total 211s)
+R=96 seq 15 gsm8k    err k1/2/4/8 0.8893 0.8000 0.6407 0.4242 | rho 0.8969 | BCxW check 1.1e-16 (12s, total 223s)
+R=128 seq  0 gsm8k    err k1/2/4/8 0.8418 0.7333 0.5061 0.2073 | rho 0.9379 | BCxW check 1.1e-16 (15s, total 238s)
+R=128 seq  1 gsm8k    err k1/2/4/8 0.7366 0.5447 0.2913 0.0974 | rho 0.8162 | BCxW check 1.1e-16 (16s, total 254s)
+R=128 seq  2 gsm8k    err k1/2/4/8 0.8292 0.6822 0.4177 0.1741 | rho 0.9041 | BCxW check 1.1e-16 (16s, total 270s)
+R=128 seq  3 gsm8k    err k1/2/4/8 0.7966 0.6391 0.3841 0.1592 | rho 0.9212 | BCxW check 1.1e-16 (15s, total 285s)
+R=128 seq  4 gsm8k    err k1/2/4/8 0.7781 0.6367 0.4250 0.2281 | rho 0.8904 | BCxW check 1.1e-16 (16s, total 301s)
+R=128 seq  5 gsm8k    err k1/2/4/8 0.8742 0.7241 0.4611 0.2046 | rho 0.8344 | BCxW check 1.1e-16 (15s, total 317s)
+R=128 seq  6 gsm8k    err k1/2/4/8 0.8445 0.7182 0.5093 0.2548 | rho 0.9486 | BCxW check 1.1e-16 (15s, total 332s)
+R=128 seq  7 gsm8k    err k1/2/4/8 0.8028 0.6445 0.3788 0.1381 | rho 0.8532 | BCxW check 1.1e-16 (15s, total 348s)
+R=128 seq  8 gsm8k    err k1/2/4/8 0.8141 0.6722 0.4313 0.1804 | rho 0.9160 | BCxW check 1.1e-16 (16s, total 363s)
+R=128 seq  9 gsm8k    err k1/2/4/8 0.7149 0.5301 0.3014 0.1030 | rho 0.9076 | BCxW check 1.1e-16 (15s, total 379s)
+R=128 seq 10 gsm8k    err k1/2/4/8 0.8101 0.6395 0.3910 0.1480 | rho 0.9181 | BCxW check 1.1e-16 (16s, total 395s)
+R=128 seq 11 gsm8k    err k1/2/4/8 0.8526 0.7095 0.4771 0.2166 | rho 0.9098 | BCxW check 1.1e-16 (16s, total 411s)
+R=128 seq 12 gsm8k    err k1/2/4/8 0.8328 0.6894 0.4853 0.2653 | rho 0.9399 | BCxW check 1.1e-16 (16s, total 427s)
+R=128 seq 13 gsm8k    err k1/2/4/8 0.8217 0.6846 0.5126 0.2987 | rho 0.8918 | BCxW check 1.1e-16 (15s, total 443s)
+R=128 seq 14 gsm8k    err k1/2/4/8 0.7837 0.6408 0.4261 0.2680 | rho 0.9068 | BCxW check 1.1e-16 (16s, total 458s)
+R=128 seq 15 gsm8k    err k1/2/4/8 0.8896 0.8007 0.6418 0.4254 | rho 0.9092 | BCxW check 1.1e-16 (15s, total 474s)
+done 475 s

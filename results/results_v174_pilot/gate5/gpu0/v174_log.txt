@@ -1,0 +1,2 @@
+v174 driver d5c2647126de (v163 d5c2647126de) dev cuda amp True R 32
+gate A_f {'full': 1.0, 'k1_l0.91': 0.8774, 'k4_l1.97': 0.8036}

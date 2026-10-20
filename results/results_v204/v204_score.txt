@@ -1,0 +1,13 @@
+==== Parcae-140m: 16 sequences (decides)
+  R=96 rho_fit median 0.898 | predicted 0.891 [0.875, 0.904] -> inside
+  R=128 rho_fit median 0.908 | predicted 0.900 [0.875, 0.910] -> inside
+  paired rise rho(128) - rho(64): median +0.039, bootstrap 95% [+0.009, +0.047] (predicted about +0.03)
+  lost gradient minus its 64-loop value (k=1/2/4/8): R=96 [-0.0, 0.0, -0.0, -0.0] | R=128 [-0.0, 0.0, -0.0, -0.0]
+  window check: R=128 profile over j<96 minus the R=96 run, median +0.001, max |.| 0.030
+==== Parcae-370m: 16 sequences (descriptive)
+  R=96 rho_fit median 0.931 | predicted 0.922 [0.858, 0.951] -> inside
+  R=128 rho_fit median 0.932 | predicted 0.924 [0.866, 0.954] -> inside
+  paired rise rho(128) - rho(64): median +0.025, bootstrap 95% [+0.013, +0.042] (predicted about +0.03)
+  lost gradient minus its 64-loop value (k=1/2/4/8): R=96 [-0.006, 0.001, 0.001, 0.003] | R=128 [-0.01, -0.007, -0.014, -0.032]
+  window check: R=128 profile over j<96 minus the R=96 run, median +0.000, max |.| 0.100
+VERDICT (Parcae-140m decides): PREDICTED | Parcae-370m (descriptive): LOST-MOVES

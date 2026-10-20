@@ -1,0 +1,12 @@
+v161 driver ddb4e99b660b dev cuda amp True | train ex 7000, val chunks 158, test chunks 455
+v161 driver ddb4e99b660b dev cuda amp True | train ex 7000, val chunks 158, test chunks 455
+cell R=16 k=0 lr=0.0009 seed=1611101: val 1.5660 test 1.5491 nonfinite 0 (292s)
+cell R=16 k=0 lr=0.0009 seed=1611102: val 1.5621 test 1.5464 nonfinite 0 (304s)
+cell R=16 k=0 lr=0.0009 seed=1611103: val 1.5643 test 1.5415 nonfinite 0 (293s)
+cell R=16 k=0 lr=0.0009 seed=1611104: val 1.5684 test 1.5484 nonfinite 0 (315s)
+cell R=8 k=0 lr=0.0009 seed=1611101: val 1.5946 test 1.5706 nonfinite 0 (214s)
+cell R=16 k=0 lr=0.0009 seed=1611105: val 1.5639 test 1.5422 nonfinite 0 (292s)
+cell R=8 k=0 lr=0.0009 seed=1611103: val 1.5984 test 1.5725 nonfinite 0 (201s)
+cell R=8 k=0 lr=0.0009 seed=1611102: val 1.5944 test 1.5706 nonfinite 0 (215s)
+cell R=8 k=0 lr=0.0009 seed=1611105: val 1.5958 test 1.5711 nonfinite 0 (200s)
+cell R=8 k=0 lr=0.0009 seed=1611104: val 1.6002 test 1.5752 nonfinite 0 (218s)

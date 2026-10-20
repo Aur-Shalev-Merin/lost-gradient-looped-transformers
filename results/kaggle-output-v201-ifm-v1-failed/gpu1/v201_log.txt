@@ -1,0 +1,1 @@
+v201 r5 | driver 1a4f98bd6012 | R 5 | dev cuda | train chunks 2252 | 64 x 8 sequences, groups of 8, B=1 on 64 | k (1, 2, 4)

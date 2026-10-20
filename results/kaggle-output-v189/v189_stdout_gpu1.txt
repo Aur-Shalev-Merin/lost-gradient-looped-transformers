@@ -1,0 +1,3 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+v189: repo SandyResearch/parcae-370m | params 388.0M | v164 driver feaf9a0ba438
+R=32: rho 0.8681 err {1: 0.8273, 2: 0.6739, 4: 0.4513, 8: 0.2382, 16: 0.074} (133s)

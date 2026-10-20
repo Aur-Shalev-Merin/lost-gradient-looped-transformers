@@ -1,0 +1,8 @@
+v182 parcae sha 1c6d1edbf41e | params 144.3M | val chunks 158
+subset R=16 groups {'all': 144323136, 'adapter+core0': 7670784, 'loop': 14750400, 'core0': 7079424, 'core1': 7079616}
+subset R=16 rho 0.802 (22s)
+  k=1 all 0.8132 adapter+core0 0.8223 loop 0.8379 core0 0.8222 core1 0.8421
+  k=2 all 0.6632 adapter+core0 0.6504 loop 0.6812 core0 0.6505 core1 0.6920
+  k=4 all 0.4210 adapter+core0 0.3975 loop 0.4302 core0 0.3974 core1 0.4421
+  k=8 all 0.1803 adapter+core0 0.1824 loop 0.1823 core0 0.1824 core1 0.1842
+v182 done

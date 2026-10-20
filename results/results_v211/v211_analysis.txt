@@ -1,0 +1,21 @@
+v211: k = 0 fine-tune control (held-out GSM8K test, per-sequence medians, k = 1 / 2 / 4)
+  parcae v210 s0        all [0.798, 0.636, 0.408] | loop [0.818, 0.657, 0.417]
+  parcae v210 full300   all [0.608, 0.428, 0.217] | loop [0.689, 0.484, 0.246]
+  parcae v211 s0        all [0.798, 0.636, 0.408] | loop [0.818, 0.657, 0.417]
+  parcae v211 zero300   all [0.707, 0.543, 0.338] | loop [0.74, 0.571, 0.354]
+  parcae v211 zero300b  all [0.711, 0.555, 0.346] | loop [0.744, 0.579, 0.363]
+  parcae fall (mean over k): full300 all 0.196 loop 0.157 | zero300 all 0.085 loop 0.076 | ratio (loop) 0.48, (all) 0.43
+  parcae checks: s0 agreement max |diff| 0.0000 (<= 0.005) | loop weights fixed PASS | seed 2011, non-finite 0, clipped 0.0367 | VALID
+  pln5   v210 s0        all [0.764, 0.591, 0.291] | loop [0.805, 0.626, 0.308]
+  pln5   v210 full300   all [0.633, 0.456, 0.221] | loop [0.722, 0.519, 0.254]
+  pln5   v211 s0        all [0.764, 0.591, 0.291] | loop [0.805, 0.626, 0.308]
+  pln5   v211 zero300   all [0.671, 0.51, 0.256] | loop [0.756, 0.574, 0.286]
+  pln5   fall (mean over k): full300 all 0.112 loop 0.081 | zero300 all 0.069 loop 0.041 | ratio (loop) 0.50, (all) 0.62
+  pln5   checks: s0 agreement max |diff| 0.0000 (<= 0.005) | loop weights fixed PASS | seed 2011, non-finite 0, clipped 0.0433 | VALID
+  r5     v210 s0        all [0.833, 0.702, 0.387] | loop [0.867, 0.73, 0.4]
+  r5     v210 full300   all [0.718, 0.564, 0.298] | loop [0.791, 0.62, 0.328]
+  r5     v211 s0        all [0.833, 0.702, 0.387] | loop [0.867, 0.73, 0.4]
+  r5     v211 zero300   all [0.79, 0.662, 0.378] | loop [0.848, 0.709, 0.403]
+  r5     fall (mean over k): full300 all 0.114 loop 0.086 | zero300 all 0.031 loop 0.012 | ratio (loop) 0.14, (all) 0.27
+  r5     checks: s0 agreement max |diff| 0.0000 (<= 0.005) | loop weights fixed PASS | seed 2011, non-finite 0, clipped 0.0333 | VALID
+VERDICT: PARTIAL {'parcae': 0.48, 'pln5': 0.5, 'r5': 0.14}

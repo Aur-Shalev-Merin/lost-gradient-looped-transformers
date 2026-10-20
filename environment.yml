@@ -1,0 +1,15 @@
+name: lost-gradient-looped
+channels: [conda-forge, defaults]
+dependencies:
+  - python=3.12
+  - numpy=2.3
+  - matplotlib=3.10
+  - pip
+  - pip:
+      - torch==2.5.1
+      - datasets
+      - huggingface_hub
+      - safetensors
+      - tokenizers
+      - kaggle
+      # Ouro kernels install transformers==4.54.1 themselves; the TeX build needs `tectonic`.

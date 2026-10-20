@@ -1,0 +1,34 @@
+measured 35/35; missing []
+sanity gate passed
+
+adam_def  (PRIMARY) c 0.517 p 0.62 | Parcae R2 0.775 | retro damped MAE 0.0284, calibrated False | Spearman(35) 0.737 -> -
+   retro a=1.0 k=1: d 0.0227 | obs +0.0087 pred 0.0503
+   retro a=1.0 k=2: d 0.0012 | obs -0.0012 pred 0.0082
+   retro a=0.5 k=1: d 0.0198 | obs +0.0113 pred 0.0463
+   retro a=0.5 k=2: d 0.0087 | obs +0.0019 pred 0.0279
+   retro a=0.3 k=1: d 0.0142 | obs +0.0087 pred 0.0377
+   retro a=0.3 k=2: d 0.0086 | obs +0.0042 pred 0.0277
+
+sgd_def   c 0.385 p 0.65 | Parcae R2 0.770 | retro damped MAE 0.0639, calibrated False | Spearman(35) 0.734 -> -
+   retro a=1.0 k=1: d 0.0696 | obs +0.0087 pred 0.0686
+   retro a=1.0 k=2: d 0.0079 | obs -0.0012 pred 0.0168
+   retro a=0.5 k=1: d 0.0910 | obs +0.0113 pred 0.0817
+   retro a=0.5 k=2: d 0.0301 | obs +0.0019 pred 0.0399
+   retro a=0.3 k=1: d 0.1421 | obs +0.0087 pred 0.1089
+   retro a=0.3 k=2: d 0.0445 | obs +0.0042 pred 0.0514
+
+err_mean  c 0.199 p 2.30 | Parcae R2 0.946 | retro damped MAE 0.0148, calibrated False | Spearman(35) 0.959 -> -
+   retro a=1.0 k=1: d 0.3517 | obs +0.0087 pred 0.0179
+   retro a=1.0 k=2: d 0.1221 | obs -0.0012 pred 0.0016
+   retro a=0.5 k=1: d 0.4063 | obs +0.0113 pred 0.0250
+   retro a=0.5 k=2: d 0.2238 | obs +0.0019 pred 0.0063
+   retro a=0.3 k=1: d 0.5189 | obs +0.0087 pred 0.0439
+   retro a=0.3 k=2: d 0.2766 | obs +0.0042 pred 0.0103
+
+adam_cos  c 2.403 p 1.58 | Parcae R2 0.953 | retro damped MAE 0.0027, calibrated True | Spearman(35) 0.964 -> CANDIDATE
+   retro a=1.0 k=1: d 0.0264 | obs +0.0087 pred 0.0078
+   retro a=1.0 k=2: d 0.0019 | obs -0.0012 pred 0.0001
+   retro a=0.5 k=1: d 0.0249 | obs +0.0113 pred 0.0071
+   retro a=0.5 k=2: d 0.0119 | obs +0.0019 pred 0.0022
+   retro a=0.3 k=1: d 0.0188 | obs +0.0087 pred 0.0045
+   retro a=0.3 k=2: d 0.0119 | obs +0.0042 pred 0.0022

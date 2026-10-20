@@ -1,0 +1,26 @@
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split:  13%|█▎        | 1000/7473 [00:00<00:01, 4429.30 examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 32149.54 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 307093.37 examples/s]
+v167 driver b6fd416e48f2 dev cuda amp True | params 163.5M | train ex 7000, val/test chunks 170/492
+/kaggle/working/v167_retrofit_trunc.py:206: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  torch.manual_seed(0); a = float(m(ids, labels=labels_of(ids), num_steps=r).loss)
+selftest decomposition R=1: model 1.885320 manual 1.885320
+selftest decomposition R=4: model 1.856819 manual 1.856819
+selftest decomposition R=8: model 1.856685 manual 1.856685
+selftest checkpointed vs plain k=4: {'other': '3.3e-07', 'prelude': '9.7e-07', 'adapter': '5.9e-07', 'core_block': '5.6e-07', 'coda': '2.7e-07'}
+selftest damped a=0.5 checkpointed vs plain: {'other': '2.9e-07', 'prelude': '8.4e-07', 'adapter': '4.9e-07', 'core_block': '4.9e-07', 'coda': '2.8e-07'}
+selftest fp16 vs fp32 k=1: {'other': 0.0456, 'prelude': 0.1666, 'adapter': 0.5978, 'core_block': 0.2568, 'coda': 0.3924}
+selftest fp16 vs fp32 k=4: {'other': 0.0437, 'prelude': 0.141, 'adapter': 0.4397, 'core_block': 0.2235, 'coda': 0.3924}
+selftest floor: core grad norm k=0 0.000e+00, k=1 1.921e+00
+selftest OK
+cell R=8 a=0.50 k=8 lr=0.0001 seed=1671102: val 1.1982 test 1.1762 rho_end 0.590 nonfinite 0 (1005s, peak 7.3 GB)
+cell R=8 a=1.00 k=8 lr=0.0001 seed=1671105: val 1.1977 test 1.1762 rho_end 0.309 nonfinite 0 (1009s, peak 7.2 GB)
+cell R=8 a=0.30 k=8 lr=0.0001 seed=1671107: val 1.1968 test 1.1761 rho_end 0.733 nonfinite 0 (1013s, peak 7.3 GB)
+cell R=8 a=0.50 k=2 lr=0.0001 seed=1671104: val 1.1974 test 1.1763 rho_end 0.584 nonfinite 0 (611s, peak 7.3 GB)
+cell R=8 a=1.00 k=2 lr=0.0001 seed=1671107: val 1.1958 test 1.1752 rho_end 0.317 nonfinite 0 (612s, peak 7.2 GB)
+cell R=8 a=0.30 k=1 lr=0.0001 seed=1671102: val 1.1993 test 1.1775 rho_end 0.734 nonfinite 0 (543s, peak 7.3 GB)
+cell R=8 a=0.50 k=1 lr=0.0001 seed=1671105: val 1.1989 test 1.1772 rho_end 0.587 nonfinite 0 (545s, peak 7.3 GB)
+cell R=8 a=1.00 k=0 lr=0.0003 seed=1671101: val 1.2802 test 1.2578 rho_end 0.305 nonfinite 0 (396s, peak 5.8 GB)
+cell R=8 a=0.50 k=0 lr=0.0003 seed=1671102: val 1.2786 test 1.2570 rho_end 0.595 nonfinite 0 (395s, peak 6.0 GB)
+cell R=8 a=1.00 k=0 lr=0.0003 seed=1671105: val 1.2794 test 1.2572 rho_end 0.310 nonfinite 0 (393s, peak 5.8 GB)
+cell R=8 a=0.30 k=0 lr=0.0003 seed=1671107: val 1.2765 test 1.2554 rho_end 0.733 nonfinite 0 (392s, peak 6.0 GB)

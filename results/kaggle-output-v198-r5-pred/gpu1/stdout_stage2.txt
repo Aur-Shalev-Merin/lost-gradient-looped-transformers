@@ -1,0 +1,7 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+v198 driver 2d4f2c4c9e65 | huginn-s-fixed-r5 (Table 2, S, Fixed R=5) | dev cuda fp32 | params 303.6M (loop 54.3M, part 28.3M) | docmask True | 150 val chunks of 512 tokens, 3 boundaries in chunk 0
+adam a=1.0 k=R: batch norms median 6.065 max 6.707 (24 of 24 clipped)  (99s)
+adam a=1.0 k=1: batch norms median 2.402 max 2.787 (24 of 24 clipped) | cos_u 0.6722 cos_g 0.6050 err_g 0.8805 ratio 0.9808 (64s)
+adam a=1.0 k=2: batch norms median 3.449 max 3.991 (24 of 24 clipped) | cos_u 0.7946 cos_g 0.7729 err_g 0.6730 ratio 0.9971 (75s)
+adam a=1.0 k=4: batch norms median 5.288 max 5.782 (24 of 24 clipped) | cos_u 0.9571 cos_g 0.9574 err_g 0.2926 ratio 1.0057 (96s)
+done p1

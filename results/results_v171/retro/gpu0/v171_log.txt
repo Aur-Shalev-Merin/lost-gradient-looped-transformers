@@ -1,0 +1,10 @@
+v171 retro | params 163.5M | B 24 x 8 training seqs (train chunks 2556)
+retro R=8 a=1.00 k=1: {'adam_def': 0.0229, 'sgd_def': 0.21, 'err_mean': 0.3608, 'adam_cos': 0.9753}
+retro R=8 a=1.00 k=2: {'adam_def': 0.0012, 'sgd_def': 0.0562, 'err_mean': 0.1289, 'adam_cos': 0.9982}
+  variant R=8 a=1.00 done in 387s
+retro R=8 a=0.50 k=1: {'adam_def': 0.0201, 'sgd_def': 0.5403, 'err_mean': 0.5764, 'adam_cos': 0.9774}
+retro R=8 a=0.50 k=2: {'adam_def': 0.0089, 'sgd_def': 0.3095, 'err_mean': 0.3476, 'adam_cos': 0.989}
+  variant R=8 a=0.50 done in 404s
+retro R=8 a=0.30 k=1: {'adam_def': 0.0143, 'sgd_def': 0.618, 'err_mean': 0.6569, 'adam_cos': 0.9834}
+retro R=8 a=0.30 k=2: {'adam_def': 0.0087, 'sgd_def': 0.4136, 'err_mean': 0.4463, 'adam_cos': 0.9892}
+  variant R=8 a=0.30 done in 403s

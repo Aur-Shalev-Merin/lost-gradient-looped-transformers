@@ -1,0 +1,33 @@
+v170: AdamW replaced by SGD(momentum 0.9) | driver parcae
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 79801.50 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 309273.65 examples/s]
+v164 driver feaf9a0ba438 (v163 module d5c2647126de) dev cuda amp True
+/kaggle/working/v163_parcae_damped_trunc.py:155: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  torch.manual_seed(0); x1 = float(v.loss_manual(m, ids, R, k))
+selftest a=1 vs v162 loss_manual R=64 k=64: 2.675924 2.675924
+selftest a=1 vs v162 loss_manual R=64 k=32: 2.675924 2.675924
+selftest a=1 vs v162 loss_manual R=64 k=0: 2.675924 2.675924
+selftest checkpointed vs plain grad (a=0.5, k=4): rel diff 4.63e-07
+selftest truncated grad fp16 vs fp32 a=1.0 k=1: {'rest': 0.0027, 'prelude': 0.0025, 'adapter': 0.0026, 'core_block': 0.0026}
+selftest truncated grad fp16 vs fp32 a=1.0 k=4: {'rest': 0.0027, 'prelude': 0.0024, 'adapter': 0.0029, 'core_block': 0.0025}
+selftest truncated grad fp16 vs fp32 a=0.5 k=1: {'rest': 0.0026, 'prelude': 0.0024, 'adapter': 0.0025, 'core_block': 0.0026}
+selftest truncated grad fp16 vs fp32 a=0.5 k=4: {'rest': 0.0026, 'prelude': 0.0022, 'adapter': 0.0025, 'core_block': 0.0025}
+selftest OK
+v170: optimizer = SGD(lr 0.1, momentum 0.9, wd 0)
+cell R=32 a=1.0 k=32 lr=0.1 seed=1701101: val 1.4205 test 1.4020 rho_end 0.779 nonfinite 1 (1543s)
+v170: optimizer = SGD(lr 0.1, momentum 0.9, wd 0)
+cell R=32 a=1.0 k=32 lr=0.1 seed=1701105: val 1.4163 test 1.3961 rho_end 0.767 nonfinite 0 (1542s)
+v170: optimizer = SGD(lr 0.1, momentum 0.9, wd 0)
+cell R=32 a=1.0 k=4 lr=0.1 seed=1701104: val 1.4224 test 1.4027 rho_end 0.784 nonfinite 0 (646s)
+v170: optimizer = SGD(lr 0.1, momentum 0.9, wd 0)
+cell R=32 a=1.0 k=2 lr=0.1 seed=1701101: val 1.4387 test 1.4218 rho_end 0.762 nonfinite 0 (581s)
+v170: optimizer = SGD(lr 0.1, momentum 0.9, wd 0)
+cell R=32 a=1.0 k=2 lr=0.1 seed=1701105: val 1.4374 test 1.4186 rho_end 0.762 nonfinite 0 (581s)
+v170: optimizer = SGD(lr 0.1, momentum 0.9, wd 0)
+cell R=32 a=1.0 k=1 lr=0.1 seed=1701102: val 1.4690 test 1.4514 rho_end 0.780 nonfinite 0 (548s)
+v170: optimizer = SGD(lr 0.1, momentum 0.9, wd 0)
+cell R=32 a=1.0 k=1 lr=0.1 seed=1701106: val 1.4703 test 1.4522 rho_end 0.790 nonfinite 0 (547s)
+v170: optimizer = SGD(lr 0.3, momentum 0.9, wd 0)
+cell R=32 a=1.0 k=0 lr=0.3 seed=1701104: val 1.6107 test 1.5924 rho_end 0.827 nonfinite 0 (484s)

@@ -1,0 +1,10 @@
+v203 retro | driver 9055ec8b615a | R 8 | held-out (test) chunks 492 -> 56 batches of 8, groups of 8, B=1 on 64
+  stage 300 fine-tune: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0001, 'seed': 2011, 'nonfinite': 0, 'clipped_frac': 1.0, 'ok': True, 's': 435}
+  selftest PASS | repeat-pass rel diff 1.00e-06 (< 0.001) | k=1 lost on batch 0 0.3664 (> 0.001) | params 163.5M
+    groups pass: 16/56 batches, 281s
+    groups pass: 32/56 batches, 563s
+    groups pass: 48/56 batches, 841s
+    total pass: 16/56 batches, 276s
+    total pass: 32/56 batches, 552s
+    total pass: 48/56 batches, 823s
+  stage 300 measured after 2551s

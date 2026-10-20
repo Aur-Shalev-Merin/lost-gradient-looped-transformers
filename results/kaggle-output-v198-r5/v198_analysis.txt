@@ -1,0 +1,101 @@
+gpu0/v198_ifm_g0.json: 72 rows, driver 95b158362555, model huginn-s-fixed-r5, docmask True
+gpu1/v198_ifm_g1.json: 24 rows, driver 95b158362555, model huginn-s-fixed-r5, docmask True
+gpu0/v198_selftest_gpu0.json: PASS {'fails': []}
+gpu1/v198_refcheck.json: PASS {'stubbed': ['xllm_extension (group RMSNorm in PyTorch; everything else raises)', 'fla', 'fla.modules', 'fla.modules.conv', 'fla.modules.conv.triton', 'fla.ops', 'fla.ops.utils', 'flash_attn_2_cuda', 'xattn', 'xattn.ops'], 'grads': {'R5_k5': {'rel_err_all': 2.2315100776937206e-06, 'worst_param': 'layers.0.nffn.norm.weight', 'worst_rel_err': 3.541865546547384e-06}, 'R10_k2': {'rel_err_all': 1.376565639488036e-06, 'worst_param': 'layers.1.attention.wk.weight', 'worst_rel_err': 2.022969415270269e-06}}}
+noise floors (repeat of the full pass, err over all params): {'repeat_full_R5_a1': '0.0e+00', 'repeat_full_R5_a0.5': '0.0e+00', 'repeat_full_R5_a0.3': '0.0e+00', 'repeat_full_R10_a1': '0.0e+00', 'repeat_full_R10_a0.5': '0.0e+00', 'repeat_full_R10_a0.3': '0.0e+00'}
+
+=== R = 5, a = 1.0: n = 16 sequences, loss median 2.348
+rho: median 0.846 [0.824, 0.854]; range 0.797 - 0.874; rho_i > 1 in 0 of 16
+all   err  k=1 0.833 [0.814, 0.845]  k=2 0.695 [0.669, 0.710]  k=3 0.538 [0.520, 0.560]  k=4 0.369 [0.353, 0.419]
+loop  err  k=1 0.857 [0.835, 0.869]  k=2 0.710 [0.678, 0.725]  k=3 0.541 [0.513, 0.568]  k=4 0.363 [0.346, 0.395]
+part  err  k=1 0.857 [0.840, 0.878]  k=2 0.722 [0.689, 0.748]  k=3 0.563 [0.537, 0.599]  k=4 0.405 [0.383, 0.436]
+all   err_loop = |gR - gk| / |gR - g0| (readout gradient, equal at every k, left out): k=1 0.861  k=2 0.718  k=3 0.559  k=4 0.382
+all   ratio k=1 0.412  k=2 0.574  k=3 0.715  k=4 0.851
+all   cos   k=1 0.579  k=2 0.740  k=3 0.854  k=4 0.932
+rule rho_i^k (median):        k=1 0.846  k=2 0.716  k=3 0.606  k=4 0.512
+geometric aligned / orthogonal: k=1 0.728 / 0.806  k=2 0.498 / 0.632  k=3 0.304 / 0.469  k=4 0.139 / 0.303
+measured-profile aligned / orthogonal: k=1 0.630 / 0.649  k=2 0.458 / 0.545  k=3 0.319 / 0.465  k=4 0.173 / 0.356
+summed backward signal (hidden-state share): k=1 0.684  k=2 0.550  k=3 0.420  k=4 0.256
+per-loop contribution |c_j| / |c_0| (loop params, median): 1 0.855 0.827 0.855 1.07
+aligned form on measured contribution sizes: k=1 0.784  k=2 0.601  k=3 0.419  k=4 0.230
+
+=== R = 5, a = 0.5: n = 16 sequences, loss median 2.855
+rho: median 0.919 [0.907, 0.926]; range 0.898 - 0.938; rho_i > 1 in 0 of 16
+all   err  k=1 0.820 [0.811, 0.839]  k=2 0.674 [0.657, 0.694]  k=4 0.302 [0.289, 0.317]
+loop  err  k=1 0.851 [0.846, 0.866]  k=2 0.694 [0.680, 0.711]  k=4 0.301 [0.280, 0.311]
+part  err  k=1 0.870 [0.861, 0.883]  k=2 0.718 [0.701, 0.729]  k=4 0.320 [0.300, 0.336]
+all   err_loop = |gR - gk| / |gR - g0| (readout gradient, equal at every k, left out): k=1 0.857  k=2 0.704  k=4 0.316
+all   ratio k=1 0.407  k=2 0.591  k=4 0.872
+all   cos   k=1 0.606  k=2 0.757  k=4 0.956
+rule rho_i^k (median):        k=1 0.919  k=2 0.845  k=4 0.713
+geometric aligned / orthogonal: k=1 0.765 / 0.853  k=2 0.549 / 0.705  k=4 0.168 / 0.372
+measured-profile aligned / orthogonal: k=1 0.723 / 0.794  k=2 0.529 / 0.671  k=4 0.196 / 0.429
+summed backward signal (hidden-state share): k=1 0.765  k=2 0.587  k=4 0.235
+
+=== R = 5, a = 0.3: n = 16 sequences, loss median 3.376
+rho: median 0.941 [0.934, 0.945]; range 0.923 - 0.947; rho_i > 1 in 0 of 16
+all   err  k=1 0.762 [0.757, 0.785]  k=2 0.593 [0.579, 0.612]  k=4 0.235 [0.227, 0.249]
+loop  err  k=1 0.805 [0.796, 0.820]  k=2 0.619 [0.605, 0.637]  k=4 0.233 [0.225, 0.247]
+part  err  k=1 0.819 [0.804, 0.830]  k=2 0.636 [0.616, 0.652]  k=4 0.248 [0.238, 0.261]
+all   err_loop = |gR - gk| / |gR - g0| (readout gradient, equal at every k, left out): k=1 0.811  k=2 0.632  k=4 0.249
+all   ratio k=1 0.436  k=2 0.607  k=4 0.882
+all   cos   k=1 0.693  k=2 0.837  k=4 0.976
+rule rho_i^k (median):        k=1 0.941  k=2 0.886  k=4 0.784
+geometric aligned / orthogonal: k=1 0.775 / 0.865  k=2 0.563 / 0.725  k=4 0.176 / 0.393
+measured-profile aligned / orthogonal: k=1 0.752 / 0.835  k=2 0.552 / 0.707  k=4 0.195 / 0.432
+summed backward signal (hidden-state share): k=1 0.778  k=2 0.587  k=4 0.216
+
+=== R = 10, a = 1.0: n = 16 sequences, loss median 2.725
+rho: median 0.793 [0.779, 0.797]; range 0.769 - 0.828; rho_i > 1 in 0 of 16
+all   err  k=1 0.817 [0.813, 0.824]  k=2 0.701 [0.692, 0.723]  k=3 0.557 [0.545, 0.575]  k=4 0.384 [0.369, 0.402]  k=5 0.262 [0.241, 0.280]  k=6 0.202 [0.177, 0.216]  k=7 0.159 [0.136, 0.172]  k=8 0.122 [0.104, 0.134]  k=9 0.081 [0.070, 0.091]
+loop  err  k=1 0.833 [0.826, 0.840]  k=2 0.712 [0.704, 0.740]  k=3 0.564 [0.552, 0.587]  k=4 0.391 [0.373, 0.411]  k=5 0.264 [0.241, 0.279]  k=6 0.205 [0.176, 0.215]  k=7 0.161 [0.132, 0.169]  k=8 0.120 [0.099, 0.129]  k=9 0.078 [0.067, 0.088]
+part  err  k=1 0.840 [0.836, 0.845]  k=2 0.740 [0.723, 0.769]  k=3 0.574 [0.563, 0.602]  k=4 0.391 [0.376, 0.411]  k=5 0.262 [0.238, 0.272]  k=6 0.202 [0.175, 0.213]  k=7 0.162 [0.136, 0.173]  k=8 0.125 [0.105, 0.135]  k=9 0.084 [0.072, 0.097]
+all   err_loop = |gR - gk| / |gR - g0| (readout gradient, equal at every k, left out): k=1 0.837  k=2 0.717  k=3 0.571  k=4 0.393  k=5 0.269  k=6 0.207  k=7 0.163  k=8 0.125  k=9 0.083
+all   ratio k=1 0.394  k=2 0.553  k=3 0.677  k=4 0.812  k=5 0.896  k=6 0.927  k=7 0.951  k=8 0.970  k=9 0.984
+all   cos   k=1 0.619  k=2 0.736  k=3 0.846  k=4 0.933  k=5 0.969  k=6 0.981  k=7 0.988  k=8 0.993  k=9 0.997
+rule rho_i^k (median):        k=1 0.793  k=2 0.629  k=3 0.498  k=4 0.395  k=5 0.313  k=6 0.248  k=7 0.197  k=8 0.156  k=9 0.124
+geometric aligned / orthogonal: k=1 0.770 / 0.791  k=2 0.588 / 0.624  k=3 0.444 / 0.491  k=4 0.329 / 0.385  k=5 0.239 / 0.299  k=6 0.167 / 0.229  k=7 0.110 / 0.172  k=8 0.064 / 0.122  k=9 0.028 / 0.076
+measured-profile aligned / orthogonal: k=1 0.691 / 0.650  k=2 0.523 / 0.507  k=3 0.400 / 0.410  k=4 0.296 / 0.317  k=5 0.214 / 0.236  k=6 0.153 / 0.188  k=7 0.110 / 0.157  k=8 0.074 / 0.129  k=9 0.039 / 0.097
+summed backward signal (hidden-state share): k=1 0.768  k=2 0.627  k=3 0.497  k=4 0.371  k=5 0.267  k=6 0.193  k=7 0.145  k=8 0.103  k=9 0.061
+per-loop contribution |c_j| / |c_0| (loop params, median): 1 0.848 0.834 0.832 0.568 0.303 0.217 0.187 0.188 0.241
+aligned form on measured contribution sizes: k=1 0.806  k=2 0.645  k=3 0.495  k=4 0.328  k=5 0.216  k=6 0.154  k=7 0.113  k=8 0.079  k=9 0.044
+
+=== R = 10, a = 0.5: n = 16 sequences, loss median 2.471
+rho: median 0.923 [0.904, 0.927]; range 0.896 - 0.941; rho_i > 1 in 0 of 16
+all   err  k=1 0.864 [0.846, 0.882]  k=2 0.786 [0.757, 0.812]  k=4 0.664 [0.620, 0.697]
+loop  err  k=1 0.891 [0.880, 0.907]  k=2 0.808 [0.786, 0.832]  k=4 0.679 [0.642, 0.711]
+part  err  k=1 0.897 [0.887, 0.919]  k=2 0.821 [0.800, 0.855]  k=4 0.700 [0.664, 0.744]
+all   err_loop = |gR - gk| / |gR - g0| (readout gradient, equal at every k, left out): k=1 0.894  k=2 0.814  k=4 0.687
+all   ratio k=1 0.312  k=2 0.400  k=4 0.547
+all   cos   k=1 0.555  k=2 0.671  k=4 0.783
+rule rho_i^k (median):        k=1 0.923  k=2 0.852  k=4 0.727
+geometric aligned / orthogonal: k=1 0.860 / 0.903  k=2 0.732 / 0.811  k=4 0.503 / 0.639
+measured-profile aligned / orthogonal: k=1 0.788 / 0.788  k=2 0.646 / 0.674  k=4 0.457 / 0.550
+summed backward signal (hidden-state share): k=1 0.816  k=2 0.691  k=4 0.516
+
+=== R = 10, a = 0.3: n = 16 sequences, loss median 2.590
+rho: median 0.961 [0.955, 0.966]; range 0.946 - 0.977; rho_i > 1 in 0 of 16
+all   err  k=1 0.892 [0.881, 0.901]  k=2 0.825 [0.808, 0.839]  k=4 0.691 [0.658, 0.710]
+loop  err  k=1 0.924 [0.918, 0.931]  k=2 0.852 [0.840, 0.864]  k=4 0.708 [0.680, 0.726]
+part  err  k=1 0.931 [0.926, 0.940]  k=2 0.864 [0.851, 0.879]  k=4 0.726 [0.693, 0.744]
+all   err_loop = |gR - gk| / |gR - g0| (readout gradient, equal at every k, left out): k=1 0.926  k=2 0.858  k=4 0.718
+all   ratio k=1 0.305  k=2 0.367  k=4 0.522
+all   cos   k=1 0.490  k=2 0.617  k=4 0.766
+rule rho_i^k (median):        k=1 0.961  k=2 0.923  k=4 0.852
+geometric aligned / orthogonal: k=1 0.881 / 0.928  k=2 0.767 / 0.855  k=4 0.552 / 0.709
+measured-profile aligned / orthogonal: k=1 0.842 / 0.874  k=2 0.717 / 0.786  k=4 0.525 / 0.665
+summed backward signal (hidden-state share): k=1 0.861  k=2 0.752  k=4 0.576
+
+=== direction after Adam (v172 procedure, R = [5]): cos(u_k, u_R) | raw: lost gradient of gbar, size ratio, cosine | loop params cos_u
+a=1.0 full: batch norm median 6.10, 24 of 24 batches clipped
+a=1.0 k=1: cos_u 0.6710 | err 0.882 ratio 0.981 cos 0.6040 | loop cos_u 0.4710
+a=1.0 k=2: cos_u 0.7934 | err 0.675 ratio 0.998 cos 0.7717 | loop cos_u 0.6848
+a=1.0 k=4: cos_u 0.9563 | err 0.295 ratio 1.006 cos 0.9568 | loop cos_u 0.9441
+a=0.5 full: batch norm median 8.55, 24 of 24 batches clipped
+a=0.5 k=1: cos_u 0.7337 | err 0.914 ratio 0.991 cos 0.5784 | loop cos_u 0.6070
+a=0.5 k=2: cos_u 0.8209 | err 0.722 ratio 1.009 cos 0.7421 | loop cos_u 0.7470
+a=0.5 k=4: cos_u 0.9650 | err 0.277 ratio 1.007 cos 0.9619 | loop cos_u 0.9549
+a=0.3 full: batch norm median 9.89, 24 of 24 batches clipped
+a=0.3 k=1: cos_u 0.7976 | err 0.770 ratio 0.998 cos 0.7026 | loop cos_u 0.7011
+a=0.3 k=2: cos_u 0.8679 | err 0.544 ratio 1.008 cos 0.8531 | loop cos_u 0.8120
+a=0.3 k=4: cos_u 0.9793 | err 0.192 ratio 1.004 cos 0.9816 | loop cos_u 0.9718

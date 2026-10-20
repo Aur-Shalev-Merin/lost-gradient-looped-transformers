@@ -1,0 +1,15 @@
+L predictions: pln5 k1 0.138 k2 0.058 k4 0.005 | r5 k1 0.182 k2 0.097 k4 0.011
+A predictions: pln5 k1 0.258 k2 0.102 k4 0.008 | r5 k1 0.412 k2 0.197 k4 0.017
+KP predictions: pln5 k1 0.224 k2 0.100 k4 0.024 | r5 k1 0.224 k2 0.100 k4 0.024
+KS predictions: pln5 k1 0.009 k2 -0.001 k4 0.000 | r5 k1 0.009 k2 -0.001 k4 0.000
+pln5  scored | seeds [2001101, 2001102, 2001103, 2001104, 2001105] | floor gap 0.1285 (90% lower 0.1276)
+r5    scored | seeds [2001101, 2001102, 2001103, 2001104, 2001105] | floor gap 0.1407 (90% lower 0.1391)
+  pln5 k=1 phi 0.1624 +- 0.0019 [0.1586, 0.161, 0.1671, 0.1584, 0.167] | L 0.138 A 0.258 KP 0.224 KS 0.009
+  pln5 k=2 phi 0.0711 +- 0.0014 [0.0703, 0.0734, 0.075, 0.067, 0.07] | L 0.058 A 0.102 KP 0.100 KS -0.001
+  pln5 k=4 phi 0.0149 +- 0.0009 [0.0141, 0.0152, 0.0165, 0.012, 0.0166] | L 0.005 A 0.008 KP 0.024 KS 0.000
+  r5 k=1 phi 0.2906 +- 0.0021 [0.2829, 0.2896, 0.2939, 0.2946, 0.292] | L 0.182 A 0.412 KP 0.224 KS 0.009
+  r5 k=2 phi 0.1488 +- 0.0023 [0.1442, 0.1452, 0.1558, 0.1525, 0.1461] | L 0.097 A 0.197 KP 0.100 KS -0.001
+  r5 k=4 phi 0.0226 +- 0.0025 [0.0283, 0.0191, 0.0268, 0.0244, 0.0147] | L 0.011 A 0.017 KP 0.024 KS 0.000
+MAE L 0.0367 (calibrated 4/6) A 0.0515 (calibrated 2/6) KP 0.0360 (calibrated 3/6) KS 0.1157 (calibrated 1/6)
+in-range cells for L vs A: [('pln5', 2), ('r5', 2), ('r5', 4)] | MAE in range L 0.0256 A 0.0284
+TRANSFER: K-AS-GOOD | WHICH CURVE (in range, primary): TIE | all cells, A extrapolated (secondary): TIE | best predictor: KP

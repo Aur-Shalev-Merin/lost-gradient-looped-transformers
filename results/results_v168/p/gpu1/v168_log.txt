@@ -1,0 +1,16 @@
+v168 parcae | params 144.3M | B 4 x 8 seqs | val chunks 158
+parcae R=32 a=0.70 k=2: {'err': 0.7327, 'cos': 0.7293, 'useful_sgd': 0.3495, 'adam_cos': 0.8322, 'adam_err': 0.5885, 'useful_adam': 0.7777, 'sign_agree': 0.9208}
+parcae R=32 a=0.70 k=3: {'err': 0.6314, 'cos': 0.8145, 'useful_sgd': 0.4716, 'adam_cos': 0.8697, 'adam_err': 0.5209, 'useful_adam': 0.8374, 'sign_agree': 0.9384}
+parcae R=32 a=0.70 k=4: {'err': 0.5402, 'cos': 0.8721, 'useful_sgd': 0.5736, 'adam_cos': 0.8974, 'adam_err': 0.4644, 'useful_adam': 0.8768, 'sign_agree': 0.9514}
+parcae R=32 a=0.70 k=6: {'err': 0.3951, 'cos': 0.9365, 'useful_sgd': 0.7207, 'adam_cos': 0.934, 'adam_err': 0.3766, 'useful_adam': 0.9223, 'sign_agree': 0.9683}
+  variant R=32 a=0.70 done in 166s
+parcae R=64 a=0.30 k=2: {'err': 0.8803, 'cos': 0.5399, 'useful_sgd': 0.1509, 'adam_cos': 0.7792, 'adam_err': 0.6684, 'useful_adam': 0.6883, 'sign_agree': 0.899}
+parcae R=64 a=0.30 k=3: {'err': 0.837, 'cos': 0.6077, 'useful_sgd': 0.2034, 'adam_cos': 0.7977, 'adam_err': 0.6398, 'useful_adam': 0.7239, 'sign_agree': 0.9078}
+parcae R=64 a=0.30 k=4: {'err': 0.7962, 'cos': 0.6563, 'useful_sgd': 0.2531, 'adam_cos': 0.8144, 'adam_err': 0.6128, 'useful_adam': 0.7548, 'sign_agree': 0.9157}
+parcae R=64 a=0.30 k=6: {'err': 0.7202, 'cos': 0.7267, 'useful_sgd': 0.3442, 'adam_cos': 0.8431, 'adam_err': 0.5633, 'useful_adam': 0.806, 'sign_agree': 0.9292}
+parcae R=64 a=0.30 k=8: {'err': 0.6504, 'cos': 0.7779, 'useful_sgd': 0.4244, 'adam_cos': 0.8673, 'adam_err': 0.5184, 'useful_adam': 0.8469, 'sign_agree': 0.9403}
+parcae R=64 a=0.30 k=12: {'err': 0.528, 'cos': 0.8518, 'useful_sgd': 0.5553, 'adam_cos': 0.9065, 'adam_err': 0.4379, 'useful_adam': 0.9098, 'sign_agree': 0.958}
+  variant R=64 a=0.30 done in 328s
+parcae R=48 a=0.40 k=4: {'err': 0.7508, 'cos': 0.6832, 'useful_sgd': 0.3114, 'adam_cos': 0.8014, 'adam_err': 0.6251, 'useful_adam': 0.7731, 'sign_agree': 0.9125}
+parcae R=48 a=0.40 k=8: {'err': 0.5762, 'cos': 0.8047, 'useful_sgd': 0.5086, 'adam_cos': 0.8574, 'adam_err': 0.5241, 'useful_adam': 0.8709, 'sign_agree': 0.9383}
+  variant R=48 a=0.40 done in 127s

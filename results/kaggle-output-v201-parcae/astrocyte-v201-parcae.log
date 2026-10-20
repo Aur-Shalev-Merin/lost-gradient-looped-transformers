@@ -1,0 +1,62 @@
+[{"stream_name":"stderr","time":13.180146808,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":15.485587972,"data":"\rGenerating train split:   0%|          | 0/7473 [00:00\u003c?, ? examples/s]\rGenerating train split: 100%|██████████| 7473/7473 [00:00\u003c00:00, 69836.69 examples/s]\rGenerating train split: 100%|██████████| 7473/7473 [00:00\u003c00:00, 69581.04 examples/s]\n"}
+,{"stream_name":"stderr","time":15.490743919,"data":"\rGenerating test split:   0%|          | 0/1319 [00:00\u003c?, ? examples/s]\rGenerating test split: 100%|██████████| 1319/1319 [00:00\u003c00:00, 290866.82 examples/s]\n"}
+,{"stream_name":"stdout","time":16.274706985999998,"data":"setup done after 15s\n"}
+,{"stream_name":"stdout","time":2388.608429881,"data":"job exit 0 elapsed 2387s\n"}
+,{"stream_name":"stdout","time":3448.486545236,"data":"job exit 0 elapsed 3447s\n"}
+,{"stream_name":"stdout","time":3448.493673258,"data":"---- gpu0 (tail)\n"}
+,{"stream_name":"stdout","time":3448.493696504,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":3448.493702814,"data":"v201 parcae | driver eac2ee89621e | R 32 | dev cuda | train chunks 2363 | 64 x 8 sequences, groups of 8, B=1 on 64 | k (1, 2, 4)\n"}
+,{"stream_name":"stdout","time":3448.493708145,"data":"  selftest PASS | repeat-pass rel diff 4.57e-07 (\u003c 0.001) | k=1 lost on batch 0 0.8575 (\u003e 0.001) | params 144.3M\n"}
+,{"stream_name":"stdout","time":3448.493714058,"data":"    groups pass: 16/64 batches, 266s\n"}
+,{"stream_name":"stdout","time":3448.493719091,"data":"    groups pass: 32/64 batches, 542s\n"}
+,{"stream_name":"stdout","time":3448.493723288,"data":"    groups pass: 48/64 batches, 819s\n"}
+,{"stream_name":"stdout","time":3448.493727337,"data":"    groups pass: 64/64 batches, 1094s\n"}
+,{"stream_name":"stdout","time":3448.493731429,"data":"    total pass: 16/64 batches, 273s\n"}
+,{"stream_name":"stdout","time":3448.493735497,"data":"    total pass: 32/64 batches, 546s\n"}
+,{"stream_name":"stdout","time":3448.493739931,"data":"    total pass: 48/64 batches, 819s\n"}
+,{"stream_name":"stdout","time":3448.493744535,"data":"    total pass: 64/64 batches, 1092s\n"}
+,{"stream_name":"stdout","time":3448.493748608,"data":"  stage 0 measured after 2360s\n"}
+,{"stream_name":"stdout","time":3448.493753284,"data":"\n"}
+,{"stream_name":"stdout","time":3448.493810159,"data":"---- gpu1 (tail)\n"}
+,{"stream_name":"stdout","time":3448.493831284,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":3448.493837283,"data":"v201 parcae | driver eac2ee89621e | R 32 | dev cuda | train chunks 2363 | 64 x 8 sequences, groups of 8, B=1 on 64 | k (1, 2, 4)\n"}
+,{"stream_name":"stdout","time":3448.493842508,"data":"  stage 300 fine-tune: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0003, 'seed': 2011, 'nonfinite': 0, 'clipped_frac': 0.9933, 'ok': True, 's': 775}\n"}
+,{"stream_name":"stdout","time":3448.493847824,"data":"  curve (step, loss, grad norm): [(0, 2.8265, 5.612), (50, 1.7458, 1.633), (100, 1.5286, 1.344), (150, 1.523, 1.324), (200, 1.4746, 1.136), (250, 1.5341, 1.254), (299, 1.4036, 1.187)]\n"}
+,{"stream_name":"stdout","time":3448.493852775,"data":"  selftest PASS | repeat-pass rel diff 4.88e-07 (\u003c 0.001) | k=1 lost on batch 0 0.6005 (\u003e 0.001) | params 144.3M\n"}
+,{"stream_name":"stdout","time":3448.493858162,"data":"    groups pass: 16/64 batches, 309s\n"}
+,{"stream_name":"stdout","time":3448.493873466,"data":"    groups pass: 32/64 batches, 620s\n"}
+,{"stream_name":"stdout","time":3448.493877503,"data":"    groups pass: 48/64 batches, 929s\n"}
+,{"stream_name":"stdout","time":3448.493881214,"data":"    groups pass: 64/64 batches, 1237s\n"}
+,{"stream_name":"stdout","time":3448.493884818,"data":"    total pass: 16/64 batches, 306s\n"}
+,{"stream_name":"stdout","time":3448.493888533,"data":"    total pass: 32/64 batches, 609s\n"}
+,{"stream_name":"stdout","time":3448.493892317,"data":"    total pass: 48/64 batches, 911s\n"}
+,{"stream_name":"stdout","time":3448.493895498,"data":"    total pass: 64/64 batches, 1215s\n"}
+,{"stream_name":"stdout","time":3448.493898707,"data":"  stage 300 measured after 3398s\n"}
+,{"stream_name":"stdout","time":3448.493901997,"data":"\n"}
+,{"stream_name":"stdout","time":3450.800927254,"data":"parcae stage   0 | batches clipped 100% (median |G_b| 6.34) | B=8 repeat between passes, max diff 2.8e-06\n"}
+,{"stream_name":"stdout","time":3450.800961482,"data":"   k=1 | B=1 0.800 | B=8 raw 0.809 clip 0.884 | B=64 raw 0.999 clip 0.968 [0.845-1.011] | B=512 raw 1.000 clip 0.928\n"}
+,{"stream_name":"stdout","time":3450.800964907,"data":"   k=2 | B=1 0.637 | B=8 raw 0.650 clip 0.669 | B=64 raw 0.998 clip 0.739 [0.617-0.794] | B=512 raw 1.000 clip 0.689\n"}
+,{"stream_name":"stdout","time":3450.80096827,"data":"   k=4 | B=1 0.383 | B=8 raw 0.390 clip 0.368 | B=64 raw 0.997 clip 0.446 [0.300-0.590] | B=512 raw 1.000 clip 0.364\n"}
+,{"stream_name":"stdout","time":3450.800986567,"data":"parcae stage 300 | batches clipped 91% (median |G_b| 1.05) | B=8 repeat between passes, max diff 8.8e-08 | fine-tune clipped 99% of steps\n"}
+,{"stream_name":"stdout","time":3450.800991596,"data":"   k=1 | B=1 0.598 | B=8 raw 0.603 clip 0.600 | B=64 raw 0.584 clip 0.575 [0.562-0.605] | B=512 raw 0.579 clip 0.569\n"}
+,{"stream_name":"stdout","time":3450.800995539,"data":"   k=2 | B=1 0.415 | B=8 raw 0.423 clip 0.417 | B=64 raw 0.386 clip 0.372 [0.354-0.406] | B=512 raw 0.354 clip 0.340\n"}
+,{"stream_name":"stdout","time":3450.800999282,"data":"   k=4 | B=1 0.200 | B=8 raw 0.206 clip 0.203 | B=64 raw 0.177 clip 0.170 [0.142-0.207] | B=512 raw 0.131 clip 0.122\n"}
+,{"stream_name":"stdout","time":3450.801003362,"data":"\n"}
+,{"stream_name":"stdout","time":3450.801006518,"data":"PRIMARY: gap = clipped B=64 median at stage 300 - per-sequence (B=1) median at stage 0, same k\n"}
+,{"stream_name":"stdout","time":3450.801009919,"data":"  parcae gaps {1: -0.225, 2: -0.265, 4: -0.213}\n"}
+,{"stream_name":"stdout","time":3450.801013205,"data":"VERDICT: INCOMPLETE (fewer than 4 models)\n"}
+,{"stream_name":"stdout","time":3450.801016422,"data":"\n"}
+,{"stream_name":"stdout","time":3450.801019534,"data":"SECONDARY (no verdict)\n"}
+,{"stream_name":"stdout","time":3450.801022788,"data":"  parcae k=1: stage-0 gap (clip B=64 - B=1) +0.168 | stage-300 gap (clip B=64 - B=1) -0.023 | plateau |clip B=512 - B=64| 0.006 | training effect on B=1 -0.202\n"}
+,{"stream_name":"stdout","time":3450.801028567,"data":"  parcae k=2: stage-0 gap (clip B=64 - B=1) +0.102 | stage-300 gap (clip B=64 - B=1) -0.043 | plateau |clip B=512 - B=64| 0.032 (MOVING) | stage 0 raw B=512 exceeds clipped by 0.311 (RARE-SEQUENCES) | training effect on B=1 -0.222\n"}
+,{"stream_name":"stdout","time":3450.801036703,"data":"  parcae k=4: stage-0 gap (clip B=64 - B=1) +0.063 | stage-300 gap (clip B=64 - B=1) -0.031 | plateau |clip B=512 - B=64| 0.047 (MOVING) | stage 0 raw B=512 exceeds clipped by 0.636 (RARE-SEQUENCES) | training effect on B=1 -0.182\n"}
+,{"stream_name":"stdout","time":3450.801039266,"data":"\n"}
+,{"stream_name":"stdout","time":3450.801041343,"data":"total 3450s\n"}
+,{"stream_name":"stderr","time":3452.928953073,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":3452.929002429,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":3453.200396591,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":3453.200441096,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":3453.966688212,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":3454.988821545,"data":"[NbConvertApp] Writing 316443 bytes to __results__.html\n"}
+]

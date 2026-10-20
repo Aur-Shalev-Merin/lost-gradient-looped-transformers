@@ -1,0 +1,22 @@
+v168 parcae | params 144.3M | B 4 x 8 seqs | val chunks 158
+parcae R=8 a=1.00 k=1: {'err': 0.8365, 'cos': 0.5349, 'useful_sgd': 0.2366, 'adam_cos': 0.7145, 'adam_err': 0.784, 'useful_adam': 0.8418, 'sign_agree': 0.8868}
+parcae R=8 a=1.00 k=2: {'err': 0.7031, 'cos': 0.6855, 'useful_sgd': 0.4006, 'adam_cos': 0.7656, 'adam_err': 0.6995, 'useful_adam': 0.9753, 'sign_agree': 0.9107}
+parcae R=8 a=1.00 k=4: {'err': 0.4774, 'cos': 0.8258, 'useful_sgd': 0.6528, 'adam_cos': 0.827, 'adam_err': 0.5736, 'useful_adam': 0.9967, 'sign_agree': 0.9371}
+  variant R=8 a=1.00 done in 94s
+parcae R=16 a=1.00 k=1: {'err': 0.845, 'cos': 0.5287, 'useful_sgd': 0.2282, 'adam_cos': 0.7399, 'adam_err': 0.7273, 'useful_adam': 0.6602, 'sign_agree': 0.8836}
+parcae R=16 a=1.00 k=2: {'err': 0.725, 'cos': 0.6682, 'useful_sgd': 0.3802, 'adam_cos': 0.7984, 'adam_err': 0.6344, 'useful_adam': 0.7813, 'sign_agree': 0.9117}
+parcae R=16 a=1.00 k=4: {'err': 0.5149, 'cos': 0.8086, 'useful_sgd': 0.5928, 'adam_cos': 0.8592, 'adam_err': 0.515, 'useful_adam': 0.8875, 'sign_agree': 0.9404}
+parcae R=16 a=1.00 k=8: {'err': 0.3223, 'cos': 0.8654, 'useful_sgd': 0.741, 'adam_cos': 0.8964, 'adam_err': 0.4186, 'useful_adam': 0.9401, 'sign_agree': 0.9573}
+  variant R=16 a=1.00 done in 137s
+parcae R=32 a=1.00 k=1: {'err': 0.8091, 'cos': 0.6147, 'useful_sgd': 0.2781, 'adam_cos': 0.777, 'adam_err': 0.6759, 'useful_adam': 0.6821, 'sign_agree': 0.8947}
+parcae R=32 a=1.00 k=2: {'err': 0.6562, 'cos': 0.7811, 'useful_sgd': 0.4679, 'adam_cos': 0.8489, 'adam_err': 0.5594, 'useful_adam': 0.8092, 'sign_agree': 0.9289}
+parcae R=32 a=1.00 k=3: {'err': 0.5162, 'cos': 0.8781, 'useful_sgd': 0.621, 'adam_cos': 0.8944, 'adam_err': 0.4706, 'useful_adam': 0.8782, 'sign_agree': 0.9502}
+parcae R=32 a=1.00 k=4: {'err': 0.3993, 'cos': 0.9334, 'useful_sgd': 0.7297, 'adam_cos': 0.9242, 'adam_err': 0.4019, 'useful_adam': 0.9171, 'sign_agree': 0.964}
+parcae R=32 a=1.00 k=6: {'err': 0.2617, 'cos': 0.9746, 'useful_sgd': 0.8471, 'adam_cos': 0.957, 'adam_err': 0.3096, 'useful_adam': 0.9526, 'sign_agree': 0.9787}
+parcae R=32 a=1.00 k=8: {'err': 0.1981, 'cos': 0.986, 'useful_sgd': 0.9022, 'adam_cos': 0.9712, 'adam_err': 0.258, 'useful_adam': 0.9641, 'sign_agree': 0.985}
+  variant R=32 a=1.00 done in 225s
+parcae R=32 a=0.50 k=1: {'err': 0.8917, 'cos': 0.5072, 'useful_sgd': 0.141, 'adam_cos': 0.7645, 'adam_err': 0.6926, 'useful_adam': 0.6544, 'sign_agree': 0.8909}
+parcae R=32 a=0.50 k=2: {'err': 0.8193, 'cos': 0.6207, 'useful_sgd': 0.2319, 'adam_cos': 0.7991, 'adam_err': 0.6398, 'useful_adam': 0.7197, 'sign_agree': 0.9075}
+parcae R=32 a=0.50 k=4: {'err': 0.6946, 'cos': 0.7407, 'useful_sgd': 0.3864, 'adam_cos': 0.8485, 'adam_err': 0.5547, 'useful_adam': 0.8038, 'sign_agree': 0.9309}
+parcae R=32 a=0.50 k=8: {'err': 0.5021, 'cos': 0.8477, 'useful_sgd': 0.5954, 'adam_cos': 0.9035, 'adam_err': 0.4364, 'useful_adam': 0.8837, 'sign_agree': 0.9565}
+  variant R=32 a=0.50 done in 160s

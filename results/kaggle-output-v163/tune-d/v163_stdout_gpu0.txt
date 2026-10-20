@@ -1,0 +1,9 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 114683.92 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 305684.99 examples/s]
+v163 driver d5c2647126de (v162 module 0ae4891d7abc) dev cuda amp True R 32
+cell a=1.0 k=8 lr=0.0001 seed=1631001: val 1.4158 test 1.3971 rho_end 0.769 nonfinite 0 (789s)
+cell a=1.0 k=8 lr=0.0009 seed=1631001: val 1.4620 test 1.4349 rho_end 0.810 nonfinite 0 (789s)
+cell a=0.5 k=8 lr=0.0003 seed=1631001: val 1.4019 test 1.3786 rho_end 0.848 nonfinite 0 (790s)
+cell a=1.0 k=1 lr=0.0001 seed=1631001: val 1.4516 test 1.4338 rho_end 0.775 nonfinite 0 (563s)
+cell a=1.0 k=0 lr=0.0009 seed=1631001: val 1.5586 test 1.5403 rho_end 0.817 nonfinite 0 (492s)

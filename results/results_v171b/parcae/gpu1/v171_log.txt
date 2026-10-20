@@ -1,0 +1,31 @@
+v171b clip=True | v171 parcae | params 144.3M | B 24 x 8 training seqs (train chunks 2363)
+    R=32 a=0.70 k=32 batch grad norms (pre-clip): median 6.726 max 18.429
+    R=32 a=0.70 k=2 batch grad norms (pre-clip): median 3.006 max 3.661
+parcae R=32 a=0.70 k=2: {'adam_def': 0.1302, 'sgd_def': 0.2179, 'err_mean': 0.7506, 'adam_cos': 0.8592}
+    R=32 a=0.70 k=3 batch grad norms (pre-clip): median 3.645 max 4.351
+parcae R=32 a=0.70 k=3: {'adam_def': 0.0563, 'sgd_def': 0.1129, 'err_mean': 0.6061, 'adam_cos': 0.899}
+    R=32 a=0.70 k=4 batch grad norms (pre-clip): median 4.150 max 4.882
+parcae R=32 a=0.70 k=4: {'adam_def': 0.0089, 'sgd_def': 0.0417, 'err_mean': 0.4886, 'adam_cos': 0.9259}
+    R=32 a=0.70 k=6 batch grad norms (pre-clip): median 4.866 max 5.813
+parcae R=32 a=0.70 k=6: {'adam_def': -0.0389, 'sgd_def': -0.0336, 'err_mean': 0.3248, 'adam_cos': 0.9566}
+  variant R=32 a=0.70 done in 710s
+    R=64 a=0.30 k=64 batch grad norms (pre-clip): median 6.591 max 122.796
+    R=64 a=0.30 k=2 batch grad norms (pre-clip): median 1.855 max 2.374
+parcae R=64 a=0.30 k=2: {'adam_def': 0.1915, 'sgd_def': 0.354, 'err_mean': 0.9353, 'adam_cos': 0.82}
+    R=64 a=0.30 k=3 batch grad norms (pre-clip): median 2.234 max 2.839
+parcae R=64 a=0.30 k=3: {'adam_def': 0.1489, 'sgd_def': 0.2689, 'err_mean': 0.84, 'adam_cos': 0.8434}
+    R=64 a=0.30 k=4 batch grad norms (pre-clip): median 2.590 max 3.259
+parcae R=64 a=0.30 k=4: {'adam_def': 0.1127, 'sgd_def': 0.2072, 'err_mean': 0.7652, 'adam_cos': 0.8633}
+    R=64 a=0.30 k=6 batch grad norms (pre-clip): median 3.191 max 3.957
+parcae R=64 a=0.30 k=6: {'adam_def': 0.0565, 'sgd_def': 0.1174, 'err_mean': 0.6443, 'adam_cos': 0.8948}
+    R=64 a=0.30 k=8 batch grad norms (pre-clip): median 3.680 max 4.505
+parcae R=64 a=0.30 k=8: {'adam_def': 0.0167, 'sgd_def': 0.0545, 'err_mean': 0.5467, 'adam_cos': 0.918}
+    R=64 a=0.30 k=12 batch grad norms (pre-clip): median 4.436 max 5.305
+parcae R=64 a=0.30 k=12: {'adam_def': -0.0305, 'sgd_def': -0.0217, 'err_mean': 0.4006, 'adam_cos': 0.9479}
+  variant R=64 a=0.30 done in 1363s
+    R=48 a=0.40 k=48 batch grad norms (pre-clip): median 6.546 max 153.767
+    R=48 a=0.40 k=4 batch grad norms (pre-clip): median 3.050 max 7.164
+parcae R=48 a=0.40 k=4: {'adam_def': 0.1013, 'sgd_def': 0.1825, 'err_mean': 0.6654, 'adam_cos': 0.8864}
+    R=48 a=0.40 k=8 batch grad norms (pre-clip): median 4.243 max 49.496
+parcae R=48 a=0.40 k=8: {'adam_def': 0.0182, 'sgd_def': 0.0497, 'err_mean': 0.4145, 'adam_cos': 0.9443}
+  variant R=48 a=0.40 done in 575s

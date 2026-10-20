@@ -1,0 +1,11 @@
+v182 retro sha 1c6d1edbf41e | params 163.5M | val chunks 170
+table2 R=8 a=1.00 k=1: {'err': 0.3648, 'r': 0.8453, 'cos': 0.9355, 'adam_cos': 0.9671, 'cos_fp32': 0.9398}
+table2 R=8 a=1.00 k=2: {'err': 0.1325, 'r': 0.9505, 'cos': 0.9921, 'adam_cos': 0.9967, 'cos_fp32': 0.9964}
+  variant R=8 a=1.00 done in 139s
+table2 R=8 a=0.50 k=1: {'err': 0.5766, 'r': 0.501, 'cos': 0.9168, 'adam_cos': 0.9695, 'cos_fp32': 0.9219}
+table2 R=8 a=0.50 k=2: {'err': 0.3482, 'r': 0.709, 'cos': 0.9742, 'adam_cos': 0.984, 'cos_fp32': 0.9791}
+  variant R=8 a=0.50 done in 134s
+table2 R=8 a=0.30 k=1: {'err': 0.6565, 'r': 0.4377, 'cos': 0.8689, 'adam_cos': 0.9768, 'cos_fp32': 0.8743}
+table2 R=8 a=0.30 k=2: {'err': 0.4449, 'r': 0.6102, 'cos': 0.9623, 'adam_cos': 0.9843, 'cos_fp32': 0.9683}
+  variant R=8 a=0.30 done in 134s
+v182 done

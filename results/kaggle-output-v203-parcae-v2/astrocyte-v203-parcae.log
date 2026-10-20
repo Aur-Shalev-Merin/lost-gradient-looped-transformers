@@ -1,0 +1,33 @@
+[{"stream_name":"stderr","time":17.307879836,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":19.929105416,"data":"\rGenerating train split:   0%|          | 0/7473 [00:00\u003c?, ? examples/s]\rGenerating train split:  13%|█▎        | 1000/7473 [00:00\u003c00:00, 6706.92 examples/s]\rGenerating train split: 100%|██████████| 7473/7473 [00:00\u003c00:00, 45844.52 examples/s]\n"}
+,{"stream_name":"stderr","time":19.934264074,"data":"\rGenerating test split:   0%|          | 0/1319 [00:00\u003c?, ? examples/s]\rGenerating test split: 100%|██████████| 1319/1319 [00:00\u003c00:00, 289269.91 examples/s]\n"}
+,{"stream_name":"stdout","time":20.643719009,"data":"setup done after 19s\n"}
+,{"stream_name":"stdout","time":2270.012938275,"data":"job exit 0 elapsed 2268s\n"}
+,{"stream_name":"stdout","time":2270.013008871,"data":"job exit 0 elapsed 2268s\n"}
+,{"stream_name":"stdout","time":2270.023154091,"data":"---- gpu0 (tail)\n"}
+,{"stream_name":"stdout","time":2270.023174207,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":2270.023181593,"data":"v203 parcae | driver 450d8ebcc48e | R 32 | held-out (test) chunks 455 -\u003e 56 batches of 8, groups of 8, B=1 on 64\n"}
+,{"stream_name":"stdout","time":2270.023187839,"data":"  selftest PASS | repeat-pass rel diff 3.39e-07 (\u003c 0.001) | k=1 lost on batch 0 0.8114 (\u003e 0.001) | params 144.3M\n"}
+,{"stream_name":"stdout","time":2270.023193527,"data":"    groups pass: 16/56 batches, 286s\n"}
+,{"stream_name":"stdout","time":2270.023198825,"data":"    groups pass: 32/56 batches, 569s\n"}
+,{"stream_name":"stdout","time":2270.023203344,"data":"    groups pass: 48/56 batches, 858s\n"}
+,{"stream_name":"stdout","time":2270.023207748,"data":"    total pass: 16/56 batches, 296s\n"}
+,{"stream_name":"stdout","time":2270.023218599,"data":"    total pass: 32/56 batches, 592s\n"}
+,{"stream_name":"stdout","time":2270.023222514,"data":"    total pass: 48/56 batches, 887s\n"}
+,{"stream_name":"stdout","time":2270.023225513,"data":"  stage 0 measured after 2235s\n"}
+,{"stream_name":"stdout","time":2270.023228589,"data":"\n"}
+,{"stream_name":"stdout","time":2270.02324104,"data":"---- gpu1 (tail)\n"}
+,{"stream_name":"stdout","time":2270.023244449,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":2270.023247723,"data":"v203 parcae | driver 450d8ebcc48e | R 32 | held-out (test) chunks 455 -\u003e 56 batches of 8, groups of 8, B=1 on 64\n"}
+,{"stream_name":"stdout","time":2270.023250833,"data":"  stage 300 fine-tune: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0003, 'seed': 2011, 'nonfinite': 12, 'clipped_frac': 0.96, 'ok': False, 's': 724}\n"}
+,{"stream_name":"stdout","time":2270.023253875,"data":"  stage 300 NOT measured after 756s\n"}
+,{"stream_name":"stdout","time":2270.023256693,"data":"\n"}
+,{"stream_name":"stdout","time":2270.023409094,"data":"analysis needs v201 outputs: run v203_heldout_lost.py --analyze locally\n"}
+,{"stream_name":"stdout","time":2270.023428785,"data":"total 2268s\n"}
+,{"stream_name":"stderr","time":2272.543468641,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":2272.543499984,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":2272.936290953,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":2272.936346276,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":2273.819972091,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":2275.187290396,"data":"[NbConvertApp] Writing 319250 bytes to __results__.html\n"}
+]

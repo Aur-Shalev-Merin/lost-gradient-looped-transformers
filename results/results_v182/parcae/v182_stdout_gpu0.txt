@@ -1,0 +1,140 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split:  13%|█▎        | 1000/7473 [00:00<00:00, 8889.40 examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 59301.25 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 239120.29 examples/s]
+v182 parcae sha 1c6d1edbf41e | params 144.3M | val chunks 158
+subset R=16 groups {'all': 144323136, 'adapter+core0': 7670784, 'loop': 14750400, 'core0': 7079424, 'core1': 7079616}
+subset R=16 rho 0.802 (22s)
+  k=1 all 0.8132 adapter+core0 0.8223 loop 0.8379 core0 0.8222 core1 0.8421
+  k=2 all 0.6632 adapter+core0 0.6504 loop 0.6812 core0 0.6505 core1 0.6920
+  k=4 all 0.4210 adapter+core0 0.3975 loop 0.4302 core0 0.3974 core1 0.4421
+  k=8 all 0.1803 adapter+core0 0.1824 loop 0.1823 core0 0.1824 core1 0.1842
+v182 done
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+parcae load: missing [] unexpected []
+model SandyResearch/parcae-140m subset adapter (diagonal injection) + core_block[0] (all params that receive gradient) | v182 probe variant subset, driver 1c6d1edbf41e (7670784 params) dtype torch.float32
+wikitext load failed HfUriError("Invalid HF URI 'hf://datasets/wikitext@b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml'. Repository id must be 'namespace/name', got 'wikitext'.")
+parcae decomposition check: loss mine 2.75160 vs model forward 2.75160
+/usr/local/lib/python3.13/dist-packages/torch/autograd/graph.py:869: UserWarning: Attempting to run cuBLAS, but there was no current CUDA context! Attempting to set the primary context... (Triggered internally at /pytorch/aten/src/ATen/cuda/CublasHandlePool.cpp:335.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/kaggle/working/loop_grad_probe.py:240: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return float(loss), g
+seq  0 gsm8k    R=8  loss 2.752 sigma {4: 14.066, 7: 12.474} resid_end 1.25e-02 stretch_med 0.650 | k1:err 0.864 cos 0.554 k2:err 0.716 cos 0.752 k4:err 0.519 cos 0.892  (1s)
+seq  0 gsm8k    R=16 loss 2.759 sigma {8: 12.611, 15: 13.071} resid_end 1.10e-03 stretch_med 0.695 | k1:err 0.913 cos 0.465 k2:err 0.804 cos 0.673 k4:err 0.652 cos 0.840 k8:err 0.340 cos 0.972  (2s)
+seq  1 gsm8k    R=8  loss 2.891 sigma {4: 13.142, 7: 12.148} resid_end 1.67e-02 stretch_med 0.656 | k1:err 0.922 cos 0.488 k2:err 0.799 cos 0.745 k4:err 0.568 cos 0.902  (1s)
+seq  1 gsm8k    R=16 loss 2.944 sigma {8: 12.206, 15: 12.353} resid_end 1.68e-03 stretch_med 0.731 | k1:err 0.915 cos 0.490 k2:err 0.795 cos 0.718 k4:err 0.600 cos 0.875 k8:err 0.274 cos 0.981  (2s)
+seq  2 gsm8k    R=8  loss 3.244 sigma {4: 13.775, 7: 14.287} resid_end 1.28e-02 stretch_med 0.596 | k1:err 0.845 cos 0.580 k2:err 0.717 cos 0.743 k4:err 0.470 cos 0.911  (2s)
+seq  2 gsm8k    R=16 loss 3.219 sigma {8: 14.04, 15: 14.305} resid_end 1.08e-03 stretch_med 0.693 | k1:err 0.866 cos 0.556 k2:err 0.759 cos 0.710 k4:err 0.536 cos 0.896 k8:err 0.190 cos 0.992  (2s)
+seq  3 gsm8k    R=8  loss 2.647 sigma {4: 14.347, 7: 13.852} resid_end 1.79e-02 stretch_med 0.654 | k1:err 0.769 cos 0.665 k2:err 0.603 cos 0.805 k4:err 0.389 cos 0.922  (2s)
+seq  3 gsm8k    R=16 loss 2.680 sigma {8: 13.87, 15: 13.77} resid_end 1.61e-03 stretch_med 0.729 | k1:err 0.794 cos 0.642 k2:err 0.620 cos 0.798 k4:err 0.387 cos 0.928 k8:err 0.142 cos 0.991  (3s)
+seq  4 gsm8k    R=8  loss 3.295 sigma {4: 11.187, 7: 11.204} resid_end 9.82e-03 stretch_med 0.593 | k1:err 0.715 cos 0.734 k2:err 0.541 cos 0.852 k4:err 0.301 cos 0.956  (1s)
+seq  4 gsm8k    R=16 loss 3.311 sigma {8: 11.167, 15: 11.192} resid_end 6.42e-04 stretch_med 0.672 | k1:err 0.749 cos 0.698 k2:err 0.593 cos 0.818 k4:err 0.348 cos 0.942 k8:err 0.108 cos 0.995  (3s)
+seq  5 gsm8k    R=8  loss 3.321 sigma {4: 11.527, 7: 11.551} resid_end 1.13e-02 stretch_med 0.584 | k1:err 0.769 cos 0.705 k2:err 0.579 cos 0.851 k4:err 0.320 cos 0.958  (2s)
+seq  5 gsm8k    R=16 loss 3.343 sigma {8: 11.429, 15: 11.398} resid_end 6.98e-03 stretch_med 0.843 | k1:err 0.825 cos 0.636 k2:err 0.668 cos 0.797 k4:err 0.435 cos 0.930 k8:err 0.216 cos 0.984  (3s)
+seq  6 gsm8k    R=8  loss 3.192 sigma {4: 10.739, 7: 10.951} resid_end 9.15e-03 stretch_med 0.602 | k1:err 0.727 cos 0.727 k2:err 0.548 cos 0.854 k4:err 0.281 cos 0.963  (2s)
+seq  6 gsm8k    R=16 loss 3.199 sigma {8: 10.839, 15: 10.862} resid_end 1.11e-03 stretch_med 0.658 | k1:err 0.716 cos 0.744 k2:err 0.532 cos 0.867 k4:err 0.280 cos 0.964 k8:err 0.099 cos 0.995  (3s)
+seq  7 gsm8k    R=8  loss 2.344 sigma {4: 12.839, 7: 15.426} resid_end 1.73e-02 stretch_med 0.637 | k1:err 0.850 cos 0.610 k2:err 0.716 cos 0.764 k4:err 0.516 cos 0.887  (2s)
+seq  7 gsm8k    R=16 loss 2.325 sigma {8: 15.506, 15: 13.622} resid_end 3.88e-03 stretch_med 0.806 | k1:err 0.857 cos 0.590 k2:err 0.743 cos 0.730 k4:err 0.581 cos 0.861 k8:err 0.297 cos 0.970  (2s)
+seq  8 gsm8k    R=8  loss 2.700 sigma {4: 14.501, 7: 14.136} resid_end 1.60e-02 stretch_med 0.674 | k1:err 0.784 cos 0.661 k2:err 0.623 cos 0.803 k4:err 0.395 cos 0.927  (1s)
+seq  8 gsm8k    R=16 loss 2.690 sigma {8: 12.707, 15: 14.065} resid_end 1.01e-03 stretch_med 0.702 | k1:err 0.796 cos 0.648 k2:err 0.630 cos 0.803 k4:err 0.373 cos 0.941 k8:err 0.105 cos 0.995  (2s)
+seq  9 gsm8k    R=8  loss 2.684 sigma {4: 11.396, 7: 11.261} resid_end 1.09e-02 stretch_med 0.641 | k1:err 0.777 cos 0.668 k2:err 0.582 cos 0.841 k4:err 0.334 cos 0.954  (1s)
+seq  9 gsm8k    R=16 loss 2.671 sigma {8: 11.258, 15: 11.284} resid_end 1.35e-03 stretch_med 0.696 | k1:err 0.746 cos 0.693 k2:err 0.546 cos 0.852 k4:err 0.301 cos 0.960 k8:err 0.097 cos 0.996  (2s)
+seq 10 gsm8k    R=8  loss 2.878 sigma {4: 11.07, 7: 11.289} resid_end 1.07e-02 stretch_med 0.602 | k1:err 0.806 cos 0.644 k2:err 0.647 cos 0.797 k4:err 0.406 cos 0.932  (1s)
+seq 10 gsm8k    R=16 loss 2.874 sigma {8: 11.36, 15: 11.321} resid_end 7.54e-04 stretch_med 0.668 | k1:err 0.856 cos 0.574 k2:err 0.736 cos 0.722 k4:err 0.544 cos 0.878 k8:err 0.274 cos 0.977  (2s)
+seq 11 gsm8k    R=8  loss 2.648 sigma {4: 15.937, 7: 14.728} resid_end 1.24e-02 stretch_med 0.636 | k1:err 0.880 cos 0.542 k2:err 0.746 cos 0.747 k4:err 0.482 cos 0.919  (1s)
+seq 11 gsm8k    R=16 loss 2.650 sigma {8: 14.884, 15: 15.208} resid_end 9.44e-04 stretch_med 0.683 | k1:err 0.933 cos 0.450 k2:err 0.853 cos 0.644 k4:err 0.669 cos 0.860 k8:err 0.330 cos 0.980  (2s)
+seq 12 gsm8k    R=8  loss 3.175 sigma {4: 13.031, 7: 13.111} resid_end 1.58e-02 stretch_med 0.622 | k1:err 0.879 cos 0.635 k2:err 0.752 cos 0.792 k4:err 0.517 cos 0.922  (1s)
+seq 12 gsm8k    R=16 loss 3.187 sigma {8: 13.034, 15: 13.202} resid_end 1.67e-03 stretch_med 0.714 | k1:err 0.900 cos 0.593 k2:err 0.786 cos 0.761 k4:err 0.554 cos 0.917 k8:err 0.148 cos 0.993  (2s)
+seq 13 gsm8k    R=8  loss 3.338 sigma {4: 13.652, 7: 18.121} resid_end 1.33e-02 stretch_med 0.591 | k1:err 0.819 cos 0.611 k2:err 0.590 cos 0.849 k4:err 0.364 cos 0.950  (1s)
+seq 13 gsm8k    R=16 loss 3.371 sigma {8: 17.107, 15: 16.829} resid_end 3.47e-03 stretch_med 0.720 | k1:err 0.846 cos 0.577 k2:err 0.653 cos 0.813 k4:err 0.468 cos 0.919 k8:err 0.237 cos 0.984  (1s)
+seq 14 gsm8k    R=8  loss 2.938 sigma {4: 13.494, 7: 13.209} resid_end 1.44e-02 stretch_med 0.609 | k1:err 0.862 cos 0.597 k2:err 0.737 cos 0.758 k4:err 0.496 cos 0.910  (1s)
+seq 14 gsm8k    R=16 loss 2.897 sigma {8: 13.084, 15: 12.939} resid_end 1.47e-03 stretch_med 0.707 | k1:err 0.878 cos 0.560 k2:err 0.758 cos 0.731 k4:err 0.528 cos 0.906 k8:err 0.164 cos 0.992  (2s)
+seq 15 gsm8k    R=8  loss 3.099 sigma {4: 16.455, 7: 17.603} resid_end 1.05e-02 stretch_med 0.621 | k1:err 0.882 cos 0.500 k2:err 0.701 cos 0.766 k4:err 0.429 cos 0.923  (1s)
+seq 15 gsm8k    R=16 loss 3.124 sigma {8: 17.465, 15: 17.667} resid_end 2.18e-03 stretch_med 0.689 | k1:err 0.943 cos 0.354 k2:err 0.824 cos 0.642 k4:err 0.626 cos 0.840 k8:err 0.317 cos 0.973  (2s)
+done 73 s
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+parcae load: missing [] unexpected []
+model SandyResearch/parcae-140m subset adapter + every core_block layer (the whole loop) | v182 probe variant loop, driver 1c6d1edbf41e (14750208 params) dtype torch.float32
+wikitext load failed HfUriError("Invalid HF URI 'hf://datasets/wikitext@b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml'. Repository id must be 'namespace/name', got 'wikitext'.")
+parcae decomposition check: loss mine 2.75160 vs model forward 2.75160
+/usr/local/lib/python3.13/dist-packages/torch/autograd/graph.py:869: UserWarning: Attempting to run cuBLAS, but there was no current CUDA context! Attempting to set the primary context... (Triggered internally at /pytorch/aten/src/ATen/cuda/CublasHandlePool.cpp:335.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/kaggle/working/loop_grad_probe.py:240: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return float(loss), g
+seq  0 gsm8k    R=8  loss 2.752 sigma {4: 14.066, 7: 12.474} resid_end 1.25e-02 stretch_med 0.650 | k1:err 0.886 cos 0.481 k2:err 0.723 cos 0.721 k4:err 0.481 cos 0.907  (2s)
+seq  0 gsm8k    R=16 loss 2.759 sigma {8: 12.611, 15: 13.071} resid_end 1.10e-03 stretch_med 0.695 | k1:err 0.933 cos 0.377 k2:err 0.817 cos 0.625 k4:err 0.641 cos 0.833 k8:err 0.345 cos 0.969  (2s)
+seq  1 gsm8k    R=8  loss 2.891 sigma {4: 13.142, 7: 12.148} resid_end 1.67e-02 stretch_med 0.656 | k1:err 0.934 cos 0.392 k2:err 0.817 cos 0.657 k4:err 0.575 cos 0.889  (2s)
+seq  1 gsm8k    R=16 loss 2.944 sigma {8: 12.206, 15: 12.353} resid_end 1.68e-03 stretch_med 0.731 | k1:err 0.929 cos 0.393 k2:err 0.819 cos 0.628 k4:err 0.609 cos 0.854 k8:err 0.286 cos 0.976  (3s)
+seq  2 gsm8k    R=8  loss 3.244 sigma {4: 13.775, 7: 14.287} resid_end 1.28e-02 stretch_med 0.596 | k1:err 0.843 cos 0.552 k2:err 0.700 cos 0.732 k4:err 0.446 cos 0.912  (2s)
+seq  2 gsm8k    R=16 loss 3.219 sigma {8: 14.04, 15: 14.305} resid_end 1.08e-03 stretch_med 0.693 | k1:err 0.873 cos 0.505 k2:err 0.755 cos 0.678 k4:err 0.536 cos 0.876 k8:err 0.207 cos 0.988  (2s)
+seq  3 gsm8k    R=8  loss 2.647 sigma {4: 14.347, 7: 13.852} resid_end 1.79e-02 stretch_med 0.654 | k1:err 0.765 cos 0.654 k2:err 0.602 cos 0.802 k4:err 0.362 cos 0.933  (2s)
+seq  3 gsm8k    R=16 loss 2.680 sigma {8: 13.87, 15: 13.77} resid_end 1.61e-03 stretch_med 0.729 | k1:err 0.790 cos 0.626 k2:err 0.639 cos 0.776 k4:err 0.405 cos 0.917 k8:err 0.141 cos 0.991  (3s)
+seq  4 gsm8k    R=8  loss 3.295 sigma {4: 11.187, 7: 11.204} resid_end 9.82e-03 stretch_med 0.593 | k1:err 0.697 cos 0.737 k2:err 0.516 cos 0.863 k4:err 0.274 cos 0.963  (2s)
+seq  4 gsm8k    R=16 loss 3.311 sigma {8: 11.167, 15: 11.192} resid_end 6.42e-04 stretch_med 0.672 | k1:err 0.728 cos 0.703 k2:err 0.571 cos 0.827 k4:err 0.341 cos 0.942 k8:err 0.107 cos 0.995  (3s)
+seq  5 gsm8k    R=8  loss 3.321 sigma {4: 11.527, 7: 11.551} resid_end 1.13e-02 stretch_med 0.584 | k1:err 0.751 cos 0.694 k2:err 0.564 cos 0.847 k4:err 0.301 cos 0.960  (2s)
+seq  5 gsm8k    R=16 loss 3.343 sigma {8: 11.429, 15: 11.398} resid_end 6.98e-03 stretch_med 0.843 | k1:err 0.810 cos 0.622 k2:err 0.657 cos 0.784 k4:err 0.424 cos 0.924 k8:err 0.201 cos 0.985  (3s)
+seq  6 gsm8k    R=8  loss 3.192 sigma {4: 10.739, 7: 10.951} resid_end 9.15e-03 stretch_med 0.602 | k1:err 0.721 cos 0.716 k2:err 0.538 cos 0.853 k4:err 0.274 cos 0.965  (2s)
+seq  6 gsm8k    R=16 loss 3.199 sigma {8: 10.839, 15: 10.862} resid_end 1.11e-03 stretch_med 0.658 | k1:err 0.718 cos 0.720 k2:err 0.529 cos 0.860 k4:err 0.284 cos 0.962 k8:err 0.100 cos 0.995  (2s)
+seq  7 gsm8k    R=8  loss 2.344 sigma {4: 12.839, 7: 15.426} resid_end 1.73e-02 stretch_med 0.637 | k1:err 0.850 cos 0.563 k2:err 0.693 cos 0.760 k4:err 0.450 cos 0.915  (2s)
+seq  7 gsm8k    R=16 loss 2.325 sigma {8: 15.506, 15: 13.622} resid_end 3.88e-03 stretch_med 0.806 | k1:err 0.862 cos 0.541 k2:err 0.726 cos 0.726 k4:err 0.548 cos 0.870 k8:err 0.272 cos 0.974  (2s)
+seq  8 gsm8k    R=8  loss 2.700 sigma {4: 14.501, 7: 14.136} resid_end 1.60e-02 stretch_med 0.674 | k1:err 0.775 cos 0.652 k2:err 0.600 cos 0.811 k4:err 0.370 cos 0.934  (2s)
+seq  8 gsm8k    R=16 loss 2.690 sigma {8: 12.707, 15: 14.065} resid_end 1.01e-03 stretch_med 0.702 | k1:err 0.804 cos 0.615 k2:err 0.636 cos 0.786 k4:err 0.391 cos 0.930 k8:err 0.108 cos 0.995  (2s)
+seq  9 gsm8k    R=8  loss 2.684 sigma {4: 11.396, 7: 11.261} resid_end 1.09e-02 stretch_med 0.641 | k1:err 0.796 cos 0.630 k2:err 0.600 cos 0.821 k4:err 0.328 cos 0.954  (2s)
+seq  9 gsm8k    R=16 loss 2.671 sigma {8: 11.258, 15: 11.284} resid_end 1.35e-03 stretch_med 0.696 | k1:err 0.761 cos 0.670 k2:err 0.559 cos 0.841 k4:err 0.301 cos 0.958 k8:err 0.095 cos 0.996  (3s)
+seq 10 gsm8k    R=8  loss 2.878 sigma {4: 11.07, 7: 11.289} resid_end 1.07e-02 stretch_med 0.602 | k1:err 0.812 cos 0.615 k2:err 0.653 cos 0.781 k4:err 0.389 cos 0.937  (2s)
+seq 10 gsm8k    R=16 loss 2.874 sigma {8: 11.36, 15: 11.321} resid_end 7.54e-04 stretch_med 0.668 | k1:err 0.864 cos 0.537 k2:err 0.743 cos 0.700 k4:err 0.542 cos 0.872 k8:err 0.270 cos 0.976  (3s)
+seq 11 gsm8k    R=8  loss 2.648 sigma {4: 15.937, 7: 14.728} resid_end 1.24e-02 stretch_med 0.636 | k1:err 0.906 cos 0.443 k2:err 0.758 cos 0.703 k4:err 0.471 cos 0.917  (2s)
+seq 11 gsm8k    R=16 loss 2.650 sigma {8: 14.884, 15: 15.208} resid_end 9.44e-04 stretch_med 0.683 | k1:err 0.955 cos 0.317 k2:err 0.870 cos 0.565 k4:err 0.676 cos 0.831 k8:err 0.339 cos 0.974  (3s)
+seq 12 gsm8k    R=8  loss 3.175 sigma {4: 13.031, 7: 13.111} resid_end 1.58e-02 stretch_med 0.622 | k1:err 0.904 cos 0.494 k2:err 0.782 cos 0.708 k4:err 0.519 cos 0.910  (3s)
+seq 12 gsm8k    R=16 loss 3.187 sigma {8: 13.034, 15: 13.202} resid_end 1.67e-03 stretch_med 0.714 | k1:err 0.926 cos 0.440 k2:err 0.827 cos 0.648 k4:err 0.589 cos 0.881 k8:err 0.182 cos 0.989  (3s)
+seq 13 gsm8k    R=8  loss 3.338 sigma {4: 13.652, 7: 18.121} resid_end 1.33e-02 stretch_med 0.591 | k1:err 0.859 cos 0.529 k2:err 0.609 cos 0.818 k4:err 0.342 cos 0.951  (2s)
+seq 13 gsm8k    R=16 loss 3.371 sigma {8: 17.107, 15: 16.829} resid_end 3.47e-03 stretch_med 0.720 | k1:err 0.882 cos 0.488 k2:err 0.667 cos 0.777 k4:err 0.448 cos 0.913 k8:err 0.229 cos 0.982  (2s)
+seq 14 gsm8k    R=8  loss 2.938 sigma {4: 13.494, 7: 13.209} resid_end 1.44e-02 stretch_med 0.609 | k1:err 0.879 cos 0.510 k2:err 0.736 cos 0.719 k4:err 0.485 cos 0.905  (2s)
+seq 14 gsm8k    R=16 loss 2.897 sigma {8: 13.084, 15: 12.939} resid_end 1.47e-03 stretch_med 0.707 | k1:err 0.892 cos 0.484 k2:err 0.764 cos 0.685 k4:err 0.535 cos 0.884 k8:err 0.183 cos 0.989  (3s)
+seq 15 gsm8k    R=8  loss 3.099 sigma {4: 16.455, 7: 17.603} resid_end 1.05e-02 stretch_med 0.621 | k1:err 0.852 cos 0.542 k2:err 0.684 cos 0.757 k4:err 0.396 cos 0.932  (2s)
+seq 15 gsm8k    R=16 loss 3.124 sigma {8: 17.465, 15: 17.667} resid_end 2.18e-03 stretch_med 0.689 | k1:err 0.923 cos 0.399 k2:err 0.817 cos 0.613 k4:err 0.618 cos 0.827 k8:err 0.313 cos 0.969  (2s)
+done 92 s
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+parcae load: missing [] unexpected []
+model SandyResearch/parcae-140m subset adapter (diagonal injection) + core_block[0] (all params that receive gradient) | v182 probe variant subset_bf16, driver 1c6d1edbf41e (7670784 params) dtype torch.bfloat16
+wikitext load failed HfUriError("Invalid HF URI 'hf://datasets/wikitext@b08601e04326c79dfdd32d625aee71d232d685c3/.huggingface.yaml'. Repository id must be 'namespace/name', got 'wikitext'.")
+parcae decomposition check: loss mine 2.74836 vs model forward 2.74836
+/usr/local/lib/python3.13/dist-packages/torch/autograd/graph.py:869: UserWarning: Attempting to run cuBLAS, but there was no current CUDA context! Attempting to set the primary context... (Triggered internally at /pytorch/aten/src/ATen/cuda/CublasHandlePool.cpp:335.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/kaggle/working/loop_grad_probe.py:240: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return float(loss), g
+seq  0 gsm8k    R=8  loss 2.748 sigma {4: 14.012, 7: 12.588} resid_end 1.31e-02 stretch_med 0.654 | k1:err 0.866 cos 0.550 k2:err 0.720 cos 0.748 k4:err 0.524 cos 0.889  (1s)
+seq  0 gsm8k    R=16 loss 2.757 sigma {8: 12.602, 15: 13.193} resid_end 3.90e-03 stretch_med 0.711 | k1:err 0.912 cos 0.466 k2:err 0.801 cos 0.676 k4:err 0.648 cos 0.842 k8:err 0.340 cos 0.971  (2s)
+seq  1 gsm8k    R=8  loss 2.884 sigma {4: 12.992, 7: 12.23} resid_end 1.74e-02 stretch_med 0.658 | k1:err 0.922 cos 0.484 k2:err 0.797 cos 0.743 k4:err 0.565 cos 0.902  (1s)
+seq  1 gsm8k    R=16 loss 2.934 sigma {8: 12.305, 15: 12.455} resid_end 4.23e-03 stretch_med 0.763 | k1:err 0.914 cos 0.490 k2:err 0.794 cos 0.717 k4:err 0.600 cos 0.873 k8:err 0.280 cos 0.980  (2s)
+seq  2 gsm8k    R=8  loss 3.243 sigma {4: 13.771, 7: 14.444} resid_end 1.37e-02 stretch_med 0.601 | k1:err 0.837 cos 0.588 k2:err 0.708 cos 0.749 k4:err 0.462 cos 0.912  (1s)
+seq  2 gsm8k    R=16 loss 3.221 sigma {8: 14.198, 15: 14.521} resid_end 3.88e-03 stretch_med 0.720 | k1:err 0.853 cos 0.571 k2:err 0.742 cos 0.721 k4:err 0.516 cos 0.900 k8:err 0.178 cos 0.992  (2s)
+seq  3 gsm8k    R=8  loss 2.643 sigma {4: 14.352, 7: 13.895} resid_end 1.85e-02 stretch_med 0.653 | k1:err 0.772 cos 0.661 k2:err 0.608 cos 0.802 k4:err 0.396 cos 0.920  (1s)
+seq  3 gsm8k    R=16 loss 2.677 sigma {8: 13.859, 15: 13.766} resid_end 3.74e-03 stretch_med 0.756 | k1:err 0.799 cos 0.634 k2:err 0.630 cos 0.791 k4:err 0.396 cos 0.925 k8:err 0.144 cos 0.991  (2s)
+seq  4 gsm8k    R=8  loss 3.297 sigma {4: 11.204, 7: 11.211} resid_end 1.12e-02 stretch_med 0.597 | k1:err 0.715 cos 0.734 k2:err 0.542 cos 0.852 k4:err 0.302 cos 0.956  (1s)
+seq  4 gsm8k    R=16 loss 3.309 sigma {8: 11.184, 15: 11.234} resid_end 3.61e-03 stretch_med 0.702 | k1:err 0.749 cos 0.699 k2:err 0.593 cos 0.819 k4:err 0.348 cos 0.943 k8:err 0.107 cos 0.995  (2s)
+seq  5 gsm8k    R=8  loss 3.330 sigma {4: 11.518, 7: 11.583} resid_end 1.24e-02 stretch_med 0.601 | k1:err 0.772 cos 0.701 k2:err 0.583 cos 0.849 k4:err 0.325 cos 0.957  (1s)
+seq  5 gsm8k    R=16 loss 3.350 sigma {8: 11.456, 15: 11.386} resid_end 8.28e-03 stretch_med 0.851 | k1:err 0.831 cos 0.627 k2:err 0.676 cos 0.790 k4:err 0.447 cos 0.926 k8:err 0.223 cos 0.984  (2s)
+seq  6 gsm8k    R=8  loss 3.191 sigma {4: 10.723, 7: 10.977} resid_end 1.08e-02 stretch_med 0.613 | k1:err 0.728 cos 0.726 k2:err 0.548 cos 0.854 k4:err 0.280 cos 0.964  (1s)
+seq  6 gsm8k    R=16 loss 3.199 sigma {8: 10.858, 15: 10.869} resid_end 4.06e-03 stretch_med 0.759 | k1:err 0.718 cos 0.742 k2:err 0.534 cos 0.865 k4:err 0.281 cos 0.964 k8:err 0.100 cos 0.995  (2s)
+seq  7 gsm8k    R=8  loss 2.346 sigma {4: 12.841, 7: 15.469} resid_end 1.80e-02 stretch_med 0.635 | k1:err 0.848 cos 0.610 k2:err 0.714 cos 0.762 k4:err 0.518 cos 0.884  (1s)
+seq  7 gsm8k    R=16 loss 2.325 sigma {8: 15.594, 15: 13.871} resid_end 5.56e-03 stretch_med 0.811 | k1:err 0.851 cos 0.598 k2:err 0.736 cos 0.734 k4:err 0.570 cos 0.866 k8:err 0.288 cos 0.972  (2s)
+seq  8 gsm8k    R=8  loss 2.699 sigma {4: 14.521, 7: 14.089} resid_end 1.68e-02 stretch_med 0.674 | k1:err 0.779 cos 0.666 k2:err 0.616 cos 0.808 k4:err 0.385 cos 0.931  (1s)
+seq  8 gsm8k    R=16 loss 2.686 sigma {8: 13.335, 15: 14.078} resid_end 3.67e-03 stretch_med 0.730 | k1:err 0.795 cos 0.649 k2:err 0.629 cos 0.803 k4:err 0.373 cos 0.941 k8:err 0.107 cos 0.995  (2s)
+seq  9 gsm8k    R=8  loss 2.684 sigma {4: 11.409, 7: 11.28} resid_end 1.22e-02 stretch_med 0.646 | k1:err 0.775 cos 0.670 k2:err 0.580 cos 0.841 k4:err 0.334 cos 0.953  (1s)
+seq  9 gsm8k    R=16 loss 2.675 sigma {8: 11.264, 15: 11.293} resid_end 3.98e-03 stretch_med 0.731 | k1:err 0.746 cos 0.694 k2:err 0.546 cos 0.852 k4:err 0.304 cos 0.959 k8:err 0.101 cos 0.996  (2s)
+seq 10 gsm8k    R=8  loss 2.875 sigma {4: 11.046, 7: 11.27} resid_end 1.18e-02 stretch_med 0.611 | k1:err 0.807 cos 0.644 k2:err 0.648 cos 0.796 k4:err 0.408 cos 0.931  (1s)
+seq 10 gsm8k    R=16 loss 2.867 sigma {8: 11.312, 15: 11.311} resid_end 3.62e-03 stretch_med 0.689 | k1:err 0.856 cos 0.574 k2:err 0.737 cos 0.721 k4:err 0.546 cos 0.877 k8:err 0.276 cos 0.976  (2s)
+seq 11 gsm8k    R=8  loss 2.642 sigma {4: 16.011, 7: 14.899} resid_end 1.30e-02 stretch_med 0.634 | k1:err 0.879 cos 0.542 k2:err 0.745 cos 0.748 k4:err 0.480 cos 0.919  (1s)
+seq 11 gsm8k    R=16 loss 2.635 sigma {8: 15.021, 15: 15.536} resid_end 3.43e-03 stretch_med 0.734 | k1:err 0.933 cos 0.449 k2:err 0.852 cos 0.646 k4:err 0.668 cos 0.860 k8:err 0.335 cos 0.979  (2s)
+seq 12 gsm8k    R=8  loss 3.176 sigma {4: 13.034, 7: 13.238} resid_end 1.63e-02 stretch_med 0.624 | k1:err 0.877 cos 0.638 k2:err 0.749 cos 0.794 k4:err 0.515 cos 0.923  (1s)
+seq 12 gsm8k    R=16 loss 3.183 sigma {8: 13.115, 15: 13.318} resid_end 4.28e-03 stretch_med 0.769 | k1:err 0.895 cos 0.600 k2:err 0.776 cos 0.768 k4:err 0.539 cos 0.919 k8:err 0.140 cos 0.993  (2s)
+seq 13 gsm8k    R=8  loss 3.341 sigma {4: 12.166, 7: 18.221} resid_end 1.38e-02 stretch_med 0.599 | k1:err 0.817 cos 0.613 k2:err 0.587 cos 0.851 k4:err 0.363 cos 0.950  (1s)
+seq 13 gsm8k    R=16 loss 3.366 sigma {8: 17.206, 15: 16.828} resid_end 4.81e-03 stretch_med 0.738 | k1:err 0.848 cos 0.572 k2:err 0.654 cos 0.813 k4:err 0.469 cos 0.920 k8:err 0.244 cos 0.983  (3s)
+seq 14 gsm8k    R=8  loss 2.933 sigma {4: 13.455, 7: 12.888} resid_end 1.54e-02 stretch_med 0.606 | k1:err 0.864 cos 0.597 k2:err 0.738 cos 0.758 k4:err 0.498 cos 0.910  (1s)
+seq 14 gsm8k    R=16 loss 2.885 sigma {8: 13.069, 15: 12.939} resid_end 3.85e-03 stretch_med 0.740 | k1:err 0.875 cos 0.563 k2:err 0.753 cos 0.737 k4:err 0.522 cos 0.909 k8:err 0.163 cos 0.992  (2s)
+seq 15 gsm8k    R=8  loss 3.101 sigma {4: 16.588, 7: 17.749} resid_end 1.13e-02 stretch_med 0.623 | k1:err 0.881 cos 0.502 k2:err 0.700 cos 0.768 k4:err 0.430 cos 0.923  (1s)
+seq 15 gsm8k    R=16 loss 3.116 sigma {8: 17.64, 15: 17.735} resid_end 4.23e-03 stretch_med 0.727 | k1:err 0.941 cos 0.358 k2:err 0.821 cos 0.641 k4:err 0.627 cos 0.837 k8:err 0.323 cos 0.971  (2s)
+done 68 s

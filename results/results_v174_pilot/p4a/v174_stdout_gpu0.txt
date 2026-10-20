@@ -1,0 +1,18 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 73448.92 examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 73201.23 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 264335.94 examples/s]
+v174 driver d5c2647126de (v163 d5c2647126de) dev cuda amp True R 32
+  k=4 lam=0.750 step 0: A 0.9015 A_loop 0.8320 |gR| 5.90 |gk| 4.79 S 65536 (4s)
+  k=4 lam=0.750 step 100: A 0.9935 A_loop 0.9843 |gR| 1.18 |gk| 1.09 S 65536 (368s)
+  k=4 lam=0.750 step 200: A 0.9923 A_loop 0.9823 |gR| 1.12 |gk| 1.04 S 65536 (732s)
+  k=4 lam=0.750 step 300: A 0.9924 A_loop 0.9838 |gR| 1.18 |gk| 1.11 S 65536 (1098s)
+  k=4 lam=0.750 step 400: A 0.9919 A_loop 0.9843 |gR| 1.00 |gk| 0.93 S 65536 (1463s)
+  k=4 lam=0.750 step 500: A 0.9904 A_loop 0.9824 |gR| 1.04 |gk| 0.98 S 65536 (1827s)
+pilot k=4 lam=0.750: Abar 0.9912 Abar_loop 0.9818 both-clipped 0.617 nonfinite 0 (2189s)
+  k=4 lam=1.000 step 0: A 0.8572 A_loop 0.7565 |gR| 5.90 |gk| 4.79 S 65536 (3s)
+  k=4 lam=1.000 step 100: A 0.9888 A_loop 0.9715 |gR| 1.19 |gk| 1.10 S 32768 (368s)
+  k=4 lam=1.000 step 200: A 0.9845 A_loop 0.9625 |gR| 1.11 |gk| 1.04 S 32768 (732s)
+  k=4 lam=1.000 step 300: A 0.9850 A_loop 0.9668 |gR| 1.21 |gk| 1.12 S 32768 (1097s)
+  k=4 lam=1.000 step 400: A 0.9846 A_loop 0.9689 |gR| 1.00 |gk| 0.93 S 32768 (1465s)
+  k=4 lam=1.000 step 500: A 0.9810 A_loop 0.9633 |gR| 1.05 |gk| 0.99 S 32768 (1831s)
+pilot k=4 lam=1.000: Abar 0.9837 Abar_loop 0.9652 both-clipped 0.629 nonfinite 1 (2194s)

@@ -1,0 +1,33 @@
+[{"stream_name":"stdout","time":5767.213729609,"data":"job exit 0 elapsed 5760s\n"}
+,{"stream_name":"stdout","time":5816.151969187,"data":"job exit 0 elapsed 5809s\n"}
+,{"stream_name":"stdout","time":5816.152378948,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":5816.152402351,"data":"\n"}
+,{"stream_name":"stdout","time":5816.15240838,"data":"Generating train split:   0%|          | 0/7473 [00:00\u003c?, ? examples/s]\n"}
+,{"stream_name":"stdout","time":5816.152414414,"data":"Generating train split: 100%|██████████| 7473/7473 [00:00\u003c00:00, 112054.23 examples/s]\n"}
+,{"stream_name":"stdout","time":5816.152420358,"data":"\n"}
+,{"stream_name":"stdout","time":5816.152424665,"data":"Generating test split:   0%|          | 0/1319 [00:00\u003c?, ? examples/s]\n"}
+,{"stream_name":"stdout","time":5816.15242956,"data":"Generating test split: 100%|██████████| 1319/1319 [00:00\u003c00:00, 302923.23 examples/s]\n"}
+,{"stream_name":"stdout","time":5816.152434424,"data":"v163 driver d5c2647126de (v162 module 0ae4891d7abc) dev cuda amp True R 32\n"}
+,{"stream_name":"stdout","time":5816.152439347,"data":"cell a=1.0 k=32 lr=0.0003 seed=1631101: val 1.3944 test 1.3716 rho_end 0.774 nonfinite 5 (1604s)\n"}
+,{"stream_name":"stdout","time":5816.152443558,"data":"cell a=0.5 k=32 lr=0.0003 seed=1631103: val 1.4000 test 1.3729 rho_end 0.854 nonfinite 0 (1609s)\n"}
+,{"stream_name":"stdout","time":5816.152448825,"data":"cell a=0.5 k=4 lr=0.0003 seed=1631101: val 1.4072 test 1.3825 rho_end 0.864 nonfinite 0 (682s)\n"}
+,{"stream_name":"stdout","time":5816.15245303,"data":"cell a=1.0 k=2 lr=0.0003 seed=1631103: val 1.4140 test 1.3896 rho_end 0.786 nonfinite 0 (615s)\n"}
+,{"stream_name":"stdout","time":5816.152457365,"data":"cell a=0.5 k=2 lr=0.0003 seed=1631103: val 1.4224 test 1.3976 rho_end 0.855 nonfinite 0 (616s)\n"}
+,{"stream_name":"stdout","time":5816.15246175,"data":"cell a=0.5 k=1 lr=0.0003 seed=1631101: val 1.4311 test 1.4080 rho_end 0.856 nonfinite 0 (582s)\n"}
+,{"stream_name":"stdout","time":5816.152466113,"data":"\n"}
+,{"stream_name":"stdout","time":5816.152474281,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":5816.152479497,"data":"v163 driver d5c2647126de (v162 module 0ae4891d7abc) dev cuda amp True R 32\n"}
+,{"stream_name":"stdout","time":5816.152483781,"data":"cell a=1.0 k=32 lr=0.0003 seed=1631102: val 1.3963 test 1.3731 rho_end 0.808 nonfinite 0 (1607s)\n"}
+,{"stream_name":"stdout","time":5816.152488416,"data":"cell a=0.5 k=32 lr=0.0003 seed=1631104: val 1.3999 test 1.3765 rho_end 0.858 nonfinite 0 (1617s)\n"}
+,{"stream_name":"stdout","time":5816.152492997,"data":"cell a=0.5 k=4 lr=0.0003 seed=1631102: val 1.4114 test 1.3867 rho_end 0.862 nonfinite 0 (683s)\n"}
+,{"stream_name":"stdout","time":5816.152497697,"data":"cell a=1.0 k=2 lr=0.0003 seed=1631104: val 1.4134 test 1.3908 rho_end 0.794 nonfinite 0 (617s)\n"}
+,{"stream_name":"stdout","time":5816.152502585,"data":"cell a=0.5 k=2 lr=0.0003 seed=1631104: val 1.4202 test 1.3981 rho_end 0.852 nonfinite 0 (616s)\n"}
+,{"stream_name":"stdout","time":5816.15250703,"data":"cell a=0.5 k=1 lr=0.0003 seed=1631102: val 1.4349 test 1.4114 rho_end 0.867 nonfinite 0 (584s)\n"}
+,{"stream_name":"stdout","time":5816.152511539,"data":"\n"}
+,{"stream_name":"stderr","time":5818.023794084,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":5818.023825792,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":5818.235934538,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":5818.235958986,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":5818.938195401,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":5819.786545491,"data":"[NbConvertApp] Writing 296168 bytes to __results__.html\n"}
+]

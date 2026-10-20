@@ -1,0 +1,9 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+v174 driver d5c2647126de (v163 d5c2647126de) dev cuda amp True R 32
+  k=1 lam=0.924 step 0: A 0.7507 A_loop 0.5744 |gR| 5.90 |gk| 2.76 S 65536 (3s)
+  k=1 lam=0.924 step 100: A 0.9320 A_loop 0.8173 |gR| 1.23 |gk| 0.78 S 65536 (372s)
+  k=1 lam=0.924 step 200: A 0.9207 A_loop 0.8086 |gR| 1.03 |gk| 0.71 S 65536 (747s)
+  k=1 lam=0.924 step 300: A 0.9206 A_loop 0.8215 |gR| 1.30 |gk| 0.82 S 65536 (1121s)
+  k=1 lam=0.924 step 400: A 0.9148 A_loop 0.8203 |gR| 1.00 |gk| 0.69 S 65536 (1493s)
+  k=1 lam=0.924 step 500: A 0.9137 A_loop 0.8272 |gR| 1.06 |gk| 0.70 S 65536 (1867s)
+pilot k=1 lam=0.924: Abar 0.9188 Abar_loop 0.8239 both-clipped 0.145 nonfinite 0 (2237s)

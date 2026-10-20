@@ -1,0 +1,10 @@
+v192: tomg-group-umd/huginn-0125 subset adapter + core_block[0] (all params) (451154880 params) dtype torch.bfloat16, seqs 0-7 of 32
+R=32 seq  0 wikitext err direct k1/2/4 0.8608 0.7367 0.5323 | subtraction 0.8608 0.7367 0.5323 | sum-vs-full 8.9e-03 | sketch: norm 1.5e-03 cos 1.0e-03 err 3.4e-04 (873s, total 1026s)
+R=32 seq  1 wikitext err direct k1/2/4 0.8339 0.6947 0.4761 | subtraction 0.8340 0.6948 0.4762 | sum-vs-full 8.9e-03 | sketch: norm 2.3e-03 cos 1.6e-03 err 6.2e-04 (910s, total 1935s)
+R=32 seq  2 wikitext err direct k1/2/4 0.8706 0.7623 0.5789 | subtraction 0.8706 0.7624 0.5789 | sum-vs-full 8.9e-03 | sketch: norm 1.7e-03 cos 1.7e-03 err 5.7e-04 (921s, total 2856s)
+R=32 seq  3 wikitext err direct k1/2/4 0.9099 0.8269 0.6841 | subtraction 0.9099 0.8269 0.6841 | sum-vs-full 8.2e-03 | sketch: norm 1.5e-03 cos 1.4e-03 err 4.5e-04 (920s, total 3777s)
+R=32 seq  4 wikitext err direct k1/2/4 0.8867 0.7793 0.5972 | subtraction 0.8867 0.7793 0.5972 | sum-vs-full 8.7e-03 | sketch: norm 1.8e-03 cos 2.0e-03 err 6.7e-04 (930s, total 4706s)
+R=32 seq  5 wikitext err direct k1/2/4 0.8541 0.7234 0.5104 | subtraction 0.8541 0.7232 0.5102 | sum-vs-full 8.8e-03 | sketch: norm 1.8e-03 cos 1.1e-03 err 3.5e-04 (922s, total 5629s)
+R=32 seq  6 wikitext err direct k1/2/4 0.8794 0.7803 0.6407 | subtraction 0.8794 0.7803 0.6407 | sum-vs-full 8.4e-03 | sketch: norm 1.7e-03 cos 2.0e-03 err 5.0e-04 (914s, total 6543s)
+R=32 seq  7 wikitext err direct k1/2/4 0.8811 0.7605 0.5605 | subtraction 0.8811 0.7605 0.5606 | sum-vs-full 8.8e-03 | sketch: norm 1.3e-03 cos 1.3e-03 err 5.6e-04 (914s, total 7457s)
+done 7457 s

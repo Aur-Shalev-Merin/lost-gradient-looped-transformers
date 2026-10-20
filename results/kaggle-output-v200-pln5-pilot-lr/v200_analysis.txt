@@ -1,0 +1,13 @@
+6 runs from 2 files
+
+=== huginn-s-fixed-pln5: 6 runs (drivers ['903183508aa3'])
+  k=0 lr=0.0001  seed=9001     val 1.5759 test 1.5564 | nonfinite   0 | rho_end 0.709 |  344s (train  320s) peak 6.0 GB
+  k=0 lr=0.0003  seed=9001     val 1.5623 test 1.5383 | nonfinite   0 | rho_end 0.704 |  344s (train  319s) peak 6.0 GB
+  k=0 lr=0.0009  seed=9001     val 1.6785 test 1.6509 | nonfinite   0 | rho_end 0.702 |  354s (train  328s) peak 6.0 GB
+  k=5 lr=0.0001  seed=9001     val 1.4327 test 1.4117 | nonfinite   0 | rho_end 0.740 |  737s (train  713s) peak 8.6 GB
+  k=5 lr=0.0003  seed=9001     val 1.5279 test 1.5044 | nonfinite   0 | rho_end 0.722 |  757s (train  731s) peak 8.6 GB
+  k=5 lr=0.0009  seed=9001     val 1.6878 test 1.6618 | nonfinite   0 | rho_end 0.673 |  738s (train  714s) peak 8.6 GB
+LR pilot full (seed 9001): 0.0001: val 1.4327 test 1.4117  0.0003: val 1.5279 test 1.5044  0.0009: val 1.6878 test 1.6618 -> best by val 0.0001 (EDGE of the grid: extend it before fixing the LR, as v167 pilot 2)
+LR pilot floor (seed 9001): 0.0001: val 1.5759 test 1.5564  0.0003: val 1.5623 test 1.5383  0.0009: val 1.6785 test 1.6509 -> best by val 0.0003
+seed 9001: full nonfinite 0 test 1.4117 -> VALID
+floor lr 0.0001, truncated/full lr 0.0001; seeds used: [9001]

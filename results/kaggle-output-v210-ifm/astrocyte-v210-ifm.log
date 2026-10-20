@@ -1,0 +1,44 @@
+[{"stream_name":"stderr","time":7.347858914,"data":"\rFetching 11 files:   0%|          | 0/11 [00:00\u003c?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":10.505490564,"data":"\rFetching 11 files:   9%|▉         | 1/11 [00:00\u003c00:03,  3.03it/s]\rFetching 11 files:  55%|█████▍    | 6/11 [00:00\u003c00:00, 16.78it/s]\rFetching 11 files:  82%|████████▏ | 9/11 [00:00\u003c00:00, 15.03it/s]\rFetching 11 files: 100%|██████████| 11/11 [00:03\u003c00:00,  3.36it/s]\n"}
+,{"stream_name":"stderr","time":16.887920688,"data":"\rFetching 11 files:   0%|          | 0/11 [00:00\u003c?, ?it/s]\rFetching 11 files:   9%|▉         | 1/11 [00:00\u003c00:03,  3.12it/s]\rFetching 11 files:  73%|███████▎  | 8/11 [00:00\u003c00:00, 14.20it/s]\rFetching 11 files:  91%|█████████ | 10/11 [00:00\u003c00:00, 13.07it/s]\rFetching 11 files: 100%|██████████| 11/11 [00:06\u003c00:00,  1.76it/s]\n"}
+,{"stream_name":"stderr","time":23.259068257,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":26.080247608,"data":"\rGenerating train split:   0%|          | 0/7473 [00:00\u003c?, ? examples/s]\rGenerating train split: 100%|██████████| 7473/7473 [00:00\u003c00:00, 99665.92 examples/s]\n"}
+,{"stream_name":"stderr","time":26.085313488,"data":"\rGenerating test split:   0%|          | 0/1319 [00:00\u003c?, ? examples/s]\rGenerating test split: 100%|██████████| 1319/1319 [00:00\u003c00:00, 300048.11 examples/s]\n"}
+,{"stream_name":"stdout","time":27.005209549,"data":"setup done after 26s\n"}
+,{"stream_name":"stdout","time":981.868015633,"data":"job exit 0 elapsed 981s\n"}
+,{"stream_name":"stdout","time":981.868057005,"data":"job exit 0 elapsed 981s\n"}
+,{"stream_name":"stdout","time":981.868226931,"data":"---- gpu0 (tail)\n"}
+,{"stream_name":"stdout","time":981.868246832,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":981.868251974,"data":"  pln5 s0: all [0.764, 0.591, 0.291] | loop [0.805, 0.626, 0.308] (126s)\n"}
+,{"stream_name":"stdout","time":981.868256696,"data":"  pln5 full300 fine-tune seed 2011: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0001, 'seed': 2011, 'nonfinite': 0, 'clipped_frac': 0.9933, 'ok': True, 's': 318, 'k': 5}\n"}
+,{"stream_name":"stdout","time":981.868261271,"data":"  pln5 full300: all [0.633, 0.456, 0.221] | loop [0.722, 0.519, 0.254] (126s)\n"}
+,{"stream_name":"stdout","time":981.868265585,"data":"  pln5 trunc300 fine-tune seed 2011: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0001, 'seed': 2011, 'nonfinite': 0, 'clipped_frac': 0.1333, 'ok': True, 's': 223, 'k': 2}\n"}
+,{"stream_name":"stdout","time":981.868270473,"data":"  pln5 trunc300: all [0.646, 0.47, 0.246] | loop [0.73, 0.533, 0.279] (126s)\n"}
+,{"stream_name":"stdout","time":981.868274668,"data":"\n"}
+,{"stream_name":"stdout","time":981.86830698,"data":"---- gpu1 (tail)\n"}
+,{"stream_name":"stdout","time":981.868342697,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":981.868349433,"data":"  r5 s0: all [0.833, 0.702, 0.387] | loop [0.867, 0.73, 0.4] (117s)\n"}
+,{"stream_name":"stdout","time":981.868354082,"data":"  r5 full300 fine-tune seed 2011: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0001, 'seed': 2011, 'nonfinite': 0, 'clipped_frac': 1.0, 'ok': True, 's': 305, 'k': 5}\n"}
+,{"stream_name":"stdout","time":981.86837172,"data":"  r5 full300: all [0.718, 0.564, 0.298] | loop [0.791, 0.62, 0.328] (123s)\n"}
+,{"stream_name":"stdout","time":981.868375408,"data":"  r5 trunc300 fine-tune seed 2011: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0001, 'seed': 2011, 'nonfinite': 0, 'clipped_frac': 0.46, 'ok': True, 's': 217, 'k': 2}\n"}
+,{"stream_name":"stdout","time":981.868379076,"data":"  r5 trunc300: all [0.743, 0.604, 0.366] | loop [0.809, 0.658, 0.399] (123s)\n"}
+,{"stream_name":"stdout","time":981.868382413,"data":"\n"}
+,{"stream_name":"stdout","time":983.512367541,"data":"PART A (held-out GSM8K test, per-sequence medians, k = 1 / 2 / 4)\n"}
+,{"stream_name":"stdout","time":983.512394126,"data":"  parcae incomplete: []\n"}
+,{"stream_name":"stdout","time":983.512398538,"data":"  pln5   s0       all [0.764, 0.591, 0.291] | loop [0.805, 0.626, 0.308]\n"}
+,{"stream_name":"stdout","time":983.512402423,"data":"  pln5   full300  all [0.633, 0.456, 0.221] | loop [0.722, 0.519, 0.254]\n"}
+,{"stream_name":"stdout","time":983.512406226,"data":"  pln5   trunc300 all [0.646, 0.47, 0.246] | loop [0.73, 0.533, 0.279]\n"}
+,{"stream_name":"stdout","time":983.512410054,"data":"  pln5   mean fall: all 0.112, loop 0.081 (ratio 0.72) | truncated fine-tune fall (all) 0.095\n"}
+,{"stream_name":"stdout","time":983.51241403,"data":"  r5     s0       all [0.833, 0.702, 0.387] | loop [0.867, 0.73, 0.4]\n"}
+,{"stream_name":"stdout","time":983.512417729,"data":"  r5     full300  all [0.718, 0.564, 0.298] | loop [0.791, 0.62, 0.328]\n"}
+,{"stream_name":"stdout","time":983.512421363,"data":"  r5     trunc300 all [0.743, 0.604, 0.366] | loop [0.809, 0.658, 0.399]\n"}
+,{"stream_name":"stdout","time":983.512425129,"data":"  r5     mean fall: all 0.114, loop 0.086 (ratio 0.75) | truncated fine-tune fall (all) 0.070\n"}
+,{"stream_name":"stdout","time":983.512428834,"data":"VERDICT A1 (loop-only): INCOMPLETE | VERDICT A2 (truncated fine-tune): INCOMPLETE\n"}
+,{"stream_name":"stdout","time":983.870388566,"data":"total 983s\n"}
+,{"stream_name":"stderr","time":985.917351581,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":985.917395795,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":986.167766146,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":986.167791234,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":986.899632658,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":987.843199796,"data":"[NbConvertApp] Writing 330374 bytes to __results__.html\n"}
+]

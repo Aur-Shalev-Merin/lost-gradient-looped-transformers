@@ -1,0 +1,2 @@
+  parcae trunc300 fine-tune seed 2011: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0003, 'seed': 2011, 'nonfinite': 0, 'clipped_frac': 0.6, 'ok': True, 's': 267, 'k': 2}
+  parcae trunc300: all [0.617, 0.434, 0.211] | loop [0.693, 0.486, 0.238] (134s)

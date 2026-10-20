@@ -1,0 +1,21 @@
+v167 driver b6fd416e48f2 dev cuda amp True | params 163.5M | train ex 7000, val/test chunks 170/492
+selftest decomposition R=1: model 1.885320 manual 1.885320
+selftest decomposition R=4: model 1.856819 manual 1.856819
+selftest decomposition R=8: model 1.856685 manual 1.856685
+selftest checkpointed vs plain k=4: {'other': '3.4e-07', 'prelude': '9.3e-07', 'adapter': '6.4e-07', 'core_block': '6.3e-07', 'coda': '2.7e-07'}
+selftest damped a=0.5 checkpointed vs plain: {'other': '3.0e-07', 'prelude': '8.5e-07', 'adapter': '4.8e-07', 'core_block': '4.3e-07', 'coda': '2.5e-07'}
+selftest fp16 vs fp32 k=1: {'other': 0.0456, 'prelude': 0.1662, 'adapter': 0.5986, 'core_block': 0.2567, 'coda': 0.3924}
+selftest fp16 vs fp32 k=4: {'other': 0.0437, 'prelude': 0.1412, 'adapter': 0.44, 'core_block': 0.2235, 'coda': 0.3924}
+selftest floor: core grad norm k=0 0.000e+00, k=1 1.921e+00
+selftest OK
+cell R=8 a=0.50 k=8 lr=0.0001 seed=1671103: val 1.1969 test 1.1761 rho_end 0.587 nonfinite 0 (889s, peak 7.3 GB)
+cell R=8 a=1.00 k=8 lr=0.0001 seed=1671106: val 1.1964 test 1.1755 rho_end 0.301 nonfinite 1 (892s, peak 7.2 GB)
+cell R=8 a=0.30 k=2 lr=0.0001 seed=1671101: val 1.1993 test 1.1770 rho_end 0.735 nonfinite 0 (539s, peak 7.3 GB)
+cell R=8 a=0.30 k=2 lr=0.0001 seed=1671102: val 1.1988 test 1.1770 rho_end 0.735 nonfinite 0 (539s, peak 7.3 GB)
+cell R=8 a=0.50 k=2 lr=0.0001 seed=1671105: val 1.1982 test 1.1764 rho_end 0.588 nonfinite 0 (539s, peak 7.3 GB)
+cell R=8 a=1.00 k=1 lr=0.0001 seed=1671101: val 1.1992 test 1.1769 rho_end 0.297 nonfinite 0 (481s, peak 7.2 GB)
+cell R=8 a=1.00 k=1 lr=0.0001 seed=1671103: val 1.1980 test 1.1770 rho_end 0.296 nonfinite 1 (481s, peak 7.2 GB)
+cell R=8 a=0.30 k=1 lr=0.0001 seed=1671105: val 1.1992 test 1.1774 rho_end 0.734 nonfinite 0 (480s, peak 7.3 GB)
+cell R=8 a=0.50 k=0 lr=0.0003 seed=1671101: val 1.2801 test 1.2577 rho_end 0.593 nonfinite 0 (347s, peak 6.0 GB)
+cell R=8 a=0.30 k=0 lr=0.0003 seed=1671102: val 1.2778 test 1.2564 rho_end 0.733 nonfinite 0 (347s, peak 6.0 GB)
+cell R=8 a=0.50 k=0 lr=0.0003 seed=1671105: val 1.2792 test 1.2571 rho_end 0.594 nonfinite 0 (346s, peak 6.0 GB)

@@ -1,0 +1,155 @@
+[{"stream_name":"stdout","time":26782.679726485,"data":"job exit 0 elapsed 26774s\n"}
+,{"stream_name":"stdout","time":27382.841019584,"data":"job exit 0 elapsed 27375s\n"}
+,{"stream_name":"stdout","time":27382.841533447,"data":"1.08 |gk| 0.72 S 65536 (1775s)\n"}
+,{"stream_name":"stdout","time":27382.841548551,"data":"scored k1_l0.910 seed 1741101: test 1.3986 val 1.4224 Abar 0.9227 nonfinite 0 (2175s)\n"}
+,{"stream_name":"stdout","time":27382.841553849,"data":"  k=1 lam=0.924 step 0: A 0.7483 A_loop 0.5748 |gR| 6.48 |gk| 3.00 S 65536 (3s)\n"}
+,{"stream_name":"stdout","time":27382.841558464,"data":"  k=1 lam=0.924 step 100: A 0.9361 A_loop 0.8287 |gR| 1.38 |gk| 0.92 S 32768 (357s)\n"}
+,{"stream_name":"stdout","time":27382.841563048,"data":"  k=1 lam=0.924 step 200: A 0.9196 A_loop 0.8096 |gR| 1.45 |gk| 0.78 S 16384 (712s)\n"}
+,{"stream_name":"stdout","time":27382.841567548,"data":"  k=1 lam=0.924 step 300: A 0.9168 A_loop 0.8136 |gR| 1.17 |gk| 0.73 S 8192 (1066s)\n"}
+,{"stream_name":"stdout","time":27382.841572028,"data":"  k=1 lam=0.924 step 400: A 0.9196 A_loop 0.8333 |gR| 0.99 |gk| 0.69 S 8192 (1419s)\n"}
+,{"stream_name":"stdout","time":27382.841576423,"data":"  k=1 lam=0.924 step 500: A 0.9149 A_loop 0.8300 |gR| 1.00 |gk| 0.68 S 8192 (1773s)\n"}
+,{"stream_name":"stdout","time":27382.841581175,"data":"scored k1_l0.924 seed 1741102: test 1.3952 val 1.4171 Abar 0.9186 nonfinite 3 (2172s)\n"}
+,{"stream_name":"stdout","time":27382.841591851,"data":"scored floor seed 1741103: test 1.5357 val 1.5549 Abar - nonfinite 0 (497s)\n"}
+,{"stream_name":"stdout","time":27382.841609221,"data":"  k=1 lam=0.820 step 100: A 0.9493 A_loop 0.8727 |gR| 1.31 |gk| 0.82 S 16384 (356s)\n"}
+,{"stream_name":"stdout","time":27382.841614571,"data":"  k=1 lam=0.820 step 200: A 0.9516 A_loop 0.8840 |gR| 1.30 |gk| 0.87 S 16384 (710s)\n"}
+,{"stream_name":"stdout","time":27382.84162026,"data":"  k=1 lam=0.820 step 300: A 0.9457 A_loop 0.8791 |gR| 1.06 |gk| 0.70 S 16384 (1064s)\n"}
+,{"stream_name":"stdout","time":27382.841625438,"data":"  k=1 lam=0.820 step 400: A 0.9411 A_loop 0.8845 |gR| 1.08 |gk| 0.72 S 16384 (1419s)\n"}
+,{"stream_name":"stdout","time":27382.841630367,"data":"  k=1 lam=0.820 step 500: A 0.9407 A_loop 0.8844 |gR| 1.09 |gk| 0.78 S 16384 (1773s)\n"}
+,{"stream_name":"stdout","time":27382.841635323,"data":"scored k1_l0.820 seed 1741103: test 1.3909 val 1.4137 Abar 0.9442 nonfinite 3 (2172s)\n"}
+,{"stream_name":"stdout","time":27382.841639888,"data":"  k=1 lam=0.625 step 0: A 0.8875 A_loop 0.8081 |gR| 5.70 |gk| 2.71 S 65536 (3s)\n"}
+,{"stream_name":"stdout","time":27382.841644466,"data":"  k=1 lam=0.625 step 100: A 0.9773 A_loop 0.9493 |gR| 1.24 |gk| 0.86 S 65536 (357s)\n"}
+,{"stream_name":"stdout","time":27382.841649127,"data":"  k=1 lam=0.625 step 200: A 0.9763 A_loop 0.9495 |gR| 1.23 |gk| 0.82 S 65536 (712s)\n"}
+,{"stream_name":"stdout","time":27382.841653659,"data":"  k=1 lam=0.625 step 300: A 0.9756 A_loop 0.9502 |gR| 1.07 |gk| 0.73 S 65536 (1067s)\n"}
+,{"stream_name":"stdout","time":27382.84166967,"data":"  k=1 lam=0.625 step 400: A 0.9727 A_loop 0.9513 |gR| 1.00 |gk| 0.71 S 65536 (1422s)\n"}
+,{"stream_name":"stdout","time":27382.841674289,"data":"  k=1 lam=0.625 step 500: A 0.9732 A_loop 0.9517 |gR| 0.95 |gk| 0.68 S 65536 (1776s)\n"}
+,{"stream_name":"stdout","time":27382.841678486,"data":"scored k1_l0.625 seed 1741104: test 1.3809 val 1.4058 Abar 0.9743 nonfinite 0 (2176s)\n"}
+,{"stream_name":"stdout","time":27382.84168274,"data":"  k=1 lam=0.500 step 0: A 0.9208 A_loop 0.8676 |gR| 6.70 |gk| 2.68 S 65536 (3s)\n"}
+,{"stream_name":"stdout","time":27382.841687027,"data":"  k=1 lam=0.500 step 100: A 0.9880 A_loop 0.9749 |gR| 1.27 |gk| 0.89 S 32768 (357s)\n"}
+,{"stream_name":"stdout","time":27382.841697656,"data":"  k=1 lam=0.500 step 200: A 0.9866 A_loop 0.9736 |gR| 1.09 |gk| 0.73 S 32768 (711s)\n"}
+,{"stream_name":"stdout","time":27382.841710503,"data":"  k=1 lam=0.500 step 300: A 0.9866 A_loop 0.9737 |gR| 1.00 |gk| 0.69 S 32768 (1066s)\n"}
+,{"stream_name":"stdout","time":27382.841713035,"data":"  k=1 lam=0.500 step 400: A 0.9850 A_loop 0.9738 |gR| 1.08 |gk| 0.77 S 32768 (1421s)\n"}
+,{"stream_name":"stdout","time":27382.841715304,"data":"  k=1 lam=0.500 step 500: A 0.9842 A_loop 0.9733 |gR| 0.97 |gk| 0.72 S 32768 (1775s)\n"}
+,{"stream_name":"stdout","time":27382.841717478,"data":"scored k1_l0.500 seed 1741105: test 1.3760 val 1.3997 Abar 0.9856 nonfinite 1 (2174s)\n"}
+,{"stream_name":"stdout","time":27382.841719735,"data":"  k=1 lam=0.910 step 0: A 0.7470 A_loop 0.5723 |gR| 6.70 |gk| 2.68 S 65536 (3s)\n"}
+,{"stream_name":"stdout","time":27382.841721909,"data":"  k=1 lam=0.910 step 100: A 0.9356 A_loop 0.8346 |gR| 1.25 |gk| 0.87 S 32768 (356s)\n"}
+,{"stream_name":"stdout","time":27382.841724179,"data":"  k=1 lam=0.910 step 200: A 0.9289 A_loop 0.8339 |gR| 1.08 |gk| 0.73 S 32768 (711s)\n"}
+,{"stream_name":"stdout","time":27382.841726361,"data":"  k=1 lam=0.910 step 300: A 0.9284 A_loop 0.8330 |gR| 1.02 |gk| 0.68 S 32768 (1065s)\n"}
+,{"stream_name":"stdout","time":27382.841728549,"data":"  k=1 lam=0.910 step 400: A 0.9155 A_loop 0.8267 |gR| 1.10 |gk| 0.75 S 32768 (1420s)\n"}
+,{"stream_name":"stdout","time":27382.841730813,"data":"  k=1 lam=0.910 step 500: A 0.9169 A_loop 0.8345 |gR| 0.99 |gk| 0.73 S 32768 (1774s)\n"}
+,{"stream_name":"stdout","time":27382.841733007,"data":"scored k1_l0.910 seed 1741105: test 1.3949 val 1.4191 Abar 0.9223 nonfinite 1 (2173s)\n"}
+,{"stream_name":"stdout","time":27382.841735225,"data":"  k=1 lam=0.924 step 0: A 0.7398 A_loop 0.5571 |gR| 6.27 |gk| 3.00 S 65536 (3s)\n"}
+,{"stream_name":"stdout","time":27382.841737487,"data":"  k=1 lam=0.924 step 100: A 0.9281 A_loop 0.8155 |gR| 1.63 |gk| 1.07 S 65536 (357s)\n"}
+,{"stream_name":"stdout","time":27382.841739687,"data":"  k=1 lam=0.924 step 200: A 0.9287 A_loop 0.8248 |gR| 1.20 |gk| 0.78 S 32768 (712s)\n"}
+,{"stream_name":"stdout","time":27382.841742033,"data":"  k=1 lam=0.924 step 300: A 0.9217 A_loop 0.8256 |gR| 1.15 |gk| 0.74 S 32768 (1066s)\n"}
+,{"stream_name":"stdout","time":27382.841744272,"data":"  k=1 lam=0.924 step 400: A 0.9157 A_loop 0.8279 |gR| 1.02 |gk| 0.68 S 32768 (1420s)\n"}
+,{"stream_name":"stdout","time":27382.841746509,"data":"  k=1 lam=0.924 step 500: A 0.9127 A_loop 0.8254 |gR| 1.01 |gk| 0.69 S 32768 (1775s)\n"}
+,{"stream_name":"stdout","time":27382.841748709,"data":"scored k1_l0.924 seed 1741106: test 1.3976 val 1.4195 Abar 0.9181 nonfinite 1 (2174s)\n"}
+,{"stream_name":"stdout","time":27382.841750921,"data":"  k=1 lam=0.820 step 0: A 0.8052 A_loop 0.6727 |gR| 5.86 |gk| 2.87 S 65536 (3s)\n"}
+,{"stream_name":"stdout","time":27382.841753103,"data":"  k=1 lam=0.820 step 100: A 0.9503 A_loop 0.8757 |gR| 1.46 |gk| 0.97 S 32768 (357s)\n"}
+,{"stream_name":"stdout","time":27382.841755299,"data":"  k=1 lam=0.820 step 200: A 0.9513 A_loop 0.8853 |gR| 1.18 |gk| 0.78 S 32768 (711s)\n"}
+,{"stream_name":"stdout","time":27382.841757485,"data":"  k=1 lam=0.820 step 300: A 0.9462 A_loop 0.8830 |gR| 1.05 |gk| 0.73 S 32768 (1065s)\n"}
+,{"stream_name":"stdout","time":27382.841759679,"data":"  k=1 lam=0.820 step 400: A 0.9398 A_loop 0.8796 |gR| 0.93 |gk| 0.65 S 32768 (1419s)\n"}
+,{"stream_name":"stdout","time":27382.84176214,"data":"  k=1 lam=0.820 step 500: A 0.9384 A_loop 0.8823 |gR| 1.02 |gk| 0.69 S 32768 (1773s)\n"}
+,{"stream_name":"stdout","time":27382.841764372,"data":"scored k1_l0.820 seed 1741107: test 1.3889 val 1.4126 Abar 0.9444 nonfinite 1 (2173s)\n"}
+,{"stream_name":"stdout","time":27382.841766582,"data":"  k=1 lam=0.625 step 0: A 0.8843 A_loop 0.8068 |gR| 6.16 |gk| 2.85 S 65536 (3s)\n"}
+,{"stream_name":"stdout","time":27382.841768777,"data":"  k=1 lam=0.625 step 100: A 0.9787 A_loop 0.9501 |gR| 1.31 |gk| 0.87 S 16384 (356s)\n"}
+,{"stream_name":"stdout","time":27382.841773428,"data":"  k=1 lam=0.625 step 200: A 0.9775 A_loop 0.9519 |gR| 1.07 |gk| 0.73 S 16384 (711s)\n"}
+,{"stream_name":"stdout","time":27382.841775709,"data":"  k=1 lam=0.625 step 300: A 0.9769 A_loop 0.9518 |gR| 1.08 |gk| 0.71 S 16384 (1065s)\n"}
+,{"stream_name":"stdout","time":27382.8417779,"data":"  k=1 lam=0.625 step 400: A 0.9719 A_loop 0.9489 |gR| 1.00 |gk| 0.69 S 16384 (1419s)\n"}
+,{"stream_name":"stdout","time":27382.841780089,"data":"  k=1 lam=0.625 step 500: A 0.9715 A_loop 0.9490 |gR| 1.07 |gk| 0.69 S 16384 (1773s)\n"}
+,{"stream_name":"stdout","time":27382.841782272,"data":"scored k1_l0.625 seed 1741108: test 1.3789 val 1.3992 Abar 0.9746 nonfinite 2 (2172s)\n"}
+,{"stream_name":"stdout","time":27382.841786963,"data":"  k=1 lam=0.500 step 0: A 0.9205 A_loop 0.8650 |gR| 5.24 |gk| 2.54 S 65536 (3s)\n"}
+,{"stream_name":"stdout","time":27382.841789244,"data":"  k=1 lam=0.500 step 100: A 0.9874 A_loop 0.9726 |gR| 1.34 |gk| 0.96 S 32768 (356s)\n"}
+,{"stream_name":"stdout","time":27382.841791516,"data":"  k=1 lam=0.500 step 200: A 0.9868 A_loop 0.9740 |gR| 1.22 |gk| 0.86 S 32768 (711s)\n"}
+,{"stream_name":"stdout","time":27382.841793689,"data":"  k=1 lam=0.500 step 300: A 0.9858 A_loop 0.9729 |gR| 1.18 |gk| 0.72 S 32768 (1066s)\n"}
+,{"stream_name":"stdout","time":27382.841795958,"data":"  k=1 lam=0.500 step 400: A 0.9854 A_loop 0.9741 |gR| 1.79 |gk| 1.50 S 16384 (1419s)\n"}
+,{"stream_name":"stdout","time":27382.841798151,"data":"  k=1 lam=0.500 step 500: A 0.9843 A_loop 0.9733 |gR| 1.04 |gk| 0.71 S 16384 (1773s)\n"}
+,{"stream_name":"stdout","time":27382.841800328,"data":"scored k1_l0.500 seed 1741109: test 1.3797 val 1.4027 Abar 0.9855 nonfinite 2 (2172s)\n"}
+,{"stream_name":"stdout","time":27382.841808168,"data":"  k=1 lam=0.910 step 0: A 0.7563 A_loop 0.5824 |gR| 5.24 |gk| 2.54 S 65536 (3s)\n"}
+,{"stream_name":"stdout","time":27382.841810382,"data":"  k=1 lam=0.910 step 100: A 0.9313 A_loop 0.8209 |gR| 1.40 |gk| 0.98 S 32768 (356s)\n"}
+,{"stream_name":"stdout","time":27382.841812599,"data":"  k=1 lam=0.910 step 200: A 0.9319 A_loop 0.8329 |gR| 1.25 |gk| 0.89 S 32768 (711s)\n"}
+,{"stream_name":"stdout","time":27382.841814887,"data":"  k=1 lam=0.910 step 300: A 0.9258 A_loop 0.8323 |gR| 1.08 |gk| 0.73 S 32768 (1065s)\n"}
+,{"stream_name":"stdout","time":27382.841817086,"data":"  k=1 lam=0.910 step 400: A 0.9200 A_loop 0.8348 |gR| 1.20 |gk| 0.82 S 32768 (1419s)\n"}
+,{"stream_name":"stdout","time":27382.841819358,"data":"  k=1 lam=0.910 step 500: A 0.9171 A_loop 0.8361 |gR| 1.02 |gk| 0.68 S 32768 (1773s)\n"}
+,{"stream_name":"stdout","time":27382.841821546,"data":"scored k1_l0.910 seed 1741109: test 1.3975 val 1.4215 Abar 0.9220 nonfinite 1 (2172s)\n"}
+,{"stream_name":"stdout","time":27382.841823767,"data":"\n"}
+,{"stream_name":"stdout","time":27382.841825912,"data":"7 |gk| 1.03 S 1024 (1812s)\n"}
+,{"stream_name":"stdout","time":27382.841828082,"data":"scored k4_l1.970 seed 1741101: test 1.3977 val 1.4208 Abar 0.9177 nonfinite 6 (2218s)\n"}
+,{"stream_name":"stdout","time":27382.841830671,"data":"  k=4 lam=2.030 step 0: A 0.6499 A_loop 0.4095 |gR| 6.48 |gk| 5.16 S 65536 (3s)\n"}
+,{"stream_name":"stdout","time":27382.8418329,"data":"  k=4 lam=2.030 step 100: A 0.9270 A_loop 0.7836 |gR| 1.53 |gk| 1.31 S 32768 (366s)\n"}
+,{"stream_name":"stdout","time":27382.841835309,"data":"  k=4 lam=2.030 step 200: A 0.9301 A_loop 0.8261 |gR| 1.21 |gk| 1.10 S 32768 (729s)\n"}
+,{"stream_name":"stdout","time":27382.841837494,"data":"  k=4 lam=2.030 step 300: A 0.9252 A_loop 0.8187 |gR| 1.13 |gk| 1.04 S 16384 (1092s)\n"}
+,{"stream_name":"stdout","time":27382.841839812,"data":"  k=4 lam=2.030 step 400: A -0.9195 A_loop -0.9788 |gR| 4180.51 |gk| 1.77 S 4 (1451s)\n"}
+,{"stream_name":"stdout","time":27382.841844488,"data":"  k=4 lam=2.030 step 500: A -0.9759 A_loop -0.9966 |gR| 1825659.50 |gk| 7.68 S 0.0078125 (1808s)\n"}
+,{"stream_name":"stdout","time":27382.841846821,"data":"scored k4_l2.030 seed 1741102: test 6.9964 val 7.1522 Abar 0.2592 nonfinite 25 (2209s)\n"}
+,{"stream_name":"stdout","time":27382.84185045,"data":"  k=4 lam=1.750 step 100: A 0.9112 A_loop 0.7417 |gR| 1.33 |gk| 1.21 S 16384 (366s)\n"}
+,{"stream_name":"stdout","time":27382.841852664,"data":"  k=4 lam=1.750 step 200: A 0.9528 A_loop 0.8781 |gR| 1.40 |gk| 1.32 S 16384 (728s)\n"}
+,{"stream_name":"stdout","time":27382.841854854,"data":"  k=4 lam=1.750 step 300: A 0.9482 A_loop 0.8759 |gR| 1.10 |gk| 1.02 S 16384 (1091s)\n"}
+,{"stream_name":"stdout","time":27382.841857052,"data":"  k=4 lam=1.750 step 400: A 0.9341 A_loop 0.8599 |gR| 1.10 |gk| 1.03 S 8192 (1454s)\n"}
+,{"stream_name":"stdout","time":27382.841859334,"data":"  k=4 lam=1.750 step 500: A 0.9221 A_loop 0.8316 |gR| 1.16 |gk| 1.08 S 1024 (1816s)\n"}
+,{"stream_name":"stdout","time":27382.841861513,"data":"scored k4_l1.750 seed 1741103: test 1.3894 val 1.4125 Abar 0.9217 nonfinite 7 (2221s)\n"}
+,{"stream_name":"stdout","time":27382.841863705,"data":"scored floor seed 1741104: test 1.5384 val 1.5588 Abar - nonfinite 0 (486s)\n"}
+,{"stream_name":"stdout","time":27382.841865882,"data":"  k=4 lam=1.170 step 0: A 0.8345 A_loop 0.7157 |gR| 5.70 |gk| 4.55 S 65536 (3s)\n"}
+,{"stream_name":"stdout","time":27382.841868154,"data":"  k=4 lam=1.170 step 100: A 0.9815 A_loop 0.9547 |gR| 1.24 |gk| 1.17 S 65536 (366s)\n"}
+,{"stream_name":"stdout","time":27382.841870337,"data":"  k=4 lam=1.170 step 200: A 0.9722 A_loop 0.9311 |gR| 1.35 |gk| 1.24 S 65536 (730s)\n"}
+,{"stream_name":"stdout","time":27382.841872509,"data":"  k=4 lam=1.170 step 300: A 0.9760 A_loop 0.9443 |gR| 1.11 |gk| 1.02 S 65536 (1093s)\n"}
+,{"stream_name":"stdout","time":27382.841874711,"data":"  k=4 lam=1.170 step 400: A 0.9802 A_loop 0.9612 |gR| 1.02 |gk| 0.97 S 65536 (1456s)\n"}
+,{"stream_name":"stdout","time":27382.841876976,"data":"  k=4 lam=1.170 step 500: A 0.9722 A_loop 0.9433 |gR| 0.98 |gk| 0.92 S 65536 (1819s)\n"}
+,{"stream_name":"stdout","time":27382.841879159,"data":"scored k4_l1.170 seed 1741104: test 1.3794 val 1.4052 Abar 0.9763 nonfinite 0 (2226s)\n"}
+,{"stream_name":"stdout","time":27382.841881352,"data":"  k=4 lam=0.940 step 0: A 0.8595 A_loop 0.7624 |gR| 6.70 |gk| 5.09 S 65536 (3s)\n"}
+,{"stream_name":"stdout","time":27382.841883543,"data":"  k=4 lam=0.940 step 100: A 0.9886 A_loop 0.9716 |gR| 1.34 |gk| 1.28 S 65536 (366s)\n"}
+,{"stream_name":"stdout","time":27382.841885819,"data":"  k=4 lam=0.940 step 200: A 0.9872 A_loop 0.9706 |gR| 1.07 |gk| 1.02 S 65536 (729s)\n"}
+,{"stream_name":"stdout","time":27382.84188823,"data":"  k=4 lam=0.940 step 300: A 0.9873 A_loop 0.9713 |gR| 1.02 |gk| 0.96 S 65536 (1092s)\n"}
+,{"stream_name":"stdout","time":27382.841890441,"data":"  k=4 lam=0.940 step 400: A 0.9858 A_loop 0.9724 |gR| 1.11 |gk| 1.04 S 65536 (1456s)\n"}
+,{"stream_name":"stdout","time":27382.841892619,"data":"  k=4 lam=0.940 step 500: A 0.9817 A_loop 0.9640 |gR| 0.98 |gk| 0.93 S 65536 (1819s)\n"}
+,{"stream_name":"stdout","time":27382.841894795,"data":"scored k4_l0.940 seed 1741105: test 1.3749 val 1.3988 Abar 0.9843 nonfinite 0 (2226s)\n"}
+,{"stream_name":"stdout","time":27382.841896986,"data":"  k=4 lam=1.970 step 0: A 0.6197 A_loop 0.3554 |gR| 6.70 |gk| 5.09 S 65536 (3s)\n"}
+,{"stream_name":"stdout","time":27382.841899166,"data":"  k=4 lam=1.970 step 100: A 0.9378 A_loop 0.8157 |gR| 1.20 |gk| 1.13 S 512 (363s)\n"}
+,{"stream_name":"stdout","time":27382.841901347,"data":"  k=4 lam=1.970 step 200: A 0.9402 A_loop 0.8527 |gR| 1.12 |gk| 1.06 S 512 (725s)\n"}
+,{"stream_name":"stdout","time":27382.841903517,"data":"  k=4 lam=1.970 step 300: A 0.9025 A_loop 0.7537 |gR| 1.07 |gk| 0.96 S 256 (1086s)\n"}
+,{"stream_name":"stdout","time":27382.84190759,"data":"  k=4 lam=1.970 step 400: A 0.9176 A_loop 0.8232 |gR| 1.17 |gk| 1.10 S 256 (1448s)\n"}
+,{"stream_name":"stdout","time":27382.841909835,"data":"  k=4 lam=1.970 step 500: A 0.8995 A_loop 0.7823 |gR| 1.04 |gk| 0.97 S 256 (1809s)\n"}
+,{"stream_name":"stdout","time":27382.841912011,"data":"scored k4_l1.970 seed 1741105: test 1.3972 val 1.4182 Abar 0.9224 nonfinite 8 (2215s)\n"}
+,{"stream_name":"stdout","time":27382.841914204,"data":"  k=4 lam=2.030 step 0: A 0.6252 A_loop 0.3631 |gR| 6.27 |gk| 4.90 S 65536 (3s)\n"}
+,{"stream_name":"stdout","time":27382.841916379,"data":"  k=4 lam=2.030 step 100: A 0.9334 A_loop 0.8223 |gR| 1.54 |gk| 1.40 S 65536 (366s)\n"}
+,{"stream_name":"stdout","time":27382.841918605,"data":"  k=4 lam=2.030 step 200: A 0.9380 A_loop 0.8415 |gR| 1.20 |gk| 1.12 S 65536 (729s)\n"}
+,{"stream_name":"stdout","time":27382.841920793,"data":"  k=4 lam=2.030 step 300: A 0.9068 A_loop 0.7774 |gR| 1.22 |gk| 1.10 S 65536 (1093s)\n"}
+,{"stream_name":"stdout","time":27382.841923001,"data":"  k=4 lam=2.030 step 400: A 0.9050 A_loop 0.7923 |gR| 1.06 |gk| 0.99 S 65536 (1456s)\n"}
+,{"stream_name":"stdout","time":27382.841925184,"data":"  k=4 lam=2.030 step 500: A 0.8987 A_loop 0.7836 |gR| 1.16 |gk| 1.04 S 32768 (1819s)\n"}
+,{"stream_name":"stdout","time":27382.841927368,"data":"scored k4_l2.030 seed 1741106: test 1.3948 val 1.4149 Abar 0.9065 nonfinite 2 (2225s)\n"}
+,{"stream_name":"stdout","time":27382.841929556,"data":"  k=4 lam=1.750 step 0: A 0.7265 A_loop 0.5398 |gR| 5.86 |gk| 4.74 S 65536 (3s)\n"}
+,{"stream_name":"stdout","time":27382.841931742,"data":"  k=4 lam=1.750 step 100: A 0.9547 A_loop 0.8773 |gR| 1.46 |gk| 1.37 S 65536 (366s)\n"}
+,{"stream_name":"stdout","time":27382.841934172,"data":"  k=4 lam=1.750 step 200: A 0.9409 A_loop 0.8493 |gR| 1.18 |gk| 1.13 S 65536 (729s)\n"}
+,{"stream_name":"stdout","time":27382.841936416,"data":"  k=4 lam=1.750 step 300: A 0.9090 A_loop 0.7775 |gR| 1.31 |gk| 1.04 S 65536 (1092s)\n"}
+,{"stream_name":"stdout","time":27382.841938594,"data":"  k=4 lam=1.750 step 400: A 0.9457 A_loop 0.8883 |gR| 1.04 |gk| 0.97 S 65536 (1455s)\n"}
+,{"stream_name":"stdout","time":27382.841940784,"data":"  k=4 lam=1.750 step 500: A 0.9237 A_loop 0.8422 |gR| 1.07 |gk| 0.99 S 65536 (1818s)\n"}
+,{"stream_name":"stdout","time":27382.841942979,"data":"scored k4_l1.750 seed 1741107: test 1.3874 val 1.4102 Abar 0.9407 nonfinite 0 (2226s)\n"}
+,{"stream_name":"stdout","time":27382.841945452,"data":"  k=4 lam=1.170 step 0: A 0.7990 A_loop 0.6619 |gR| 6.16 |gk| 4.74 S 65536 (3s)\n"}
+,{"stream_name":"stdout","time":27382.841947668,"data":"  k=4 lam=1.170 step 100: A 0.9779 A_loop 0.9412 |gR| 1.43 |gk| 1.29 S 16384 (365s)\n"}
+,{"stream_name":"stdout","time":27382.841949872,"data":"  k=4 lam=1.170 step 200: A 0.9670 A_loop 0.9157 |gR| 1.09 |gk| 1.03 S 16384 (728s)\n"}
+,{"stream_name":"stdout","time":27382.841952059,"data":"  k=4 lam=1.170 step 300: A 0.9738 A_loop 0.9373 |gR| 1.13 |gk| 1.05 S 16384 (1091s)\n"}
+,{"stream_name":"stdout","time":27382.841954244,"data":"  k=4 lam=1.170 step 400: A 0.9737 A_loop 0.9474 |gR| 1.03 |gk| 0.98 S 16384 (1454s)\n"}
+,{"stream_name":"stdout","time":27382.841956431,"data":"  k=4 lam=1.170 step 500: A 0.9448 A_loop 0.8801 |gR| 1.38 |gk| 0.98 S 16384 (1817s)\n"}
+,{"stream_name":"stdout","time":27382.841958599,"data":"scored k4_l1.170 seed 1741108: test 1.3771 val 1.3973 Abar 0.9724 nonfinite 2 (2224s)\n"}
+,{"stream_name":"stdout","time":27382.841960802,"data":"  k=4 lam=0.940 step 0: A 0.8565 A_loop 0.7537 |gR| 5.24 |gk| 4.28 S 65536 (3s)\n"}
+,{"stream_name":"stdout","time":27382.841963005,"data":"  k=4 lam=0.940 step 100: A 0.9829 A_loop 0.9529 |gR| 1.30 |gk| 1.22 S 32768 (366s)\n"}
+,{"stream_name":"stdout","time":27382.841965187,"data":"  k=4 lam=0.940 step 200: A 0.9886 A_loop 0.9736 |gR| 1.36 |gk| 1.27 S 32768 (729s)\n"}
+,{"stream_name":"stdout","time":27382.841969047,"data":"  k=4 lam=0.940 step 300: A 0.9850 A_loop 0.9667 |gR| 1.11 |gk| 0.99 S 32768 (1092s)\n"}
+,{"stream_name":"stdout","time":27382.841971356,"data":"  k=4 lam=0.940 step 400: A 0.9848 A_loop 0.9698 |gR| 1.24 |gk| 1.10 S 32768 (1455s)\n"}
+,{"stream_name":"stdout","time":27382.841973536,"data":"  k=4 lam=0.940 step 500: A 0.9858 A_loop 0.9735 |gR| 1.06 |gk| 1.00 S 32768 (1818s)\n"}
+,{"stream_name":"stdout","time":27382.841975723,"data":"scored k4_l0.940 seed 1741109: test 1.3774 val 1.4009 Abar 0.9855 nonfinite 1 (2225s)\n"}
+,{"stream_name":"stdout","time":27382.841977911,"data":"  k=4 lam=1.970 step 0: A 0.6386 A_loop 0.3801 |gR| 5.24 |gk| 4.28 S 65536 (3s)\n"}
+,{"stream_name":"stdout","time":27382.841980092,"data":"  k=4 lam=1.970 step 100: A 0.9451 A_loop 0.8495 |gR| 1.33 |gk| 1.25 S 32768 (366s)\n"}
+,{"stream_name":"stdout","time":27382.841982296,"data":"  k=4 lam=1.970 step 200: A 0.9424 A_loop 0.8546 |gR| 1.43 |gk| 1.33 S 32768 (729s)\n"}
+,{"stream_name":"stdout","time":27382.841984482,"data":"  k=4 lam=1.970 step 300: A 0.9310 A_loop 0.8398 |gR| 1.09 |gk| 1.01 S 32768 (1092s)\n"}
+,{"stream_name":"stdout","time":27382.841986689,"data":"  k=4 lam=1.970 step 400: A 0.9264 A_loop 0.8407 |gR| 1.04 |gk| 0.98 S 16384 (1455s)\n"}
+,{"stream_name":"stdout","time":27382.841988884,"data":"  k=4 lam=1.970 step 500: A 0.9243 A_loop 0.8423 |gR| 1.19 |gk| 1.08 S 1024 (1816s)\n"}
+,{"stream_name":"stdout","time":27382.841991101,"data":"scored k4_l1.970 seed 1741109: test 1.3972 val 1.4193 Abar 0.8962 nonfinite 6 (2222s)\n"}
+,{"stream_name":"stdout","time":27382.841993424,"data":"\n"}
+,{"stream_name":"stderr","time":27384.888576235,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":27384.888608411,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":27385.161867772,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":27385.161892457,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":27385.921230327,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":27387.002061729,"data":"[NbConvertApp] Writing 304178 bytes to __results__.html\n"}
+]

@@ -1,0 +1,10 @@
+v192: tomg-group-umd/huginn-0125 subset adapter + core_block[0] (all params) (451154880 params) dtype torch.bfloat16, seqs 16-23 of 32
+R=32 seq 16 gsm8k    err direct k1/2/4 0.9388 0.8615 0.7074 | subtraction 0.9388 0.8615 0.7074 | sum-vs-full 8.4e-03 | sketch: norm 1.5e-03 cos 2.3e-03 err 5.2e-04 (900s, total 957s)
+R=32 seq 17 gsm8k    err direct k1/2/4 0.9482 0.8748 0.7143 | subtraction 0.9482 0.8748 0.7143 | sum-vs-full 8.0e-03 | sketch: norm 1.7e-03 cos 1.4e-03 err 3.5e-04 (906s, total 1863s)
+R=32 seq 18 gsm8k    err direct k1/2/4 0.9399 0.8773 0.7623 | subtraction 0.9400 0.8773 0.7623 | sum-vs-full 8.0e-03 | sketch: norm 1.5e-03 cos 2.1e-03 err 3.6e-04 (920s, total 2783s)
+R=32 seq 19 gsm8k    err direct k1/2/4 0.9300 0.8452 0.6673 | subtraction 0.9300 0.8452 0.6674 | sum-vs-full 8.6e-03 | sketch: norm 1.9e-03 cos 1.2e-03 err 4.6e-04 (925s, total 3708s)
+R=32 seq 20 gsm8k    err direct k1/2/4 0.9647 0.9246 0.8226 | subtraction 0.9647 0.9246 0.8226 | sum-vs-full 7.5e-03 | sketch: norm 1.6e-03 cos 1.1e-03 err 3.7e-04 (928s, total 4637s)
+R=32 seq 21 gsm8k    err direct k1/2/4 0.9196 0.8290 0.6427 | subtraction 0.9196 0.8291 0.6427 | sum-vs-full 8.4e-03 | sketch: norm 1.4e-03 cos 1.7e-03 err 1.5e-04 (924s, total 5561s)
+R=32 seq 22 gsm8k    err direct k1/2/4 0.9063 0.8066 0.6228 | subtraction 0.9063 0.8066 0.6228 | sum-vs-full 8.5e-03 | sketch: norm 1.2e-03 cos 1.7e-03 err 3.4e-04 (921s, total 6482s)
+R=32 seq 23 gsm8k    err direct k1/2/4 0.9173 0.8228 0.6456 | subtraction 0.9173 0.8228 0.6456 | sum-vs-full 8.3e-03 | sketch: norm 1.4e-03 cos 1.4e-03 err 7.6e-04 (894s, total 7376s)
+done 7376 s

@@ -1,0 +1,25 @@
+gpu0/v198_ifm_p0.json: 16 rows, driver 2d4f2c4c9e65, model huginn-s-fixed-pln5, docmask True
+gpu1/v198_ifm_p1.json: 0 rows, driver 2d4f2c4c9e65, model huginn-s-fixed-pln5, docmask True
+gpu0/v198_selftest_gpu0.json: PASS {'fails': []}
+noise floors (repeat of the full pass, err over all params): {'repeat_full_R5_a1': '0.0e+00'}
+
+=== R = 5, a = 1.0: n = 16 sequences, loss median 2.590
+rho: median 0.801 [0.792, 0.821]; range 0.779 - 0.945; rho_i > 1 in 0 of 16
+all   err  k=1 0.767 [0.746, 0.779]  k=2 0.595 [0.564, 0.619]  k=3 0.442 [0.416, 0.471]  k=4 0.292 [0.273, 0.316]
+loop  err  k=1 0.796 [0.782, 0.810]  k=2 0.609 [0.581, 0.633]  k=3 0.443 [0.422, 0.471]  k=4 0.287 [0.279, 0.307]
+part  err  k=1 0.819 [0.804, 0.831]  k=2 0.646 [0.622, 0.672]  k=3 0.488 [0.473, 0.515]  k=4 0.326 [0.310, 0.347]
+all   err_loop = |gR - gk| / |gR - g0| (readout gradient, equal at every k, left out): k=1 0.808  k=2 0.626  k=3 0.464  k=4 0.307
+all   ratio k=1 0.449  k=2 0.608  k=3 0.736  k=4 0.847
+all   cos   k=1 0.680  k=2 0.835  k=3 0.915  k=4 0.963
+rule rho_i^k (median):        k=1 0.801  k=2 0.642  k=3 0.514  k=4 0.412
+geometric aligned / orthogonal: k=1 0.703 / 0.773  k=2 0.465 / 0.583  k=3 0.275 / 0.418  k=4 0.122 / 0.261
+measured-profile aligned / orthogonal: k=1 0.638 / 0.666  k=2 0.436 / 0.519  k=3 0.282 / 0.410  k=4 0.146 / 0.300
+summed backward signal (hidden-state share): k=1 0.732  k=2 0.546  k=3 0.372  k=4 0.203
+per-loop contribution |c_j| / |c_0| (loop params, median): 1 0.738 0.601 0.57 0.783
+aligned form on measured contribution sizes: k=1 0.733  k=2 0.528  k=3 0.364  k=4 0.212
+
+=== direction after Adam (v172 procedure, R = [5]): cos(u_k, u_R) | raw: lost gradient of gbar, size ratio, cosine | loop params cos_u
+a=1.0 full: batch norm median 6.49, 24 of 24 batches clipped
+a=1.0 k=1: cos_u 0.7567 | err 0.767 ratio 0.978 cos 0.6996 | loop cos_u 0.6200
+a=1.0 k=2: cos_u 0.8646 | err 0.529 ratio 0.990 cos 0.8587 | loop cos_u 0.7981
+a=1.0 k=4: cos_u 0.9721 | err 0.221 ratio 0.999 cos 0.9755 | loop cos_u 0.9627

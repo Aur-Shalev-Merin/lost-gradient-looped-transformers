@@ -1,0 +1,29 @@
+[{"stream_name":"stdout","time":3517.384793909,"data":"job exit 0 elapsed 3509s\n"}
+,{"stream_name":"stdout","time":3583.241662779,"data":"job exit 0 elapsed 3575s\n"}
+,{"stream_name":"stdout","time":3583.242143609,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":3583.242156742,"data":"\n"}
+,{"stream_name":"stdout","time":3583.242162752,"data":"Generating train split:   0%|          | 0/7473 [00:00\u003c?, ? examples/s]\n"}
+,{"stream_name":"stdout","time":3583.242168298,"data":"Generating train split: 100%|██████████| 7473/7473 [00:00\u003c00:00, 92069.46 examples/s]\n"}
+,{"stream_name":"stdout","time":3583.242175228,"data":"\n"}
+,{"stream_name":"stdout","time":3583.242180811,"data":"Generating test split:   0%|          | 0/1319 [00:00\u003c?, ? examples/s]\n"}
+,{"stream_name":"stdout","time":3583.242186583,"data":"Generating test split: 100%|██████████| 1319/1319 [00:00\u003c00:00, 287870.07 examples/s]\n"}
+,{"stream_name":"stdout","time":3583.242192191,"data":"v163 driver d5c2647126de (v162 module 0ae4891d7abc) dev cuda amp True R 32\n"}
+,{"stream_name":"stdout","time":3583.242197717,"data":"cell a=1.0 k=32 lr=0.0001 seed=1631001: val 1.4171 test 1.3985 rho_end 0.772 nonfinite 2 (1586s)\n"}
+,{"stream_name":"stdout","time":3583.242202644,"data":"cell a=1.0 k=4 lr=0.0001 seed=1631001: val 1.4176 test 1.3994 rho_end 0.779 nonfinite 0 (678s)\n"}
+,{"stream_name":"stdout","time":3583.242207828,"data":"cell a=1.0 k=2 lr=0.0001 seed=1631001: val 1.4294 test 1.4113 rho_end 0.762 nonfinite 0 (613s)\n"}
+,{"stream_name":"stdout","time":3583.242214428,"data":"cell a=1.0 k=1 lr=0.0009 seed=1631001: val 1.4963 test 1.4751 rho_end 0.740 nonfinite 0 (579s)\n"}
+,{"stream_name":"stdout","time":3583.242219196,"data":"\n"}
+,{"stream_name":"stdout","time":3583.242223938,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":3583.242228925,"data":"v163 driver d5c2647126de (v162 module 0ae4891d7abc) dev cuda amp True R 32\n"}
+,{"stream_name":"stdout","time":3583.242233122,"data":"cell a=1.0 k=32 lr=0.0003 seed=1631001: val 1.3997 test 1.3767 rho_end 0.794 nonfinite 1 (1596s)\n"}
+,{"stream_name":"stdout","time":3583.242238141,"data":"cell a=1.0 k=4 lr=0.0003 seed=1631001: val 1.4021 test 1.3788 rho_end 0.787 nonfinite 0 (685s)\n"}
+,{"stream_name":"stdout","time":3583.242243396,"data":"cell a=1.0 k=2 lr=0.0003 seed=1631001: val 1.4133 test 1.3911 rho_end 0.784 nonfinite 0 (621s)\n"}
+,{"stream_name":"stdout","time":3583.242248484,"data":"cell a=0.5 k=1 lr=0.0001 seed=1631001: val 1.4525 test 1.4347 rho_end 0.864 nonfinite 0 (587s)\n"}
+,{"stream_name":"stdout","time":3583.24225348,"data":"\n"}
+,{"stream_name":"stderr","time":3585.320677006,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":3585.320705304,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":3585.572819296,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":3585.572844311,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":3586.369802047,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":3587.359014339,"data":"[NbConvertApp] Writing 296066 bytes to __results__.html\n"}
+]

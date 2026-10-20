@@ -1,0 +1,6 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+v198 driver 2d4f2c4c9e65 | huginn-s-fixed-r5 (Table 2, S, Fixed R=5) | dev cuda fp32 | params 303.6M (loop 54.3M, part 28.3M) | docmask True | 150 val chunks of 512 tokens, 3 boundaries in chunk 0
+/kaggle/working/v198_ifm_fade.py:168: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return float(loss)
+selftest PASS: {'device': 'cuda', 'docmask': True, 'kR_vs_plain_a1': 0.0, 'kR_vs_plain_a0.5': 0.0, 'ckpt_vs_plain_a1_k2': 0.0, 'ckpt_vs_plain_a0.5_k1': 0.0, 'ckpt_vs_plain_a1_k0': 0.0, 'loss_diff_k2': 0.0, 'readout_grad_k2_vs_kR': 0.0, 'loss_diff_k0': 0.0, 'readout_grad_k0_vs_kR': 0.0, 'loop_grad_norm_k0': 0.0, 'doc_boundaries': 3, 'loss_docmask': 2.365483999, 'loss_causal': 2.290025711, 'single_doc_mask_vs_causal': 0.0, 'fails': [], 'status': 'PASS'}

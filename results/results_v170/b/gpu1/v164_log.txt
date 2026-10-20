@@ -1,0 +1,11 @@
+v164 driver feaf9a0ba438 (v163 module d5c2647126de) dev cuda amp True
+cell R=32 a=1.0 k=32 lr=0.1 seed=1701104: val 1.4187 test 1.3993 rho_end 0.808 nonfinite 2 (1612s)
+cell R=32 a=1.0 k=4 lr=0.1 seed=1701101: val 1.4215 test 1.4036 rho_end 0.800 nonfinite 0 (689s)
+cell R=32 a=1.0 k=4 lr=0.1 seed=1701102: val 1.4214 test 1.4031 rho_end 0.785 nonfinite 0 (680s)
+cell R=32 a=1.0 k=4 lr=0.1 seed=1701103: val 1.4182 test 1.4003 rho_end 0.781 nonfinite 0 (685s)
+cell R=32 a=1.0 k=4 lr=0.1 seed=1701107: val 1.4214 test 1.4013 rho_end 0.806 nonfinite 0 (684s)
+cell R=32 a=1.0 k=2 lr=0.1 seed=1701104: val 1.4382 test 1.4203 rho_end 0.788 nonfinite 0 (619s)
+cell R=32 a=1.0 k=1 lr=0.1 seed=1701101: val 1.4685 test 1.4512 rho_end 0.809 nonfinite 0 (583s)
+cell R=32 a=1.0 k=1 lr=0.1 seed=1701105: val 1.4693 test 1.4502 rho_end 0.725 nonfinite 0 (582s)
+cell R=32 a=1.0 k=0 lr=0.3 seed=1701102: val 1.6166 test 1.5973 rho_end 0.829 nonfinite 0 (516s)
+cell R=32 a=1.0 k=0 lr=0.3 seed=1701106: val 1.6197 test 1.6012 rho_end 0.824 nonfinite 2 (517s)

@@ -1,0 +1,16 @@
+v164 driver feaf9a0ba438 (v163 module d5c2647126de) dev cuda amp True
+v164 driver feaf9a0ba438 (v163 module d5c2647126de) dev cuda amp True
+cell R=64 a=0.3 k=64 lr=0.0003 seed=1661105: val 1.3942 test 1.3720 rho_end 0.913 nonfinite 1 (2954s)
+cell R=64 a=0.3 k=64 lr=0.0003 seed=1661106: val 1.3949 test 1.3722 rho_end 0.910 nonfinite 1 (3023s)
+cell R=64 a=0.3 k=12 lr=0.0003 seed=1661101: val 1.3992 test 1.3771 rho_end 0.922 nonfinite 0 (1327s)
+cell R=48 a=0.4 k=48 lr=0.0003 seed=1661107: val 1.3934 test 1.3691 rho_end 0.893 nonfinite 0 (2250s)
+cell R=64 a=0.3 k=12 lr=0.0003 seed=1661103: val 1.4032 test 1.3780 rho_end 0.916 nonfinite 0 (1325s)
+cell R=64 a=0.3 k=8 lr=0.0003 seed=1661103: val 1.4088 test 1.3832 rho_end 0.918 nonfinite 0 (1163s)
+cell R=64 a=0.3 k=8 lr=0.0003 seed=1661104: val 1.4048 test 1.3843 rho_end 0.919 nonfinite 0 (1197s)
+cell R=48 a=0.4 k=8 lr=0.0003 seed=1661102: val 1.4009 test 1.3782 rho_end 0.890 nonfinite 0 (972s)
+cell R=48 a=0.4 k=8 lr=0.0003 seed=1661105: val 1.4011 test 1.3790 rho_end 0.895 nonfinite 0 (1000s)
+cell R=64 a=0.3 k=0 lr=0.0009 seed=1661102: val 1.5561 test 1.5495 rho_end 0.937 nonfinite 0 (868s)
+cell R=64 a=0.3 k=0 lr=0.0009 seed=1661106: val 1.5575 test 1.5468 rho_end 0.940 nonfinite 0 (895s)
+cell R=48 a=0.4 k=4 lr=0.0003 seed=1661103: val 1.4154 test 1.3895 rho_end 0.887 nonfinite 0 (845s)
+cell R=48 a=0.4 k=4 lr=0.0003 seed=1661107: val 1.4106 test 1.3863 rho_end 0.888 nonfinite 0 (868s)
+cell R=48 a=0.4 k=0 lr=0.0009 seed=1661104: val 1.5590 test 1.5593 rho_end 0.918 nonfinite 0 (677s)

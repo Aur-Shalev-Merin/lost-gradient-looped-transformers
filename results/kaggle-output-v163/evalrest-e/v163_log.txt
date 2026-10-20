@@ -1,0 +1,10 @@
+v163 driver d5c2647126de (v162 module 0ae4891d7abc) dev cuda amp True R 32
+v163 driver d5c2647126de (v162 module 0ae4891d7abc) dev cuda amp True R 32
+cell a=1.0 k=0 lr=0.0009 seed=1631101: val 1.5594 test 1.5381 rho_end 0.826 nonfinite 0 (484s)
+cell a=1.0 k=0 lr=0.0009 seed=1631102: val 1.5588 test 1.5375 rho_end 0.824 nonfinite 0 (488s)
+cell a=1.0 k=0 lr=0.0009 seed=1631103: val 1.5583 test 1.5395 rho_end 0.830 nonfinite 0 (488s)
+cell a=1.0 k=0 lr=0.0009 seed=1631104: val 1.5580 test 1.5389 rho_end 0.819 nonfinite 0 (496s)
+cell a=0.5 k=0 lr=0.0009 seed=1631101: val 1.5668 test 1.5467 rho_end 0.884 nonfinite 0 (487s)
+cell a=0.5 k=0 lr=0.0009 seed=1631102: val 1.5671 test 1.5448 rho_end 0.885 nonfinite 0 (495s)
+cell a=0.5 k=0 lr=0.0009 seed=1631103: val 1.5659 test 1.5478 rho_end 0.887 nonfinite 0 (487s)
+cell a=0.5 k=0 lr=0.0009 seed=1631104: val 1.5644 test 1.5459 rho_end 0.884 nonfinite 0 (495s)

@@ -1,0 +1,44 @@
+[{"stream_name":"stdout","time":1779.301802574,"data":"job exit 0 elapsed 1771s\n"}
+,{"stream_name":"stdout","time":1779.301898651,"data":"job exit 0 elapsed 1771s\n"}
+,{"stream_name":"stdout","time":1779.302304412,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":1779.302314082,"data":"\n"}
+,{"stream_name":"stdout","time":1779.302318851,"data":"Generating train split:   0%|          | 0/7473 [00:00\u003c?, ? examples/s]\n"}
+,{"stream_name":"stdout","time":1779.302323237,"data":"Generating train split:  13%|█▎        | 1000/7473 [00:00\u003c00:00, 9711.29 examples/s]\n"}
+,{"stream_name":"stdout","time":1779.302328747,"data":"Generating train split: 100%|██████████| 7473/7473 [00:00\u003c00:00, 68330.23 examples/s]\n"}
+,{"stream_name":"stdout","time":1779.302332975,"data":"\n"}
+,{"stream_name":"stdout","time":1779.302337169,"data":"Generating test split:   0%|          | 0/1319 [00:00\u003c?, ? examples/s]\n"}
+,{"stream_name":"stdout","time":1779.302341846,"data":"Generating test split: 100%|██████████| 1319/1319 [00:00\u003c00:00, 277460.60 examples/s]\n"}
+,{"stream_name":"stdout","time":1779.302345995,"data":"v163 driver 888f185a0c54 (v162 module 0ae4891d7abc) dev cuda amp True R 32\n"}
+,{"stream_name":"stdout","time":1779.302350269,"data":"/kaggle/working/v163_parcae_damped_trunc.py:139: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.\n"}
+,{"stream_name":"stdout","time":1779.302354359,"data":"Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)\n"}
+,{"stream_name":"stdout","time":1779.302358385,"data":"  torch.manual_seed(0); x1 = float(v.loss_manual(m, ids, R, k))\n"}
+,{"stream_name":"stdout","time":1779.302361928,"data":"selftest a=1 vs v162 loss_manual R=32 k=32: 2.675809 2.675809\n"}
+,{"stream_name":"stdout","time":1779.302365511,"data":"selftest a=1 vs v162 loss_manual R=32 k=16: 2.675809 2.675809\n"}
+,{"stream_name":"stdout","time":1779.302370683,"data":"selftest a=1 vs v162 loss_manual R=32 k=0: 2.675809 2.675809\n"}
+,{"stream_name":"stdout","time":1779.302377581,"data":"selftest checkpointed vs plain grad (a=0.5, k=4): rel diff 8.89e-07\n"}
+,{"stream_name":"stdout","time":1779.302380039,"data":"selftest truncated grad fp16 vs fp32 a=1.0 k=1: {'rest': 0.0027, 'prelude': 0.0027, 'adapter': 0.0029, 'core_block': 0.0027}\n"}
+,{"stream_name":"stdout","time":1779.302382584,"data":"selftest truncated grad fp16 vs fp32 a=1.0 k=4: {'rest': 0.0027, 'prelude': 0.0027, 'adapter': 0.0032, 'core_block': 0.0025}\n"}
+,{"stream_name":"stdout","time":1779.302385015,"data":"selftest truncated grad fp16 vs fp32 a=0.5 k=1: {'rest': 0.0027, 'prelude': 0.0025, 'adapter': 0.0026, 'core_block': 0.0026}\n"}
+,{"stream_name":"stdout","time":1779.302387449,"data":"selftest truncated grad fp16 vs fp32 a=0.5 k=4: {'rest': 0.0027, 'prelude': 0.0022, 'adapter': 0.0025, 'core_block': 0.0025}\n"}
+,{"stream_name":"stdout","time":1779.302389885,"data":"selftest OK\n"}
+,{"stream_name":"stdout","time":1779.302393217,"data":"measure a=1.0: {\"a\": 1.0, \"R\": 32, \"rho_median\": 0.8250177639210495, \"err_median\": {\"1\": 0.8201241493225098, \"2\": 0.6752893626689911, \"4\": 0.4427010416984558, \"8\": 0.2046329230070114, \"16\": 0.04253258742392063}, \"law_median\": {\"1\": 0.8250177639210495, \"2\": 0.680683655379356, \"4\": 0.46341013279840304, \"8\": 0.2148970205858533, \"16\": 0.04630792045491153}}\n"}
+,{"stream_name":"stdout","time":1779.30239867,"data":"step-0 val/test loss a=1.0 R=32: 2.6283 / 2.6123\n"}
+,{"stream_name":"stdout","time":1779.302401119,"data":"measure a=0.5: {\"a\": 0.5, \"R\": 32, \"rho_median\": 0.9025027949651551, \"err_median\": {\"1\": 0.8772655129432678, \"2\": 0.7911480367183685, \"4\": 0.64529088139534, \"8\": 0.4182574898004532, \"16\": 0.18665622174739838}, \"law_median\": {\"1\": 0.9025027949651551, \"2\": 0.8145177647282256, \"4\": 0.6634602679856394, \"8\": 0.44023546554257165, \"16\": 0.1939057567820145}}\n"}
+,{"stream_name":"stdout","time":1779.302413263,"data":"step-0 val/test loss a=0.5 R=32: 2.6440 / 2.6353\n"}
+,{"stream_name":"stdout","time":1779.302415757,"data":"cell a=1.0 k=0 lr=0.0001 seed=9001: val 1.6908 test 1.6742 nonfinite 0 (505s)\n"}
+,{"stream_name":"stdout","time":1779.302418201,"data":"cell a=1.0 k=0 lr=0.0003 seed=9001: val 1.5984 test 1.5811 nonfinite 0 (501s)\n"}
+,{"stream_name":"stdout","time":1779.302420651,"data":"cell a=1.0 k=0 lr=0.0009 seed=9001: val 1.5576 test 1.5382 nonfinite 0 (505s)\n"}
+,{"stream_name":"stdout","time":1779.302422999,"data":"\n"}
+,{"stream_name":"stdout","time":1779.302425339,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":1779.302427835,"data":"v163 driver 888f185a0c54 (v162 module 0ae4891d7abc) dev cuda amp True R 32\n"}
+,{"stream_name":"stdout","time":1779.302430268,"data":"cell a=0.5 k=0 lr=0.0001 seed=9001: val 1.6999 test 1.6852 nonfinite 0 (473s)\n"}
+,{"stream_name":"stdout","time":1779.302433101,"data":"cell a=0.5 k=0 lr=0.0003 seed=9001: val 1.6061 test 1.5888 nonfinite 1 (475s)\n"}
+,{"stream_name":"stdout","time":1779.302435488,"data":"cell a=0.5 k=0 lr=0.0009 seed=9001: val 1.5658 test 1.5451 nonfinite 0 (477s)\n"}
+,{"stream_name":"stdout","time":1779.302437841,"data":"\n"}
+,{"stream_name":"stderr","time":1781.47512321,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":1781.475153391,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":1781.753458752,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":1781.753497056,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":1782.55136017,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":1783.629183485,"data":"[NbConvertApp] Writing 295783 bytes to __results__.html\n"}
+]

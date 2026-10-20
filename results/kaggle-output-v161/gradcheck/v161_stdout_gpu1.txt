@@ -1,0 +1,14 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+gradcheck R=8: path mode amp batch | loss | |g_R| |g_R-1| relerr
+/kaggle/working/v161_gradcheck.py:46: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return out / (1024.0 if amp else 1.0), float(loss)
+  model  train amp=True  B=8 | loss 2.6208/2.6208 | 6.1031 2.8167 0.8727
+    loop-0 contribution by group (|d|, |g_R|): adapter 0.0244/0.2209, coda 0.0001/1.2197, core_block 5.2977/5.4052, ln_f 0.0000/0.3896, other 0.0001/0.2983, prelude 0.5503/2.4986, value_embeds 0.0020/0.0142, wte 0.0096/0.1054
+  model  train amp=False B=8 | loss 2.6206/2.6206 | 6.1012 5.7611 0.1438
+    loop-0 contribution by group (|d|, |g_R|): adapter 0.0246/0.2210, coda 0.0000/1.2163, core_block 0.6794/5.4039, ln_f 0.0000/0.3891, other 0.0000/0.2980, prelude 0.5542/2.4984, value_embeds 0.0020/0.0142, wte 0.0097/0.1054
+  model  eval  amp=False B=8 | loss 2.6206/2.6206 | 6.1012 5.7611 0.1438
+    loop-0 contribution by group (|d|, |g_R|): adapter 0.0246/0.2210, coda 0.0000/1.2163, core_block 0.6794/5.4039, ln_f 0.0000/0.3891, other 0.0000/0.2980, prelude 0.5542/2.4984, value_embeds 0.0020/0.0142, wte 0.0097/0.1054
+  manual eval  amp=False B=8 | loss 2.6206/2.6206 | 6.1012 5.7611 0.1438
+  manual eval  amp=False B=1 | loss 2.9285/2.9285 | 8.9374 8.4423 0.1474
+  model  train amp=True  B=1 | loss 2.9288/2.9288 | 8.9441 4.1546 0.8695

@@ -1,0 +1,10 @@
+verdict pairs: {('K-AS-GOOD', 'TIE'): 0.6817, ('INCONCLUSIVE', 'TIE'): 0.3183}
+{'L<KP': 0.3183, 'L<A in range': 0.9579}
+MAE L  5/50/95%: 0.0353 0.0367 0.0383
+MAE A  5/50/95%: 0.0503 0.0514 0.0528
+MAE KP 5/50/95%: 0.0347 0.0362 0.0375
+MAE KS 5/50/95%: 0.1142 0.1157 0.1173
+MAE(L) - MAE(KP) 5/50/95%: -0.0015 0.0006 0.0026
+k=1 r5/pln5 cost ratio: observed 1.79 | L 1.32 | A 1.60 | KP 1.00
+k=2 r5/pln5 cost ratio: observed 2.09 | L 1.69 | A 1.93 | KP 1.00
+k=4 r5/pln5 cost ratio: observed 1.52 | L 2.18 | A 1.97 | KP 1.00

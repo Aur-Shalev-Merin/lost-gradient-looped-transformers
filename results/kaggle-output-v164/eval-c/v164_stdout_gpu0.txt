@@ -1,0 +1,30 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 74928.72 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 330838.83 examples/s]
+v164 driver feaf9a0ba438 (v163 module d5c2647126de) dev cuda amp True
+/kaggle/working/v163_parcae_damped_trunc.py:155: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  torch.manual_seed(0); x1 = float(v.loss_manual(m, ids, R, k))
+selftest a=1 vs v162 loss_manual R=64 k=64: 2.675924 2.675924
+selftest a=1 vs v162 loss_manual R=64 k=32: 2.675924 2.675924
+selftest a=1 vs v162 loss_manual R=64 k=0: 2.675924 2.675924
+selftest checkpointed vs plain grad (a=0.5, k=4): rel diff 4.15e-07
+selftest truncated grad fp16 vs fp32 a=1.0 k=1: {'rest': 0.0027, 'prelude': 0.0026, 'adapter': 0.0027, 'core_block': 0.0026}
+selftest truncated grad fp16 vs fp32 a=1.0 k=4: {'rest': 0.0027, 'prelude': 0.0023, 'adapter': 0.0028, 'core_block': 0.0025}
+selftest truncated grad fp16 vs fp32 a=0.5 k=1: {'rest': 0.0026, 'prelude': 0.0024, 'adapter': 0.0025, 'core_block': 0.0026}
+selftest truncated grad fp16 vs fp32 a=0.5 k=4: {'rest': 0.0026, 'prelude': 0.0022, 'adapter': 0.0025, 'core_block': 0.0025}
+selftest OK
+cell R=64 a=0.3 k=64 lr=0.0003 seed=1641103: val 1.3965 test 1.3762 rho_end 0.919 nonfinite 0 (2955s)
+cell R=32 a=1.0 k=32 lr=0.0003 seed=1641105: val 1.3926 test 1.3686 rho_end 0.805 nonfinite 6 (1541s)
+cell R=64 a=0.3 k=6 lr=0.0003 seed=1641101: val 1.4096 test 1.3862 rho_end 0.912 nonfinite 0 (1101s)
+cell R=64 a=0.3 k=6 lr=0.0003 seed=1641105: val 1.4051 test 1.3809 rho_end 0.917 nonfinite 0 (1103s)
+cell R=64 a=0.3 k=3 lr=0.0003 seed=1641104: val 1.4178 test 1.3953 rho_end 0.912 nonfinite 0 (1005s)
+cell R=64 a=0.3 k=2 lr=0.0003 seed=1641105: val 1.4213 test 1.3990 rho_end 0.915 nonfinite 0 (974s)
+cell R=32 a=1.0 k=6 lr=0.0003 seed=1641101: val 1.3979 test 1.3739 rho_end 0.771 nonfinite 0 (721s)
+cell R=32 a=1.0 k=6 lr=0.0003 seed=1641104: val 1.3918 test 1.3703 rho_end 0.771 nonfinite 0 (721s)
+cell R=32 a=0.7 k=6 lr=0.0003 seed=1641105: val 1.3941 test 1.3692 rho_end 0.816 nonfinite 0 (721s)
+cell R=32 a=1.0 k=3 lr=0.0003 seed=1641101: val 1.4041 test 1.3804 rho_end 0.789 nonfinite 0 (623s)
+cell R=32 a=0.7 k=3 lr=0.0003 seed=1641102: val 1.4077 test 1.3838 rho_end 0.817 nonfinite 0 (623s)
+cell R=32 a=0.7 k=2 lr=0.0003 seed=1641103: val 1.4198 test 1.3992 rho_end 0.815 nonfinite 0 (593s)
+cell R=32 a=1.0 k=0 lr=0.0009 seed=1641104: val 1.5578 test 1.5381 rho_end 0.827 nonfinite 0 (489s)
+cell R=32 a=0.7 k=0 lr=0.0009 seed=1641105: val 1.5568 test 1.5423 rho_end 0.867 nonfinite 0 (490s)

@@ -1,0 +1,56 @@
+parcae stage   0 | batches clipped 100% (median |G_b| 6.34) | B=8 repeat between passes, max diff 2.8e-06
+   k=1 | B=1 0.800 | B=8 raw 0.809 clip 0.884 | B=64 raw 0.999 clip 0.968 [0.845-1.011] | B=512 raw 1.000 clip 0.928
+   k=2 | B=1 0.637 | B=8 raw 0.650 clip 0.669 | B=64 raw 0.998 clip 0.739 [0.617-0.794] | B=512 raw 1.000 clip 0.689
+   k=4 | B=1 0.383 | B=8 raw 0.390 clip 0.368 | B=64 raw 0.997 clip 0.446 [0.300-0.590] | B=512 raw 1.000 clip 0.364
+parcae stage 300 | batches clipped 91% (median |G_b| 1.05) | B=8 repeat between passes, max diff 8.8e-08 | fine-tune clipped 99% of steps
+   k=1 | B=1 0.598 | B=8 raw 0.603 clip 0.600 | B=64 raw 0.584 clip 0.575 [0.562-0.605] | B=512 raw 0.579 clip 0.569
+   k=2 | B=1 0.415 | B=8 raw 0.423 clip 0.417 | B=64 raw 0.386 clip 0.372 [0.354-0.406] | B=512 raw 0.354 clip 0.340
+   k=4 | B=1 0.200 | B=8 raw 0.206 clip 0.203 | B=64 raw 0.177 clip 0.170 [0.142-0.207] | B=512 raw 0.131 clip 0.122
+pln5   stage   0 | batches clipped 100% (median |G_b| 6.33) | B=8 repeat between passes, max diff 0.0e+00
+   k=1 | B=1 0.758 | B=8 raw 0.771 clip 0.782 | B=64 raw 0.772 clip 0.766 [0.760-0.781] | B=512 raw 0.771 clip 0.766
+   k=2 | B=1 0.595 | B=8 raw 0.591 clip 0.542 | B=64 raw 0.589 clip 0.529 [0.525-0.547] | B=512 raw 0.587 clip 0.529
+   k=4 | B=1 0.288 | B=8 raw 0.270 clip 0.234 | B=64 raw 0.263 clip 0.222 [0.218-0.247] | B=512 raw 0.261 clip 0.221
+pln5   stage 300 | batches clipped 97% (median |G_b| 1.09) | B=8 repeat between passes, max diff 0.0e+00 | fine-tune clipped 99% of steps
+   k=1 | B=1 0.615 | B=8 raw 0.618 clip 0.608 | B=64 raw 0.621 clip 0.604 [0.588-0.634] | B=512 raw 0.589 clip 0.567
+   k=2 | B=1 0.440 | B=8 raw 0.443 clip 0.432 | B=64 raw 0.440 clip 0.418 [0.401-0.499] | B=512 raw 0.387 clip 0.359
+   k=4 | B=1 0.217 | B=8 raw 0.218 clip 0.215 | B=64 raw 0.239 clip 0.229 [0.194-0.328] | B=512 raw 0.189 clip 0.175
+r5     stage   0 | batches clipped 100% (median |G_b| 6.01) | B=8 repeat between passes, max diff 0.0e+00
+   k=1 | B=1 0.830 | B=8 raw 0.826 clip 0.893 | B=64 raw 0.824 clip 0.877 [0.861-0.881] | B=512 raw 0.823 clip 0.872
+   k=2 | B=1 0.696 | B=8 raw 0.673 clip 0.685 | B=64 raw 0.665 clip 0.670 [0.651-0.673] | B=512 raw 0.662 clip 0.665
+   k=4 | B=1 0.380 | B=8 raw 0.322 clip 0.314 | B=64 raw 0.303 clip 0.291 [0.282-0.297] | B=512 raw 0.299 clip 0.288
+r5     stage 300 | batches clipped 100% (median |G_b| 1.23) | B=8 repeat between passes, max diff 0.0e+00 | fine-tune clipped 100% of steps
+   k=1 | B=1 0.705 | B=8 raw 0.711 clip 0.700 | B=64 raw 0.708 clip 0.689 [0.670-0.708] | B=512 raw 0.692 clip 0.663
+   k=2 | B=1 0.548 | B=8 raw 0.552 clip 0.553 | B=64 raw 0.535 clip 0.521 [0.500-0.546] | B=512 raw 0.485 clip 0.457
+   k=4 | B=1 0.290 | B=8 raw 0.289 clip 0.292 | B=64 raw 0.275 clip 0.273 [0.253-0.279] | B=512 raw 0.221 clip 0.218
+retro  stage   0 | batches clipped 100% (median |G_b| 8.05) | B=8 repeat between passes, max diff 9.6e-08
+   k=1 | B=1 0.359 | B=8 raw 0.359 clip 0.356 | B=64 raw 0.361 clip 0.355 [0.346-0.360] | B=512 raw 0.362 clip 0.354
+   k=2 | B=1 0.134 | B=8 raw 0.129 clip 0.123 | B=64 raw 0.126 clip 0.120 [0.117-0.127] | B=512 raw 0.128 clip 0.121
+   k=4 | B=1 0.018 | B=8 raw 0.015 clip 0.015 | B=64 raw 0.014 clip 0.013 [0.012-0.018] | B=512 raw 0.014 clip 0.013
+retro  stage 300 | batches clipped 100% (median |G_b| 1.99) | B=8 repeat between passes, max diff 2.6e-07 | fine-tune clipped 100% of steps
+   k=1 | B=1 0.325 | B=8 raw 0.322 clip 0.326 | B=64 raw 0.309 clip 0.314 [0.299-0.347] | B=512 raw 0.305 clip 0.311
+   k=2 | B=1 0.110 | B=8 raw 0.111 clip 0.109 | B=64 raw 0.104 clip 0.102 [0.100-0.117] | B=512 raw 0.096 clip 0.096
+   k=4 | B=1 0.012 | B=8 raw 0.013 clip 0.012 | B=64 raw 0.013 clip 0.013 [0.010-0.015] | B=512 raw 0.010 clip 0.010
+
+PRIMARY: gap = clipped B=64 median at stage 300 - per-sequence (B=1) median at stage 0, same k
+  parcae gaps {1: -0.225, 2: -0.265, 4: -0.213}
+  pln5   gaps {1: -0.154, 2: -0.177, 4: -0.058}
+  r5     gaps {1: -0.141, 2: -0.175, 4: -0.106}
+  retro  gaps {1: -0.044, 2: -0.031, 4: -0.005}
+VERDICT: MEDIAN-OVERSTATES ['parcae', 'pln5', 'r5']
+
+SECONDARY (no verdict)
+  parcae k=1: stage-0 gap (clip B=64 - B=1) +0.168 | stage-300 gap (clip B=64 - B=1) -0.023 | plateau |clip B=512 - B=64| 0.006 | training effect on B=1 -0.202
+  parcae k=2: stage-0 gap (clip B=64 - B=1) +0.102 | stage-300 gap (clip B=64 - B=1) -0.043 | plateau |clip B=512 - B=64| 0.032 (MOVING) | stage 0 raw B=512 exceeds clipped by 0.311 (RARE-SEQUENCES) | training effect on B=1 -0.222
+  parcae k=4: stage-0 gap (clip B=64 - B=1) +0.063 | stage-300 gap (clip B=64 - B=1) -0.031 | plateau |clip B=512 - B=64| 0.047 (MOVING) | stage 0 raw B=512 exceeds clipped by 0.636 (RARE-SEQUENCES) | training effect on B=1 -0.182
+  pln5   k=1: stage-0 gap (clip B=64 - B=1) +0.008 | stage-300 gap (clip B=64 - B=1) -0.011 | plateau |clip B=512 - B=64| 0.037 (MOVING) | training effect on B=1 -0.144
+  pln5   k=2: stage-0 gap (clip B=64 - B=1) -0.066 | stage-300 gap (clip B=64 - B=1) -0.023 | plateau |clip B=512 - B=64| 0.059 (MOVING) | training effect on B=1 -0.155
+  pln5   k=4: stage-0 gap (clip B=64 - B=1) -0.066 | stage-300 gap (clip B=64 - B=1) +0.013 | plateau |clip B=512 - B=64| 0.054 (MOVING) | training effect on B=1 -0.071
+  r5     k=1: stage-0 gap (clip B=64 - B=1) +0.047 | stage-300 gap (clip B=64 - B=1) -0.017 | plateau |clip B=512 - B=64| 0.026 | training effect on B=1 -0.124
+  r5     k=2: stage-0 gap (clip B=64 - B=1) -0.026 | stage-300 gap (clip B=64 - B=1) -0.027 | plateau |clip B=512 - B=64| 0.064 (MOVING) | training effect on B=1 -0.148
+  r5     k=4: stage-0 gap (clip B=64 - B=1) -0.089 | stage-300 gap (clip B=64 - B=1) -0.017 | plateau |clip B=512 - B=64| 0.055 (MOVING) | training effect on B=1 -0.089
+  retro  k=1: stage-0 gap (clip B=64 - B=1) -0.004 | stage-300 gap (clip B=64 - B=1) -0.011 | plateau |clip B=512 - B=64| 0.003 | training effect on B=1 -0.034
+  retro  k=2: stage-0 gap (clip B=64 - B=1) -0.014 | stage-300 gap (clip B=64 - B=1) -0.007 | plateau |clip B=512 - B=64| 0.006 | training effect on B=1 -0.024
+  retro  k=4: stage-0 gap (clip B=64 - B=1) -0.005 | stage-300 gap (clip B=64 - B=1) +0.001 | plateau |clip B=512 - B=64| 0.003 | training effect on B=1 -0.006
+  Part II, after the fact relative to S11 (descriptive): r5 - pln5 at k=1/2/4
+    per-sequence (stage 0): [0.071, 0.101, 0.092]
+    clipped B=64 (stage 300): [0.085, 0.103, 0.044]

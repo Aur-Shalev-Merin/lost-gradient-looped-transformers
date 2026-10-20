@@ -1,0 +1,19 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+v203 pln5 | driver a12dad4f7289 | R 5 | held-out (test) chunks 434 -> 48 batches of 8, groups of 8, B=1 on 64
+  selftest PASS | repeat-pass rel diff 0.00e+00 (< 0.001) | k=1 lost on batch 0 0.7639 (> 0.001) | params 204.9M
+    groups pass: 16/48 batches, 311s
+    groups pass: 32/48 batches, 623s
+    groups pass: 48/48 batches, 935s
+    total pass: 16/48 batches, 310s
+    total pass: 32/48 batches, 619s
+    total pass: 48/48 batches, 929s
+  stage 0 measured after 2006s
+  stage 300 fine-tune: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0001, 'seed': 2011, 'nonfinite': 0, 'clipped_frac': 0.9933, 'ok': True, 's': 320}
+  selftest PASS | repeat-pass rel diff 0.00e+00 (< 0.001) | k=1 lost on batch 0 0.6517 (> 0.001) | params 204.9M
+    groups pass: 16/48 batches, 314s
+    groups pass: 32/48 batches, 634s
+    groups pass: 48/48 batches, 954s
+    total pass: 16/48 batches, 315s
+    total pass: 32/48 batches, 631s
+    total pass: 48/48 batches, 950s
+  stage 300 measured after 4360s

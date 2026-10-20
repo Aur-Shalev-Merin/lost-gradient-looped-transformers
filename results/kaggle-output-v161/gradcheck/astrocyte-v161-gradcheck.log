@@ -1,0 +1,54 @@
+[{"stream_name":"stdout","time":127.026863429,"data":"job exit 1 elapsed 120s\n"}
+,{"stream_name":"stdout","time":127.026916221,"data":"job exit 0 elapsed 120s\n"}
+,{"stream_name":"stdout","time":127.026929333,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":127.026934218,"data":"\n"}
+,{"stream_name":"stdout","time":127.026938414,"data":"Generating train split:   0%|          | 0/7473 [00:00\u003c?, ? examples/s]\n"}
+,{"stream_name":"stdout","time":127.026943202,"data":"Generating train split: 100%|██████████| 7473/7473 [00:00\u003c00:00, 106726.71 examples/s]\n"}
+,{"stream_name":"stdout","time":127.026948207,"data":"\n"}
+,{"stream_name":"stdout","time":127.02695159,"data":"Generating test split:   0%|          | 0/1319 [00:00\u003c?, ? examples/s]\n"}
+,{"stream_name":"stdout","time":127.026955377,"data":"Generating test split: 100%|██████████| 1319/1319 [00:00\u003c00:00, 266860.59 examples/s]\n"}
+,{"stream_name":"stdout","time":127.026959567,"data":"gradcheck R=16: path mode amp batch | loss | |g_R| |g_R-1| relerr\n"}
+,{"stream_name":"stdout","time":127.026963325,"data":"/kaggle/working/v161_gradcheck.py:46: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.\n"}
+,{"stream_name":"stdout","time":127.026966861,"data":"Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)\n"}
+,{"stream_name":"stdout","time":127.026970446,"data":"  return out / (1024.0 if amp else 1.0), float(loss)\n"}
+,{"stream_name":"stdout","time":127.026974056,"data":"  model  train amp=True  B=8 | loss 2.6152/2.6152 | 6.6113 2.9081 0.8977\n"}
+,{"stream_name":"stdout","time":127.026977994,"data":"    loop-0 contribution by group (|d|, |g_R|): adapter 0.0634/0.2363, coda 0.0001/1.2089, core_block 5.7520/5.8121, ln_f 0.0000/0.3874, other 0.0001/0.2950, prelude 1.4610/2.8568, value_embeds 0.0045/0.0155, wte 0.0266/0.1124\n"}
+,{"stream_name":"stdout","time":127.026983545,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":127.02698717,"data":"  File \"/kaggle/working/v161_gradcheck.py\", line 66, in \u003cmodule\u003e\n"}
+,{"stream_name":"stdout","time":127.026991692,"data":"    main()\n"}
+,{"stream_name":"stdout","time":127.026994899,"data":"  File \"/kaggle/working/v161_gradcheck.py\", line 52, in main\n"}
+,{"stream_name":"stdout","time":127.026998674,"data":"    gR, lR = grad(path, mode, amp, ids, R); g1, l1 = grad(path, mode, amp, ids, R - 1)\n"}
+,{"stream_name":"stdout","time":127.027002474,"data":"             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":127.027006398,"data":"  File \"/kaggle/working/v161_gradcheck.py\", line 44, in grad\n"}
+,{"stream_name":"stdout","time":127.027010102,"data":"    (loss * (1024.0 if amp else 1.0)).backward()\n"}
+,{"stream_name":"stdout","time":127.02701371,"data":"  File \"/usr/local/lib/python3.12/dist-packages/torch/_tensor.py\", line 630, in backward\n"}
+,{"stream_name":"stdout","time":127.02701758,"data":"    torch.autograd.backward(\n"}
+,{"stream_name":"stdout","time":127.027020962,"data":"  File \"/usr/local/lib/python3.12/dist-packages/torch/autograd/__init__.py\", line 364, in backward\n"}
+,{"stream_name":"stdout","time":127.027024822,"data":"    _engine_run_backward(\n"}
+,{"stream_name":"stdout","time":127.02702832,"data":"  File \"/usr/local/lib/python3.12/dist-packages/torch/autograd/graph.py\", line 865, in _engine_run_backward\n"}
+,{"stream_name":"stdout","time":127.027033335,"data":"    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\n"}
+,{"stream_name":"stdout","time":127.027044798,"data":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":127.027049676,"data":"torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 512.00 MiB. GPU 0 has a total capacity of 14.56 GiB of which 368.81 MiB is free. Including non-PyTorch memory, this process has 14.20 GiB memory in use. Of the allocated memory 13.90 GiB is allocated by PyTorch, and 165.32 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)\n"}
+,{"stream_name":"stdout","time":127.027055943,"data":"\n"}
+,{"stream_name":"stdout","time":127.027059525,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":127.027063226,"data":"gradcheck R=8: path mode amp batch | loss | |g_R| |g_R-1| relerr\n"}
+,{"stream_name":"stdout","time":127.027066465,"data":"/kaggle/working/v161_gradcheck.py:46: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.\n"}
+,{"stream_name":"stdout","time":127.0270699,"data":"Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)\n"}
+,{"stream_name":"stdout","time":127.02707352,"data":"  return out / (1024.0 if amp else 1.0), float(loss)\n"}
+,{"stream_name":"stdout","time":127.027077171,"data":"  model  train amp=True  B=8 | loss 2.6208/2.6208 | 6.1031 2.8167 0.8727\n"}
+,{"stream_name":"stdout","time":127.027080958,"data":"    loop-0 contribution by group (|d|, |g_R|): adapter 0.0244/0.2209, coda 0.0001/1.2197, core_block 5.2977/5.4052, ln_f 0.0000/0.3896, other 0.0001/0.2983, prelude 0.5503/2.4986, value_embeds 0.0020/0.0142, wte 0.0096/0.1054\n"}
+,{"stream_name":"stdout","time":127.027085258,"data":"  model  train amp=False B=8 | loss 2.6206/2.6206 | 6.1012 5.7611 0.1438\n"}
+,{"stream_name":"stdout","time":127.027089147,"data":"    loop-0 contribution by group (|d|, |g_R|): adapter 0.0246/0.2210, coda 0.0000/1.2163, core_block 0.6794/5.4039, ln_f 0.0000/0.3891, other 0.0000/0.2980, prelude 0.5542/2.4984, value_embeds 0.0020/0.0142, wte 0.0097/0.1054\n"}
+,{"stream_name":"stdout","time":127.027093182,"data":"  model  eval  amp=False B=8 | loss 2.6206/2.6206 | 6.1012 5.7611 0.1438\n"}
+,{"stream_name":"stdout","time":127.027097418,"data":"    loop-0 contribution by group (|d|, |g_R|): adapter 0.0246/0.2210, coda 0.0000/1.2163, core_block 0.6794/5.4039, ln_f 0.0000/0.3891, other 0.0000/0.2980, prelude 0.5542/2.4984, value_embeds 0.0020/0.0142, wte 0.0097/0.1054\n"}
+,{"stream_name":"stdout","time":127.027102122,"data":"  manual eval  amp=False B=8 | loss 2.6206/2.6206 | 6.1012 5.7611 0.1438\n"}
+,{"stream_name":"stdout","time":127.027105748,"data":"  manual eval  amp=False B=1 | loss 2.9285/2.9285 | 8.9374 8.4423 0.1474\n"}
+,{"stream_name":"stdout","time":127.027109304,"data":"  model  train amp=True  B=1 | loss 2.9288/2.9288 | 8.9441 4.1546 0.8695\n"}
+,{"stream_name":"stdout","time":127.027112994,"data":"\n"}
+,{"stream_name":"stderr","time":128.938117104,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":128.938138635,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":129.141665375,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":129.141699017,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":129.73617687,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":130.834611863,"data":"[NbConvertApp] Writing 291568 bytes to __results__.html\n"}
+]

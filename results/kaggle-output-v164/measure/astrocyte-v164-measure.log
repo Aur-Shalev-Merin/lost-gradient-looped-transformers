@@ -1,0 +1,35 @@
+[{"stream_name":"stdout","time":396.258855659,"data":"job exit 0 elapsed 389s\n"}
+,{"stream_name":"stdout","time":396.25908754,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":396.259098746,"data":"\n"}
+,{"stream_name":"stdout","time":396.259103217,"data":"Generating train split:   0%|          | 0/7473 [00:00\u003c?, ? examples/s]\n"}
+,{"stream_name":"stdout","time":396.2591081,"data":"Generating train split: 100%|██████████| 7473/7473 [00:00\u003c00:00, 84816.99 examples/s]\n"}
+,{"stream_name":"stdout","time":396.259113072,"data":"\n"}
+,{"stream_name":"stdout","time":396.259116828,"data":"Generating test split:   0%|          | 0/1319 [00:00\u003c?, ? examples/s]\n"}
+,{"stream_name":"stdout","time":396.259121156,"data":"Generating test split: 100%|██████████| 1319/1319 [00:00\u003c00:00, 310837.56 examples/s]\n"}
+,{"stream_name":"stdout","time":396.259125521,"data":"v164 driver feaf9a0ba438 (v163 module d5c2647126de) dev cuda amp True\n"}
+,{"stream_name":"stdout","time":396.259129568,"data":"/kaggle/working/v163_parcae_damped_trunc.py:155: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.\n"}
+,{"stream_name":"stdout","time":396.259133882,"data":"Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)\n"}
+,{"stream_name":"stdout","time":396.259138169,"data":"  torch.manual_seed(0); x1 = float(v.loss_manual(m, ids, R, k))\n"}
+,{"stream_name":"stdout","time":396.259144298,"data":"selftest a=1 vs v162 loss_manual R=64 k=64: 2.675924 2.675924\n"}
+,{"stream_name":"stdout","time":396.259148256,"data":"selftest a=1 vs v162 loss_manual R=64 k=32: 2.675924 2.675924\n"}
+,{"stream_name":"stdout","time":396.25915212,"data":"selftest a=1 vs v162 loss_manual R=64 k=0: 2.675924 2.675924\n"}
+,{"stream_name":"stdout","time":396.259155948,"data":"selftest checkpointed vs plain grad (a=0.5, k=4): rel diff 1.11e-06\n"}
+,{"stream_name":"stdout","time":396.259159783,"data":"selftest truncated grad fp16 vs fp32 a=1.0 k=1: {'rest': 0.0027, 'prelude': 0.0026, 'adapter': 0.0027, 'core_block': 0.0026}\n"}
+,{"stream_name":"stdout","time":396.259163802,"data":"selftest truncated grad fp16 vs fp32 a=1.0 k=4: {'rest': 0.0027, 'prelude': 0.0024, 'adapter': 0.0028, 'core_block': 0.0025}\n"}
+,{"stream_name":"stdout","time":396.259168319,"data":"selftest truncated grad fp16 vs fp32 a=0.5 k=1: {'rest': 0.0026, 'prelude': 0.0024, 'adapter': 0.0025, 'core_block': 0.0026}\n"}
+,{"stream_name":"stdout","time":396.259174751,"data":"selftest truncated grad fp16 vs fp32 a=0.5 k=4: {'rest': 0.0026, 'prelude': 0.0022, 'adapter': 0.0024, 'core_block': 0.0025}\n"}
+,{"stream_name":"stdout","time":396.25917962,"data":"selftest OK\n"}
+,{"stream_name":"stdout","time":396.25918444,"data":"measure R=32 a=1.0: rho 0.8250 err {2: 0.6753, 3: 0.5462, 4: 0.4427, 6: 0.3071}\n"}
+,{"stream_name":"stdout","time":396.259189696,"data":"  step-0 val/test R=32 a=1.0: 2.6283 / 2.6123\n"}
+,{"stream_name":"stdout","time":396.259194622,"data":"measure R=32 a=0.7: rho 0.8732 err {2: 0.7436, 3: 0.6456, 4: 0.5584, 6: 0.4229}\n"}
+,{"stream_name":"stdout","time":396.259199191,"data":"  step-0 val/test R=32 a=0.7: 2.6290 / 2.6183\n"}
+,{"stream_name":"stdout","time":396.259203145,"data":"measure R=64 a=0.3: rho 0.9415 err {2: 0.8596, 3: 0.8092, 4: 0.7634, 6: 0.6789}\n"}
+,{"stream_name":"stdout","time":396.259207863,"data":"  step-0 val/test R=64 a=0.3: 2.6295 / 2.6317\n"}
+,{"stream_name":"stdout","time":396.259211789,"data":"\n"}
+,{"stream_name":"stderr","time":398.282631737,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":398.28267414,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":398.532666901,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":398.532705103,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":399.308179162,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":400.293526656,"data":"[NbConvertApp] Writing 298231 bytes to __results__.html\n"}
+]

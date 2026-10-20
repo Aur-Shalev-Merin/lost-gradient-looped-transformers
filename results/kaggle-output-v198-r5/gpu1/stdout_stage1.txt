@@ -1,0 +1,5 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/kaggle/working/v198_ifm_fade.py:164: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return float(loss)
+refcheck PASS: fp32 logits max |diff| 3.72e-05, CE diff max 9.54e-07 (R = 1, 5, 10; doc mask on/off); bf16 {'max_abs': 0.34375, 'mean_abs': 0.018928321078419685, 'logit_absmax': 28.625, 'ce_ref': 2.3653318881988525, 'ce_ours': 2.3639841079711914, 'argmax_agree': 0.986328125}; gradients rel err {'R5_k5': '2.23e-06', 'R10_k2': '1.38e-06'}

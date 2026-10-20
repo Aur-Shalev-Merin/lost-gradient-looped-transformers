@@ -1,0 +1,33 @@
+[{"stream_name":"stderr","time":17.389424607,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":20.065949896,"data":"\rGenerating train split:   0%|          | 0/7473 [00:00\u003c?, ? examples/s]\rGenerating train split:  13%|█▎        | 1000/7473 [00:00\u003c00:01, 5556.56 examples/s]\rGenerating train split: 100%|██████████| 7473/7473 [00:00\u003c00:00, 39975.20 examples/s]\n"}
+,{"stream_name":"stderr","time":20.071453754,"data":"\rGenerating test split:   0%|          | 0/1319 [00:00\u003c?, ? examples/s]\rGenerating test split: 100%|██████████| 1319/1319 [00:00\u003c00:00, 267725.85 examples/s]\n"}
+,{"stream_name":"stdout","time":20.817337723,"data":"setup done after 19s\n"}
+,{"stream_name":"stdout","time":1111.085783447,"data":"job exit 0 elapsed 1109s\n"}
+,{"stream_name":"stdout","time":1111.085830413,"data":"job exit 0 elapsed 1109s\n"}
+,{"stream_name":"stdout","time":1111.086067163,"data":"---- gpu0 (tail)\n"}
+,{"stream_name":"stdout","time":1111.086080768,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":1111.086085928,"data":"  parcae s0: all [0.798, 0.636, 0.408] | loop [0.818, 0.657, 0.417] (132s)\n"}
+,{"stream_name":"stdout","time":1111.086090994,"data":"  parcae full300 fine-tune seed 2011: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0003, 'seed': 2011, 'nonfinite': 10, 'clipped_frac': 0.9667, 'ok': True, 's': 742, 'k': 32}\n"}
+,{"stream_name":"stdout","time":1111.086096788,"data":"  parcae full300: all [0.608, 0.428, 0.217] | loop [0.689, 0.484, 0.246] (135s)\n"}
+,{"stream_name":"stdout","time":1111.086101205,"data":"\n"}
+,{"stream_name":"stdout","time":1111.086133186,"data":"---- gpu1 (tail)\n"}
+,{"stream_name":"stdout","time":1111.086145055,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":1111.08615041,"data":"  parcae trunc300 fine-tune seed 2011: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0003, 'seed': 2011, 'nonfinite': 0, 'clipped_frac': 0.6, 'ok': True, 's': 267, 'k': 2}\n"}
+,{"stream_name":"stdout","time":1111.086155246,"data":"  parcae trunc300: all [0.617, 0.434, 0.211] | loop [0.693, 0.486, 0.238] (134s)\n"}
+,{"stream_name":"stdout","time":1111.086159563,"data":"\n"}
+,{"stream_name":"stdout","time":1112.757370577,"data":"PART A (held-out GSM8K test, per-sequence medians, k = 1 / 2 / 4)\n"}
+,{"stream_name":"stdout","time":1112.757404226,"data":"  parcae s0       all [0.798, 0.636, 0.408] | loop [0.818, 0.657, 0.417]\n"}
+,{"stream_name":"stdout","time":1112.757408168,"data":"  parcae full300  all [0.608, 0.428, 0.217] | loop [0.689, 0.484, 0.246]\n"}
+,{"stream_name":"stdout","time":1112.75741136,"data":"  parcae trunc300 all [0.617, 0.434, 0.211] | loop [0.693, 0.486, 0.238]\n"}
+,{"stream_name":"stdout","time":1112.757414321,"data":"  parcae mean fall: all 0.196, loop 0.157 (ratio 0.80) | truncated fine-tune fall (all) 0.193\n"}
+,{"stream_name":"stdout","time":1112.757417215,"data":"  pln5   incomplete: []\n"}
+,{"stream_name":"stdout","time":1112.757419961,"data":"  r5     incomplete: []\n"}
+,{"stream_name":"stdout","time":1112.757422775,"data":"VERDICT A1 (loop-only): INCOMPLETE | VERDICT A2 (truncated fine-tune): INCOMPLETE\n"}
+,{"stream_name":"stdout","time":1113.109604518,"data":"total 1111s\n"}
+,{"stream_name":"stderr","time":1115.501671473,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":1115.501705426,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":1115.880886313,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":1115.88092692,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":1116.705423288,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":1118.052209799,"data":"[NbConvertApp] Writing 322074 bytes to __results__.html\n"}
+]

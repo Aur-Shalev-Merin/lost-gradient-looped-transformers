@@ -1,0 +1,48 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split:  13%|█▎        | 1000/7473 [00:00<00:01, 5764.31 examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 41488.13 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 276462.29 examples/s]
+v171b clip=True | v171 parcae | params 144.3M | B 24 x 8 training seqs (train chunks 2363)
+/usr/local/lib/python3.13/dist-packages/torch/nn/init.py:119: UserWarning: Specified kernel cache directory could not be created! This disables kernel caching. Specified directory is /root/.cache/torch/kernels. This warning will appear only once per process. (Triggered internally at /pytorch/aten/src/ATen/native/cuda/jit_utils.cpp:1505.)
+  tensor.erfinv_()
+    R=8 a=1.00 k=8 batch grad norms (pre-clip): median 6.676 max 241.579
+    R=8 a=1.00 k=1 batch grad norms (pre-clip): median 3.005 max 9.883
+parcae R=8 a=1.00 k=1: {'adam_def': 0.1389, 'sgd_def': 0.2262, 'err_mean': 1.0317, 'adam_cos': 0.7778}
+    R=8 a=1.00 k=2 batch grad norms (pre-clip): median 3.960 max 24.045
+parcae R=8 a=1.00 k=2: {'adam_def': -0.0085, 'sgd_def': 0.0554, 'err_mean': 0.7522, 'adam_cos': 0.8606}
+    R=8 a=1.00 k=4 batch grad norms (pre-clip): median 5.243 max 91.865
+parcae R=8 a=1.00 k=4: {'adam_def': -0.0718, 'sgd_def': -0.0589, 'err_mean': 0.3815, 'adam_cos': 0.9352}
+  variant R=8 a=1.00 done in 377s
+    R=16 a=1.00 k=16 batch grad norms (pre-clip): median 6.561 max 24865.397
+    R=16 a=1.00 k=1 batch grad norms (pre-clip): median 2.811 max 3.491
+parcae R=16 a=1.00 k=1: {'adam_def': 0.1454, 'sgd_def': 0.1867, 'err_mean': 1.0377, 'adam_cos': 0.7899}
+    R=16 a=1.00 k=2 batch grad norms (pre-clip): median 3.784 max 4.533
+parcae R=16 a=1.00 k=2: {'adam_def': -0.0272, 'sgd_def': -0.0457, 'err_mean': 0.7975, 'adam_cos': 0.8649}
+    R=16 a=1.00 k=4 batch grad norms (pre-clip): median 4.933 max 5.840
+parcae R=16 a=1.00 k=4: {'adam_def': -0.1588, 'sgd_def': -0.2634, 'err_mean': 0.515, 'adam_cos': 0.9278}
+    R=16 a=1.00 k=8 batch grad norms (pre-clip): median 5.946 max 31.332
+parcae R=16 a=1.00 k=8: {'adam_def': -0.1375, 'sgd_def': -0.2266, 'err_mean': 0.3605, 'adam_cos': 0.9544}
+  variant R=16 a=1.00 done in 552s
+    R=32 a=1.00 k=32 batch grad norms (pre-clip): median 6.728 max 20464.763
+    R=32 a=1.00 k=1 batch grad norms (pre-clip): median 2.819 max 3.485
+parcae R=32 a=1.00 k=1: {'adam_def': 0.1971, 'sgd_def': 0.2833, 'err_mean': 0.9584, 'adam_cos': 0.7933}
+    R=32 a=1.00 k=2 batch grad norms (pre-clip): median 3.763 max 4.521
+parcae R=32 a=1.00 k=2: {'adam_def': 0.0327, 'sgd_def': 0.0756, 'err_mean': 0.7217, 'adam_cos': 0.8719}
+    R=32 a=1.00 k=3 batch grad norms (pre-clip): median 4.469 max 5.254
+parcae R=32 a=1.00 k=3: {'adam_def': -0.0562, 'sgd_def': -0.0554, 'err_mean': 0.5404, 'adam_cos': 0.9157}
+    R=32 a=1.00 k=4 batch grad norms (pre-clip): median 4.933 max 5.929
+parcae R=32 a=1.00 k=4: {'adam_def': -0.0992, 'sgd_def': -0.1252, 'err_mean': 0.4131, 'adam_cos': 0.9398}
+    R=32 a=1.00 k=6 batch grad norms (pre-clip): median 5.524 max 6.690
+parcae R=32 a=1.00 k=6: {'adam_def': -0.1263, 'sgd_def': -0.1687, 'err_mean': 0.2975, 'adam_cos': 0.9601}
+    R=32 a=1.00 k=8 batch grad norms (pre-clip): median 5.839 max 7.219
+parcae R=32 a=1.00 k=8: {'adam_def': -0.1297, 'sgd_def': -0.1754, 'err_mean': 0.2583, 'adam_cos': 0.9671}
+  variant R=32 a=1.00 done in 934s
+    R=32 a=0.50 k=32 batch grad norms (pre-clip): median 6.457 max 1666.110
+    R=32 a=0.50 k=1 batch grad norms (pre-clip): median 1.795 max 3.723
+parcae R=32 a=0.50 k=1: {'adam_def': 0.2291, 'sgd_def': 0.3854, 'err_mean': 1.0126, 'adam_cos': 0.7904}
+    R=32 a=0.50 k=2 batch grad norms (pre-clip): median 2.458 max 5.796
+parcae R=32 a=0.50 k=2: {'adam_def': 0.1449, 'sgd_def': 0.2404, 'err_mean': 0.8535, 'adam_cos': 0.8345}
+    R=32 a=0.50 k=4 batch grad norms (pre-clip): median 3.463 max 11.444
+parcae R=32 a=0.50 k=4: {'adam_def': 0.0346, 'sgd_def': 0.0772, 'err_mean': 0.6366, 'adam_cos': 0.8932}
+    R=32 a=0.50 k=8 batch grad norms (pre-clip): median 4.692 max 36.255
+parcae R=32 a=0.50 k=8: {'adam_def': -0.0513, 'sgd_def': -0.0657, 'err_mean': 0.3716, 'adam_cos': 0.9485}
+  variant R=32 a=0.50 done in 690s

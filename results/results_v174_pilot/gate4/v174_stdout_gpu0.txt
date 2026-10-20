@@ -1,0 +1,5 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 90774.13 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 278817.00 examples/s]
+v174 driver d5c2647126de (v163 d5c2647126de) dev cuda amp True R 32
+gate A_f {'full': 1.0, 'k1_l0.50': 0.984, 'k1_l0.75': 0.9421, 'k1_l1.00': 0.7933, 'k4_l0.50': 0.9929, 'k4_l0.75': 0.9812, 'k4_l1.00': 0.9398, 'k4_l1.25': 0.9096, 'k4_l1.50': 0.8773}

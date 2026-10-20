@@ -1,0 +1,9 @@
+v203 retro | driver 9055ec8b615a | R 8 | held-out (test) chunks 492 -> 56 batches of 8, groups of 8, B=1 on 64
+  selftest PASS | repeat-pass rel diff 4.19e-07 (< 0.001) | k=1 lost on batch 0 0.3587 (> 0.001) | params 163.5M
+    groups pass: 16/56 batches, 260s
+    groups pass: 32/56 batches, 525s
+    groups pass: 48/56 batches, 793s
+    total pass: 16/56 batches, 266s
+    total pass: 32/56 batches, 533s
+    total pass: 48/56 batches, 801s
+  stage 0 measured after 2062s

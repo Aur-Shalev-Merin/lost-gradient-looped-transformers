@@ -1,0 +1,104 @@
+[{"stream_name":"stderr","time":8.408940332,"data":"\rFetching 11 files:   0%|          | 0/11 [00:00\u003c?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":23.052391406,"data":"\rFetching 11 files:   9%|▉         | 1/11 [00:00\u003c00:07,  1.37it/s]\rFetching 11 files:  18%|█▊        | 2/11 [00:00\u003c00:03,  2.75it/s]\rFetching 11 files:  64%|██████▎   | 7/11 [00:00\u003c00:00, 10.84it/s]\rFetching 11 files:  82%|████████▏ | 9/11 [00:01\u003c00:00,  6.43it/s]\rFetching 11 files: 100%|██████████| 11/11 [00:14\u003c00:00,  2.18s/it]\rFetching 11 files: 100%|██████████| 11/11 [00:14\u003c00:00,  1.35s/it]\n"}
+,{"stream_name":"stderr","time":26.452441424,"data":"\rFetching 11 files:   0%|          | 0/11 [00:00\u003c?, ?it/s]\rFetching 11 files:   9%|▉         | 1/11 [00:00\u003c00:02,  3.85it/s]\rFetching 11 files:  64%|██████▎   | 7/11 [00:00\u003c00:00, 23.76it/s]\rFetching 11 files: 100%|██████████| 11/11 [00:03\u003c00:00,  2.93it/s]\rFetching 11 files: 100%|██████████| 11/11 [00:03\u003c00:00,  3.51it/s]\n"}
+,{"stream_name":"stderr","time":33.898269928,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":39.449237799,"data":"\rGenerating train split:   0%|          | 0/7473 [00:00\u003c?, ? examples/s]\rGenerating train split:  13%|█▎        | 1000/7473 [00:00\u003c00:00, 9684.85 examples/s]\rGenerating train split: 100%|██████████| 7473/7473 [00:00\u003c00:00, 68770.85 examples/s]\n"}
+,{"stream_name":"stderr","time":39.455213617,"data":"\rGenerating test split:   0%|          | 0/1319 [00:00\u003c?, ? examples/s]\rGenerating test split: 100%|██████████| 1319/1319 [00:00\u003c00:00, 242878.52 examples/s]\n"}
+,{"stream_name":"stdout","time":41.673690713,"data":"setup done after 40s\n"}
+,{"stream_name":"stdout","time":5633.925685736,"data":"job exit 0 elapsed 5633s\n"}
+,{"stream_name":"stdout","time":5678.501996422,"data":"job exit 0 elapsed 5677s\n"}
+,{"stream_name":"stdout","time":5678.509278464,"data":"---- gpu0 (tail)\n"}
+,{"stream_name":"stdout","time":5678.509303148,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":5678.509307876,"data":"v201 pln5 | driver caf466a9d4a7 | R 5 | dev cuda | train chunks 2252 | 64 x 8 sequences, groups of 8, B=1 on 64 | k (1, 2, 4)\n"}
+,{"stream_name":"stdout","time":5678.509329291,"data":"  trainable parameters 204882432 (expected 204.9M)\n"}
+,{"stream_name":"stdout","time":5678.509333964,"data":"  selftest PASS | repeat-pass rel diff 0.00e+00 (\u003c 0.001) | k=1 lost on batch 0 0.7745 (\u003e 0.001) | params 204.9M\n"}
+,{"stream_name":"stdout","time":5678.50933969,"data":"    groups pass: 16/64 batches, 310s\n"}
+,{"stream_name":"stdout","time":5678.509344367,"data":"    groups pass: 32/64 batches, 618s\n"}
+,{"stream_name":"stdout","time":5678.509349097,"data":"    groups pass: 48/64 batches, 927s\n"}
+,{"stream_name":"stdout","time":5678.509353714,"data":"    groups pass: 64/64 batches, 1237s\n"}
+,{"stream_name":"stdout","time":5678.509359112,"data":"    total pass: 16/64 batches, 308s\n"}
+,{"stream_name":"stdout","time":5678.509363447,"data":"    total pass: 32/64 batches, 616s\n"}
+,{"stream_name":"stdout","time":5678.509367522,"data":"    total pass: 48/64 batches, 921s\n"}
+,{"stream_name":"stdout","time":5678.509371511,"data":"    total pass: 64/64 batches, 1226s\n"}
+,{"stream_name":"stdout","time":5678.509385823,"data":"  stage 0 measured after 2606s\n"}
+,{"stream_name":"stdout","time":5678.509394787,"data":"  stage 300 fine-tune: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0001, 'seed': 2011, 'nonfinite': 0, 'clipped_frac': 0.9933, 'ok': True, 's': 318}\n"}
+,{"stream_name":"stdout","time":5678.509397562,"data":"  curve (step, loss, grad norm): [(0, 2.8175, 5.981), (50, 1.5134, 1.219), (100, 1.5061, 1.181), (150, 1.4162, 1.164), (200, 1.4084, 1.08), (250, 1.3448, 1.025), (299, 1.2019, 1.111)]\n"}
+,{"stream_name":"stdout","time":5678.509399993,"data":"  selftest PASS | repeat-pass rel diff 0.00e+00 (\u003c 0.001) | k=1 lost on batch 0 0.6229 (\u003e 0.001) | params 204.9M\n"}
+,{"stream_name":"stdout","time":5678.509402397,"data":"    groups pass: 16/64 batches, 317s\n"}
+,{"stream_name":"stdout","time":5678.509404733,"data":"    groups pass: 32/64 batches, 635s\n"}
+,{"stream_name":"stdout","time":5678.509406873,"data":"    groups pass: 48/64 batches, 954s\n"}
+,{"stream_name":"stdout","time":5678.509408991,"data":"    groups pass: 64/64 batches, 1274s\n"}
+,{"stream_name":"stdout","time":5678.509411204,"data":"    total pass: 16/64 batches, 316s\n"}
+,{"stream_name":"stdout","time":5678.509413313,"data":"    total pass: 32/64 batches, 628s\n"}
+,{"stream_name":"stdout","time":5678.509415405,"data":"    total pass: 48/64 batches, 940s\n"}
+,{"stream_name":"stdout","time":5678.509417515,"data":"    total pass: 64/64 batches, 1251s\n"}
+,{"stream_name":"stdout","time":5678.509419704,"data":"  stage 300 measured after 5580s\n"}
+,{"stream_name":"stdout","time":5678.509421866,"data":"\n"}
+,{"stream_name":"stdout","time":5678.509570701,"data":"---- gpu1 (tail)\n"}
+,{"stream_name":"stdout","time":5678.509578239,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":5678.50958238,"data":"v201 r5 | driver caf466a9d4a7 | R 5 | dev cuda | train chunks 2252 | 64 x 8 sequences, groups of 8, B=1 on 64 | k (1, 2, 4)\n"}
+,{"stream_name":"stdout","time":5678.509586527,"data":"  trainable parameters 204882432 (expected 204.9M)\n"}
+,{"stream_name":"stdout","time":5678.50959078,"data":"  selftest PASS | repeat-pass rel diff 0.00e+00 (\u003c 0.001) | k=1 lost on batch 0 0.8278 (\u003e 0.001) | params 204.9M\n"}
+,{"stream_name":"stdout","time":5678.509594682,"data":"    groups pass: 16/64 batches, 302s\n"}
+,{"stream_name":"stdout","time":5678.509598375,"data":"    groups pass: 32/64 batches, 611s\n"}
+,{"stream_name":"stdout","time":5678.509602142,"data":"    groups pass: 48/64 batches, 922s\n"}
+,{"stream_name":"stdout","time":5678.509605864,"data":"    groups pass: 64/64 batches, 1236s\n"}
+,{"stream_name":"stdout","time":5678.509609574,"data":"    total pass: 16/64 batches, 312s\n"}
+,{"stream_name":"stdout","time":5678.50961319,"data":"    total pass: 32/64 batches, 620s\n"}
+,{"stream_name":"stdout","time":5678.509617151,"data":"    total pass: 48/64 batches, 928s\n"}
+,{"stream_name":"stdout","time":5678.509620844,"data":"    total pass: 64/64 batches, 1238s\n"}
+,{"stream_name":"stdout","time":5678.509625251,"data":"  stage 0 measured after 2612s\n"}
+,{"stream_name":"stdout","time":5678.509629019,"data":"  stage 300 fine-tune: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0001, 'seed': 2011, 'nonfinite': 0, 'clipped_frac': 1.0, 'ok': True, 's': 321}\n"}
+,{"stream_name":"stdout","time":5678.509633295,"data":"  curve (step, loss, grad norm): [(0, 2.6516, 5.758), (50, 1.4919, 1.377), (100, 1.5045, 1.348), (150, 1.4017, 1.31), (200, 1.4003, 1.218), (250, 1.3229, 1.146), (299, 1.1759, 1.217)]\n"}
+,{"stream_name":"stdout","time":5678.509637473,"data":"  selftest PASS | repeat-pass rel diff 0.00e+00 (\u003c 0.001) | k=1 lost on batch 0 0.7174 (\u003e 0.001) | params 204.9M\n"}
+,{"stream_name":"stdout","time":5678.509647299,"data":"    groups pass: 16/64 batches, 318s\n"}
+,{"stream_name":"stdout","time":5678.509650789,"data":"    groups pass: 32/64 batches, 638s\n"}
+,{"stream_name":"stdout","time":5678.509653952,"data":"    groups pass: 48/64 batches, 959s\n"}
+,{"stream_name":"stdout","time":5678.509657196,"data":"    groups pass: 64/64 batches, 1281s\n"}
+,{"stream_name":"stdout","time":5678.509660474,"data":"    total pass: 16/64 batches, 318s\n"}
+,{"stream_name":"stdout","time":5678.509664381,"data":"    total pass: 32/64 batches, 633s\n"}
+,{"stream_name":"stdout","time":5678.509668122,"data":"    total pass: 48/64 batches, 945s\n"}
+,{"stream_name":"stdout","time":5678.509671762,"data":"    total pass: 64/64 batches, 1259s\n"}
+,{"stream_name":"stdout","time":5678.509675219,"data":"  stage 300 measured after 5603s\n"}
+,{"stream_name":"stdout","time":5678.509679044,"data":"\n"}
+,{"stream_name":"stdout","time":5680.868843375,"data":"pln5   stage   0 | batches clipped 100% (median |G_b| 6.33) | B=8 repeat between passes, max diff 0.0e+00\n"}
+,{"stream_name":"stdout","time":5680.86887181,"data":"   k=1 | B=1 0.758 | B=8 raw 0.771 clip 0.782 | B=64 raw 0.772 clip 0.766 [0.760-0.781] | B=512 raw 0.771 clip 0.766\n"}
+,{"stream_name":"stdout","time":5680.868876696,"data":"   k=2 | B=1 0.595 | B=8 raw 0.591 clip 0.542 | B=64 raw 0.589 clip 0.529 [0.525-0.547] | B=512 raw 0.587 clip 0.529\n"}
+,{"stream_name":"stdout","time":5680.86888061,"data":"   k=4 | B=1 0.288 | B=8 raw 0.270 clip 0.234 | B=64 raw 0.263 clip 0.222 [0.218-0.247] | B=512 raw 0.261 clip 0.221\n"}
+,{"stream_name":"stdout","time":5680.868884613,"data":"pln5   stage 300 | batches clipped 97% (median |G_b| 1.09) | B=8 repeat between passes, max diff 0.0e+00 | fine-tune clipped 99% of steps\n"}
+,{"stream_name":"stdout","time":5680.868888318,"data":"   k=1 | B=1 0.615 | B=8 raw 0.618 clip 0.608 | B=64 raw 0.621 clip 0.604 [0.588-0.634] | B=512 raw 0.589 clip 0.567\n"}
+,{"stream_name":"stdout","time":5680.868891783,"data":"   k=2 | B=1 0.440 | B=8 raw 0.443 clip 0.432 | B=64 raw 0.440 clip 0.418 [0.401-0.499] | B=512 raw 0.387 clip 0.359\n"}
+,{"stream_name":"stdout","time":5680.868901203,"data":"   k=4 | B=1 0.217 | B=8 raw 0.218 clip 0.215 | B=64 raw 0.239 clip 0.229 [0.194-0.328] | B=512 raw 0.189 clip 0.175\n"}
+,{"stream_name":"stdout","time":5680.86890387,"data":"r5     stage   0 | batches clipped 100% (median |G_b| 6.01) | B=8 repeat between passes, max diff 0.0e+00\n"}
+,{"stream_name":"stdout","time":5680.868906391,"data":"   k=1 | B=1 0.830 | B=8 raw 0.826 clip 0.893 | B=64 raw 0.824 clip 0.877 [0.861-0.881] | B=512 raw 0.823 clip 0.872\n"}
+,{"stream_name":"stdout","time":5680.868908926,"data":"   k=2 | B=1 0.696 | B=8 raw 0.673 clip 0.685 | B=64 raw 0.665 clip 0.670 [0.651-0.673] | B=512 raw 0.662 clip 0.665\n"}
+,{"stream_name":"stdout","time":5680.868911368,"data":"   k=4 | B=1 0.380 | B=8 raw 0.322 clip 0.314 | B=64 raw 0.303 clip 0.291 [0.282-0.297] | B=512 raw 0.299 clip 0.288\n"}
+,{"stream_name":"stdout","time":5680.868913828,"data":"r5     stage 300 | batches clipped 100% (median |G_b| 1.23) | B=8 repeat between passes, max diff 0.0e+00 | fine-tune clipped 100% of steps\n"}
+,{"stream_name":"stdout","time":5680.868916141,"data":"   k=1 | B=1 0.705 | B=8 raw 0.711 clip 0.700 | B=64 raw 0.708 clip 0.689 [0.670-0.708] | B=512 raw 0.692 clip 0.663\n"}
+,{"stream_name":"stdout","time":5680.86891845,"data":"   k=2 | B=1 0.548 | B=8 raw 0.552 clip 0.553 | B=64 raw 0.535 clip 0.521 [0.500-0.546] | B=512 raw 0.485 clip 0.457\n"}
+,{"stream_name":"stdout","time":5680.868920713,"data":"   k=4 | B=1 0.290 | B=8 raw 0.289 clip 0.292 | B=64 raw 0.275 clip 0.273 [0.253-0.279] | B=512 raw 0.221 clip 0.218\n"}
+,{"stream_name":"stdout","time":5680.868942322,"data":"\n"}
+,{"stream_name":"stdout","time":5680.868944675,"data":"PRIMARY: gap = clipped B=64 median at stage 300 - per-sequence (B=1) median at stage 0, same k\n"}
+,{"stream_name":"stdout","time":5680.868947043,"data":"  pln5   gaps {1: -0.154, 2: -0.177, 4: -0.058}\n"}
+,{"stream_name":"stdout","time":5680.868951043,"data":"  r5     gaps {1: -0.141, 2: -0.175, 4: -0.106}\n"}
+,{"stream_name":"stdout","time":5680.868954356,"data":"VERDICT: INCOMPLETE (fewer than 4 models)\n"}
+,{"stream_name":"stdout","time":5680.86895772,"data":"\n"}
+,{"stream_name":"stdout","time":5680.868959871,"data":"SECONDARY (no verdict)\n"}
+,{"stream_name":"stdout","time":5680.868962098,"data":"  pln5   k=1: stage-0 gap (clip B=64 - B=1) +0.008 | stage-300 gap (clip B=64 - B=1) -0.011 | plateau |clip B=512 - B=64| 0.037 (MOVING) | training effect on B=1 -0.144\n"}
+,{"stream_name":"stdout","time":5680.868964539,"data":"  pln5   k=2: stage-0 gap (clip B=64 - B=1) -0.066 | stage-300 gap (clip B=64 - B=1) -0.023 | plateau |clip B=512 - B=64| 0.059 (MOVING) | training effect on B=1 -0.155\n"}
+,{"stream_name":"stdout","time":5680.868966897,"data":"  pln5   k=4: stage-0 gap (clip B=64 - B=1) -0.066 | stage-300 gap (clip B=64 - B=1) +0.013 | plateau |clip B=512 - B=64| 0.054 (MOVING) | training effect on B=1 -0.071\n"}
+,{"stream_name":"stdout","time":5680.868969333,"data":"  r5     k=1: stage-0 gap (clip B=64 - B=1) +0.047 | stage-300 gap (clip B=64 - B=1) -0.017 | plateau |clip B=512 - B=64| 0.026 | training effect on B=1 -0.124\n"}
+,{"stream_name":"stdout","time":5680.868971666,"data":"  r5     k=2: stage-0 gap (clip B=64 - B=1) -0.026 | stage-300 gap (clip B=64 - B=1) -0.027 | plateau |clip B=512 - B=64| 0.064 (MOVING) | training effect on B=1 -0.148\n"}
+,{"stream_name":"stdout","time":5680.868974077,"data":"  r5     k=4: stage-0 gap (clip B=64 - B=1) -0.089 | stage-300 gap (clip B=64 - B=1) -0.017 | plateau |clip B=512 - B=64| 0.055 (MOVING) | training effect on B=1 -0.089\n"}
+,{"stream_name":"stdout","time":5680.868976415,"data":"  Part II, after the fact relative to S11 (descriptive): r5 - pln5 at k=1/2/4\n"}
+,{"stream_name":"stdout","time":5680.868978684,"data":"    per-sequence (stage 0): [0.071, 0.101, 0.092]\n"}
+,{"stream_name":"stdout","time":5680.86898082,"data":"    clipped B=64 (stage 300): [0.085, 0.103, 0.044]\n"}
+,{"stream_name":"stdout","time":5680.868983029,"data":"\n"}
+,{"stream_name":"stdout","time":5680.868985071,"data":"total 5680s\n"}
+,{"stream_name":"stderr","time":5683.168108493,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":5683.168129923,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":5683.47133263,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":5683.471356578,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":5684.274499534,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":5685.344848299,"data":"[NbConvertApp] Writing 325111 bytes to __results__.html\n"}
+]

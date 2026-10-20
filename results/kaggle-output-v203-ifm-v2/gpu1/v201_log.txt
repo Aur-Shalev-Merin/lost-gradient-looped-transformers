@@ -1,0 +1,18 @@
+v203 r5 | driver a12dad4f7289 | R 5 | held-out (test) chunks 434 -> 48 batches of 8, groups of 8, B=1 on 64
+  selftest PASS | repeat-pass rel diff 0.00e+00 (< 0.001) | k=1 lost on batch 0 0.8312 (> 0.001) | params 204.9M
+    groups pass: 16/48 batches, 319s
+    groups pass: 32/48 batches, 646s
+    groups pass: 48/48 batches, 971s
+    total pass: 16/48 batches, 322s
+    total pass: 32/48 batches, 644s
+    total pass: 48/48 batches, 963s
+  stage 0 measured after 2076s
+  stage 300 fine-tune: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0001, 'seed': 2011, 'nonfinite': 0, 'clipped_frac': 1.0, 'ok': True, 's': 344}
+  selftest PASS | repeat-pass rel diff 0.00e+00 (< 0.001) | k=1 lost on batch 0 0.6911 (> 0.001) | params 204.9M
+    groups pass: 16/48 batches, 337s
+    groups pass: 32/48 batches, 674s
+    groups pass: 48/48 batches, 1013s
+    total pass: 16/48 batches, 336s
+    total pass: 32/48 batches, 670s
+    total pass: 48/48 batches, 1002s
+  stage 300 measured after 4578s

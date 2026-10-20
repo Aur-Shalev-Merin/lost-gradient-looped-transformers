@@ -1,0 +1,25 @@
+17 runs from 2 files
+
+=== huginn-s-fixed-r5: 17 runs (drivers ['22a56eba93e9'])
+  k=0 lr=0.0003  seed=2001103  val 1.5612 test 1.5419 | nonfinite   0 | rho_end 0.737 |  345s (train  320s) peak 6.0 GB
+  k=0 lr=0.0003  seed=2001104  val 1.5601 test 1.5416 | nonfinite   0 | rho_end 0.740 |  335s (train  310s) peak 6.0 GB
+  k=0 lr=0.0003  seed=2001107  val 1.5621 test 1.5423 | nonfinite   0 | rho_end 0.738 |  345s (train  320s) peak 6.0 GB
+  k=1 lr=0.0001  seed=2001103  val 1.4603 test 1.4427 | nonfinite   0 | rho_end 0.757 |  449s (train  424s) peak 7.2 GB
+  k=1 lr=0.0001  seed=2001106  val 1.4588 test 1.4398 | nonfinite   0 | rho_end 0.756 |  456s (train  430s) peak 7.2 GB
+  k=1 lr=0.0001  seed=2001107  val 1.4613 test 1.4417 | nonfinite   0 | rho_end 0.753 |  448s (train  423s) peak 7.2 GB
+  k=2 lr=0.0001  seed=2001101  val 1.4391 test 1.4193 | nonfinite   0 | rho_end 0.755 |  512s (train  487s) peak 7.3 GB
+  k=2 lr=0.0001  seed=2001103  val 1.4432 test 1.4233 | nonfinite   0 | rho_end 0.757 |  528s (train  502s) peak 7.3 GB
+  k=2 lr=0.0001  seed=2001106  val 1.4412 test 1.4208 | nonfinite   0 | rho_end 0.764 |  518s (train  493s) peak 7.3 GB
+  k=2 lr=0.0001  seed=2001107  val 1.4446 test 1.4229 | nonfinite   0 | rho_end 0.763 |  527s (train  502s) peak 7.3 GB
+  k=4 lr=0.0001  seed=2001103  val 1.4259 test 1.4051 | nonfinite   0 | rho_end 0.765 |  661s (train  636s) peak 7.5 GB
+  k=4 lr=0.0001  seed=2001104  val 1.4240 test 1.4024 | nonfinite   0 | rho_end 0.760 |  672s (train  646s) peak 7.5 GB
+  k=4 lr=0.0001  seed=2001107  val 1.4263 test 1.4042 | nonfinite   0 | rho_end 0.754 |  661s (train  636s) peak 7.5 GB
+  k=5 lr=0.0001  seed=2001101  val 1.4198 test 1.3989 | nonfinite   0 | rho_end 0.766 |  728s (train  703s) peak 7.6 GB
+  k=5 lr=0.0001  seed=2001102  val 1.4228 test 1.4020 | nonfinite   0 | rho_end 0.766 |  742s (train  716s) peak 7.6 GB
+  k=5 lr=0.0001  seed=2001105  val 1.4192 test 1.4002 | nonfinite   0 | rho_end 0.766 |  729s (train  704s) peak 7.6 GB
+  k=5 lr=0.0001  seed=2001106  val 1.4207 test 1.4005 | nonfinite   0 | rho_end 0.774 |  741s (train  715s) peak 7.6 GB
+seed 2001101: full nonfinite 0 test 1.3989 -> VALID
+seed 2001102: full nonfinite 0 test 1.4020 -> VALID
+seed 2001105: full nonfinite 0 test 1.4002 -> VALID
+seed 2001106: full nonfinite 0 test 1.4005 -> VALID
+floor lr 0.0003, truncated/full lr 0.0001; seeds used: []

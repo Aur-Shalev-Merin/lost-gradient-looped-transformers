@@ -1,0 +1,5 @@
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 75537.08 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 308997.26 examples/s]
+v167 driver b6fd416e48f2 dev cuda amp True | params 163.5M | train ex 7000, val/test chunks 170/492
+cell R=8 a=0.30 k=0 lr=0.0009 seed=9001: val 1.3080 test 1.2870 rho_end 0.732 nonfinite 0 (352s, peak 6.0 GB)
+cell R=8 a=0.30 k=8 lr=0.0003 seed=9001: val 1.2044 test 1.1787 rho_end 0.735 nonfinite 0 (916s, peak 7.3 GB)

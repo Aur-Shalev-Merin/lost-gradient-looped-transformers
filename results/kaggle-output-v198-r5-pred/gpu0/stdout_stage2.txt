@@ -1,0 +1,22 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+v198 driver 2d4f2c4c9e65 | huginn-s-fixed-r5 (Table 2, S, Fixed R=5) | dev cuda fp32 | params 303.6M (loop 54.3M, part 28.3M) | docmask True | 150 val chunks of 512 tokens, 3 boundaries in chunk 0
+/kaggle/working/v198_ifm_fade.py:168: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return float(loss)
+seq  0 R=5  a=1.0: loss 2.365 rho 0.857 adj 0.00548 0.00477 0.00445 0.00531 0.0112 | err all k1 0.814 / k2 0.668 / k4 0.352 | loop 0.834 / 0.678 / 0.343 (7s)
+seq  1 R=5  a=1.0: loss 2.584 rho 0.809 adj 0.00447 0.00397 0.00398 0.00513 0.0113 | err all k1 0.796 / k2 0.644 / k4 0.339 | loop 0.830 / 0.667 / 0.341 (5s)
+seq  2 R=5  a=1.0: loss 2.592 rho 0.825 adj 0.00484 0.00414 0.00413 0.0052 0.0113 | err all k1 0.814 / k2 0.668 / k4 0.336 | loop 0.849 / 0.692 / 0.338 (5s)
+seq  3 R=5  a=1.0: loss 2.449 rho 0.844 adj 0.00578 0.00465 0.00447 0.00564 0.0122 | err all k1 0.844 / k2 0.718 / k4 0.416 | loop 0.863 / 0.725 / 0.408 (5s)
+seq  4 R=5  a=1.0: loss 2.613 rho 0.813 adj 0.00438 0.00399 0.00395 0.005 0.011 | err all k1 0.790 / k2 0.637 / k4 0.327 | loop 0.825 / 0.660 / 0.332 (5s)
+seq  5 R=5  a=1.0: loss 2.569 rho 0.820 adj 0.00467 0.00415 0.00421 0.00529 0.0112 | err all k1 0.803 / k2 0.658 / k4 0.404 | loop 0.825 / 0.659 / 0.357 (5s)
+seq  6 R=5  a=1.0: loss 2.631 rho 0.861 adj 0.00594 0.00498 0.00478 0.00563 0.0118 | err all k1 0.833 / k2 0.695 / k4 0.367 | loop 0.856 / 0.709 / 0.367 (5s)
+seq  7 R=5  a=1.0: loss 2.287 rho 0.797 adj 0.00442 0.00405 0.00422 0.00546 0.0119 | err all k1 0.794 / k2 0.636 / k4 0.346 | loop 0.835 / 0.662 / 0.348 (5s)
+seq  8 R=5  a=1.0: loss 2.903 rho 0.850 adj 0.00609 0.00532 0.00501 0.00602 0.0129 | err all k1 0.838 / k2 0.707 / k4 0.392 | loop 0.867 / 0.727 / 0.395 (5s)
+seq  9 R=5  a=1.0: loss 2.266 rho 0.874 adj 0.00587 0.00478 0.0043 0.00511 0.0111 | err all k1 0.871 / k2 0.761 / k4 0.455 | loop 0.900 / 0.782 / 0.458 (5s)
+seq 10 R=5  a=1.0: loss 2.230 rho 0.824 adj 0.00434 0.00372 0.00365 0.00462 0.0103 | err all k1 0.812 / k2 0.672 / k4 0.349 | loop 0.840 / 0.688 / 0.346 (5s)
+seq 11 R=5  a=1.0: loss 2.322 rho 0.848 adj 0.00538 0.00456 0.00432 0.00527 0.0114 | err all k1 0.864 / k2 0.754 / k4 0.423 | loop 0.889 / 0.770 / 0.422 (5s)
+seq 12 R=5  a=1.0: loss 2.235 rho 0.837 adj 0.00481 0.00433 0.00414 0.00506 0.0109 | err all k1 0.837 / k2 0.702 / k4 0.363 | loop 0.864 / 0.719 / 0.361 (5s)
+seq 13 R=5  a=1.0: loss 2.301 rho 0.848 adj 0.00631 0.00514 0.00501 0.00608 0.0132 | err all k1 0.849 / k2 0.708 / k4 0.389 | loop 0.876 / 0.725 / 0.386 (5s)
+seq 14 R=5  a=1.0: loss 2.330 rho 0.854 adj 0.00524 0.00434 0.0041 0.00508 0.0107 | err all k1 0.860 / k2 0.745 / k4 0.426 | loop 0.886 / 0.763 / 0.425 (5s)
+seq 15 R=5  a=1.0: loss 2.220 rho 0.859 adj 0.00567 0.00471 0.00439 0.00537 0.0114 | err all k1 0.831 / k2 0.692 / k4 0.366 | loop 0.858 / 0.710 / 0.365 (5s)
+done p0

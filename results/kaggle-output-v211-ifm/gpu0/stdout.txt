@@ -1,0 +1,6 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  pln5: 11 tensors (124.65M params) get a nonzero k = 0 gradient
+  pln5 s0: all [0.764, 0.591, 0.291] | loop [0.805, 0.626, 0.308] (129s)
+  pln5 zero300 fine-tune (k = 0) seed 2011: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0001, 'seed': 2011, 'nonfinite': 0, 'clipped_frac': 0.0433, 'ok': True, 's': 147, 'k': 0} | changed 11 tensors, 124.65M params
+  CHECK loop weights fixed: PASS
+  pln5 zero300: all [0.671, 0.51, 0.256] | loop [0.756, 0.574, 0.286] (127s)

@@ -1,0 +1,28 @@
+A new version of the following files was downloaded from https://huggingface.co/tomg-group-umd/huginn-0125:
+- raven_config_minimal.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+A new version of the following files was downloaded from https://huggingface.co/tomg-group-umd/huginn-0125:
+- raven_modeling_minimal.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:  25%|██▌       | 1/4 [01:04<03:14, 64.82s/it]Fetching 4 files:  75%|███████▌  | 3/4 [01:05<00:16, 16.87s/it]Fetching 4 files: 100%|██████████| 4/4 [01:05<00:00, 16.25s/it]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:06<00:18,  6.24s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:17<00:18,  9.43s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:36<00:13, 13.64s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:42<00:00, 10.42s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:42<00:00, 10.51s/it]
+Generating test split:   0%|          | 0/4358 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 4358/4358 [00:00<00:00, 248046.26 examples/s]
+Generating train split:   0%|          | 0/1801350 [00:00<?, ? examples/s]Generating train split:   3%|▎         | 51000/1801350 [00:00<00:03, 502768.76 examples/s]Generating train split:   7%|▋         | 135000/1801350 [00:00<00:02, 694157.06 examples/s]Generating train split:  13%|█▎        | 230000/1801350 [00:00<00:02, 649036.62 examples/s]Generating train split:  18%|█▊        | 317000/1801350 [00:00<00:02, 719986.53 examples/s]Generating train split:  24%|██▍       | 430000/1801350 [00:00<00:01, 708179.96 examples/s]Generating train split:  28%|██▊       | 512000/1801350 [00:00<00:01, 738571.27 examples/s]Generating train split:  34%|███▍      | 612000/1801350 [00:00<00:01, 684715.33 examples/s]Generating train split:  38%|███▊      | 685000/1801350 [00:00<00:01, 693330.03 examples/s]Generating train split:  42%|████▏     | 756000/1801350 [00:01<00:01, 693996.38 examples/s]Generating train split:  47%|████▋     | 853000/1801350 [00:01<00:01, 671991.21 examples/s]Generating train split:  52%|█████▏    | 941675/1801350 [00:01<00:01, 640173.07 examples/s]Generating train split:  57%|█████▋    | 1018675/1801350 [00:01<00:01, 666872.09 examples/s]Generating train split:  61%|██████    | 1093675/1801350 [00:01<00:01, 660992.14 examples/s]Generating train split:  65%|██████▍   | 1168675/1801350 [00:01<00:00, 683874.59 examples/s]Generating train split:  69%|██████▉   | 1249675/1801350 [00:01<00:00, 715860.69 examples/s]Generating train split:  74%|███████▎  | 1327675/1801350 [00:01<00:00, 701387.98 examples/s]Generating train split:  78%|███████▊  | 1406675/1801350 [00:02<00:00, 723196.04 examples/s]Generating train split:  84%|████████▍ | 1516675/1801350 [00:02<00:00, 705806.05 examples/s]Generating train split:  89%|████████▊ | 1598675/1801350 [00:02<00:00, 730264.88 examples/s]Generating train split:  95%|█████████▍| 1710675/1801350 [00:02<00:00, 733928.07 examples/s]Generating train split: 100%|█████████▉| 1795675/1801350 [00:02<00:00, 758683.58 examples/s]Generating train split: 100%|██████████| 1801350/1801350 [00:02<00:00, 701017.23 examples/s]
+Generating validation split:   0%|          | 0/3760 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 3760/3760 [00:00<00:00, 606700.89 examples/s]
+v196: tomg-group-umd/huginn-0125 | dtype torch.bfloat16
+/kaggle/working/loop_grad_probe.py:242: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return float(loss), g
+R=48 seq  0 wikitext err k1/2/4/8 0.8618 0.7392 0.5368 0.2707 | rho 0.8745 | BCxW check 1.1e-16 (156s, total 321s)
+R=48 seq  1 wikitext err k1/2/4/8 0.8316 0.6894 0.4651 0.2145 | rho 0.9080 | BCxW check 1.1e-16 (162s, total 483s)
+R=48 seq  2 wikitext err k1/2/4/8 0.9082 0.8353 0.7126 0.5388 | rho 0.8781 | BCxW check 1.1e-16 (163s, total 646s)
+R=48 seq  3 wikitext err k1/2/4/8 0.9209 0.8477 0.7161 0.4980 | rho 0.9089 | BCxW check 1.1e-16 (162s, total 808s)
+R=48 seq  4 wikitext err k1/2/4/8 0.9029 0.8117 0.6602 0.4531 | rho 0.9094 | BCxW check 1.1e-16 (164s, total 972s)
+R=48 seq  5 wikitext err k1/2/4/8 0.8541 0.7236 0.5115 0.2366 | rho 0.8634 | BCxW check 1.1e-16 (162s, total 1134s)
+R=48 seq  6 wikitext err k1/2/4/8 0.9553 0.9141 0.8380 0.6917 | rho 0.9141 | BCxW check 1.1e-16 (165s, total 1300s)
+R=48 seq  7 wikitext err k1/2/4/8 0.8822 0.7638 0.5672 0.3169 | rho 0.8972 | BCxW check 1.1e-16 (165s, total 1465s)
+R=48 seq 16 gsm8k    err k1/2/4/8 0.9369 0.8567 0.6974 0.4828 | rho 0.9023 | BCxW check 5.6e-17 (165s, total 1630s)
+R=48 seq 17 gsm8k    err k1/2/4/8 0.9293 0.8370 0.6444 0.4039 | rho 0.9096 | BCxW check 1.1e-16 (166s, total 1796s)
+R=48 seq 18 gsm8k    err k1/2/4/8 0.9441 0.8861 0.7777 0.5871 | rho 0.9008 | BCxW check 1.1e-16 (155s, total 1950s)
+R=48 seq 19 gsm8k    err k1/2/4/8 0.9211 0.8274 0.6376 0.3828 | rho 0.8927 | BCxW check 1.1e-16 (155s, total 2106s)
+done 2106 s

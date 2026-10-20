@@ -1,0 +1,6 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  pln5 s0: all [0.764, 0.591, 0.291] | loop [0.805, 0.626, 0.308] (126s)
+  pln5 full300 fine-tune seed 2011: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0001, 'seed': 2011, 'nonfinite': 0, 'clipped_frac': 0.9933, 'ok': True, 's': 318, 'k': 5}
+  pln5 full300: all [0.633, 0.456, 0.221] | loop [0.722, 0.519, 0.254] (126s)
+  pln5 trunc300 fine-tune seed 2011: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0001, 'seed': 2011, 'nonfinite': 0, 'clipped_frac': 0.1333, 'ok': True, 's': 223, 'k': 2}
+  pln5 trunc300: all [0.646, 0.47, 0.246] | loop [0.73, 0.533, 0.279] (126s)

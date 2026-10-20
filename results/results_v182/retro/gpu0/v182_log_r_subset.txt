@@ -1,0 +1,7 @@
+v182 retro sha 1c6d1edbf41e | params 163.5M | val chunks 170
+subset R=8 groups {'all': 163490112, 'adapter+core0': 4203648, 'loop': 28984320, 'core0': 3540096, 'core1': 3540096, 'core2': 3540096, 'core3': 3540096, 'core4': 3540096, 'core5': 3540096, 'core6': 3540096, 'core7': 3540096}
+subset R=8 rho 0.346 (26s)
+  k=1 all 0.3575 adapter+core0 0.3825 loop 0.3782 core0 0.4090 core1 0.2971 core2 0.2606 core3 0.3199 core4 0.3123 core5 0.2240 core6 0.2645 core7 0.3481
+  k=2 all 0.1372 adapter+core0 0.1473 loop 0.1444 core0 0.1541 core1 0.0882 core2 0.0800 core3 0.0943 core4 0.0942 core5 0.0613 core6 0.0740 core7 0.0932
+  k=4 all 0.0164 adapter+core0 0.0177 loop 0.0173 core0 0.0202 core1 0.0111 core2 0.0092 core3 0.0113 core4 0.0108 core5 0.0065 core6 0.0063 core7 0.0090
+v182 done

@@ -1,0 +1,47 @@
+[{"stream_name":"stderr","time":7.695838744,"data":"\rFetching 11 files:   0%|          | 0/11 [00:00\u003c?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":13.39358297,"data":"\rFetching 11 files:   9%|▉         | 1/11 [00:00\u003c00:02,  4.67it/s]\rFetching 11 files:  73%|███████▎  | 8/11 [00:00\u003c00:00, 27.56it/s]\rFetching 11 files: 100%|██████████| 11/11 [00:05\u003c00:00,  1.88it/s]\n"}
+,{"stream_name":"stderr","time":16.477000345,"data":"\rFetching 11 files:   0%|          | 0/11 [00:00\u003c?, ?it/s]\rFetching 11 files:   9%|▉         | 1/11 [00:00\u003c00:01,  8.11it/s]\rFetching 11 files:  36%|███▋      | 4/11 [00:00\u003c00:00, 19.19it/s]\rFetching 11 files: 100%|██████████| 11/11 [00:02\u003c00:00,  3.37it/s]\rFetching 11 files: 100%|██████████| 11/11 [00:02\u003c00:00,  3.74it/s]\n"}
+,{"stream_name":"stderr","time":23.481566898,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":26.051361671,"data":"\rGenerating train split:   0%|          | 0/7473 [00:00\u003c?, ? examples/s]\rGenerating train split: 100%|██████████| 7473/7473 [00:00\u003c00:00, 74026.04 examples/s]\rGenerating train split: 100%|██████████| 7473/7473 [00:00\u003c00:00, 73747.54 examples/s]\n"}
+,{"stream_name":"stderr","time":26.05633187,"data":"\rGenerating test split:   0%|          | 0/1319 [00:00\u003c?, ? examples/s]\rGenerating test split: 100%|██████████| 1319/1319 [00:00\u003c00:00, 302426.45 examples/s]\n"}
+,{"stream_name":"stdout","time":26.856090355,"data":"setup done after 26s\n"}
+,{"stream_name":"stdout","time":86.858300784,"data":"job exit 1 elapsed 86s\n"}
+,{"stream_name":"stdout","time":86.858368398,"data":"job exit 1 elapsed 86s\n"}
+,{"stream_name":"stdout","time":86.863412946,"data":"---- gpu0 (tail)\n"}
+,{"stream_name":"stdout","time":86.863432866,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":86.863439265,"data":"v201 pln5 | driver 1a4f98bd6012 | R 5 | dev cuda | train chunks 2252 | 64 x 8 sequences, groups of 8, B=1 on 64 | k (1, 2, 4)\n"}
+,{"stream_name":"stdout","time":86.863443959,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":86.863448044,"data":"  File \"/kaggle/working/v201_batch_lost.py\", line 353, in \u003cmodule\u003e\n"}
+,{"stream_name":"stdout","time":86.86345286,"data":"    main()\n"}
+,{"stream_name":"stdout","time":86.863456854,"data":"    ~~~~^^\n"}
+,{"stream_name":"stdout","time":86.863461082,"data":"  File \"/kaggle/working/v201_batch_lost.py\", line 225, in main\n"}
+,{"stream_name":"stdout","time":86.863467088,"data":"    assert abs(sum(p.numel() for p in params) / 1e6 - PARAMS_M[A.model]) \u003c 0.2, 'unexpected parameter set'\n"}
+,{"stream_name":"stdout","time":86.863474269,"data":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":86.863477091,"data":"AssertionError: unexpected parameter set\n"}
+,{"stream_name":"stdout","time":86.863479903,"data":"\n"}
+,{"stream_name":"stdout","time":86.863718019,"data":"---- gpu1 (tail)\n"}
+,{"stream_name":"stdout","time":86.863738635,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":86.863745503,"data":"v201 r5 | driver 1a4f98bd6012 | R 5 | dev cuda | train chunks 2252 | 64 x 8 sequences, groups of 8, B=1 on 64 | k (1, 2, 4)\n"}
+,{"stream_name":"stdout","time":86.863762822,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":86.863766642,"data":"  File \"/kaggle/working/v201_batch_lost.py\", line 353, in \u003cmodule\u003e\n"}
+,{"stream_name":"stdout","time":86.863770565,"data":"    main()\n"}
+,{"stream_name":"stdout","time":86.86377371,"data":"    ~~~~^^\n"}
+,{"stream_name":"stdout","time":86.863776816,"data":"  File \"/kaggle/working/v201_batch_lost.py\", line 225, in main\n"}
+,{"stream_name":"stdout","time":86.863780293,"data":"    assert abs(sum(p.numel() for p in params) / 1e6 - PARAMS_M[A.model]) \u003c 0.2, 'unexpected parameter set'\n"}
+,{"stream_name":"stdout","time":86.863783919,"data":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":86.863787277,"data":"AssertionError: unexpected parameter set\n"}
+,{"stream_name":"stdout","time":86.863790633,"data":"\n"}
+,{"stream_name":"stdout","time":89.269483085,"data":"\n"}
+,{"stream_name":"stdout","time":89.269509275,"data":"PRIMARY: gap = clipped B=64 median at stage 300 - per-sequence (B=1) median at stage 0, same k\n"}
+,{"stream_name":"stdout","time":89.269513904,"data":"VERDICT: INCOMPLETE (fewer than 4 models)\n"}
+,{"stream_name":"stdout","time":89.269517534,"data":"\n"}
+,{"stream_name":"stdout","time":89.269521004,"data":"SECONDARY (no verdict)\n"}
+,{"stream_name":"stdout","time":89.269524945,"data":"\n"}
+,{"stream_name":"stdout","time":89.269528463,"data":"total 88s\n"}
+,{"stream_name":"stderr","time":91.48594068,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":91.485982966,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":91.769871322,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":91.769900106,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":92.540332927,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":93.620230453,"data":"[NbConvertApp] Writing 324983 bytes to __results__.html\n"}
+]

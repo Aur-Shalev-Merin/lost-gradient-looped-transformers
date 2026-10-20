@@ -1,0 +1,21 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+v164 driver feaf9a0ba438 (v163 module d5c2647126de) dev cuda amp True
+/kaggle/working/v163_parcae_damped_trunc.py:155: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  torch.manual_seed(0); x1 = float(v.loss_manual(m, ids, R, k))
+selftest a=1 vs v162 loss_manual R=64 k=64: 2.675924 2.675924
+selftest a=1 vs v162 loss_manual R=64 k=32: 2.675924 2.675924
+selftest a=1 vs v162 loss_manual R=64 k=0: 2.675924 2.675924
+selftest checkpointed vs plain grad (a=0.5, k=4): rel diff 1.64e-06
+selftest truncated grad fp16 vs fp32 a=1.0 k=1: {'rest': 0.0027, 'prelude': 0.0026, 'adapter': 0.0028, 'core_block': 0.0026}
+selftest truncated grad fp16 vs fp32 a=1.0 k=4: {'rest': 0.0027, 'prelude': 0.0023, 'adapter': 0.0028, 'core_block': 0.0025}
+selftest truncated grad fp16 vs fp32 a=0.5 k=1: {'rest': 0.0026, 'prelude': 0.0024, 'adapter': 0.0026, 'core_block': 0.0026}
+selftest truncated grad fp16 vs fp32 a=0.5 k=4: {'rest': 0.0026, 'prelude': 0.0022, 'adapter': 0.0024, 'core_block': 0.0025}
+selftest OK
+cell R=48 a=0.4 k=48 lr=0.0003 seed=1661101: val 1.3961 test 1.3743 rho_end 0.896 nonfinite 2 (2273s)
+cell R=48 a=0.4 k=48 lr=0.0003 seed=1661102: val 1.3945 test 1.3727 rho_end 0.886 nonfinite 0 (2280s)
+cell R=64 a=0.3 k=12 lr=0.0003 seed=1661105: val 1.3998 test 1.3778 rho_end 0.917 nonfinite 0 (1308s)
+cell R=64 a=0.3 k=8 lr=0.0003 seed=1661106: val 1.4060 test 1.3822 rho_end 0.913 nonfinite 0 (1179s)
+cell R=48 a=0.4 k=8 lr=0.0003 seed=1661107: val 1.3993 test 1.3760 rho_end 0.896 nonfinite 0 (987s)
+cell R=48 a=0.4 k=4 lr=0.0003 seed=1661101: val 1.4109 test 1.3874 rho_end 0.890 nonfinite 0 (857s)
+cell R=48 a=0.4 k=0 lr=0.0009 seed=1661102: val 1.5562 test 1.5553 rho_end 0.916 nonfinite 0 (688s)

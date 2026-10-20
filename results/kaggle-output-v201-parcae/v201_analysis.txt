@@ -1,0 +1,17 @@
+parcae stage   0 | batches clipped 100% (median |G_b| 6.34) | B=8 repeat between passes, max diff 2.8e-06
+   k=1 | B=1 0.800 | B=8 raw 0.809 clip 0.884 | B=64 raw 0.999 clip 0.968 [0.845-1.011] | B=512 raw 1.000 clip 0.928
+   k=2 | B=1 0.637 | B=8 raw 0.650 clip 0.669 | B=64 raw 0.998 clip 0.739 [0.617-0.794] | B=512 raw 1.000 clip 0.689
+   k=4 | B=1 0.383 | B=8 raw 0.390 clip 0.368 | B=64 raw 0.997 clip 0.446 [0.300-0.590] | B=512 raw 1.000 clip 0.364
+parcae stage 300 | batches clipped 91% (median |G_b| 1.05) | B=8 repeat between passes, max diff 8.8e-08 | fine-tune clipped 99% of steps
+   k=1 | B=1 0.598 | B=8 raw 0.603 clip 0.600 | B=64 raw 0.584 clip 0.575 [0.562-0.605] | B=512 raw 0.579 clip 0.569
+   k=2 | B=1 0.415 | B=8 raw 0.423 clip 0.417 | B=64 raw 0.386 clip 0.372 [0.354-0.406] | B=512 raw 0.354 clip 0.340
+   k=4 | B=1 0.200 | B=8 raw 0.206 clip 0.203 | B=64 raw 0.177 clip 0.170 [0.142-0.207] | B=512 raw 0.131 clip 0.122
+
+PRIMARY: gap = clipped B=64 median at stage 300 - per-sequence (B=1) median at stage 0, same k
+  parcae gaps {1: -0.225, 2: -0.265, 4: -0.213}
+VERDICT: INCOMPLETE (fewer than 4 models)
+
+SECONDARY (no verdict)
+  parcae k=1: stage-0 gap (clip B=64 - B=1) +0.168 | stage-300 gap (clip B=64 - B=1) -0.023 | plateau |clip B=512 - B=64| 0.006 | training effect on B=1 -0.202
+  parcae k=2: stage-0 gap (clip B=64 - B=1) +0.102 | stage-300 gap (clip B=64 - B=1) -0.043 | plateau |clip B=512 - B=64| 0.032 (MOVING) | stage 0 raw B=512 exceeds clipped by 0.311 (RARE-SEQUENCES) | training effect on B=1 -0.222
+  parcae k=4: stage-0 gap (clip B=64 - B=1) +0.063 | stage-300 gap (clip B=64 - B=1) -0.031 | plateau |clip B=512 - B=64| 0.047 (MOVING) | stage 0 raw B=512 exceeds clipped by 0.636 (RARE-SEQUENCES) | training effect on B=1 -0.182

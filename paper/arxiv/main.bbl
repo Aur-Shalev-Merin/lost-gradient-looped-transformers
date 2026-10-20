@@ -1,0 +1,225 @@
+\begin{thebibliography}{29}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Aicher et~al.(2019)Aicher, Foti, and Fox]{aicher2019}
+Christopher Aicher, Nicholas~J. Foti, and Emily~B. Fox.
+\newblock Adaptively truncating backpropagation through time to control
+  gradient bias.
+\newblock In \emph{Proceedings of the 35th Conference on Uncertainty in
+  Artificial Intelligence (UAI)}, volume 115 of \emph{Proceedings of Machine
+  Learning Research}, pp.\  799--808. PMLR, 2019.
+
+\bibitem[Ajalloeian \& Stich(2020)Ajalloeian and Stich]{ajalloeian2020}
+Ahmad Ajalloeian and Sebastian~U. Stich.
+\newblock On the convergence of {SGD} with biased gradients.
+\newblock In \emph{ICML 2020 Workshop on Beyond First Order Methods in ML
+  Systems}, 2020.
+
+\bibitem[Allal et~al.(2025)Allal, Lozhkov, Bakouch, et~al.]{allal2025smollm2}
+Loubna~Ben Allal, Anton Lozhkov, Elie Bakouch, et~al.
+\newblock {SmolLM2}: When smol goes big -- data-centric training of a small
+  language model.
+\newblock arXiv preprint arXiv:2502.02737, 2025.
+
+\bibitem[Bansal et~al.(2022)Bansal, Schwarzschild, Borgnia, Emam, Huang,
+  Goldblum, and Goldstein]{bansal2022}
+Arpit Bansal, Avi Schwarzschild, Eitan Borgnia, Zeyad Emam, Furong Huang, Micah
+  Goldblum, and Tom Goldstein.
+\newblock End-to-end algorithm synthesis with recurrent networks: Extrapolation
+  without overthinking.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~35, 2022.
+
+\bibitem[Cobbe et~al.(2021)Cobbe, Kosaraju, Bavarian, et~al.]{cobbe2021gsm8k}
+Karl Cobbe, Vineet Kosaraju, Mohammad Bavarian, et~al.
+\newblock Training verifiers to solve math word problems.
+\newblock arXiv preprint arXiv:2110.14168, 2021.
+
+\bibitem[Fung et~al.(2022)Fung, Heaton, Li, McKenzie, Osher, and Yin]{fung2022}
+Samy~Wu Fung, Howard Heaton, Qiuwei Li, Daniel McKenzie, Stanley Osher, and
+  Wotao Yin.
+\newblock {JFB}: Jacobian-free backpropagation for implicit networks.
+\newblock In \emph{Proceedings of the AAAI Conference on Artificial
+  Intelligence}, volume~36, pp.\  6648--6656, 2022.
+\newblock \doi{10.1609/aaai.v36i6.20619}.
+
+\bibitem[Gao et~al.(2025)Gao, Chen, Xiao, Xing, Tao, Luo, Zhou, and
+  Dai]{gao2025urm}
+Zitian Gao, Lynx Chen, Yihao Xiao, He~Xing, Ran Tao, Haoming Luo, Joey Zhou,
+  and Bryan Dai.
+\newblock Universal reasoning model.
+\newblock arXiv preprint arXiv:2512.14693, 2025.
+
+\bibitem[Geiping et~al.(2025)Geiping, McLeish, Jain, Kirchenbauer, Singh,
+  Bartoldson, Kailkhura, Bhatele, and Goldstein]{geiping2025}
+Jonas Geiping, Sean McLeish, Neel Jain, John Kirchenbauer, Siddharth Singh,
+  Brian~R. Bartoldson, Bhavya Kailkhura, Abhinav Bhatele, and Tom Goldstein.
+\newblock Scaling up test-time compute with latent reasoning: A recurrent depth
+  approach.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~38, 2025.
+
+\bibitem[Geng et~al.(2021)Geng, Zhang, Bai, Wang, and Lin]{geng2021}
+Zhengyang Geng, Xin-Yu Zhang, Shaojie Bai, Yisen Wang, and Zhouchen Lin.
+\newblock On training implicit models.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~34, 2021.
+
+\bibitem[Guo et~al.(2026)Guo, Wu, Du, Huo, Shao, Vasilakos, and Wen]{guo2026}
+Zhihao Guo, Zonghan Wu, Haizhou Du, Huan Huo, Yilei Shao, Athanasios~V.
+  Vasilakos, and Qingsong Wen.
+\newblock Right direction, wrong step: Geometric analysis of finite-step
+  failure in looped transformers.
+\newblock arXiv preprint arXiv:2609.16665, 2026.
+
+\bibitem[Huang et~al.(2026)Huang, Shi, Chen, Wen, Liu, Xing, and
+  Ma]{huang2026partii}
+Benhao Huang, Chufan Shi, Junlin Chen, Shicheng Wen, Zhengzhong Liu, Eric Xing,
+  and Xuezhe Ma.
+\newblock Towards looped models done right, part {II}: Rethinking at fixed
+  points.
+\newblock arXiv preprint arXiv:2610.06833, 2026.
+
+\bibitem[Li et~al.(2026)Li, Huang, and Duan]{li2026policymemory}
+Xingjian Li, Jianhua~Z. Huang, and Junli Duan.
+\newblock When does backpropagating through policy memory matter? {S}eparating
+  representation credit from closed-loop credit.
+\newblock arXiv preprint arXiv:2609.33169, 2026.
+
+\bibitem[Liao et~al.(2018)Liao, Xiong, Fetaya, Zhang, Yoon, Pitkow, Urtasun,
+  and Zemel]{liao2018}
+Renjie Liao, Yuwen Xiong, Ethan Fetaya, Lisa Zhang, KiJung Yoon, Xaq Pitkow,
+  Raquel Urtasun, and Richard Zemel.
+\newblock Reviving and improving recurrent back-propagation.
+\newblock In \emph{Proceedings of the 35th International Conference on Machine
+  Learning (ICML)}, volume~80 of \emph{Proceedings of Machine Learning
+  Research}. PMLR, 2018.
+
+\bibitem[Loshchilov \& Hutter(2019)Loshchilov and Hutter]{loshchilov2019}
+Ilya Loshchilov and Frank Hutter.
+\newblock Decoupled weight decay regularization.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2019.
+
+\bibitem[Marchenko et~al.(2026)Marchenko, Bezrukov, Kashurin, Fedorova,
+  Bocharov, Shakhvalieva, Tikhonova, and Ternovskii]{marchenko2026}
+Andrei Marchenko, Viacheslav Bezrukov, Oleg Kashurin, Inessa Fedorova, Dmitry
+  Bocharov, Yuliana Shakhvalieva, Maria Tikhonova, and Valerii Ternovskii.
+\newblock Closing the loop: Practical training recipes for looped language
+  models.
+\newblock arXiv preprint arXiv:2610.00673, 2026.
+
+\bibitem[McLeish et~al.(2026)McLeish, Li, Kirchenbauer, Kalra, Bartoldson,
+  Kailkhura, Schwarzschild, Geiping, Goldstein, and Goldblum]{mcleish2025}
+Sean McLeish, Ang Li, John Kirchenbauer, Dayal~Singh Kalra, Brian~R.
+  Bartoldson, Bhavya Kailkhura, Avi Schwarzschild, Jonas Geiping, Tom
+  Goldstein, and Micah Goldblum.
+\newblock Teaching pretrained language models to think deeper with retrofitted
+  recurrence.
+\newblock In \emph{Conference on Language Modeling (COLM)}, 2026.
+
+\bibitem[Merity et~al.(2017)Merity, Xiong, Bradbury, and Socher]{merity2017}
+Stephen Merity, Caiming Xiong, James Bradbury, and Richard Socher.
+\newblock Pointer sentinel mixture models.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2017.
+
+\bibitem[Movahedi et~al.(2026)Movahedi, Milovanovi{\'c}, Libo~Feigin, Theus,
+  Hofmann, Boeva, Rusch, and Orvieto]{movahedi2026fprm}
+Sajad Movahedi, Vera Milovanovi{\'c}, Shlomo Libo~Feigin, Alexander Theus,
+  Thomas Hofmann, Valentina Boeva, T.~Konstantin Rusch, and Antonio Orvieto.
+\newblock Fixed-point reasoners: Stable and adaptive deep looped transformers.
+\newblock arXiv preprint arXiv:2606.18206, 2026.
+
+\bibitem[Prairie et~al.(2026)Prairie, Novack, Berg-Kirkpatrick, and
+  Fu]{prairie2026parcae}
+Hayden Prairie, Zachary Novack, Taylor Berg-Kirkpatrick, and Daniel~Y. Fu.
+\newblock Parcae: Scaling laws for stable looped language models.
+\newblock In \emph{Conference on Language Modeling (COLM)}, 2026.
+
+\bibitem[Schwethelm et~al.(2026{\natexlab{a}})Schwethelm, R{\"u}ckert, and
+  Kaissis]{schwethelm2026a}
+Kristian Schwethelm, Daniel R{\"u}ckert, and Georgios Kaissis.
+\newblock How much is one recurrence worth? {I}so-depth scaling laws for looped
+  language models.
+\newblock arXiv preprint arXiv:2604.21106, 2026{\natexlab{a}}.
+
+\bibitem[Schwethelm et~al.(2026{\natexlab{b}})Schwethelm, R{\"u}ckert, and
+  Kaissis]{schwethelm2026b}
+Kristian Schwethelm, Daniel R{\"u}ckert, and Georgios Kaissis.
+\newblock Depth-adaptive inference of looped language models via continuous
+  depth batching.
+\newblock arXiv preprint arXiv:2608.09444v2, 2026{\natexlab{b}}.
+\newblock Version 2.
+
+\bibitem[Shaban et~al.(2019)Shaban, Cheng, Hatch, and Boots]{shaban2019}
+Amirreza Shaban, Ching-An Cheng, Nathan Hatch, and Byron Boots.
+\newblock Truncated back-propagation for bilevel optimization.
+\newblock In \emph{Proceedings of the 22nd International Conference on
+  Artificial Intelligence and Statistics (AISTATS)}, volume~89 of
+  \emph{Proceedings of Machine Learning Research}. PMLR, 2019.
+
+\bibitem[Shakhvalieva et~al.(2026)Shakhvalieva, Kharchev, Bezrukov, Fedorova,
+  Bocharov, Oseledets, and Ternovskii]{shakhvalieva2026}
+Yuliana Shakhvalieva, Dmitrii Kharchev, Viacheslav Bezrukov, Inessa Fedorova,
+  Dmitry Bocharov, Ivan Oseledets, and Valerii Ternovskii.
+\newblock What limits recursive reasoning models: Optimization, architecture
+  and test-time scaling.
+\newblock arXiv preprint arXiv:2609.39967, 2026.
+
+\bibitem[Tallec \& Ollivier(2017)Tallec and Ollivier]{tallec2017}
+Corentin Tallec and Yann Ollivier.
+\newblock Unbiasing truncated backpropagation through time.
+\newblock arXiv preprint arXiv:1705.08209, 2017.
+
+\bibitem[Vicol et~al.(2022)Vicol, Lorraine, Pedregosa, Duvenaud, and
+  Grosse]{vicol2022}
+Paul Vicol, Jonathan Lorraine, Fabian Pedregosa, David Duvenaud, and Roger
+  Grosse.
+\newblock On implicit bias in overparameterized bilevel optimization.
+\newblock In \emph{Proceedings of the 39th International Conference on Machine
+  Learning (ICML)}, volume 162 of \emph{Proceedings of Machine Learning
+  Research}. PMLR, 2022.
+
+\bibitem[Wang et~al.(2026)Wang, Liu, Wang, Zhou, Sun, Wu, Zhen, Scimeca, and
+  Abbasi~Yadkori]{wang2026hrm}
+Guan Wang, Changling Liu, Chenyu Wang, Cai Zhou, Yuhao Sun, Yifei Wu, Shuai
+  Zhen, Luca Scimeca, and Yasin Abbasi~Yadkori.
+\newblock {HRM-Text}: Efficient pretraining beyond scaling.
+\newblock arXiv preprint arXiv:2605.20613, 2026.
+
+\bibitem[Xiong et~al.(2026)Xiong, Chen, Shao, Su, Jin, Luo, Yang, and
+  Liu]{xiong2026truncate}
+Xuyuan Xiong, Siyu Chen, Zihan Shao, Yue Su, Weiyang Jin, Ping Luo, Zhuoran
+  Yang, and Xihui Liu.
+\newblock Truncate or not? {A} scaling study of looped transformers with
+  truncated backpropagation.
+\newblock arXiv preprint arXiv:2610.26030, 2026.
+
+\bibitem[Yang et~al.(2026)Yang, Han, Zhang, Wei, Shao, Guo, and
+  Li]{yang2026stars}
+Xiao-Wen Yang, Ziyu Han, Xi-Hua Zhang, Wen-Da Wei, Jie-Jing Shao, Lan-Zhe Guo,
+  and Yu-Feng Li.
+\newblock Stabilizing recurrent dynamics for test-time scalable latent
+  reasoning in looped language models.
+\newblock In \emph{Proceedings of the 43rd International Conference on Machine
+  Learning (ICML)}, volume 306 of \emph{Proceedings of Machine Learning
+  Research}. PMLR, 2026.
+
+\bibitem[Zhu et~al.(2025)Zhu, Wang, Hua, Zhang, Li, Que, Wei, Wen, Yin, Xing,
+  Li, Shi, Ma, Li, Kergan, Smith, Qu, Hui, Wu, Min, Huang, Zhou, Ye, Liu, Yang,
+  Shi, Lin, Zhao, Cai, Zhang, Huang, Bengio, and Eshraghian]{zhu2025ouro}
+Rui-Jie Zhu, Zixuan Wang, Kai Hua, Tianyu Zhang, Ziniu Li, Haoran Que, Boyi
+  Wei, Zixin Wen, Fan Yin, He~Xing, Lu~Li, Jiajun Shi, Kaijing Ma, Shanda Li,
+  Taylor Kergan, Andrew Smith, Xingwei Qu, Mude Hui, Bohong Wu, Qiyang Min,
+  Hongzhi Huang, Xun Zhou, Wei Ye, Jiaheng Liu, Jian Yang, Yunfeng Shi,
+  Chenghua Lin, Enduo Zhao, Tianle Cai, Ge~Zhang, Wenhao Huang, Yoshua Bengio,
+  and Jason Eshraghian.
+\newblock Scaling latent reasoning via looped language models.
+\newblock arXiv preprint arXiv:2510.25741, 2025.
+
+\end{thebibliography}

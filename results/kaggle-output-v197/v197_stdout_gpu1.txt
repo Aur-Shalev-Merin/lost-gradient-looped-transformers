@@ -1,0 +1,13 @@
+v197 driver 7f1c32f10bc2 | dev cuda dtype torch.float32 | params 1434.7M (loop 1233.3M, layers[12] (all params) 51.4M) | tied False | 169 chunks of 512 tokens
+/kaggle/working/v197_ouro_allparam.py:109: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return float(loss)
+  check: repeated full pass vs first, all-param err 0.00e+00
+seq 8: loss 0.867 rho 1.969 adj 0.345 0.201 0.165 0.0385 | err all 0.970 / 0.909 / 0.839 | loop 0.970 / 0.908 / 0.838 | layer 0.979 / 0.894 / 0.755 (38s)
+seq 9: loss 0.836 rho 1.847 adj 0.279 0.229 0.213 0.037 | err all 0.899 / 0.795 / 0.710 | loop 0.899 / 0.794 / 0.708 | layer 0.803 / 0.581 / 0.403 (27s)
+seq 10: loss 0.733 rho 1.738 adj 0.216 0.201 0.185 0.0352 | err all 0.873 / 0.717 / 0.600 | loop 0.873 / 0.716 / 0.598 | layer 0.826 / 0.564 / 0.359 (27s)
+seq 11: loss 0.898 rho 2.090 adj 0.376 0.365 0.212 0.0387 | err all 0.949 / 0.882 / 0.804 | loop 0.949 / 0.882 / 0.804 | layer 0.896 / 0.772 / 0.534 (28s)
+seq 12: loss 0.759 rho 1.907 adj 0.262 0.234 0.154 0.0351 | err all 0.921 / 0.795 / 0.613 | loop 0.921 / 0.794 / 0.612 | layer 0.895 / 0.716 / 0.393 (28s)
+seq 13: loss 1.008 rho 1.658 adj 0.2 0.155 0.118 0.0407 | err all 0.946 / 0.878 / 0.799 | loop 0.946 / 0.877 / 0.798 | layer 0.846 / 0.668 / 0.436 (29s)
+seq 14: loss 0.910 rho 1.587 adj 0.166 0.117 0.0913 0.0387 | err all 0.943 / 0.860 / 0.774 | loop 0.944 / 0.860 / 0.774 | layer 0.861 / 0.651 / 0.379 (30s)
+seq 15: loss 0.703 rho 1.931 adj 0.275 0.208 0.145 0.0346 | err all 0.921 / 0.791 / 0.655 | loop 0.921 / 0.790 / 0.654 | layer 0.886 / 0.680 / 0.439 (30s)

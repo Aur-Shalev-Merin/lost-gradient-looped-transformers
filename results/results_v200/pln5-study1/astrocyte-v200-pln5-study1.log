@@ -1,0 +1,76 @@
+[{"stream_name":"stderr","time":7.60640781,"data":"\rFetching 11 files:   0%|          | 0/11 [00:00\u003c?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":10.233892739,"data":"\rFetching 11 files:   9%|▉         | 1/11 [00:00\u003c00:01,  6.34it/s]\rFetching 11 files:  64%|██████▎   | 7/11 [00:00\u003c00:00, 26.94it/s]\rFetching 11 files: 100%|██████████| 11/11 [00:02\u003c00:00,  3.31it/s]\rFetching 11 files: 100%|██████████| 11/11 [00:02\u003c00:00,  4.00it/s]\n"}
+,{"stream_name":"stderr","time":16.518420186,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":19.3853441,"data":"\rGenerating train split:   0%|          | 0/7473 [00:00\u003c?, ? examples/s]\rGenerating train split: 100%|██████████| 7473/7473 [00:00\u003c00:00, 86543.89 examples/s]\n"}
+,{"stream_name":"stderr","time":19.390286318,"data":"\rGenerating test split:   0%|          | 0/1319 [00:00\u003c?, ? examples/s]\rGenerating test split: 100%|██████████| 1319/1319 [00:00\u003c00:00, 301552.76 examples/s]\n"}
+,{"stream_name":"stdout","time":20.312758955,"data":"setup done after 19s; jobs [['--selftest', '--train', '0:0.0003:2001101,1:0.0001:2001101,2:0.0001:2001102,5:0.0001:2001103,1:0.0001:2001104,2:0.0001:2001104,0:0.0003:2001105,4:0.0001:2001105,5:0.0001:2001107', '--tag', 'study1_g0'], ['--selftest', '--train', '4:0.0001:2001101,0:0.0003:2001102,1:0.0001:2001102,4:0.0001:2001102,5:0.0001:2001104,1:0.0001:2001105,2:0.0001:2001105,0:0.0003:2001106,4:0.0001:2001106', '--tag', 'study1_g1']]\n"}
+,{"stream_name":"stdout","time":4936.829016661,"data":"gpu0 study1_g0 exit 0 after 4936s\n"}
+,{"stream_name":"stdout","time":4969.429902349,"data":"gpu1 study1_g1 exit 0 after 4968s\n"}
+,{"stream_name":"stdout","time":4969.430506264,"data":"---- gpu0 (tail)\n"}
+,{"stream_name":"stdout","time":4969.431718361,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":4969.431732064,"data":"v200 driver 22a56eba93e9 (port 502739cdccc8) | huginn-s-fixed-pln5 @ c581f369 | dev cuda amp True | R 5 | train ex 7000, val/test chunks 150/434, 600 steps x 8 x 512\n"}
+,{"stream_name":"stdout","time":4969.431738048,"data":"/kaggle/working/v200_ifm_trunc.py:207: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.\n"}
+,{"stream_name":"stdout","time":4969.431743481,"data":"Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)\n"}
+,{"stream_name":"stdout","time":4969.431748782,"data":"  return out, float(loss)\n"}
+,{"stream_name":"stdout","time":4969.431757798,"data":"selftest PASS [] | decomposition 2.715472 / 2.715472 | {'ckpt_vs_plain_k2': {'embed': 0.0, 'prelude': 0.0, 'injection': 0.0, 'core': 0.0, 'coda': 0.0, 'head': 0.0}, 'ckpt_vs_plain_k5': {'embed': 0.0, 'prelude': 0.0, 'injection': 0.0, 'core': 0.0, 'coda': 0.0, 'head': 0.0}, 'fp16_vs_fp32_k1': {'embed': 0.0, 'prelude': 0.0016, 'injection': 0.0013, 'core': 0.0014, 'coda': 0.0015, 'head': 0.0011}, 'fp16_vs_fp32_k2': {'embed': 0.0, 'prelude': 0.0015, 'injection': 0.0012, 'core': 0.0012, 'coda': 0.0015, 'head': 0.0011}, 'fp16_vs_fp32_k4': {'embed': 0.0, 'prelude': 0.0013, 'injection': 0.0011, 'core': 0.0011, 'coda': 0.0015, 'head': 0.0011}, 'fp16_vs_fp32_k5': {'embed': 0.0, 'prelude': 0.0012, 'injection': 0.0011, 'core': 0.0011, 'coda': 0.0015, 'head': 0.0011}, 'negative_control_cache_on_k2': {'embed': 0.0, 'prelude': 0.0015, 'injection': 0.0013, 'core': 0.0013, 'coda': 0.0015, 'head': 0.0011}, 'negative_control_synthetic_k2': {'embed': 0.0, 'prelude': 0.0015, 'injection': 1.0, 'core': 1.0, 'coda': 0.0015, 'head': 0.0011}} | floor k0 {'embed': '0.00e+00', 'prelude': '0.00e+00', 'injection': '0.00e+00', 'core': '0.00e+00', 'coda': '1.77e+00', 'head': '1.15e+00'}\n"}
+,{"stream_name":"stdout","time":4969.431776741,"data":"cell pln5 k=0 lr=0.0003 seed=2001101: val 1.5607 test 1.5376 rho_end 0.708 nonfinite 0 (343s, train 318s, peak 6.0 GB)\n"}
+,{"stream_name":"stdout","time":4969.431781212,"data":"cell pln5 k=1 lr=0.0001 seed=2001101: val 1.4485 test 1.4283 rho_end 0.723 nonfinite 0 (455s, train 430s, peak 7.2 GB)\n"}
+,{"stream_name":"stdout","time":4969.431788868,"data":"cell pln5 k=2 lr=0.0001 seed=2001102: val 1.4395 test 1.4203 rho_end 0.736 nonfinite 0 (524s, train 499s, peak 7.3 GB)\n"}
+,{"stream_name":"stdout","time":4969.431793191,"data":"cell pln5 k=5 lr=0.0001 seed=2001103: val 1.4312 test 1.4105 rho_end 0.740 nonfinite 0 (736s, train 711s, peak 7.6 GB)\n"}
+,{"stream_name":"stdout","time":4969.43179753,"data":"cell pln5 k=1 lr=0.0001 seed=2001104: val 1.4505 test 1.4303 rho_end 0.722 nonfinite 0 (455s, train 430s, peak 7.2 GB)\n"}
+,{"stream_name":"stdout","time":4969.431801791,"data":"cell pln5 k=2 lr=0.0001 seed=2001104: val 1.4378 test 1.4186 rho_end 0.735 nonfinite 0 (525s, train 499s, peak 7.3 GB)\n"}
+,{"stream_name":"stdout","time":4969.431805671,"data":"cell pln5 k=0 lr=0.0003 seed=2001105: val 1.5606 test 1.5378 rho_end 0.706 nonfinite 0 (343s, train 318s, peak 6.0 GB)\n"}
+,{"stream_name":"stdout","time":4969.431809357,"data":"cell pln5 k=4 lr=0.0001 seed=2001105: val 1.4286 test 1.4111 rho_end 0.728 nonfinite 0 (665s, train 640s, peak 7.5 GB)\n"}
+,{"stream_name":"stdout","time":4969.431813152,"data":"cell pln5 k=5 lr=0.0001 seed=2001107: val 1.4305 test 1.4118 rho_end 0.736 nonfinite 0 (737s, train 711s, peak 7.6 GB)\n"}
+,{"stream_name":"stdout","time":4969.431817023,"data":"\n"}
+,{"stream_name":"stdout","time":4969.431820267,"data":"---- gpu1 (tail)\n"}
+,{"stream_name":"stdout","time":4969.431825304,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":4969.431833567,"data":"v200 driver 22a56eba93e9 (port 502739cdccc8) | huginn-s-fixed-pln5 @ c581f369 | dev cuda amp True | R 5 | train ex 7000, val/test chunks 150/434, 600 steps x 8 x 512\n"}
+,{"stream_name":"stdout","time":4969.431836494,"data":"/kaggle/working/v200_ifm_trunc.py:207: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.\n"}
+,{"stream_name":"stdout","time":4969.43183906,"data":"Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)\n"}
+,{"stream_name":"stdout","time":4969.431841513,"data":"  return out, float(loss)\n"}
+,{"stream_name":"stdout","time":4969.431844623,"data":"selftest PASS [] | decomposition 2.715472 / 2.715472 | {'ckpt_vs_plain_k2': {'embed': 0.0, 'prelude': 0.0, 'injection': 0.0, 'core': 0.0, 'coda': 0.0, 'head': 0.0}, 'ckpt_vs_plain_k5': {'embed': 0.0, 'prelude': 0.0, 'injection': 0.0, 'core': 0.0, 'coda': 0.0, 'head': 0.0}, 'fp16_vs_fp32_k1': {'embed': 0.0, 'prelude': 0.0016, 'injection': 0.0013, 'core': 0.0014, 'coda': 0.0015, 'head': 0.0011}, 'fp16_vs_fp32_k2': {'embed': 0.0, 'prelude': 0.0015, 'injection': 0.0012, 'core': 0.0012, 'coda': 0.0015, 'head': 0.0011}, 'fp16_vs_fp32_k4': {'embed': 0.0, 'prelude': 0.0013, 'injection': 0.0011, 'core': 0.0011, 'coda': 0.0015, 'head': 0.0011}, 'fp16_vs_fp32_k5': {'embed': 0.0, 'prelude': 0.0012, 'injection': 0.0011, 'core': 0.0011, 'coda': 0.0015, 'head': 0.0011}, 'negative_control_cache_on_k2': {'embed': 0.0, 'prelude': 0.0015, 'injection': 0.0013, 'core': 0.0013, 'coda': 0.0015, 'head': 0.0011}, 'negative_control_synthetic_k2': {'embed': 0.0, 'prelude': 0.0015, 'injection': 1.0, 'core': 1.0, 'coda': 0.0015, 'head': 0.0011}} | floor k0 {'embed': '0.00e+00', 'prelude': '0.00e+00', 'injection': '0.00e+00', 'core': '0.00e+00', 'coda': '1.77e+00', 'head': '1.15e+00'}\n"}
+,{"stream_name":"stdout","time":4969.431852462,"data":"cell pln5 k=4 lr=0.0001 seed=2001101: val 1.4282 test 1.4095 rho_end 0.730 nonfinite 0 (650s, train 625s, peak 7.5 GB)\n"}
+,{"stream_name":"stdout","time":4969.431855038,"data":"cell pln5 k=0 lr=0.0003 seed=2001102: val 1.5617 test 1.5385 rho_end 0.702 nonfinite 0 (336s, train 312s, peak 6.0 GB)\n"}
+,{"stream_name":"stdout","time":4969.431857467,"data":"cell pln5 k=1 lr=0.0001 seed=2001102: val 1.4521 test 1.4314 rho_end 0.725 nonfinite 0 (448s, train 423s, peak 7.2 GB)\n"}
+,{"stream_name":"stdout","time":4969.431859944,"data":"cell pln5 k=4 lr=0.0001 seed=2001102: val 1.4322 test 1.4128 rho_end 0.733 nonfinite 0 (659s, train 633s, peak 7.5 GB)\n"}
+,{"stream_name":"stdout","time":4969.431862361,"data":"cell pln5 k=5 lr=0.0001 seed=2001104: val 1.4289 test 1.4100 rho_end 0.743 nonfinite 1 (731s, train 706s, peak 7.6 GB)\n"}
+,{"stream_name":"stdout","time":4969.431864824,"data":"cell pln5 k=1 lr=0.0001 seed=2001105: val 1.4488 test 1.4304 rho_end 0.713 nonfinite 0 (449s, train 424s, peak 7.2 GB)\n"}
+,{"stream_name":"stdout","time":4969.431867256,"data":"cell pln5 k=2 lr=0.0001 seed=2001105: val 1.4359 test 1.4179 rho_end 0.724 nonfinite 0 (517s, train 492s, peak 7.3 GB)\n"}
+,{"stream_name":"stdout","time":4969.431869648,"data":"cell pln5 k=0 lr=0.0003 seed=2001106: val 1.5607 test 1.5376 rho_end 0.703 nonfinite 0 (336s, train 312s, peak 6.0 GB)\n"}
+,{"stream_name":"stdout","time":4969.431872062,"data":"cell pln5 k=4 lr=0.0001 seed=2001106: val 1.4318 test 1.4122 rho_end 0.733 nonfinite 0 (660s, train 634s, peak 7.5 GB)\n"}
+,{"stream_name":"stdout","time":4969.4318745,"data":"\n"}
+,{"stream_name":"stdout","time":4973.082914357,"data":"18 runs from 2 files\n"}
+,{"stream_name":"stdout","time":4973.082941531,"data":"\n"}
+,{"stream_name":"stdout","time":4973.082946352,"data":"=== huginn-s-fixed-pln5: 18 runs (drivers ['22a56eba93e9'])\n"}
+,{"stream_name":"stdout","time":4973.082950207,"data":"  k=0 lr=0.0003  seed=2001101  val 1.5607 test 1.5376 | nonfinite   0 | rho_end 0.708 |  343s (train  318s) peak 6.0 GB\n"}
+,{"stream_name":"stdout","time":4973.08295403,"data":"  k=0 lr=0.0003  seed=2001102  val 1.5617 test 1.5385 | nonfinite   0 | rho_end 0.702 |  336s (train  312s) peak 6.0 GB\n"}
+,{"stream_name":"stdout","time":4973.082957814,"data":"  k=0 lr=0.0003  seed=2001105  val 1.5606 test 1.5378 | nonfinite   0 | rho_end 0.706 |  343s (train  318s) peak 6.0 GB\n"}
+,{"stream_name":"stdout","time":4973.082961276,"data":"  k=0 lr=0.0003  seed=2001106  val 1.5607 test 1.5376 | nonfinite   0 | rho_end 0.703 |  336s (train  312s) peak 6.0 GB\n"}
+,{"stream_name":"stdout","time":4973.08296505,"data":"  k=1 lr=0.0001  seed=2001101  val 1.4485 test 1.4283 | nonfinite   0 | rho_end 0.723 |  455s (train  430s) peak 7.2 GB\n"}
+,{"stream_name":"stdout","time":4973.082973187,"data":"  k=1 lr=0.0001  seed=2001102  val 1.4521 test 1.4314 | nonfinite   0 | rho_end 0.725 |  448s (train  423s) peak 7.2 GB\n"}
+,{"stream_name":"stdout","time":4973.082976802,"data":"  k=1 lr=0.0001  seed=2001104  val 1.4505 test 1.4303 | nonfinite   0 | rho_end 0.722 |  455s (train  430s) peak 7.2 GB\n"}
+,{"stream_name":"stdout","time":4973.082980235,"data":"  k=1 lr=0.0001  seed=2001105  val 1.4488 test 1.4304 | nonfinite   0 | rho_end 0.713 |  449s (train  424s) peak 7.2 GB\n"}
+,{"stream_name":"stdout","time":4973.082983662,"data":"  k=2 lr=0.0001  seed=2001102  val 1.4395 test 1.4203 | nonfinite   0 | rho_end 0.736 |  524s (train  499s) peak 7.3 GB\n"}
+,{"stream_name":"stdout","time":4973.08298708,"data":"  k=2 lr=0.0001  seed=2001104  val 1.4378 test 1.4186 | nonfinite   0 | rho_end 0.735 |  525s (train  499s) peak 7.3 GB\n"}
+,{"stream_name":"stdout","time":4973.083001941,"data":"  k=2 lr=0.0001  seed=2001105  val 1.4359 test 1.4179 | nonfinite   0 | rho_end 0.724 |  517s (train  492s) peak 7.3 GB\n"}
+,{"stream_name":"stdout","time":4973.083006239,"data":"  k=4 lr=0.0001  seed=2001101  val 1.4282 test 1.4095 | nonfinite   0 | rho_end 0.730 |  650s (train  625s) peak 7.5 GB\n"}
+,{"stream_name":"stdout","time":4973.083009635,"data":"  k=4 lr=0.0001  seed=2001102  val 1.4322 test 1.4128 | nonfinite   0 | rho_end 0.733 |  659s (train  633s) peak 7.5 GB\n"}
+,{"stream_name":"stdout","time":4973.08301358,"data":"  k=4 lr=0.0001  seed=2001105  val 1.4286 test 1.4111 | nonfinite   0 | rho_end 0.728 |  665s (train  640s) peak 7.5 GB\n"}
+,{"stream_name":"stdout","time":4973.083017353,"data":"  k=4 lr=0.0001  seed=2001106  val 1.4318 test 1.4122 | nonfinite   0 | rho_end 0.733 |  660s (train  634s) peak 7.5 GB\n"}
+,{"stream_name":"stdout","time":4973.08302117,"data":"  k=5 lr=0.0001  seed=2001103  val 1.4312 test 1.4105 | nonfinite   0 | rho_end 0.740 |  736s (train  711s) peak 7.6 GB\n"}
+,{"stream_name":"stdout","time":4973.083025657,"data":"  k=5 lr=0.0001  seed=2001104  val 1.4289 test 1.4100 | nonfinite   1 | rho_end 0.743 |  731s (train  706s) peak 7.6 GB\n"}
+,{"stream_name":"stdout","time":4973.083029803,"data":"  k=5 lr=0.0001  seed=2001107  val 1.4305 test 1.4118 | nonfinite   0 | rho_end 0.736 |  737s (train  711s) peak 7.6 GB\n"}
+,{"stream_name":"stdout","time":4973.083033162,"data":"seed 2001103: full nonfinite 0 test 1.4105 -\u003e VALID\n"}
+,{"stream_name":"stdout","time":4973.083036836,"data":"seed 2001104: full nonfinite 1 test 1.4100 -\u003e VALID\n"}
+,{"stream_name":"stdout","time":4973.08304004,"data":"seed 2001107: full nonfinite 0 test 1.4118 -\u003e VALID\n"}
+,{"stream_name":"stdout","time":4973.083043456,"data":"floor lr 0.0003, truncated/full lr 0.0001; seeds used: []\n"}
+,{"stream_name":"stdout","time":4973.083046686,"data":"\n"}
+,{"stream_name":"stdout","time":4973.083049905,"data":"total 4972s\n"}
+,{"stream_name":"stderr","time":4975.59882996,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":4975.59885435,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":4975.862273296,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":4975.862297281,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":4976.616434512,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":4977.601102881,"data":"[NbConvertApp] Writing 326096 bytes to __results__.html\n"}
+]

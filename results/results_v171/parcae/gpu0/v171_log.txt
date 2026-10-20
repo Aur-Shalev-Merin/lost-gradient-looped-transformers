@@ -1,0 +1,22 @@
+v171 parcae | params 144.3M | B 24 x 8 training seqs (train chunks 2363)
+parcae R=8 a=1.00 k=1: {'adam_def': 0.2312, 'sgd_def': 0.9545, 'err_mean': 0.9631, 'adam_cos': 0.7465}
+parcae R=8 a=1.00 k=2: {'adam_def': 0.0444, 'sgd_def': 0.8952, 'err_mean': 0.9116, 'adam_cos': 0.784}
+parcae R=8 a=1.00 k=4: {'adam_def': 0.064, 'sgd_def': 0.7137, 'err_mean': 0.7555, 'adam_cos': 0.8669}
+  variant R=8 a=1.00 done in 339s
+parcae R=16 a=1.00 k=1: {'adam_def': 1.0176, 'sgd_def': 1.0001, 'err_mean': 1.0001, 'adam_cos': 0.676}
+parcae R=16 a=1.00 k=2: {'adam_def': 1.0461, 'sgd_def': 1.0001, 'err_mean': 1.0001, 'adam_cos': 0.6737}
+parcae R=16 a=1.00 k=4: {'adam_def': 1.0328, 'sgd_def': 1.0, 'err_mean': 1.0, 'adam_cos': 0.6741}
+parcae R=16 a=1.00 k=8: {'adam_def': 1.0292, 'sgd_def': 1.0001, 'err_mean': 1.0001, 'adam_cos': 0.7101}
+  variant R=16 a=1.00 done in 504s
+parcae R=32 a=1.00 k=1: {'adam_def': 0.9657, 'sgd_def': 0.9999, 'err_mean': 0.9999, 'adam_cos': 0.7343}
+parcae R=32 a=1.00 k=2: {'adam_def': 0.9601, 'sgd_def': 0.9999, 'err_mean': 0.9999, 'adam_cos': 0.7498}
+parcae R=32 a=1.00 k=3: {'adam_def': 0.9443, 'sgd_def': 0.9999, 'err_mean': 0.9999, 'adam_cos': 0.7576}
+parcae R=32 a=1.00 k=4: {'adam_def': 0.9295, 'sgd_def': 0.9999, 'err_mean': 0.9999, 'adam_cos': 0.7627}
+parcae R=32 a=1.00 k=6: {'adam_def': 0.9207, 'sgd_def': 0.9999, 'err_mean': 0.9999, 'adam_cos': 0.7689}
+parcae R=32 a=1.00 k=8: {'adam_def': 0.9158, 'sgd_def': 0.9999, 'err_mean': 0.9999, 'adam_cos': 0.7729}
+  variant R=32 a=1.00 done in 867s
+parcae R=32 a=0.50 k=1: {'adam_def': 0.7335, 'sgd_def': 0.9991, 'err_mean': 0.9993, 'adam_cos': 0.7499}
+parcae R=32 a=0.50 k=2: {'adam_def': 0.6972, 'sgd_def': 0.9984, 'err_mean': 0.9988, 'adam_cos': 0.763}
+parcae R=32 a=0.50 k=4: {'adam_def': 0.5922, 'sgd_def': 0.9962, 'err_mean': 0.9971, 'adam_cos': 0.7827}
+parcae R=32 a=0.50 k=8: {'adam_def': 0.4133, 'sgd_def': 0.9845, 'err_mean': 0.9863, 'adam_cos': 0.8276}
+  variant R=32 a=0.50 done in 654s

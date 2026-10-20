@@ -1,0 +1,11 @@
+v201 parcae | driver eac2ee89621e | R 32 | dev cuda | train chunks 2363 | 64 x 8 sequences, groups of 8, B=1 on 64 | k (1, 2, 4)
+  selftest PASS | repeat-pass rel diff 4.57e-07 (< 0.001) | k=1 lost on batch 0 0.8575 (> 0.001) | params 144.3M
+    groups pass: 16/64 batches, 266s
+    groups pass: 32/64 batches, 542s
+    groups pass: 48/64 batches, 819s
+    groups pass: 64/64 batches, 1094s
+    total pass: 16/64 batches, 273s
+    total pass: 32/64 batches, 546s
+    total pass: 48/64 batches, 819s
+    total pass: 64/64 batches, 1092s
+  stage 0 measured after 2360s

@@ -1,0 +1,4 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+v203 parcae | driver 450d8ebcc48e | R 32 | held-out (test) chunks 455 -> 56 batches of 8, groups of 8, B=1 on 64
+  stage 300 fine-tune: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0003, 'seed': 2011, 'nonfinite': 12, 'clipped_frac': 0.96, 'ok': False, 's': 724}
+  stage 300 NOT measured after 756s

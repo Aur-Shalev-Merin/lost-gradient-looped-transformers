@@ -1,0 +1,17 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+v162 driver 0ae4891d7abc dev cuda amp True | train ex 7000, val chunks 158, test chunks 455
+/kaggle/working/v162_parcae_trunc_train.py:225: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  torch.manual_seed(0); a = float(model(ids, labels=labels_of(ids), num_steps_pair=torch.tensor([R - k, k]))['loss'])
+selftest decomposition R=4 k=4: model 2.748588 manual 2.748588
+selftest decomposition R=4 k=2: model 2.748588 manual 2.748588
+selftest decomposition R=4 k=0: model 2.748588 manual 2.748588
+selftest fp16-autocast loss 2.68950 vs fp32 2.68944 (|diff| must be < 0.01)
+selftest gradient manual vs model (k = R = 4): rel diff 2.07e-07
+selftest truncated grad fp16 vs fp32 R=16 k=8: per-group rel diff {'rest': 0.0036, 'prelude': 0.0026, 'adapter': 0.0023, 'core_block': 0.0027} | trunc err fp16 0.1236 fp32 0.1234
+selftest truncated grad fp16 vs fp32 R=16 k=1: per-group rel diff {'rest': 0.0036, 'prelude': 0.0032, 'adapter': 0.0031, 'core_block': 0.0034} | trunc err fp16 0.7895 fp32 0.7895
+selftest OK
+measure R=8: {"R": 8, "rho_median": 0.7725943585619977, "err_median": {"1": 0.8051232993602753, "2": 0.6477237939834595, "4": 0.38603898882865906}, "law_median": {"1": 0.7725943585619977, "2": 0.596912815497594, "4": 0.3563306300907043}}
+measure R=16: {"R": 16, "rho_median": 0.8019508585125201, "err_median": {"1": 0.8132020533084869, "2": 0.6632058620452881, "4": 0.4210008233785629, "8": 0.18028093129396439}, "law_median": {"1": 0.8019508585125201, "2": 0.6431325657198644, "4": 0.41363849822514925, "8": 0.17112824417478167}}
+step-0 test loss R=8: 2.7707  val 2.7984
+step-0 test loss R=16: 2.6208  val 2.6553

@@ -1,0 +1,21 @@
+v174 driver d5c2647126de (v163 d5c2647126de) dev cuda amp True R 32
+selftest mix construction OK (lam 0 = g_R; lam 1 = g_1 direction at |g_R|)
+selftest loop-affected parameters: 29257161 of 144323136
+  k=1 lam=0.000 step 0: A 1.0000 A_loop 1.0000 |gR| 5.90 |gk| 2.76 S 65536 (3s)
+selftest FULL arm agreement 1.000000 (must be 1)
+selftest v174 OK
+gate A_f {'full': 1.0, 'k1_l0.25': 0.9972, 'k1_l0.50': 0.984, 'k1_l0.75': 0.9421, 'k1_l1.00': 0.7933, 'k2_l0.25': 0.9971, 'k2_l0.50': 0.9853, 'k2_l0.75': 0.956, 'k2_l1.00': 0.8719}
+  k=1 lam=0.250 step 0: A 0.9696 A_loop 0.9485 |gR| 5.90 |gk| 2.76 S 65536 (3s)
+  k=1 lam=0.250 step 100: A 0.9975 A_loop 0.9955 |gR| 1.14 |gk| 0.79 S 65536 (359s)
+  k=1 lam=0.250 step 200: A 0.9973 A_loop 0.9955 |gR| 1.08 |gk| 0.73 S 65536 (723s)
+  k=1 lam=0.250 step 300: A 0.9971 A_loop 0.9952 |gR| 1.26 |gk| 0.83 S 65536 (1087s)
+  k=1 lam=0.250 step 400: A 0.9969 A_loop 0.9952 |gR| 1.00 |gk| 0.70 S 65536 (1451s)
+  k=1 lam=0.250 step 500: A 0.9967 A_loop 0.9952 |gR| 1.04 |gk| 0.71 S 65536 (1814s)
+pilot k=1 lam=0.250: Abar 0.9970 Abar_loop 0.9953 both-clipped 0.143 nonfinite 0 (2175s)
+  k=1 lam=0.500 step 0: A 0.9209 A_loop 0.8662 |gR| 5.90 |gk| 2.76 S 65536 (3s)
+  k=1 lam=0.500 step 100: A 0.9883 A_loop 0.9747 |gR| 1.17 |gk| 0.80 S 32768 (366s)
+  k=1 lam=0.500 step 200: A 0.9872 A_loop 0.9744 |gR| 1.08 |gk| 0.72 S 32768 (730s)
+  k=1 lam=0.500 step 300: A 0.9861 A_loop 0.9732 |gR| 1.24 |gk| 0.80 S 32768 (1093s)
+  k=1 lam=0.500 step 400: A 0.9848 A_loop 0.9728 |gR| 1.00 |gk| 0.71 S 32768 (1457s)
+  k=1 lam=0.500 step 500: A 0.9843 A_loop 0.9732 |gR| 1.03 |gk| 0.71 S 32768 (1820s)
+pilot k=1 lam=0.500: Abar 0.9856 Abar_loop 0.9735 both-clipped 0.137 nonfinite 1 (2181s)

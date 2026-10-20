@@ -1,0 +1,28 @@
+v161 driver ddb4e99b660b dev cuda amp True | train ex 7000, val chunks 158, test chunks 455
+selftest decomposition R=4 k=4: model 2.748588 manual 2.748588
+selftest decomposition R=4 k=2: model 2.748588 manual 2.748588
+selftest decomposition R=4 k=0: model 2.748588 manual 2.748588
+selftest fp16-autocast loss 2.68950 vs fp32 2.68944 (|diff| must be < 0.01)
+selftest gradient manual vs model (k = R = 4): rel diff 6.61e-07
+selftest OK
+measure R=8: {"R": 8, "rho_median": 0.7725943560907302, "err_median": {"1": 0.8051233291625977, "2": 0.6477237939834595, "4": 0.38603901863098145}, "law_median": {"1": 0.7725943560907302, "2": 0.5969128116882898, "4": 0.356330625565029}}
+v161 driver ddb4e99b660b dev cuda amp True | train ex 7000, val chunks 158, test chunks 455
+measure R=16: {"R": 16, "rho_median": 0.8019508562655766, "err_median": {"1": 0.8132020831108093, "2": 0.6632058322429657, "4": 0.4210008233785629, "8": 0.1802808940410614}, "law_median": {"1": 0.8019508562655766, "2": 0.6431325621478541, "4": 0.4136384937124662, "8": 0.17112824057664439}}
+step-0 test loss R=8: 2.7707  val 2.7984
+step-0 test loss R=16: 2.6208  val 2.6553
+cell R=8 k=8 lr=1e-05 seed=9001: val 1.7299 test 1.7163 nonfinite 7 (418s)
+cell R=16 k=16 lr=1e-05 seed=9001: val 1.6384 test 1.6228 nonfinite 5 (702s)
+cell R=8 k=8 lr=3e-05 seed=9001: val 1.5252 test 1.5104 nonfinite 6 (415s)
+cell R=8 k=8 lr=0.0001 seed=9001: val 1.4210 test 1.4031 nonfinite 4 (415s)
+cell R=16 k=16 lr=3e-05 seed=9001: val 1.5096 test 1.4932 nonfinite 3 (708s)
+cell R=8 k=8 lr=0.0003 seed=9001: val 1.4003 test 1.3759 nonfinite 1 (416s)
+cell R=8 k=0 lr=1e-05 seed=9001: val 2.1467 test 2.1262 nonfinite 0 (200s)
+cell R=8 k=0 lr=3e-05 seed=9001: val 1.9289 test 1.9049 nonfinite 0 (199s)
+cell R=16 k=16 lr=0.0001 seed=9001: val 1.4389 test 1.4204 nonfinite 8 (704s)
+cell R=8 k=0 lr=0.0001 seed=9001: val 1.7523 test 1.7277 nonfinite 0 (201s)
+cell R=8 k=0 lr=0.0003 seed=9001: val 1.6454 test 1.6226 nonfinite 0 (201s)
+cell R=16 k=16 lr=0.0003 seed=9001: val 1.3996 test 1.3761 nonfinite 3 (707s)
+cell R=16 k=0 lr=1e-05 seed=9001: val 2.0498 test 2.0206 nonfinite 0 (305s)
+cell R=16 k=0 lr=3e-05 seed=9001: val 1.8596 test 1.8303 nonfinite 0 (305s)
+cell R=16 k=0 lr=0.0001 seed=9001: val 1.7045 test 1.6938 nonfinite 0 (305s)
+cell R=16 k=0 lr=0.0003 seed=9001: val 1.6088 test 1.5849 nonfinite 0 (305s)

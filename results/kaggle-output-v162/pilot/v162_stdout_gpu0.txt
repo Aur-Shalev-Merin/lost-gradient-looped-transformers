@@ -1,0 +1,17 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 95501.97 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 256957.13 examples/s]
+v162 driver 0ae4891d7abc dev cuda amp True | train ex 7000, val chunks 158, test chunks 455
+/kaggle/working/v162_parcae_trunc_train.py:225: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  torch.manual_seed(0); a = float(model(ids, labels=labels_of(ids), num_steps_pair=torch.tensor([R - k, k]))['loss'])
+selftest decomposition R=4 k=4: model 2.748588 manual 2.748588
+selftest decomposition R=4 k=2: model 2.748588 manual 2.748588
+selftest decomposition R=4 k=0: model 2.748588 manual 2.748588
+selftest fp16-autocast loss 2.68950 vs fp32 2.68944 (|diff| must be < 0.01)
+selftest gradient manual vs model (k = R = 4): rel diff 1.74e-07
+selftest truncated grad fp16 vs fp32 R=8 k=7: per-group rel diff {'rest': 0.0068, 'prelude': 0.003, 'adapter': 0.0029, 'core_block': 0.0035} | trunc err fp16 0.1151 fp32 0.1151
+selftest truncated grad fp16 vs fp32 R=8 k=4: per-group rel diff {'rest': 0.0068, 'prelude': 0.0032, 'adapter': 0.003, 'core_block': 0.0039} | trunc err fp16 0.3379 fp32 0.3380
+selftest negative control (v161 setting, cache on) R=8 k=4: core_block rel diff vs fp32 0.991 (expect ~1)
+selftest OK
+cell R=8 k=8 lr=0.0003 seed=9001: val 1.4025 test 1.3782 nonfinite 4 (432s)

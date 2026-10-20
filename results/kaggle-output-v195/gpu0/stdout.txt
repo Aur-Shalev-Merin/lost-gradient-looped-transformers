@@ -1,0 +1,45 @@
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 121627.57 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 340658.07 examples/s]
+v195: SandyResearch/parcae-140m | 144.3M parameters | dtype torch.float32 | R 32 K 64 M 32
+seq  0 gsm8k    loss 2.6335 (ref 2.6335) | |lam| last/first 0.0026 | Krylov step-1 cos 1.000000 | Arnoldi orth 1.9e-15 | sketch norm check 1.9e-03 (30s, total 64s)
+seq  1 gsm8k    loss 2.7182 (ref 2.7182) | |lam| last/first 0.0006 | Krylov step-1 cos 1.000000 | Arnoldi orth 8.9e-16 | sketch norm check 1.9e-03 (28s, total 93s)
+seq  2 gsm8k    loss 2.5135 (ref 2.5135) | |lam| last/first 0.0032 | Krylov step-1 cos 1.000000 | Arnoldi orth 8.9e-16 | sketch norm check 1.9e-03 (29s, total 122s)
+seq  3 gsm8k    loss 2.7923 (ref 2.7923) | |lam| last/first 0.0015 | Krylov step-1 cos 1.000000 | Arnoldi orth 1.7e-15 | sketch norm check 1.6e-03 (32s, total 154s)
+seq  4 gsm8k    loss 2.9517 (ref 2.9517) | |lam| last/first 0.0121 | Krylov step-1 cos 1.000000 | Arnoldi orth 1.6e-15 | sketch norm check 1.6e-03 (36s, total 191s)
+seq  5 gsm8k    loss 2.4595 (ref 2.4595) | |lam| last/first 0.0015 | Krylov step-1 cos 1.000000 | Arnoldi orth 1.8e-15 | sketch norm check 1.5e-03 (30s, total 222s)
+seq  6 gsm8k    loss 3.0239 (ref 3.0239) | |lam| last/first 0.0046 | Krylov step-1 cos 1.000000 | Arnoldi orth 2.0e-15 | sketch norm check 1.7e-03 (30s, total 252s)
+seq  7 gsm8k    loss 2.4917 (ref 2.4917) | |lam| last/first 0.0008 | Krylov step-1 cos 1.000000 | Arnoldi orth 8.9e-16 | sketch norm check 2.0e-03 (30s, total 282s)
+seq  8 gsm8k    loss 2.8160 (ref 2.8160) | |lam| last/first 0.0018 | Krylov step-1 cos 1.000000 | Arnoldi orth 1.2e-15 | sketch norm check 1.5e-03 (30s, total 312s)
+seq  9 gsm8k    loss 2.5873 (ref 2.5873) | |lam| last/first 0.0010 | Krylov step-1 cos 1.000000 | Arnoldi orth 1.3e-15 | sketch norm check 1.5e-03 (29s, total 342s)
+seq 10 gsm8k    loss 2.6009 (ref 2.6009) | |lam| last/first 0.0028 | Krylov step-1 cos 1.000000 | Arnoldi orth 1.3e-15 | sketch norm check 1.7e-03 (30s, total 372s)
+seq 11 gsm8k    loss 2.4869 (ref 2.4869) | |lam| last/first 0.0021 | Krylov step-1 cos 1.000000 | Arnoldi orth 2.2e-15 | sketch norm check 2.0e-03 (29s, total 402s)
+seq 12 gsm8k    loss 2.7729 (ref 2.7729) | |lam| last/first 0.0137 | Krylov step-1 cos 1.000000 | Arnoldi orth 2.0e-15 | sketch norm check 2.6e-03 (30s, total 433s)
+seq 13 gsm8k    loss 2.7809 (ref 2.7809) | |lam| last/first 0.0262 | Krylov step-1 cos 1.000000 | Arnoldi orth 2.2e-15 | sketch norm check 1.5e-03 (29s, total 462s)
+seq 14 gsm8k    loss 2.4433 (ref 2.4433) | |lam| last/first 0.0175 | Krylov step-1 cos 1.000000 | Arnoldi orth 1.0e-15 | sketch norm check 1.4e-03 (29s, total 492s)
+seq 15 gsm8k    loss 2.6108 (ref 2.6108) | |lam| last/first 0.0432 | Krylov step-1 cos 1.000000 | Arnoldi orth 2.4e-15 | sketch norm check 1.8e-03 (29s, total 522s)
+done 523 s
+v195: SandyResearch/parcae-370m | 388.0M parameters | dtype torch.float32 | R 32 K 64 M 32
+seq  0 gsm8k    loss 2.1873 (ref 2.1873) | |lam| last/first 0.0434 | Krylov step-1 cos 1.000000 | Arnoldi orth 1.4e-15 | sketch norm check 1.7e-03 (75s, total 124s)
+seq  1 gsm8k    loss 2.2638 (ref 2.2638) | |lam| last/first 0.0001 | Krylov step-1 cos 1.000000 | Arnoldi orth 1.3e-15 | sketch norm check 1.8e-03 (76s, total 200s)
+seq  2 gsm8k    loss 2.1345 (ref 2.1345) | |lam| last/first 0.0011 | Krylov step-1 cos 1.000000 | Arnoldi orth 1.1e-15 | sketch norm check 2.2e-03 (75s, total 275s)
+seq  3 gsm8k    loss 2.5797 (ref 2.5797) | |lam| last/first 0.1446 | Krylov step-1 cos 1.000000 | Arnoldi orth 2.1e-15 | sketch norm check 1.7e-03 (76s, total 351s)
+seq  4 gsm8k    loss 2.6594 (ref 2.6594) | |lam| last/first 0.0006 | Krylov step-1 cos 1.000000 | Arnoldi orth 1.1e-15 | sketch norm check 3.3e-03 (75s, total 427s)
+seq  5 gsm8k    loss 2.1465 (ref 2.1465) | |lam| last/first 0.0057 | Krylov step-1 cos 1.000000 | Arnoldi orth 8.9e-16 | sketch norm check 2.7e-03 (76s, total 503s)
+seq  6 gsm8k    loss 2.7639 (ref 2.7639) | |lam| last/first 0.0855 | Krylov step-1 cos 1.000000 | Arnoldi orth 1.8e-15 | sketch norm check 1.8e-03 (76s, total 579s)
+seq  7 gsm8k    loss 2.1570 (ref 2.1570) | |lam| last/first 0.0003 | Krylov step-1 cos 1.000000 | Arnoldi orth 6.7e-16 | sketch norm check 1.6e-03 (76s, total 655s)
+seq  8 gsm8k    loss 2.4616 (ref 2.4616) | |lam| last/first 0.0010 | Krylov step-1 cos 1.000000 | Arnoldi orth 1.0e-15 | sketch norm check 1.7e-03 (76s, total 732s)
+seq  9 gsm8k    loss 2.2235 (ref 2.2235) | |lam| last/first 0.0064 | Krylov step-1 cos 1.000000 | Arnoldi orth 7.8e-16 | sketch norm check 1.4e-03 (76s, total 808s)
+seq 10 gsm8k    loss 2.2907 (ref 2.2907) | |lam| last/first 0.0292 | Krylov step-1 cos 1.000000 | Arnoldi orth 8.9e-16 | sketch norm check 1.8e-03 (76s, total 884s)
+seq 11 gsm8k    loss 2.0762 (ref 2.0762) | |lam| last/first 0.0126 | Krylov step-1 cos 1.000000 | Arnoldi orth 3.1e-15 | sketch norm check 1.9e-03 (76s, total 961s)
+seq 12 gsm8k    loss 2.5512 (ref 2.5512) | |lam| last/first 4.4534 | Krylov step-1 cos 1.000000 | Arnoldi orth 3.9e-15 | sketch norm check 1.9e-03 (76s, total 1037s)
+seq 13 gsm8k    loss 2.4376 (ref 2.4376) | |lam| last/first 0.0326 | Krylov step-1 cos 1.000000 | Arnoldi orth 2.3e-15 | sketch norm check 1.6e-03 (76s, total 1114s)
+seq 14 gsm8k    loss 2.2487 (ref 2.2487) | |lam| last/first 0.0015 | Krylov step-1 cos 1.000000 | Arnoldi orth 8.9e-16 | sketch norm check 2.0e-03 (76s, total 1191s)
+seq 15 gsm8k    loss 2.4326 (ref 2.4326) | |lam| last/first 0.2649 | Krylov step-1 cos 1.000000 | Arnoldi orth 2.9e-15 | sketch norm check 2.1e-03 (76s, total 1268s)
+done 1268 s
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:09<00:27,  9.19s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:19<00:19,  9.90s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:33<00:11, 11.70s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:38<00:00,  9.03s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:38<00:00,  9.59s/it]
+v195: tomg-group-umd/huginn-0125 | 451.2M parameters | dtype torch.bfloat16 | R 32 K 32 M 32
+seq 20 gsm8k    loss 2.1018 (ref n/a) | |lam| last/first 0.0294 | Krylov step-1 cos 1.000000 | Arnoldi orth 1.3e-15 | sketch norm check 2.0e-03 (148s, total 210s)
+seq 21 gsm8k    loss 2.1561 (ref n/a) | |lam| last/first 0.0121 | Krylov step-1 cos 1.000000 | Arnoldi orth 2.1e-15 | sketch norm check 2.2e-03 (154s, total 363s)
+seq 22 gsm8k    loss 1.6052 (ref n/a) | |lam| last/first 0.0097 | Krylov step-1 cos 1.000000 | Arnoldi orth 8.9e-16 | sketch norm check 1.7e-03 (156s, total 519s)
+seq 23 gsm8k    loss 1.4504 (ref n/a) | |lam| last/first 0.0156 | Krylov step-1 cos 1.000000 | Arnoldi orth 8.9e-16 | sketch norm check 1.7e-03 (158s, total 677s)
+done 677 s

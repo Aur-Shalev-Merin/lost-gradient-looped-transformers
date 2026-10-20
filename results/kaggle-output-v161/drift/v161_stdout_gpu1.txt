@@ -1,0 +1,14 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/kaggle/working/v161_parcae_trunc_train.py:197: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  row = dict(i=i, loss=float(loss), adj=a.tolist(), rho=float(np.exp(-slope)), err={})
+drift R=16 k=8 step 0: rho 0.802 err {1: 0.813, 2: 0.663, 4: 0.421, 8: 0.18} law {1: 0.802, 2: 0.643, 4: 0.414, 8: 0.171} val 2.6553
+drift R=16 k=8 step 150: rho 0.731 err {1: 0.668, 2: 0.485, 4: 0.253, 8: 0.082} law {1: 0.731, 2: 0.534, 4: 0.286, 8: 0.082} val 1.5716
+drift R=16 k=8 step 300: rho 0.706 err {1: 0.66, 2: 0.478, 4: 0.236, 8: 0.058} law {1: 0.706, 2: 0.498, 4: 0.248, 8: 0.062} val 1.4864
+drift R=16 k=8 step 600: rho 0.699 err {1: 0.637, 2: 0.446, 4: 0.217, 8: 0.053} law {1: 0.699, 2: 0.489, 4: 0.239, 8: 0.057} val 1.4357
+drift cell 16:8 done (593s)
+drift R=8 k=4 step 0: rho 0.773 err {1: 0.805, 2: 0.648, 4: 0.386} law {1: 0.773, 2: 0.597, 4: 0.356} val 2.7984
+drift R=8 k=4 step 150: rho 0.694 err {1: 0.658, 2: 0.469, 4: 0.22} law {1: 0.694, 2: 0.482, 4: 0.232} val 1.5728
+drift R=8 k=4 step 300: rho 0.698 err {1: 0.673, 2: 0.483, 4: 0.239} law {1: 0.698, 2: 0.487, 4: 0.237} val 1.4868
+drift R=8 k=4 step 600: rho 0.676 err {1: 0.631, 2: 0.433, 4: 0.202} law {1: 0.676, 2: 0.458, 4: 0.209} val 1.4385
+drift cell 8:4 done (388s)

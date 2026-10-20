@@ -1,0 +1,21 @@
+v163 driver 888f185a0c54 (v162 module 0ae4891d7abc) dev cuda amp True R 32
+selftest a=1 vs v162 loss_manual R=32 k=32: 2.675809 2.675809
+selftest a=1 vs v162 loss_manual R=32 k=16: 2.675809 2.675809
+selftest a=1 vs v162 loss_manual R=32 k=0: 2.675809 2.675809
+selftest checkpointed vs plain grad (a=0.5, k=4): rel diff 8.89e-07
+selftest truncated grad fp16 vs fp32 a=1.0 k=1: {'rest': 0.0027, 'prelude': 0.0027, 'adapter': 0.0029, 'core_block': 0.0027}
+selftest truncated grad fp16 vs fp32 a=1.0 k=4: {'rest': 0.0027, 'prelude': 0.0027, 'adapter': 0.0032, 'core_block': 0.0025}
+selftest truncated grad fp16 vs fp32 a=0.5 k=1: {'rest': 0.0027, 'prelude': 0.0025, 'adapter': 0.0026, 'core_block': 0.0026}
+selftest truncated grad fp16 vs fp32 a=0.5 k=4: {'rest': 0.0027, 'prelude': 0.0022, 'adapter': 0.0025, 'core_block': 0.0025}
+selftest OK
+v163 driver 888f185a0c54 (v162 module 0ae4891d7abc) dev cuda amp True R 32
+measure a=1.0: {"a": 1.0, "R": 32, "rho_median": 0.8250177639210495, "err_median": {"1": 0.8201241493225098, "2": 0.6752893626689911, "4": 0.4427010416984558, "8": 0.2046329230070114, "16": 0.04253258742392063}, "law_median": {"1": 0.8250177639210495, "2": 0.680683655379356, "4": 0.46341013279840304, "8": 0.2148970205858533, "16": 0.04630792045491153}}
+step-0 val/test loss a=1.0 R=32: 2.6283 / 2.6123
+measure a=0.5: {"a": 0.5, "R": 32, "rho_median": 0.9025027949651551, "err_median": {"1": 0.8772655129432678, "2": 0.7911480367183685, "4": 0.64529088139534, "8": 0.4182574898004532, "16": 0.18665622174739838}, "law_median": {"1": 0.9025027949651551, "2": 0.8145177647282256, "4": 0.6634602679856394, "8": 0.44023546554257165, "16": 0.1939057567820145}}
+step-0 val/test loss a=0.5 R=32: 2.6440 / 2.6353
+cell a=0.5 k=0 lr=0.0001 seed=9001: val 1.6999 test 1.6852 nonfinite 0 (473s)
+cell a=1.0 k=0 lr=0.0001 seed=9001: val 1.6908 test 1.6742 nonfinite 0 (505s)
+cell a=0.5 k=0 lr=0.0003 seed=9001: val 1.6061 test 1.5888 nonfinite 1 (475s)
+cell a=1.0 k=0 lr=0.0003 seed=9001: val 1.5984 test 1.5811 nonfinite 0 (501s)
+cell a=0.5 k=0 lr=0.0009 seed=9001: val 1.5658 test 1.5451 nonfinite 0 (477s)
+cell a=1.0 k=0 lr=0.0009 seed=9001: val 1.5576 test 1.5382 nonfinite 0 (505s)

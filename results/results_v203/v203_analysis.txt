@@ -1,0 +1,6 @@
+parcae per-sequence drop, training seqs [0.202, 0.222, 0.182] | held-out [0.195, 0.22, 0.206] | held-out stage 0 [0.798, 0.636, 0.408], stage 300 [0.603, 0.417, 0.201] | held-out clip B=64 stage 0 [1.053, 0.822, 0.56], stage 300 [0.554, 0.371, 0.151] | batches 56
+retro  per-sequence drop, training seqs [0.034, 0.024, 0.006] | held-out [0.038, 0.025, 0.006] | held-out stage 0 [0.364, 0.136, 0.018], stage 300 [0.326, 0.111, 0.012] | held-out clip B=64 stage 0 [0.349, 0.12, 0.014], stage 300 [0.317, 0.106, 0.013] | batches 56
+pln5   per-sequence drop, training seqs [0.144, 0.155, 0.071] | held-out [0.132, 0.133, 0.068] | held-out stage 0 [0.764, 0.591, 0.291], stage 300 [0.632, 0.458, 0.222] | held-out clip B=64 stage 0 [0.768, 0.53, 0.222], stage 300 [0.541, 0.375, 0.168] | batches 48
+r5     per-sequence drop, training seqs [0.124, 0.148, 0.089] | held-out [0.116, 0.138, 0.089] | held-out stage 0 [0.833, 0.702, 0.387], stage 300 [0.718, 0.564, 0.298] | held-out clip B=64 stage 0 [0.88, 0.674, 0.297], stage 300 [0.62, 0.467, 0.207] | batches 48
+ratios (held-out drop / training-sequence drop): {'parcae': 1.02, 'pln5': 0.9, 'r5': 0.95}
+VERDICT: GENERAL

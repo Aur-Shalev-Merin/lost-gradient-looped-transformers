@@ -1,0 +1,11 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 89711.25 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 303788.20 examples/s]
+v174 driver d5c2647126de (v163 d5c2647126de) dev cuda amp True R 32
+  k=1 lam=0.820 step 0: A 0.8084 A_loop 0.6740 |gR| 5.90 |gk| 2.76 S 65536 (3s)
+  k=1 lam=0.820 step 100: A 0.9551 A_loop 0.8837 |gR| 1.20 |gk| 0.79 S 32768 (365s)
+  k=1 lam=0.820 step 200: A 0.9505 A_loop 0.8829 |gR| 1.06 |gk| 0.72 S 32768 (726s)
+  k=1 lam=0.820 step 300: A 0.9464 A_loop 0.8829 |gR| 1.26 |gk| 0.82 S 32768 (1086s)
+  k=1 lam=0.820 step 400: A 0.9402 A_loop 0.8779 |gR| 1.00 |gk| 0.68 S 32768 (1447s)
+  k=1 lam=0.820 step 500: A 0.9388 A_loop 0.8809 |gR| 1.06 |gk| 0.70 S 2048 (1805s)
+pilot k=1 lam=0.820: Abar 0.9437 Abar_loop 0.8831 both-clipped 0.129 nonfinite 5 (2160s)

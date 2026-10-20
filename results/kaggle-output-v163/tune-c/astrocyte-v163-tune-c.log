@@ -1,0 +1,31 @@
+[{"stream_name":"stdout","time":4071.69779565,"data":"job exit 0 elapsed 4064s\n"}
+,{"stream_name":"stdout","time":4071.697855731,"data":"job exit 0 elapsed 4064s\n"}
+,{"stream_name":"stdout","time":4071.69824564,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":4071.698259358,"data":"\n"}
+,{"stream_name":"stdout","time":4071.698263753,"data":"Generating train split:   0%|          | 0/7473 [00:00\u003c?, ? examples/s]\n"}
+,{"stream_name":"stdout","time":4071.698267983,"data":"Generating train split: 100%|██████████| 7473/7473 [00:00\u003c00:00, 78548.99 examples/s]\n"}
+,{"stream_name":"stdout","time":4071.69827299,"data":"\n"}
+,{"stream_name":"stdout","time":4071.698276191,"data":"Generating test split:   0%|          | 0/1319 [00:00\u003c?, ? examples/s]\n"}
+,{"stream_name":"stdout","time":4071.698279608,"data":"Generating test split: 100%|██████████| 1319/1319 [00:00\u003c00:00, 302409.91 examples/s]\n"}
+,{"stream_name":"stdout","time":4071.698283246,"data":"v163 driver d5c2647126de (v162 module 0ae4891d7abc) dev cuda amp True R 32\n"}
+,{"stream_name":"stdout","time":4071.698286651,"data":"cell a=0.5 k=32 lr=0.0003 seed=1631001: val 1.4002 test 1.3767 rho_end 0.855 nonfinite 5 (1636s)\n"}
+,{"stream_name":"stdout","time":4071.698290086,"data":"cell a=0.5 k=4 lr=0.0003 seed=1631001: val 1.4102 test 1.3869 rho_end 0.856 nonfinite 0 (699s)\n"}
+,{"stream_name":"stdout","time":4071.6982935,"data":"cell a=0.5 k=2 lr=0.0003 seed=1631001: val 1.4218 test 1.3984 rho_end 0.857 nonfinite 0 (634s)\n"}
+,{"stream_name":"stdout","time":4071.698299033,"data":"cell a=1.0 k=0 lr=0.0001 seed=1631001: val 1.6909 test 1.6744 rho_end 0.831 nonfinite 0 (525s)\n"}
+,{"stream_name":"stdout","time":4071.698305369,"data":"cell a=0.5 k=0 lr=0.0003 seed=1631001: val 1.6076 test 1.5893 rho_end 0.891 nonfinite 1 (522s)\n"}
+,{"stream_name":"stdout","time":4071.69830764,"data":"\n"}
+,{"stream_name":"stdout","time":4071.69830971,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":4071.698312025,"data":"v163 driver d5c2647126de (v162 module 0ae4891d7abc) dev cuda amp True R 32\n"}
+,{"stream_name":"stdout","time":4071.698314302,"data":"cell a=0.5 k=32 lr=0.0009 seed=1631001: val 1.4626 test 1.4344 rho_end 0.830 nonfinite 0 (1569s)\n"}
+,{"stream_name":"stdout","time":4071.698316527,"data":"cell a=0.5 k=4 lr=0.0009 seed=1631001: val 1.4727 test 1.4502 rho_end 0.838 nonfinite 0 (667s)\n"}
+,{"stream_name":"stdout","time":4071.698318752,"data":"cell a=0.5 k=2 lr=0.0009 seed=1631001: val 1.4876 test 1.4652 rho_end 0.833 nonfinite 0 (602s)\n"}
+,{"stream_name":"stdout","time":4071.698320955,"data":"cell a=1.0 k=0 lr=0.0003 seed=1631001: val 1.6002 test 1.5819 rho_end 0.825 nonfinite 0 (498s)\n"}
+,{"stream_name":"stdout","time":4071.69832326,"data":"cell a=0.5 k=0 lr=0.0009 seed=1631001: val 1.5639 test 1.5460 rho_end 0.891 nonfinite 1 (497s)\n"}
+,{"stream_name":"stdout","time":4071.698325471,"data":"\n"}
+,{"stream_name":"stderr","time":4073.72869647,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":4073.728741158,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":4074.000100969,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":4074.000125234,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":4074.749569404,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":4075.740360088,"data":"[NbConvertApp] Writing 296104 bytes to __results__.html\n"}
+]

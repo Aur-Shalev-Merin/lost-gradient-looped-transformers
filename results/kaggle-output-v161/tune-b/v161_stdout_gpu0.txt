@@ -1,0 +1,15 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 97153.15 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 237162.39 examples/s]
+v161 driver ddb4e99b660b dev cuda amp True | train ex 7000, val chunks 158, test chunks 455
+/kaggle/working/v161_parcae_trunc_train.py:177: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  curve.append((s, round(float(loss), 4), round(float(gn), 3)))
+cell R=16 k=16 lr=0.0003 seed=1611001: val 1.3973 test 1.3762 nonfinite 5 (679s)
+cell R=16 k=4 lr=0.0001 seed=1611001: val 1.4910 test 1.4731 nonfinite 0 (408s)
+cell R=8 k=8 lr=0.0001 seed=1611001: val 1.4169 test 1.3981 nonfinite 2 (416s)
+cell R=16 k=2 lr=0.0003 seed=1611001: val 1.4479 test 1.4252 nonfinite 0 (369s)
+cell R=16 k=1 lr=0.0009 seed=1611001: val 1.4789 test 1.4518 nonfinite 0 (349s)
+cell R=8 k=4 lr=0.0003 seed=1611001: val 1.4409 test 1.4178 nonfinite 1 (315s)
+cell R=8 k=2 lr=0.0009 seed=1611001: val 1.4641 test 1.4360 nonfinite 0 (276s)
+cell R=8 k=0 lr=0.0001 seed=1611001: val 1.7527 test 1.7282 nonfinite 0 (202s)

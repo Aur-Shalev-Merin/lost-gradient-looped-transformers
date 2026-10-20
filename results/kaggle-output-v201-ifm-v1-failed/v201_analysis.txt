@@ -1,0 +1,5 @@
+
+PRIMARY: gap = clipped B=64 median at stage 300 - per-sequence (B=1) median at stage 0, same k
+VERDICT: INCOMPLETE (fewer than 4 models)
+
+SECONDARY (no verdict)

@@ -1,0 +1,7 @@
+v167 driver b6fd416e48f2 dev cuda amp True | params 163.5M | train ex 7000, val/test chunks 170/492
+cell R=8 a=1.00 k=2 lr=0.003 seed=1701101: val 1.3802 test 1.3662 rho_end 0.314 nonfinite 3 (528s, peak 6.5 GB)
+cell R=8 a=0.30 k=2 lr=0.01 seed=1701101: val 1.3093 test 1.2935 rho_end 0.741 nonfinite 0 (531s, peak 6.6 GB)
+cell R=8 a=1.00 k=2 lr=0.02 seed=1701102: val 1.3015 test 1.2866 rho_end 0.379 nonfinite 2 (530s, peak 6.5 GB)
+cell R=8 a=1.00 k=1 lr=0.003 seed=1701101: val 1.3715 test 1.3569 rho_end 0.296 nonfinite 4 (471s, peak 6.5 GB)
+cell R=8 a=0.30 k=1 lr=0.01 seed=1701101: val 1.3134 test 1.2974 rho_end 0.740 nonfinite 0 (471s, peak 6.6 GB)
+cell R=8 a=1.00 k=1 lr=0.02 seed=1701102: val nan test nan rho_end nan nonfinite 289 (447s, peak 6.5 GB)

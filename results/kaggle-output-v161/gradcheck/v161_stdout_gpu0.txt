@@ -1,0 +1,25 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 106726.71 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 266860.59 examples/s]
+gradcheck R=16: path mode amp batch | loss | |g_R| |g_R-1| relerr
+/kaggle/working/v161_gradcheck.py:46: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return out / (1024.0 if amp else 1.0), float(loss)
+  model  train amp=True  B=8 | loss 2.6152/2.6152 | 6.6113 2.9081 0.8977
+    loop-0 contribution by group (|d|, |g_R|): adapter 0.0634/0.2363, coda 0.0001/1.2089, core_block 5.7520/5.8121, ln_f 0.0000/0.3874, other 0.0001/0.2950, prelude 1.4610/2.8568, value_embeds 0.0045/0.0155, wte 0.0266/0.1124
+Traceback (most recent call last):
+  File "/kaggle/working/v161_gradcheck.py", line 66, in <module>
+    main()
+  File "/kaggle/working/v161_gradcheck.py", line 52, in main
+    gR, lR = grad(path, mode, amp, ids, R); g1, l1 = grad(path, mode, amp, ids, R - 1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/v161_gradcheck.py", line 44, in grad
+    (loss * (1024.0 if amp else 1.0)).backward()
+  File "/usr/local/lib/python3.12/dist-packages/torch/_tensor.py", line 630, in backward
+    torch.autograd.backward(
+  File "/usr/local/lib/python3.12/dist-packages/torch/autograd/__init__.py", line 364, in backward
+    _engine_run_backward(
+  File "/usr/local/lib/python3.12/dist-packages/torch/autograd/graph.py", line 865, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 512.00 MiB. GPU 0 has a total capacity of 14.56 GiB of which 368.81 MiB is free. Including non-PyTorch memory, this process has 14.20 GiB memory in use. Of the allocated memory 13.90 GiB is allocated by PyTorch, and 165.32 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

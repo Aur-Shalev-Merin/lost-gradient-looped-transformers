@@ -1,0 +1,6 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+v163 driver d5c2647126de (v162 module 0ae4891d7abc) dev cuda amp True R 32
+cell a=1.0 k=0 lr=0.0009 seed=1631102: val 1.5588 test 1.5375 rho_end 0.824 nonfinite 0 (488s)
+cell a=1.0 k=0 lr=0.0009 seed=1631104: val 1.5580 test 1.5389 rho_end 0.819 nonfinite 0 (496s)
+cell a=0.5 k=0 lr=0.0009 seed=1631102: val 1.5671 test 1.5448 rho_end 0.885 nonfinite 0 (495s)
+cell a=0.5 k=0 lr=0.0009 seed=1631104: val 1.5644 test 1.5459 rho_end 0.884 nonfinite 0 (495s)

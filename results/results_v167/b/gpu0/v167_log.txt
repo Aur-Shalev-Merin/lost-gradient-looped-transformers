@@ -1,0 +1,20 @@
+v167 driver b6fd416e48f2 dev cuda amp True | params 163.5M | train ex 7000, val/test chunks 170/492
+selftest decomposition R=1: model 1.885320 manual 1.885320
+selftest decomposition R=4: model 1.856819 manual 1.856819
+selftest decomposition R=8: model 1.856685 manual 1.856685
+selftest checkpointed vs plain k=4: {'other': '3.5e-07', 'prelude': '9.9e-07', 'adapter': '6.7e-07', 'core_block': '6.5e-07', 'coda': '2.6e-07'}
+selftest damped a=0.5 checkpointed vs plain: {'other': '3.1e-07', 'prelude': '8.7e-07', 'adapter': '4.8e-07', 'core_block': '4.4e-07', 'coda': '2.7e-07'}
+selftest fp16 vs fp32 k=1: {'other': 0.0456, 'prelude': 0.1666, 'adapter': 0.5978, 'core_block': 0.2568, 'coda': 0.3924}
+selftest fp16 vs fp32 k=4: {'other': 0.0436, 'prelude': 0.1407, 'adapter': 0.4384, 'core_block': 0.2234, 'coda': 0.3924}
+selftest floor: core grad norm k=0 0.000e+00, k=1 1.921e+00
+selftest OK
+cell R=8 a=0.30 k=8 lr=0.0001 seed=1671101: val 1.1989 test 1.1767 rho_end 0.735 nonfinite 0 (873s, peak 7.3 GB)
+cell R=8 a=0.50 k=8 lr=0.0001 seed=1671104: val 1.1969 test 1.1763 rho_end 0.586 nonfinite 0 (875s, peak 7.3 GB)
+cell R=8 a=1.00 k=8 lr=0.0001 seed=1671107: val 1.1959 test 1.1754 rho_end 0.299 nonfinite 0 (873s, peak 7.2 GB)
+cell R=8 a=0.30 k=2 lr=0.0001 seed=1671103: val 1.1981 test 1.1770 rho_end 0.733 nonfinite 0 (527s, peak 7.3 GB)
+cell R=8 a=0.50 k=2 lr=0.0001 seed=1671106: val 1.1966 test 1.1758 rho_end 0.586 nonfinite 0 (528s, peak 7.3 GB)
+cell R=8 a=1.00 k=1 lr=0.0001 seed=1671102: val 1.1989 test 1.1769 rho_end 0.302 nonfinite 0 (471s, peak 7.2 GB)
+cell R=8 a=0.30 k=1 lr=0.0001 seed=1671104: val 1.1983 test 1.1772 rho_end 0.732 nonfinite 0 (470s, peak 7.3 GB)
+cell R=8 a=0.50 k=1 lr=0.0001 seed=1671107: val 1.1968 test 1.1764 rho_end 0.587 nonfinite 0 (470s, peak 7.3 GB)
+cell R=8 a=0.30 k=0 lr=0.0003 seed=1671103: val 1.2769 test 1.2552 rho_end 0.733 nonfinite 0 (340s, peak 6.0 GB)
+cell R=8 a=0.50 k=0 lr=0.0003 seed=1671106: val 1.2766 test 1.2553 rho_end 0.595 nonfinite 0 (340s, peak 6.0 GB)

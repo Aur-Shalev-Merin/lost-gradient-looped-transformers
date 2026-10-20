@@ -1,0 +1,41 @@
+[{"stream_name":"stderr","time":13.261144514,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":15.19450384,"data":"\rGenerating train split:   0%|          | 0/7473 [00:00\u003c?, ? examples/s]\rGenerating train split: 100%|██████████| 7473/7473 [00:00\u003c00:00, 73146.56 examples/s]\rGenerating train split: 100%|██████████| 7473/7473 [00:00\u003c00:00, 72854.64 examples/s]\n"}
+,{"stream_name":"stderr","time":15.200535468,"data":"\rGenerating test split:   0%|          | 0/1319 [00:00\u003c?, ? examples/s]\rGenerating test split: 100%|██████████| 1319/1319 [00:00\u003c00:00, 245225.49 examples/s]\n"}
+,{"stream_name":"stdout","time":15.797935749,"data":"setup done after 14s\n"}
+,{"stream_name":"stdout","time":3037.048543446,"data":"job exit 0 elapsed 3036s\n"}
+,{"stream_name":"stdout","time":3037.048598338,"data":"job exit 0 elapsed 3036s\n"}
+,{"stream_name":"stdout","time":3037.056174809,"data":"---- gpu0 (tail)\n"}
+,{"stream_name":"stdout","time":3037.056195656,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":3037.056201749,"data":"v203 parcae | driver 62221bebe0ef | R 32 | held-out (test) chunks 455 -\u003e 56 batches of 8, groups of 8, B=1 on 64\n"}
+,{"stream_name":"stdout","time":3037.056207237,"data":"  stage 300 fine-tune: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0003, 'seed': 2012, 'nonfinite': 2, 'clipped_frac': 0.99, 'ok': True, 's': 764}\n"}
+,{"stream_name":"stdout","time":3037.056212611,"data":"  selftest PASS | repeat-pass rel diff 4.75e-07 (\u003c 0.001) | k=1 lost on batch 0 0.5931 (\u003e 0.001) | params 144.3M\n"}
+,{"stream_name":"stdout","time":3037.056217327,"data":"    groups pass: 16/56 batches, 294s\n"}
+,{"stream_name":"stdout","time":3037.05622158,"data":"    groups pass: 32/56 batches, 592s\n"}
+,{"stream_name":"stdout","time":3037.056226104,"data":"    groups pass: 48/56 batches, 890s\n"}
+,{"stream_name":"stdout","time":3037.056231977,"data":"    total pass: 16/56 batches, 294s\n"}
+,{"stream_name":"stdout","time":3037.056236401,"data":"    total pass: 32/56 batches, 587s\n"}
+,{"stream_name":"stdout","time":3037.056242255,"data":"    total pass: 48/56 batches, 881s\n"}
+,{"stream_name":"stdout","time":3037.056247157,"data":"  stage 300 measured after 3012s\n"}
+,{"stream_name":"stdout","time":3037.056252496,"data":"\n"}
+,{"stream_name":"stdout","time":3037.056262932,"data":"---- gpu1 (tail)\n"}
+,{"stream_name":"stdout","time":3037.056267855,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":3037.0562728,"data":"v203 parcae | driver 62221bebe0ef | R 32 | held-out (test) chunks 455 -\u003e 56 batches of 8, groups of 8, B=1 on 64\n"}
+,{"stream_name":"stdout","time":3037.05627731,"data":"  stage 300 fine-tune: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0003, 'seed': 2013, 'nonfinite': 1, 'clipped_frac': 0.9833, 'ok': True, 's': 760}\n"}
+,{"stream_name":"stdout","time":3037.056281954,"data":"  selftest PASS | repeat-pass rel diff 4.94e-07 (\u003c 0.001) | k=1 lost on batch 0 0.6132 (\u003e 0.001) | params 144.3M\n"}
+,{"stream_name":"stdout","time":3037.056286537,"data":"    groups pass: 16/56 batches, 293s\n"}
+,{"stream_name":"stdout","time":3037.056296439,"data":"    groups pass: 32/56 batches, 588s\n"}
+,{"stream_name":"stdout","time":3037.056299523,"data":"    groups pass: 48/56 batches, 883s\n"}
+,{"stream_name":"stdout","time":3037.056302289,"data":"    total pass: 16/56 batches, 293s\n"}
+,{"stream_name":"stdout","time":3037.05631916,"data":"    total pass: 32/56 batches, 583s\n"}
+,{"stream_name":"stdout","time":3037.056321651,"data":"    total pass: 48/56 batches, 873s\n"}
+,{"stream_name":"stdout","time":3037.056323802,"data":"  stage 300 measured after 2973s\n"}
+,{"stream_name":"stdout","time":3037.056325967,"data":"\n"}
+,{"stream_name":"stdout","time":3037.056425609,"data":"analysis needs v201 outputs: run v203_heldout_lost.py --analyze locally\n"}
+,{"stream_name":"stdout","time":3037.056432242,"data":"total 3036s\n"}
+,{"stream_name":"stderr","time":3039.086979888,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":3039.087007695,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":3039.381658765,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":3039.381683161,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":3040.138926512,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":3041.217016358,"data":"[NbConvertApp] Writing 319775 bytes to __results__.html\n"}
+]

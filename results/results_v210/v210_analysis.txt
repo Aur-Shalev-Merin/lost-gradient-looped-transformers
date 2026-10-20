@@ -1,0 +1,19 @@
+PART A (held-out GSM8K test, per-sequence medians, k = 1 / 2 / 4)
+  parcae s0       all [0.798, 0.636, 0.408] | loop [0.818, 0.657, 0.417]
+  parcae full300  all [0.608, 0.428, 0.217] | loop [0.689, 0.484, 0.246]
+  parcae trunc300 all [0.617, 0.434, 0.211] | loop [0.693, 0.486, 0.238]
+  parcae mean fall: all 0.196, loop 0.157 (ratio 0.80) | truncated fine-tune fall (all) 0.193
+  pln5   s0       all [0.764, 0.591, 0.291] | loop [0.805, 0.626, 0.308]
+  pln5   full300  all [0.633, 0.456, 0.221] | loop [0.722, 0.519, 0.254]
+  pln5   trunc300 all [0.646, 0.47, 0.246] | loop [0.73, 0.533, 0.279]
+  pln5   mean fall: all 0.112, loop 0.081 (ratio 0.72) | truncated fine-tune fall (all) 0.095
+  r5     s0       all [0.833, 0.702, 0.387] | loop [0.867, 0.73, 0.4]
+  r5     full300  all [0.718, 0.564, 0.298] | loop [0.791, 0.62, 0.328]
+  r5     trunc300 all [0.743, 0.604, 0.366] | loop [0.809, 0.658, 0.399]
+  r5     mean fall: all 0.114, loop 0.086 (ratio 0.75) | truncated fine-tune fall (all) 0.070
+VERDICT A1 (loop-only): IN-LOOP | VERDICT A2 (truncated fine-tune): TRUNC-FALLS
+PART B (Ouro, 16 sequences)
+  median |x_t| [678.4, 594.9, 551.6, 495.8] | |h_t| [721.6, 872.7, 942.9, 997.4]
+  rho of |dL/dh| 1.877 | scale-free rho on h 1.656, on pre-norm x 1.454 (medians)
+  exit-weighted objective lost gradient k = 1 / 2 / 3: 0.941 / 0.849 / 0.733
+VERDICT B1: GROWS-SCALE-FREE | VERDICT B2: MOST-LOST

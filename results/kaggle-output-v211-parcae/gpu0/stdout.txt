@@ -1,0 +1,6 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  parcae: 21 tensors (65.08M params) get a nonzero k = 0 gradient
+  parcae s0: all [0.798, 0.636, 0.408] | loop [0.818, 0.657, 0.417] (136s)
+  parcae zero300 fine-tune (k = 0) seed 2011: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0003, 'seed': 2011, 'nonfinite': 0, 'clipped_frac': 0.0367, 'ok': True, 's': 218, 'k': 0} | changed 21 tensors, 65.08M params
+  CHECK loop weights fixed: PASS
+  parcae zero300: all [0.707, 0.543, 0.338] | loop [0.74, 0.571, 0.354] (137s)

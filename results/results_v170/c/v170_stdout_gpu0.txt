@@ -1,0 +1,42 @@
+v170: AdamW replaced by SGD(momentum 0.9) | driver retro
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 76436.74 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 301618.52 examples/s]
+v167 driver b6fd416e48f2 dev cuda amp True | params 163.5M | train ex 7000, val/test chunks 170/492
+/kaggle/working/v167_retrofit_trunc.py:206: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  torch.manual_seed(0); a = float(m(ids, labels=labels_of(ids), num_steps=r).loss)
+selftest decomposition R=1: model 1.885320 manual 1.885320
+selftest decomposition R=4: model 1.856819 manual 1.856819
+selftest decomposition R=8: model 1.856685 manual 1.856685
+selftest checkpointed vs plain k=4: {'other': '3.5e-07', 'prelude': '9.4e-07', 'adapter': '5.9e-07', 'core_block': '5.8e-07', 'coda': '2.7e-07'}
+selftest damped a=0.5 checkpointed vs plain: {'other': '2.9e-07', 'prelude': '8.9e-07', 'adapter': '5.3e-07', 'core_block': '4.7e-07', 'coda': '2.7e-07'}
+selftest fp16 vs fp32 k=1: {'other': 0.0456, 'prelude': 0.1662, 'adapter': 0.5986, 'core_block': 0.2567, 'coda': 0.3924}
+selftest fp16 vs fp32 k=4: {'other': 0.0436, 'prelude': 0.141, 'adapter': 0.4397, 'core_block': 0.2235, 'coda': 0.3924}
+selftest floor: core grad norm k=0 0.000e+00, k=1 1.921e+00
+selftest OK
+v170: optimizer = SGD(lr 0.03, momentum 0.9, wd 0)
+cell R=8 a=1.00 k=8 lr=0.03 seed=1701101: val 1.2530 test 1.2356 rho_end 0.343 nonfinite 5 (869s, peak 6.5 GB)
+v170: optimizer = SGD(lr 0.03, momentum 0.9, wd 0)
+cell R=8 a=1.00 k=8 lr=0.03 seed=1701103: val 1.2613 test 1.2439 rho_end 0.364 nonfinite 2 (871s, peak 6.5 GB)
+v170: optimizer = SGD(lr 0.03, momentum 0.9, wd 0)
+cell R=8 a=1.00 k=8 lr=0.03 seed=1701105: val 1.2781 test 1.2590 rho_end 0.348 nonfinite 3 (870s, peak 6.5 GB)
+v170: optimizer = SGD(lr 0.03, momentum 0.9, wd 0)
+cell R=8 a=1.00 k=8 lr=0.03 seed=1701107: val 1.2540 test 1.2353 rho_end 0.388 nonfinite 3 (870s, peak 6.5 GB)
+v170: optimizer = SGD(lr 0.03, momentum 0.9, wd 0)
+cell R=8 a=1.00 k=2 lr=0.03 seed=1701103: val 1.2865 test 1.2703 rho_end 0.635 nonfinite 3 (520s, peak 6.5 GB)
+v170: optimizer = SGD(lr 0.03, momentum 0.9, wd 0)
+cell R=8 a=1.00 k=2 lr=0.03 seed=1701105: val 1.2939 test 1.2781 rho_end 0.767 nonfinite 4 (521s, peak 6.5 GB)
+v170: optimizer = SGD(lr 0.03, momentum 0.9, wd 0)
+cell R=8 a=1.00 k=2 lr=0.03 seed=1701107: val 1.2925 test 1.2762 rho_end 0.423 nonfinite 4 (520s, peak 6.5 GB)
+v170: optimizer = SGD(lr 0.03, momentum 0.9, wd 0)
+cell R=8 a=1.00 k=1 lr=0.03 seed=1701103: val nan test nan rho_end nan nonfinite 454 (427s, peak 6.5 GB)
+v170: optimizer = SGD(lr 0.03, momentum 0.9, wd 0)
+cell R=8 a=1.00 k=1 lr=0.03 seed=1701105: val nan test nan rho_end nan nonfinite 523 (434s, peak 6.5 GB)
+v170: optimizer = SGD(lr 0.03, momentum 0.9, wd 0)
+cell R=8 a=1.00 k=1 lr=0.03 seed=1701107: val nan test nan rho_end nan nonfinite 510 (433s, peak 6.5 GB)
+v170: optimizer = SGD(lr 0.3, momentum 0.9, wd 0)
+cell R=8 a=1.00 k=0 lr=0.3 seed=1701102: val 1.2897 test 1.2685 rho_end 0.316 nonfinite 2 (340s, peak 5.6 GB)
+v170: optimizer = SGD(lr 0.3, momentum 0.9, wd 0)
+cell R=8 a=1.00 k=0 lr=0.3 seed=1701104: val 1.2902 test 1.2685 rho_end 0.317 nonfinite 1 (341s, peak 5.6 GB)
+v170: optimizer = SGD(lr 0.3, momentum 0.9, wd 0)
+cell R=8 a=1.00 k=0 lr=0.3 seed=1701106: val 1.2892 test 1.2681 rho_end 0.321 nonfinite 0 (341s, peak 5.6 GB)

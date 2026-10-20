@@ -1,0 +1,7 @@
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split:  13%|█▎        | 1000/7473 [00:00<00:01, 5557.78 examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 39703.48 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 218563.80 examples/s]
+v167 driver b6fd416e48f2 dev cuda amp True | params 163.5M | train ex 7000, val/test chunks 170/492
+/usr/local/lib/python3.13/dist-packages/torch/nn/init.py:119: UserWarning: Specified kernel cache directory could not be created! This disables kernel caching. Specified directory is /root/.cache/torch/kernels. This warning will appear only once per process. (Triggered internally at /pytorch/aten/src/ATen/native/cuda/jit_utils.cpp:1505.)
+  tensor.erfinv_()
+cell R=8 a=1.00 k=0 lr=0.0001 seed=9001: val 1.3019 test 1.2823 rho_end 0.327 nonfinite 0 (347s, peak 5.8 GB)
+cell R=8 a=1.00 k=8 lr=3e-05 seed=9001: val 1.2375 test 1.2195 rho_end 0.293 nonfinite 0 (895s, peak 7.2 GB)

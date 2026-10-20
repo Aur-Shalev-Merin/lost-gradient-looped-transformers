@@ -1,0 +1,43 @@
+[{"stream_name":"stdout","time":6.005850051,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.4/10.4 MB 80.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":6.046733594,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 566.4/566.4 kB 22.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":6.109769291,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 73.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":20.17235837,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":20.172392277,"data":"gradio 6.26.0 requires huggingface-hub\u003c2.0,\u003e=1.16.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":20.17239843,"data":"diffusers 0.40.0 requires huggingface-hub\u003c2.0,\u003e=1.23.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":26.889091612,"data":"\rGenerating train split:   0%|          | 0/7473 [00:00\u003c?, ? examples/s]\rGenerating train split: 100%|██████████| 7473/7473 [00:00\u003c00:00, 97918.28 examples/s]\n"}
+,{"stream_name":"stderr","time":26.893889881,"data":"\rGenerating test split:   0%|          | 0/1319 [00:00\u003c?, ? examples/s]\rGenerating test split: 100%|██████████| 1319/1319 [00:00\u003c00:00, 308876.50 examples/s]\n"}
+,{"stream_name":"stdout","time":27.584929104,"data":"setup done after 26s\n"}
+,{"stream_name":"stdout","time":2101.131516832,"data":"job exit 0 elapsed 2100s\n"}
+,{"stream_name":"stdout","time":2613.267476541,"data":"job exit 0 elapsed 2612s\n"}
+,{"stream_name":"stdout","time":2613.339567537,"data":"---- gpu0 (tail)\n"}
+,{"stream_name":"stdout","time":2613.339593264,"data":"v203 retro | driver 9055ec8b615a | R 8 | held-out (test) chunks 492 -\u003e 56 batches of 8, groups of 8, B=1 on 64\n"}
+,{"stream_name":"stdout","time":2613.339599997,"data":"  selftest PASS | repeat-pass rel diff 4.19e-07 (\u003c 0.001) | k=1 lost on batch 0 0.3587 (\u003e 0.001) | params 163.5M\n"}
+,{"stream_name":"stdout","time":2613.33960544,"data":"    groups pass: 16/56 batches, 260s\n"}
+,{"stream_name":"stdout","time":2613.339610296,"data":"    groups pass: 32/56 batches, 525s\n"}
+,{"stream_name":"stdout","time":2613.339628969,"data":"    groups pass: 48/56 batches, 793s\n"}
+,{"stream_name":"stdout","time":2613.339635931,"data":"    total pass: 16/56 batches, 266s\n"}
+,{"stream_name":"stdout","time":2613.339640296,"data":"    total pass: 32/56 batches, 533s\n"}
+,{"stream_name":"stdout","time":2613.339644399,"data":"    total pass: 48/56 batches, 801s\n"}
+,{"stream_name":"stdout","time":2613.339648736,"data":"  stage 0 measured after 2062s\n"}
+,{"stream_name":"stdout","time":2613.339658228,"data":"\n"}
+,{"stream_name":"stdout","time":2613.33966481,"data":"---- gpu1 (tail)\n"}
+,{"stream_name":"stdout","time":2613.339667756,"data":"v203 retro | driver 9055ec8b615a | R 8 | held-out (test) chunks 492 -\u003e 56 batches of 8, groups of 8, B=1 on 64\n"}
+,{"stream_name":"stdout","time":2613.339671004,"data":"  stage 300 fine-tune: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0001, 'seed': 2011, 'nonfinite': 0, 'clipped_frac': 1.0, 'ok': True, 's': 435}\n"}
+,{"stream_name":"stdout","time":2613.339674171,"data":"  selftest PASS | repeat-pass rel diff 1.00e-06 (\u003c 0.001) | k=1 lost on batch 0 0.3664 (\u003e 0.001) | params 163.5M\n"}
+,{"stream_name":"stdout","time":2613.339677499,"data":"    groups pass: 16/56 batches, 281s\n"}
+,{"stream_name":"stdout","time":2613.339693923,"data":"    groups pass: 32/56 batches, 563s\n"}
+,{"stream_name":"stdout","time":2613.339696326,"data":"    groups pass: 48/56 batches, 841s\n"}
+,{"stream_name":"stdout","time":2613.339698839,"data":"    total pass: 16/56 batches, 276s\n"}
+,{"stream_name":"stdout","time":2613.339701063,"data":"    total pass: 32/56 batches, 552s\n"}
+,{"stream_name":"stdout","time":2613.339703187,"data":"    total pass: 48/56 batches, 823s\n"}
+,{"stream_name":"stdout","time":2613.339705352,"data":"  stage 300 measured after 2551s\n"}
+,{"stream_name":"stdout","time":2613.339707547,"data":"\n"}
+,{"stream_name":"stdout","time":2613.339837544,"data":"analysis needs v201 outputs: run v203_heldout_lost.py --analyze locally\n"}
+,{"stream_name":"stdout","time":2613.339844786,"data":"total 2612s\n"}
+,{"stream_name":"stderr","time":2615.21908283,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":2615.219109643,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":2615.46639851,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":2615.466421379,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":2616.233276571,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":2616.72652716,"data":"[NbConvertApp] Writing 311470 bytes to __results__.html\n"}
+]

@@ -1,0 +1,15 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+v200 driver 22a56eba93e9 (port 502739cdccc8) | huginn-s-fixed-r5 @ 17cdf78e | dev cuda amp True | R 5 | train ex 7000, val/test chunks 150/434, 600 steps x 8 x 512
+/kaggle/working/v200_ifm_trunc.py:207: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return out, float(loss)
+selftest PASS [] | decomposition 2.474733 / 2.474733 | {'ckpt_vs_plain_k2': {'embed': 0.0, 'prelude': 0.0, 'injection': 0.0, 'core': 0.0, 'coda': 0.0, 'head': 0.0}, 'ckpt_vs_plain_k5': {'embed': 0.0, 'prelude': 0.0, 'injection': 0.0, 'core': 0.0, 'coda': 0.0, 'head': 0.0}, 'fp16_vs_fp32_k1': {'embed': 0.0, 'prelude': 0.0018, 'injection': 0.0015, 'core': 0.0015, 'coda': 0.0018, 'head': 0.0012}, 'fp16_vs_fp32_k2': {'embed': 0.0, 'prelude': 0.0017, 'injection': 0.0014, 'core': 0.0014, 'coda': 0.0018, 'head': 0.0012}, 'fp16_vs_fp32_k4': {'embed': 0.0, 'prelude': 0.0019, 'injection': 0.0016, 'core': 0.0015, 'coda': 0.0018, 'head': 0.0012}, 'fp16_vs_fp32_k5': {'embed': 0.0, 'prelude': 0.0024, 'injection': 0.0022, 'core': 0.0018, 'coda': 0.0018, 'head': 0.0012}, 'negative_control_cache_on_k2': {'embed': 0.0, 'prelude': 0.0017, 'injection': 0.0014, 'core': 0.0014, 'coda': 0.0018, 'head': 0.0012}, 'negative_control_synthetic_k2': {'embed': 0.0, 'prelude': 0.0017, 'injection': 1.0, 'core': 1.0, 'coda': 0.0018, 'head': 0.0012}} | floor k0 {'embed': '0.00e+00', 'prelude': '0.00e+00', 'injection': '0.00e+00', 'core': '0.00e+00', 'coda': '1.42e+00', 'head': '1.03e+00'}
+cell r5 k=4 lr=0.0001 seed=2001101: val 1.4238 test 1.4029 rho_end 0.760 nonfinite 0 (553s, train 532s, peak 7.5 GB)
+cell r5 k=0 lr=0.0003 seed=2001102: val 1.5593 test 1.5404 rho_end 0.738 nonfinite 0 (289s, train 269s, peak 6.0 GB)
+cell r5 k=1 lr=0.0001 seed=2001102: val 1.4627 test 1.4421 rho_end 0.760 nonfinite 0 (386s, train 366s, peak 7.2 GB)
+cell r5 k=4 lr=0.0001 seed=2001102: val 1.4268 test 1.4046 rho_end 0.756 nonfinite 0 (559s, train 538s, peak 7.5 GB)
+cell r5 k=5 lr=0.0001 seed=2001104: val 1.4202 test 1.3989 rho_end 0.772 nonfinite 0 (617s, train 596s, peak 7.6 GB)
+cell r5 k=1 lr=0.0001 seed=2001105: val 1.4600 test 1.4411 rho_end 0.761 nonfinite 0 (387s, train 366s, peak 7.2 GB)
+cell r5 k=2 lr=0.0001 seed=2001105: val 1.4410 test 1.4206 rho_end 0.755 nonfinite 0 (444s, train 423s, peak 7.3 GB)
+cell r5 k=0 lr=0.0003 seed=2001106: val 1.5603 test 1.5418 rho_end 0.739 nonfinite 0 (288s, train 268s, peak 6.0 GB)
+cell r5 k=4 lr=0.0001 seed=2001106: val 1.4242 test 1.4042 rho_end 0.766 nonfinite 0 (558s, train 538s, peak 7.5 GB)

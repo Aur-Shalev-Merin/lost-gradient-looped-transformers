@@ -1,0 +1,9 @@
+v203 parcae | driver 450d8ebcc48e | R 32 | held-out (test) chunks 455 -> 56 batches of 8, groups of 8, B=1 on 64
+  selftest PASS | repeat-pass rel diff 3.39e-07 (< 0.001) | k=1 lost on batch 0 0.8114 (> 0.001) | params 144.3M
+    groups pass: 16/56 batches, 286s
+    groups pass: 32/56 batches, 569s
+    groups pass: 48/56 batches, 858s
+    total pass: 16/56 batches, 296s
+    total pass: 32/56 batches, 592s
+    total pass: 48/56 batches, 887s
+  stage 0 measured after 2235s

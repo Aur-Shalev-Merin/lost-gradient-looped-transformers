@@ -1,0 +1,45 @@
+[{"stream_name":"stdout","time":3301.036488113,"data":"job exit 0 elapsed 3294s\n"}
+,{"stream_name":"stdout","time":3422.044736891,"data":"job exit 0 elapsed 3415s\n"}
+,{"stream_name":"stdout","time":3422.045030711,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":3422.045047212,"data":"\n"}
+,{"stream_name":"stdout","time":3422.045053683,"data":"Generating train split:   0%|          | 0/7473 [00:00\u003c?, ? examples/s]\n"}
+,{"stream_name":"stdout","time":3422.045060121,"data":"Generating train split: 100%|██████████| 7473/7473 [00:00\u003c00:00, 93586.63 examples/s]\n"}
+,{"stream_name":"stdout","time":3422.0450668,"data":"\n"}
+,{"stream_name":"stdout","time":3422.045071446,"data":"Generating test split:   0%|          | 0/1319 [00:00\u003c?, ? examples/s]\n"}
+,{"stream_name":"stdout","time":3422.045077007,"data":"Generating test split: 100%|██████████| 1319/1319 [00:00\u003c00:00, 256551.98 examples/s]\n"}
+,{"stream_name":"stdout","time":3422.04508331,"data":"v162 driver 0ae4891d7abc dev cuda amp True | train ex 7000, val chunks 158, test chunks 455\n"}
+,{"stream_name":"stdout","time":3422.045089574,"data":"/kaggle/working/v162_parcae_trunc_train.py:184: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.\n"}
+,{"stream_name":"stdout","time":3422.045095784,"data":"Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)\n"}
+,{"stream_name":"stdout","time":3422.045101387,"data":"  curve.append((s, round(float(loss), 4), round(float(gn), 3)))\n"}
+,{"stream_name":"stdout","time":3422.045107303,"data":"cell R=16 k=8 lr=0.0001 seed=1621001: val 1.4140 test 1.3950 nonfinite 0 (513s)\n"}
+,{"stream_name":"stdout","time":3422.045112381,"data":"cell R=16 k=8 lr=0.0003 seed=1621001: val 1.3957 test 1.3704 nonfinite 0 (514s)\n"}
+,{"stream_name":"stdout","time":3422.045117556,"data":"cell R=16 k=4 lr=0.0009 seed=1621001: val 1.4623 test 1.4345 nonfinite 0 (427s)\n"}
+,{"stream_name":"stdout","time":3422.045122532,"data":"cell R=16 k=2 lr=0.0001 seed=1621001: val 1.4295 test 1.4111 nonfinite 0 (382s)\n"}
+,{"stream_name":"stdout","time":3422.045127664,"data":"cell R=16 k=1 lr=0.0003 seed=1621001: val 1.4319 test 1.4090 nonfinite 0 (359s)\n"}
+,{"stream_name":"stdout","time":3422.045132686,"data":"cell R=16 k=0 lr=0.0009 seed=1621001: val 1.5636 test 1.5503 nonfinite 0 (296s)\n"}
+,{"stream_name":"stdout","time":3422.04513753,"data":"cell R=8 k=2 lr=0.0001 seed=1621001: val 1.4296 test 1.4112 nonfinite 0 (288s)\n"}
+,{"stream_name":"stdout","time":3422.045142528,"data":"cell R=8 k=1 lr=0.0003 seed=1621001: val 1.4322 test 1.4088 nonfinite 0 (266s)\n"}
+,{"stream_name":"stdout","time":3422.04514761,"data":"cell R=8 k=0 lr=0.0009 seed=1621001: val 1.5960 test 1.5716 nonfinite 0 (202s)\n"}
+,{"stream_name":"stdout","time":3422.045152823,"data":"\n"}
+,{"stream_name":"stdout","time":3422.045167393,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":3422.045171427,"data":"v162 driver 0ae4891d7abc dev cuda amp True | train ex 7000, val chunks 158, test chunks 455\n"}
+,{"stream_name":"stdout","time":3422.045174839,"data":"/kaggle/working/v162_parcae_trunc_train.py:184: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.\n"}
+,{"stream_name":"stdout","time":3422.045178335,"data":"Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)\n"}
+,{"stream_name":"stdout","time":3422.045194381,"data":"  curve.append((s, round(float(loss), 4), round(float(gn), 3)))\n"}
+,{"stream_name":"stdout","time":3422.045197192,"data":"cell R=16 k=8 lr=0.0001 seed=1621002: val 1.4139 test 1.3954 nonfinite 0 (521s)\n"}
+,{"stream_name":"stdout","time":3422.045199793,"data":"cell R=16 k=8 lr=0.0003 seed=1621002: val 1.3952 test 1.3720 nonfinite 0 (526s)\n"}
+,{"stream_name":"stdout","time":3422.045202484,"data":"cell R=16 k=4 lr=0.0009 seed=1621002: val 1.4617 test 1.4354 nonfinite 0 (437s)\n"}
+,{"stream_name":"stdout","time":3422.045205075,"data":"cell R=16 k=2 lr=0.0001 seed=1621002: val 1.4279 test 1.4102 nonfinite 0 (391s)\n"}
+,{"stream_name":"stdout","time":3422.04520767,"data":"cell R=16 k=1 lr=0.0003 seed=1621002: val 1.4317 test 1.4099 nonfinite 0 (369s)\n"}
+,{"stream_name":"stdout","time":3422.045210352,"data":"cell R=16 k=0 lr=0.0009 seed=1621002: val 1.5643 test 1.5435 nonfinite 0 (306s)\n"}
+,{"stream_name":"stdout","time":3422.045213004,"data":"cell R=8 k=2 lr=0.0001 seed=1621002: val 1.4280 test 1.4104 nonfinite 1 (296s)\n"}
+,{"stream_name":"stdout","time":3422.04521561,"data":"cell R=8 k=1 lr=0.0003 seed=1621002: val 1.4318 test 1.4104 nonfinite 1 (272s)\n"}
+,{"stream_name":"stdout","time":3422.04521828,"data":"cell R=8 k=0 lr=0.0009 seed=1621002: val 1.5956 test 1.5728 nonfinite 0 (212s)\n"}
+,{"stream_name":"stdout","time":3422.045220889,"data":"\n"}
+,{"stream_name":"stderr","time":3423.940636409,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":3423.940666932,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":3424.148509142,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":3424.148538583,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":3424.737144939,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":3425.892960954,"data":"[NbConvertApp] Writing 291630 bytes to __results__.html\n"}
+]

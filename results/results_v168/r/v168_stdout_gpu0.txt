@@ -1,0 +1,12 @@
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 77672.87 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 336862.14 examples/s]
+v168 retro | params 163.5M | B 4 x 8 seqs | val chunks 170
+retro R=8 a=1.00 k=1: {'err': 0.3654, 'cos': 0.9398, 'useful_sgd': 0.7907, 'adam_cos': 0.9867, 'adam_err': 0.2569, 'useful_adam': 0.9758, 'sign_agree': 0.9836}
+retro R=8 a=1.00 k=2: {'err': 0.1327, 'cos': 0.9964, 'useful_sgd': 0.943, 'adam_cos': 1.0169, 'adam_err': 0.081, 'useful_adam': 0.9978, 'sign_agree': 0.9984}
+  variant R=8 a=1.00 done in 75s
+retro R=8 a=0.50 k=1: {'err': 0.5771, 'cos': 0.9219, 'useful_sgd': 0.4593, 'adam_cos': 0.9892, 'adam_err': 0.2475, 'useful_adam': 0.9783, 'sign_agree': 0.9848}
+retro R=8 a=0.50 k=2: {'err': 0.3486, 'cos': 0.9791, 'useful_sgd': 0.6907, 'adam_cos': 1.0041, 'adam_err': 0.1789, 'useful_adam': 0.9896, 'sign_agree': 0.9921}
+  variant R=8 a=0.50 done in 77s
+retro R=8 a=0.30 k=1: {'err': 0.6571, 'cos': 0.8743, 'useful_sgd': 0.3802, 'adam_cos': 0.9967, 'adam_err': 0.2157, 'useful_adam': 0.9844, 'sign_agree': 0.9885}
+retro R=8 a=0.30 k=2: {'err': 0.4452, 'cos': 0.9683, 'useful_sgd': 0.5872, 'adam_cos': 1.0044, 'adam_err': 0.1772, 'useful_adam': 0.9901, 'sign_agree': 0.9923}
+  variant R=8 a=0.30 done in 81s

@@ -1,0 +1,8 @@
+v170: AdamW replaced by SGD(momentum 0.9) | driver retro
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 111978.17 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 337994.07 examples/s]
+v167 driver b6fd416e48f2 dev cuda amp True | params 163.5M | train ex 7000, val/test chunks 170/492
+v170: optimizer = SGD(lr 0.02, momentum 0.9, wd 0)
+cell R=8 a=1.00 k=8 lr=0.02 seed=9001: val 1.2677 test 1.2509 rho_end 0.343 nonfinite 4 (924s, peak 6.5 GB)
+v170: optimizer = SGD(lr 0.05, momentum 0.9, wd 0)
+cell R=8 a=1.00 k=8 lr=0.05 seed=9001: val 1.2887 test 1.2720 rho_end 0.667 nonfinite 6 (918s, peak 6.5 GB)

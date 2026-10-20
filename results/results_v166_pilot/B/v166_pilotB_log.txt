@@ -1,0 +1,9 @@
+pilot B: repo SandyResearch/parcae-370m | params 388.0M | driver feaf9a0ba438
+pilot B: repo SandyResearch/parcae-370m | params 388.0M | driver feaf9a0ba438
+a=1.0 R=32: rho 0.8681 err {2: 0.6739, 4: 0.4513, 8: 0.2382} | step-0 val/test 2.3138 / 2.3061
+a=0.5 R=32: rho 0.9053 err {2: 0.7894, 4: 0.6427, 8: 0.4171} | step-0 val/test 2.3134 / 2.3061
+peak GPU memory after check: 13.84 GB
+cell a=1.0 k=0 lr=0.0003 seed=9001: val 1.4592 test 1.4419 nonfinite 0 | 1523s | peak 9.62 GB
+cell a=1.0 k=0 lr=0.0009 seed=9001: val 1.4581 test 1.4358 nonfinite 0 | 1525s | peak 9.62 GB
+cell a=1.0 k=32 lr=0.0003 seed=9001: val 1.3127 test 1.2831 nonfinite 8 | 4533s | peak 11.50 GB
+cell a=1.0 k=32 lr=0.0001 seed=9001: val 8.9198 test 8.9572 nonfinite 21 | 4480s | peak 11.50 GB

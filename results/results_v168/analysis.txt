@@ -1,0 +1,57 @@
+cells measured: parcae 29/29, retro 6/6; missing []
+
+err         fit c 0.317 p 3.60 | Parcae R2 0.886, MAE 0.0173 | retro MAE 0.0189, damped 0.0279 -> -
+   retro a=1.0 k=1: d 0.3654 | obs +0.0087 pred 0.0084 |res| 0.0003 ok
+   retro a=1.0 k=2: d 0.1327 | obs -0.0012 pred 0.0002 |res| 0.0014 ok
+   retro a=0.5 k=1: d 0.5771 | obs +0.0113 pred 0.0437 |res| 0.0324
+   retro a=0.5 k=2: d 0.3486 | obs +0.0019 pred 0.0071 |res| 0.0052 ok
+   retro a=0.3 k=1: d 0.6571 | obs +0.0087 pred 0.0698 |res| 0.0611
+   retro a=0.3 k=2: d 0.4452 | obs +0.0042 pred 0.0172 |res| 0.0130 ok
+
+adam_err    fit c 0.531 p 3.36 | Parcae R2 0.736, MAE 0.0253 | retro MAE 0.0033, damped 0.0037 -> -
+   retro a=1.0 k=1: d 0.2569 | obs +0.0087 pred 0.0055 |res| 0.0032 ok
+   retro a=1.0 k=2: d 0.0810 | obs -0.0012 pred 0.0001 |res| 0.0013 ok
+   retro a=0.5 k=1: d 0.2475 | obs +0.0113 pred 0.0049 |res| 0.0064 ok
+   retro a=0.5 k=2: d 0.1789 | obs +0.0019 pred 0.0016 |res| 0.0003 ok
+   retro a=0.3 k=1: d 0.2157 | obs +0.0087 pred 0.0031 |res| 0.0056 ok
+   retro a=0.3 k=2: d 0.1772 | obs +0.0042 pred 0.0016 |res| 0.0026 ok
+
+cos         fit c 0.652 p 1.58 | Parcae R2 0.859, MAE 0.0189 | retro MAE 0.0034, damped 0.0045 -> -
+   retro a=1.0 k=1: d 0.0602 | obs +0.0087 pred 0.0076 |res| 0.0011 ok
+   retro a=1.0 k=2: d 0.0036 | obs -0.0012 pred 0.0001 |res| 0.0013 ok
+   retro a=0.5 k=1: d 0.0781 | obs +0.0113 pred 0.0115 |res| 0.0002 ok
+   retro a=0.5 k=2: d 0.0209 | obs +0.0019 pred 0.0014 |res| 0.0005 ok
+   retro a=0.3 k=1: d 0.1257 | obs +0.0087 pred 0.0244 |res| 0.0157 ok
+   retro a=0.3 k=2: d 0.0317 | obs +0.0042 pred 0.0028 |res| 0.0014 ok
+
+adam_cos    fit c 2.278 p 1.85 | Parcae R2 0.727, MAE 0.0260 | retro MAE 0.0058, damped 0.0064 -> -
+   retro a=1.0 k=1: d 0.0133 | obs +0.0087 pred 0.0008 |res| 0.0079 ok
+   retro a=1.0 k=2: d 0.0000 | obs -0.0012 pred 0.0000 |res| 0.0012 ok
+   retro a=0.5 k=1: d 0.0108 | obs +0.0113 pred 0.0005 |res| 0.0108 ok
+   retro a=0.5 k=2: d 0.0000 | obs +0.0019 pred 0.0000 |res| 0.0019 ok
+   retro a=0.3 k=1: d 0.0033 | obs +0.0087 pred 0.0001 |res| 0.0086 ok
+   retro a=0.3 k=2: d 0.0000 | obs +0.0042 pred 0.0000 |res| 0.0042 ok
+
+useful_sgd  fit c 0.298 p 2.46 | Parcae R2 0.831, MAE 0.0210 | retro MAE 0.0309, damped 0.0454 -> -
+   retro a=1.0 k=1: d 0.2093 | obs +0.0087 pred 0.0063 |res| 0.0024 ok
+   retro a=1.0 k=2: d 0.0570 | obs -0.0012 pred 0.0003 |res| 0.0015 ok
+   retro a=0.5 k=1: d 0.5407 | obs +0.0113 pred 0.0656 |res| 0.0543
+   retro a=0.5 k=2: d 0.3093 | obs +0.0019 pred 0.0166 |res| 0.0147 ok
+   retro a=0.3 k=1: d 0.6198 | obs +0.0087 pred 0.0918 |res| 0.0831
+   retro a=0.3 k=2: d 0.4128 | obs +0.0042 pred 0.0337 |res| 0.0295
+
+useful_adam fit c 1.047 p 1.50 | Parcae R2 0.806, MAE 0.0180 | retro MAE 0.0041, damped 0.0047 -> -
+   retro a=1.0 k=1: d 0.0242 | obs +0.0087 pred 0.0039 |res| 0.0048 ok
+   retro a=1.0 k=2: d 0.0022 | obs -0.0012 pred 0.0001 |res| 0.0013 ok
+   retro a=0.5 k=1: d 0.0217 | obs +0.0113 pred 0.0033 |res| 0.0080 ok
+   retro a=0.5 k=2: d 0.0104 | obs +0.0019 pred 0.0011 |res| 0.0008 ok
+   retro a=0.3 k=1: d 0.0156 | obs +0.0087 pred 0.0020 |res| 0.0067 ok
+   retro a=0.3 k=2: d 0.0099 | obs +0.0042 pred 0.0010 |res| 0.0032 ok
+
+sign_agree  fit c 32.967 p 2.32 | Parcae R2 0.888, MAE 0.0180 | retro MAE 0.0050, damped 0.0056 -> -
+   retro a=1.0 k=1: d 0.0164 | obs +0.0087 pred 0.0023 |res| 0.0064 ok
+   retro a=1.0 k=2: d 0.0016 | obs -0.0012 pred 0.0000 |res| 0.0012 ok
+   retro a=0.5 k=1: d 0.0152 | obs +0.0113 pred 0.0020 |res| 0.0093 ok
+   retro a=0.5 k=2: d 0.0079 | obs +0.0019 pred 0.0004 |res| 0.0015 ok
+   retro a=0.3 k=1: d 0.0115 | obs +0.0087 pred 0.0010 |res| 0.0077 ok
+   retro a=0.3 k=2: d 0.0077 | obs +0.0042 pred 0.0004 |res| 0.0038 ok

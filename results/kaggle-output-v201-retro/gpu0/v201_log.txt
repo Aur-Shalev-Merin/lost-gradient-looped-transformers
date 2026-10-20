@@ -1,0 +1,11 @@
+v201 retro | driver 89f6597e7eba | R 8 | dev cuda | train chunks 2556 | 64 x 8 sequences, groups of 8, B=1 on 64 | k (1, 2, 4)
+  selftest PASS | repeat-pass rel diff 4.07e-07 (< 0.001) | k=1 lost on batch 0 0.3534 (> 0.001) | params 163.5M
+    groups pass: 16/64 batches, 265s
+    groups pass: 32/64 batches, 538s
+    groups pass: 48/64 batches, 811s
+    groups pass: 64/64 batches, 1085s
+    total pass: 16/64 batches, 272s
+    total pass: 32/64 batches, 544s
+    total pass: 48/64 batches, 818s
+    total pass: 64/64 batches, 1089s
+  stage 0 measured after 2345s

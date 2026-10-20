@@ -1,0 +1,14 @@
+v170: AdamW replaced by SGD(momentum 0.9) | driver retro
+v167 driver b6fd416e48f2 dev cuda amp True | params 163.5M | train ex 7000, val/test chunks 170/492
+v170: optimizer = SGD(lr 0.003, momentum 0.9, wd 0)
+cell R=8 a=0.30 k=2 lr=0.003 seed=1701101: val 1.3642 test 1.3494 rho_end 0.739 nonfinite 0 (525s, peak 6.6 GB)
+v170: optimizer = SGD(lr 0.01, momentum 0.9, wd 0)
+cell R=8 a=1.00 k=2 lr=0.01 seed=1701102: val 1.3408 test 1.3267 rho_end 0.558 nonfinite 2 (533s, peak 6.5 GB)
+v170: optimizer = SGD(lr 0.02, momentum 0.9, wd 0)
+cell R=8 a=0.30 k=2 lr=0.02 seed=1701102: val 1.2877 test 1.2701 rho_end 0.739 nonfinite 0 (533s, peak 6.6 GB)
+v170: optimizer = SGD(lr 0.003, momentum 0.9, wd 0)
+cell R=8 a=0.30 k=1 lr=0.003 seed=1701101: val 1.3680 test 1.3533 rho_end 0.738 nonfinite 0 (473s, peak 6.6 GB)
+v170: optimizer = SGD(lr 0.01, momentum 0.9, wd 0)
+cell R=8 a=1.00 k=1 lr=0.01 seed=1701102: val 1.3241 test 1.3073 rho_end 0.299 nonfinite 2 (474s, peak 6.5 GB)
+v170: optimizer = SGD(lr 0.02, momentum 0.9, wd 0)
+cell R=8 a=0.30 k=1 lr=0.02 seed=1701102: val 1.2915 test 1.2742 rho_end 0.738 nonfinite 0 (473s, peak 6.6 GB)

@@ -1,0 +1,6 @@
+v162 driver 0ae4891d7abc dev cuda amp True | train ex 7000, val chunks 158, test chunks 455
+v162 driver 0ae4891d7abc dev cuda amp True | train ex 7000, val chunks 158, test chunks 455
+cell R=16 k=0 lr=0.0027 seed=1621001: val 1.5959 test 1.5773 nonfinite 0 (303s)
+cell R=16 k=0 lr=0.0027 seed=1621002: val 1.5988 test 1.5772 nonfinite 0 (292s)
+cell R=8 k=0 lr=0.0027 seed=1621001: val 1.6276 test 1.6052 nonfinite 0 (205s)
+cell R=8 k=0 lr=0.0027 seed=1621002: val 1.6243 test 1.6014 nonfinite 0 (200s)

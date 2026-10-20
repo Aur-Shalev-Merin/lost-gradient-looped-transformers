@@ -1,0 +1,17 @@
+v167 driver b6fd416e48f2 dev cuda amp True | params 163.5M | train ex 7000, val/test chunks 170/492
+selftest decomposition R=1: model 1.885320 manual 1.885320
+selftest decomposition R=4: model 1.856819 manual 1.856819
+selftest decomposition R=8: model 1.856685 manual 1.856685
+selftest checkpointed vs plain k=4: {'other': '3.4e-07', 'prelude': '1.0e-06', 'adapter': '6.8e-07', 'core_block': '6.8e-07', 'coda': '2.9e-07'}
+selftest damped a=0.5 checkpointed vs plain: {'other': '3.1e-07', 'prelude': '8.6e-07', 'adapter': '4.6e-07', 'core_block': '4.3e-07', 'coda': '2.6e-07'}
+selftest fp16 vs fp32 k=1: {'other': 0.0456, 'prelude': 0.1666, 'adapter': 0.5978, 'core_block': 0.2568, 'coda': 0.3924}
+selftest fp16 vs fp32 k=4: {'other': 0.0436, 'prelude': 0.141, 'adapter': 0.4397, 'core_block': 0.2235, 'coda': 0.3924}
+selftest floor: core grad norm k=0 0.000e+00, k=1 1.921e+00
+selftest OK
+measure R=8 a=1.00: rho 0.3460 err {1: 0.3575, 2: 0.1372, 4: 0.0164} | step-0 val/test R8 1.9877 / 1.9711, R16 1.9878 / 1.9711
+measure R=8 a=0.50: rho 0.6238 err {1: 0.5658, 2: 0.3436, 4: 0.1142} | step-0 val/test R8 1.9881 / 1.9715, R16 1.9878 / 1.9711
+measure R=8 a=0.30: rho 0.7473 err {1: 0.6505, 2: 0.4418, 4: 0.1788} | step-0 val/test R8 1.9946 / 1.9784, R16 1.9880 / 1.9714
+measure R=8 a=0.20: rho 0.8204 err {1: 0.6741, 2: 0.4863, 4: 0.2302} | step-0 val/test R8 2.0276 / 2.0119, R16 1.9902 / 1.9738
+cell R=8 a=1.00 k=0 lr=0.0003 seed=9001: val 1.2777 test 1.2557 rho_end 0.304 nonfinite 0 (348s, peak 5.9 GB)
+cell R=8 a=1.00 k=0 lr=0.0009 seed=9001: val 1.3087 test 1.2873 rho_end 0.301 nonfinite 0 (348s, peak 5.8 GB)
+cell R=8 a=1.00 k=0 lr=0.0027 seed=9001: val 1.3988 test 1.3877 rho_end 0.294 nonfinite 0 (348s, peak 5.8 GB)

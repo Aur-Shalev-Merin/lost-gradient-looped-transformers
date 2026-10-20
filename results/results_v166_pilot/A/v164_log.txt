@@ -1,0 +1,14 @@
+v166 pilot A (driver feaf9a0ba438)
+v164 driver feaf9a0ba438 (v163 module d5c2647126de) dev cuda amp True
+a=1.00: val/test R32 2.6283/2.6123 R64 2.6282/2.6123 | rho 0.8250 | err {1: 0.8201, 2: 0.6753, 3: 0.5462, 4: 0.4427}
+a=1.15: val/test R32 2.6285/2.6131 R64 2.6283/2.6137 | rho 0.8851 | err {1: 0.8142, 2: 0.6531, 3: 0.5148, 4: 0.4029}
+a=1.30: val/test R32 2.6427/2.6670 R64 2.7312/2.6899 | rho 0.9435 | err {1: 0.8301, 2: 0.6567, 3: 0.5355, 4: 0.4322}
+gate a=1.30: same converged test loss at R32 (|diff| 0.0547 <= 0.01): False | rho 0.9435 < 0.8250: False -> NOT USABLE
+gate a=1.15: same converged test loss at R32 (|diff| 0.0008 <= 0.01): True | rho 0.8851 < 0.8250: False -> NOT USABLE
+v164 driver feaf9a0ba438 (v163 module d5c2647126de) dev cuda amp True
+cell R=32 a=1.3 k=0 lr=0.0003 seed=9001: val 1.6097 test 1.6177 rho_end 0.933 nonfinite 0 (476s)
+cell R=32 a=1.3 k=0 lr=0.0009 seed=9001: val 1.5670 test 1.5588 rho_end 0.938 nonfinite 0 (477s)
+cell R=32 a=1.3 k=32 lr=0.0001 seed=9001: val 1.4195 test 1.4009 rho_end 0.890 nonfinite 5 (1545s)
+cell R=32 a=1.3 k=0 lr=0.0027 seed=9001: val 1.6364 test 1.6258 rho_end 0.968 nonfinite 0 (478s)
+cell R=32 a=1.3 k=32 lr=0.0003 seed=9001: val 1.4017 test 1.3778 rho_end 0.872 nonfinite 7 (1543s)
+cell R=32 a=1.3 k=32 lr=0.0009 seed=9001: val 1.4677 test 1.4392 rho_end 0.829 nonfinite 11 (1533s)

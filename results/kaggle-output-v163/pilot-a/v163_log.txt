@@ -1,0 +1,8 @@
+v163 driver 888f185a0c54 (v162 module 0ae4891d7abc) dev cuda amp True R 32
+v163 driver 888f185a0c54 (v162 module 0ae4891d7abc) dev cuda amp True R 32
+cell a=0.5 k=32 lr=0.0001 seed=9001: val 1.4170 test 1.3977 nonfinite 0 (1551s)
+cell a=1.0 k=32 lr=0.0001 seed=9001: val 1.4172 test 1.3987 nonfinite 0 (1630s)
+cell a=0.5 k=32 lr=0.0003 seed=9001: val 1.4002 test 1.3769 nonfinite 6 (1547s)
+cell a=1.0 k=32 lr=0.0003 seed=9001: val 1.3999 test 1.3753 nonfinite 3 (1612s)
+cell a=0.5 k=32 lr=0.0009 seed=9001: val 1.4601 test 1.4311 nonfinite 0 (1550s)
+cell a=1.0 k=32 lr=0.0009 seed=9001: val 1.4576 test 1.4318 nonfinite 5 (1611s)

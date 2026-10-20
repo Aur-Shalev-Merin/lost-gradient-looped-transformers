@@ -1,0 +1,18 @@
+v161 driver ddb4e99b660b dev cuda amp True | train ex 7000, val chunks 158, test chunks 455
+v161 driver ddb4e99b660b dev cuda amp True | train ex 7000, val chunks 158, test chunks 455
+cell R=16 k=16 lr=0.0001 seed=1611001: val 1.4217 test 1.4033 nonfinite 7 (691s)
+cell R=16 k=16 lr=0.0001 seed=1611002: val 1.4145 test 1.3959 nonfinite 2 (708s)
+cell R=16 k=8 lr=0.0009 seed=1611001: val 1.4513 test 1.4245 nonfinite 0 (491s)
+cell R=16 k=8 lr=0.0009 seed=1611002: val 1.4485 test 1.4227 nonfinite 0 (506s)
+cell R=8 k=8 lr=0.0009 seed=1611001: val 1.4614 test 1.4353 nonfinite 3 (422s)
+cell R=8 k=8 lr=0.0009 seed=1611002: val 1.4533 test 1.4256 nonfinite 4 (434s)
+cell R=16 k=1 lr=0.0001 seed=1611001: val 1.5107 test 1.4930 nonfinite 0 (354s)
+cell R=16 k=1 lr=0.0001 seed=1611002: val 1.5115 test 1.4934 nonfinite 0 (367s)
+cell R=16 k=0 lr=0.0003 seed=1611001: val 1.6119 test 1.5858 nonfinite 0 (298s)
+cell R=16 k=0 lr=0.0003 seed=1611002: val 1.6069 test 1.5835 nonfinite 0 (308s)
+cell R=8 k=4 lr=0.0009 seed=1611001: val 1.4533 test 1.4265 nonfinite 0 (318s)
+cell R=8 k=4 lr=0.0009 seed=1611002: val 1.4534 test 1.4265 nonfinite 0 (329s)
+cell R=8 k=1 lr=0.0001 seed=1611001: val 1.5124 test 1.4942 nonfinite 0 (262s)
+cell R=8 k=1 lr=0.0001 seed=1611002: val 1.5105 test 1.4928 nonfinite 0 (269s)
+cell R=8 k=0 lr=0.0003 seed=1611001: val 1.6480 test 1.6241 nonfinite 0 (203s)
+cell R=8 k=0 lr=0.0003 seed=1611002: val 1.6441 test 1.6195 nonfinite 0 (211s)

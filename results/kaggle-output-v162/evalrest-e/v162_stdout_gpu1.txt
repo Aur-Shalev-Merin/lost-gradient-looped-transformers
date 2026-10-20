@@ -1,0 +1,10 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+v162 driver 0ae4891d7abc dev cuda amp True | train ex 7000, val chunks 158, test chunks 455
+/kaggle/working/v162_parcae_trunc_train.py:184: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  curve.append((s, round(float(loss), 4), round(float(gn), 3)))
+cell R=16 k=0 lr=0.0009 seed=1621102: val 1.5613 test 1.5439 nonfinite 0 (288s)
+cell R=16 k=0 lr=0.0009 seed=1621104: val 1.5629 test 1.5476 nonfinite 0 (299s)
+cell R=8 k=0 lr=0.0009 seed=1621101: val 1.5974 test 1.5744 nonfinite 0 (205s)
+cell R=8 k=0 lr=0.0009 seed=1621102: val 1.5958 test 1.5721 nonfinite 0 (205s)
+cell R=8 k=0 lr=0.0009 seed=1621104: val 1.5966 test 1.5740 nonfinite 0 (206s)

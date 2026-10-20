@@ -1,0 +1,9 @@
+selftest a=1 vs v162 loss_manual R=32 k=32: 2.225531 2.225531
+selftest a=1 vs v162 loss_manual R=32 k=16: 2.225531 2.225531
+selftest a=1 vs v162 loss_manual R=32 k=0: 2.225531 2.225531
+selftest checkpointed vs plain grad (a=0.5, k=4): rel diff 3.35e-07
+selftest truncated grad fp16 vs fp32 a=1.0 k=1: {'rest': 0.0063, 'prelude': 0.0041, 'adapter': 0.005, 'core_block': 0.0053}
+selftest truncated grad fp16 vs fp32 a=1.0 k=4: {'rest': 0.0063, 'prelude': 0.0031, 'adapter': 0.0043, 'core_block': 0.004}
+selftest truncated grad fp16 vs fp32 a=0.5 k=1: {'rest': 0.0062, 'prelude': 0.0038, 'adapter': 0.0052, 'core_block': 0.005}
+selftest truncated grad fp16 vs fp32 a=0.5 k=4: {'rest': 0.0062, 'prelude': 0.0032, 'adapter': 0.0049, 'core_block': 0.0045}
+selftest OK

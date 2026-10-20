@@ -1,0 +1,8 @@
+4 runs from 2 files
+
+=== huginn-s-fixed-r5: 4 runs (drivers ['22a56eba93e9'])
+  k=5 lr=1e-05   seed=9001     val 1.4875 test 1.4734 | nonfinite   0 | rho_end 0.737 |  721s (train  696s) peak 7.6 GB
+  k=5 lr=3e-05   seed=9001     val 1.4273 test 1.4111 | nonfinite   0 | rho_end 0.751 |  670s (train  647s) peak 7.6 GB
+  k=5 lr=0.0001  seed=9001     val 1.4207 test 1.4001 | nonfinite   0 | rho_end 0.770 |  733s (train  708s) peak 7.6 GB
+  k=5 lr=0.0003  seed=9001     val 1.5256 test 1.4978 | nonfinite   0 | rho_end 0.735 |  674s (train  651s) peak 7.6 GB
+LR pilot full (seed 9001): 1e-05: val 1.4875 test 1.4734  3e-05: val 1.4273 test 1.4111  0.0001: val 1.4207 test 1.4001  0.0003: val 1.5256 test 1.4978 -> best by val 0.0001

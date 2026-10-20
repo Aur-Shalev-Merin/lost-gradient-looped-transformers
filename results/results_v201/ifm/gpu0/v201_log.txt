@@ -1,0 +1,24 @@
+v201 pln5 | driver caf466a9d4a7 | R 5 | dev cuda | train chunks 2252 | 64 x 8 sequences, groups of 8, B=1 on 64 | k (1, 2, 4)
+  trainable parameters 204882432 (expected 204.9M)
+  selftest PASS | repeat-pass rel diff 0.00e+00 (< 0.001) | k=1 lost on batch 0 0.7745 (> 0.001) | params 204.9M
+    groups pass: 16/64 batches, 310s
+    groups pass: 32/64 batches, 618s
+    groups pass: 48/64 batches, 927s
+    groups pass: 64/64 batches, 1237s
+    total pass: 16/64 batches, 308s
+    total pass: 32/64 batches, 616s
+    total pass: 48/64 batches, 921s
+    total pass: 64/64 batches, 1226s
+  stage 0 measured after 2606s
+  stage 300 fine-tune: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0001, 'seed': 2011, 'nonfinite': 0, 'clipped_frac': 0.9933, 'ok': True, 's': 318}
+  curve (step, loss, grad norm): [(0, 2.8175, 5.981), (50, 1.5134, 1.219), (100, 1.5061, 1.181), (150, 1.4162, 1.164), (200, 1.4084, 1.08), (250, 1.3448, 1.025), (299, 1.2019, 1.111)]
+  selftest PASS | repeat-pass rel diff 0.00e+00 (< 0.001) | k=1 lost on batch 0 0.6229 (> 0.001) | params 204.9M
+    groups pass: 16/64 batches, 317s
+    groups pass: 32/64 batches, 635s
+    groups pass: 48/64 batches, 954s
+    groups pass: 64/64 batches, 1274s
+    total pass: 16/64 batches, 316s
+    total pass: 32/64 batches, 628s
+    total pass: 48/64 batches, 940s
+    total pass: 64/64 batches, 1251s
+  stage 300 measured after 5580s

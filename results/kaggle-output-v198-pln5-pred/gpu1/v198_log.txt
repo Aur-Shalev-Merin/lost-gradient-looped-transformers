@@ -1,0 +1,6 @@
+v198 driver 2d4f2c4c9e65 | huginn-s-fixed-pln5 (Table 2, S, Fixed PLN-5) | dev cuda fp32 | params 303.6M (loop 54.3M, part 28.3M) | docmask True | 150 val chunks of 512 tokens, 3 boundaries in chunk 0
+adam a=1.0 k=R: batch norms median 6.492 max 7.552 (24 of 24 clipped)  (95s)
+adam a=1.0 k=1: batch norms median 2.733 max 3.005 (24 of 24 clipped) | cos_u 0.7567 cos_g 0.6996 err_g 0.7668 ratio 0.9780 (61s)
+adam a=1.0 k=2: batch norms median 3.789 max 4.167 (24 of 24 clipped) | cos_u 0.8646 cos_g 0.8587 err_g 0.5290 ratio 0.9901 (70s)
+adam a=1.0 k=4: batch norms median 5.472 max 6.184 (24 of 24 clipped) | cos_u 0.9721 cos_g 0.9755 err_g 0.2212 ratio 0.9986 (92s)
+done p1

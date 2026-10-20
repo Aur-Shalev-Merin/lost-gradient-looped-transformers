@@ -1,0 +1,7 @@
+v164 driver feaf9a0ba438 (v163 module d5c2647126de) dev cuda amp True
+measure R=32 a=1.0: rho 0.8250 err {2: 0.6753, 3: 0.5462, 4: 0.4427, 6: 0.3071}
+  step-0 val/test R=32 a=1.0: 2.6283 / 2.6123
+measure R=32 a=0.7: rho 0.8732 err {2: 0.7436, 3: 0.6456, 4: 0.5584, 6: 0.4229}
+  step-0 val/test R=32 a=0.7: 2.6290 / 2.6183
+measure R=64 a=0.3: rho 0.9415 err {2: 0.8596, 3: 0.8092, 4: 0.7634, 6: 0.6789}
+  step-0 val/test R=64 a=0.3: 2.6295 / 2.6317

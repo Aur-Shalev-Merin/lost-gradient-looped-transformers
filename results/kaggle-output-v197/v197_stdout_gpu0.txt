@@ -1,0 +1,21 @@
+A new version of the following files was downloaded from https://huggingface.co/ByteDance/Ouro-1.4B:
+- configuration_ouro.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+A new version of the following files was downloaded from https://huggingface.co/ByteDance/Ouro-1.4B:
+- modeling_ouro.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split:  13%|█▎        | 1000/7473 [00:00<00:00, 9420.47 examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 66740.84 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 249775.93 examples/s]
+v197 driver 7f1c32f10bc2 | dev cuda dtype torch.float32 | params 1434.7M (loop 1233.3M, layers[12] (all params) 51.4M) | tied False | 169 chunks of 512 tokens
+/kaggle/working/v197_ouro_allparam.py:109: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return float(loss)
+  check: repeated full pass vs first, all-param err 0.00e+00
+seq 0: loss 0.808 rho 1.788 adj 0.237 0.194 0.146 0.0375 | err all 0.901 / 0.766 / 0.635 | loop 0.902 / 0.765 / 0.634 | layer 0.858 / 0.660 / 0.432 (39s)
+seq 1: loss 1.134 rho 1.546 adj 0.177 0.157 0.116 0.0458 | err all 0.912 / 0.823 / 0.719 | loop 0.913 / 0.823 / 0.719 | layer 0.864 / 0.676 / 0.447 (26s)
+seq 2: loss 0.858 rho 2.241 adj 0.49 0.249 0.169 0.0379 | err all 0.988 / 0.964 / 0.925 | loop 0.988 / 0.964 / 0.924 | layer 0.953 / 0.833 / 0.670 (28s)
+seq 3: loss 1.033 rho 2.194 adj 0.494 0.247 0.167 0.041 | err all 0.988 / 0.963 / 0.921 | loop 0.988 / 0.963 / 0.921 | layer 0.978 / 0.955 / 0.901 (29s)
+seq 4: loss 1.055 rho 1.743 adj 0.235 0.198 0.141 0.0413 | err all 0.919 / 0.801 / 0.627 | loop 0.919 / 0.801 / 0.626 | layer 0.858 / 0.695 / 0.402 (30s)
+seq 5: loss 1.031 rho 1.627 adj 0.193 0.167 0.12 0.0425 | err all 0.919 / 0.802 / 0.681 | loop 0.920 / 0.802 / 0.680 | layer 0.869 / 0.661 / 0.444 (31s)
+seq 6: loss 1.192 rho 2.269 adj 0.474 0.36 0.129 0.0435 | err all 0.972 / 0.906 / 0.774 | loop 0.972 / 0.906 / 0.772 | layer 0.974 / 0.905 / 0.640 (30s)
+seq 7: loss 0.676 rho 2.063 adj 0.33 0.259 0.201 0.0321 | err all 0.920 / 0.795 / 0.674 | loop 0.920 / 0.795 / 0.672 | layer 0.870 / 0.681 / 0.433 (30s)

@@ -1,0 +1,31 @@
+[{"stream_name":"stdout","time":530.602770231,"data":"job exit 0 elapsed 524s\n"}
+,{"stream_name":"stdout","time":576.38606771,"data":"job exit 0 elapsed 570s\n"}
+,{"stream_name":"stdout","time":576.386257727,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":576.386290134,"data":"\n"}
+,{"stream_name":"stdout","time":576.386296276,"data":"Generating train split:   0%|          | 0/7473 [00:00\u003c?, ? examples/s]\n"}
+,{"stream_name":"stdout","time":576.386301505,"data":"Generating train split: 100%|██████████| 7473/7473 [00:00\u003c00:00, 137659.19 examples/s]\n"}
+,{"stream_name":"stdout","time":576.386307064,"data":"\n"}
+,{"stream_name":"stdout","time":576.386311765,"data":"Generating test split:   0%|          | 0/1319 [00:00\u003c?, ? examples/s]\n"}
+,{"stream_name":"stdout","time":576.386316382,"data":"Generating test split: 100%|██████████| 1319/1319 [00:00\u003c00:00, 290363.04 examples/s]\n"}
+,{"stream_name":"stdout","time":576.386321057,"data":"v161 driver ddb4e99b660b dev cuda amp True | train ex 7000, val chunks 158, test chunks 455\n"}
+,{"stream_name":"stdout","time":576.386326046,"data":"/kaggle/working/v161_parcae_trunc_train.py:177: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.\n"}
+,{"stream_name":"stdout","time":576.386331145,"data":"Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)\n"}
+,{"stream_name":"stdout","time":576.38633574,"data":"  curve.append((s, round(float(loss), 4), round(float(gn), 3)))\n"}
+,{"stream_name":"stdout","time":576.386340022,"data":"cell R=16 k=0 lr=0.0027 seed=1611001: val 1.5974 test 1.5724 nonfinite 0 (284s)\n"}
+,{"stream_name":"stdout","time":576.386344235,"data":"cell R=8 k=0 lr=0.0027 seed=1611001: val 1.6293 test 1.6058 nonfinite 0 (196s)\n"}
+,{"stream_name":"stdout","time":576.386348405,"data":"\n"}
+,{"stream_name":"stdout","time":576.386358038,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":576.38636259,"data":"v161 driver ddb4e99b660b dev cuda amp True | train ex 7000, val chunks 158, test chunks 455\n"}
+,{"stream_name":"stdout","time":576.386366924,"data":"/kaggle/working/v161_parcae_trunc_train.py:177: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.\n"}
+,{"stream_name":"stdout","time":576.386371578,"data":"Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)\n"}
+,{"stream_name":"stdout","time":576.386376141,"data":"  curve.append((s, round(float(loss), 4), round(float(gn), 3)))\n"}
+,{"stream_name":"stdout","time":576.386380482,"data":"cell R=16 k=0 lr=0.0027 seed=1611002: val 1.5945 test 1.5699 nonfinite 0 (287s)\n"}
+,{"stream_name":"stdout","time":576.386384809,"data":"cell R=8 k=0 lr=0.0027 seed=1611002: val 1.6200 test 1.5964 nonfinite 0 (201s)\n"}
+,{"stream_name":"stdout","time":576.386389136,"data":"\n"}
+,{"stream_name":"stderr","time":578.275200773,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":578.275259471,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":578.482784044,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":578.482812446,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":579.073232298,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":580.200467495,"data":"[NbConvertApp] Writing 288161 bytes to __results__.html\n"}
+]

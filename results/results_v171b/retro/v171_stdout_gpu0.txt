@@ -1,0 +1,21 @@
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 77623.25 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 257219.96 examples/s]
+v171b clip=True | v171 retro | params 163.5M | B 24 x 8 training seqs (train chunks 2556)
+    R=8 a=1.00 k=8 batch grad norms (pre-clip): median 7.898 max 9.497
+    R=8 a=1.00 k=1 batch grad norms (pre-clip): median 6.757 max 8.204
+retro R=8 a=1.00 k=1: {'adam_def': 0.0227, 'sgd_def': 0.0696, 'err_mean': 0.3517, 'adam_cos': 0.9736}
+    R=8 a=1.00 k=2 batch grad norms (pre-clip): median 7.504 max 9.023
+retro R=8 a=1.00 k=2: {'adam_def': 0.0012, 'sgd_def': 0.0079, 'err_mean': 0.1221, 'adam_cos': 0.9981}
+  variant R=8 a=1.00 done in 419s
+    R=8 a=0.50 k=8 batch grad norms (pre-clip): median 7.454 max 8.942
+    R=8 a=0.50 k=1 batch grad norms (pre-clip): median 3.815 max 4.535
+retro R=8 a=0.50 k=1: {'adam_def': 0.0198, 'sgd_def': 0.091, 'err_mean': 0.4063, 'adam_cos': 0.9751}
+    R=8 a=0.50 k=2 batch grad norms (pre-clip): median 5.331 max 6.404
+retro R=8 a=0.50 k=2: {'adam_def': 0.0087, 'sgd_def': 0.0301, 'err_mean': 0.2238, 'adam_cos': 0.9881}
+  variant R=8 a=0.50 done in 425s
+    R=8 a=0.30 k=8 batch grad norms (pre-clip): median 6.374 max 7.762
+    R=8 a=0.30 k=1 batch grad norms (pre-clip): median 2.883 max 3.416
+retro R=8 a=0.30 k=1: {'adam_def': 0.0142, 'sgd_def': 0.1421, 'err_mean': 0.5189, 'adam_cos': 0.9812}
+    R=8 a=0.30 k=2 batch grad norms (pre-clip): median 3.944 max 4.737
+retro R=8 a=0.30 k=2: {'adam_def': 0.0086, 'sgd_def': 0.0445, 'err_mean': 0.2766, 'adam_cos': 0.9881}
+  variant R=8 a=0.30 done in 426s

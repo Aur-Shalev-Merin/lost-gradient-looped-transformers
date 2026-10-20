@@ -1,0 +1,2 @@
+{"k": 2, "lam": 0.25, "seed": 1749901, "steps": 600, "Abar": 0.9975874071592609, "Abar_loop": 0.9957981537541359, "frac_both_clipped": 0.3121869782971619, "nonfinite": 1, "s": 2235, "driver_sha": "d5c2647126de"}
+{"k": 2, "lam": 0.5, "seed": 1749901, "steps": 600, "Abar": 0.9895248243457905, "Abar_loop": 0.9797379395361081, "frac_both_clipped": 0.2953020134228188, "nonfinite": 4, "s": 2238, "driver_sha": "d5c2647126de"}

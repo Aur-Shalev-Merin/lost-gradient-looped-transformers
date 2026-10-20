@@ -1,0 +1,10 @@
+v203 parcae | driver 62221bebe0ef | R 32 | held-out (test) chunks 455 -> 56 batches of 8, groups of 8, B=1 on 64
+  stage 300 fine-tune: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0003, 'seed': 2012, 'nonfinite': 2, 'clipped_frac': 0.99, 'ok': True, 's': 764}
+  selftest PASS | repeat-pass rel diff 4.75e-07 (< 0.001) | k=1 lost on batch 0 0.5931 (> 0.001) | params 144.3M
+    groups pass: 16/56 batches, 294s
+    groups pass: 32/56 batches, 592s
+    groups pass: 48/56 batches, 890s
+    total pass: 16/56 batches, 294s
+    total pass: 32/56 batches, 587s
+    total pass: 48/56 batches, 881s
+  stage 300 measured after 3012s

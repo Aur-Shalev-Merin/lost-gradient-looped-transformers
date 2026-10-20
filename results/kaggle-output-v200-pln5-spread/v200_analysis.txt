@@ -1,0 +1,17 @@
+7 runs from 2 files
+
+=== huginn-s-fixed-pln5: 7 runs (drivers ['22a56eba93e9'])
+  k=0 lr=0.0003  seed=9002     val 1.5607 test 1.5386 | nonfinite   0 | rho_end 0.708 |  316s (train  294s) peak 6.0 GB
+  k=0 lr=0.0003  seed=9003     val 1.5607 test 1.5376 | nonfinite   0 | rho_end 0.703 |  313s (train  291s) peak 6.0 GB
+  k=1 lr=0.0001  seed=9001     val 1.4528 test 1.4313 | nonfinite   0 | rho_end 0.722 |  429s (train  405s) peak 7.2 GB
+  k=1 lr=0.0001  seed=9002     val 1.4490 test 1.4296 | nonfinite   0 | rho_end 0.723 |  422s (train  399s) peak 7.2 GB
+  k=1 lr=0.0001  seed=9003     val 1.4500 test 1.4306 | nonfinite   0 | rho_end 0.724 |  431s (train  407s) peak 7.2 GB
+  k=5 lr=0.0001  seed=9002     val 1.4287 test 1.4086 | nonfinite   0 | rho_end 0.735 |  688s (train  665s) peak 7.6 GB
+  k=5 lr=0.0001  seed=9003     val 1.4300 test 1.4112 | nonfinite   0 | rho_end 0.738 |  666s (train  643s) peak 7.6 GB
+seed 9002: full nonfinite 0 test 1.4086 -> VALID
+seed 9003: full nonfinite 0 test 1.4112 -> VALID
+floor lr 0.0003, truncated/full lr 0.0001; seeds used: [9002, 9003]
+val  floor gap L_floor - L_full: 0.1313, 90% CI [0.1272, 0.1354] (n 2; per seed 0.1320 0.1307)
+  val phi k=1: 0.1533 +- 0.0002 s.e. (n 2; sd 0.0003 -> s.e. with 5 seeds 0.0001) per seed 0.1535 0.1531
+test floor gap L_floor - L_full: 0.1282, 90% CI [0.1171, 0.1394] (n 2; per seed 0.1300 0.1264)
+  test phi k=1: 0.1577 +- 0.0040 s.e. (n 2; sd 0.0057 -> s.e. with 5 seeds 0.0026) per seed 0.1617 0.1536

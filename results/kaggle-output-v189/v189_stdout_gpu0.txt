@@ -1,0 +1,8 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split:  13%|█▎        | 1000/7473 [00:00<00:01, 5307.10 examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 38390.68 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 266308.22 examples/s]
+v189: repo SandyResearch/parcae-370m | params 388.0M | v164 driver feaf9a0ba438
+R=16: rho 0.8100 err {1: 0.8215, 2: 0.6652, 4: 0.4453, 8: 0.2099} (61s)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+v189: repo SandyResearch/parcae-140m | params 144.3M | v164 driver feaf9a0ba438
+R=16: rho 0.8020 err {1: 0.8132, 2: 0.6632, 4: 0.421, 8: 0.1803} (20s)
