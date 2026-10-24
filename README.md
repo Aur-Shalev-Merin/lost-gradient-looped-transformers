@@ -1,7 +1,6 @@
 # How Much Gradient Does Truncated Backprop Lose in Looped Transformers?
 
-Code, pre-registrations, results and paper source for the paper of that title (Aur Shalev Merin, 2026; arXiv link to be
-added). The paper measures the *lost gradient*, |g − g_k| / |g|: the share of the weight gradient that truncated
+Code, pre-registrations, results and paper source for the paper of that title (Aur Shalev Merin, 2026; [arXiv:2610.28871](https://arxiv.org/abs/2610.28871)). The paper measures the *lost gradient*, |g − g_k| / |g|: the share of the weight gradient that truncated
 backprop through the last k loops of a looped transformer throws away. It does this on nine looped language models, follows the
 lost gradient through fine-tuning, and tests whether it predicts the training cost of truncation.
 

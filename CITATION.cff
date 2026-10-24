@@ -8,3 +8,16 @@ authors:
 date-released: 2026-10-20
 url: "https://github.com/Aur-Shalev-Merin/lost-gradient-looped-transformers"
 license: MIT
+identifiers:
+  - type: other
+    value: "arXiv:2610.28871"
+    description: "arXiv preprint"
+preferred-citation:
+  type: article
+  title: "How Much Gradient Does Truncated Backprop Lose in Looped Transformers?"
+  authors:
+    - family-names: "Shalev Merin"
+      given-names: "Aur"
+  year: 2026
+  journal: "arXiv preprint"
+  url: "https://arxiv.org/abs/2610.28871"
