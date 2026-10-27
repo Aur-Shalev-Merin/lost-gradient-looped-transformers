@@ -1,0 +1,19 @@
+v219 driver afe8a26f628d, phase selftest, cells 
+data: 7000 train examples, 169 val chunks, 489 test chunks
+selftest PASS [] | own forward 1.839788 / 1.839788 | {'ckpt_vs_plain_k2': {'loop': 0.0, 'head': 0.0, 'gate': 0.0}, 'ckpt_vs_plain_k4': {'loop': 0.0, 'head': 0.0, 'gate': 0.0}, 'fp16_vs_fp32_k1': {'loop': 0.00738, 'head': 0.00345}, 'fp16_vs_fp32_k2': {'loop': 0.00924, 'head': 0.00345}, 'fp16_vs_fp32_k4': {'loop': 0.02743, 'head': 0.00345}, 'negative_control_synthetic_k2': {'loop': 1.0, 'head': 0.00345, 'gate': 0.0}}
+v219 driver afe8a26f628d, phase train, cells 4:0.0003:9001
+data: 7000 train examples, 169 val chunks, 489 test chunks
+    k=4 lr=0.0003 seed=9001 step 0 loss 0.8166 gn 19.195 | 25s
+    k=4 lr=0.0003 seed=9001 step 50 loss 1.5648 gn 2.908 | 844s
+    k=4 lr=0.0003 seed=9001 step 100 loss 2.1419 gn 2.552 | 1668s
+    k=4 lr=0.0003 seed=9001 step 150 loss 1.4276 gn 1.822 | 2491s
+    k=4 lr=0.0003 seed=9001 step 200 loss 1.2983 gn 2.039 | 3314s
+    k=4 lr=0.0003 seed=9001 step 250 loss 1.5034 gn 1.990 | 4137s
+    k=4 lr=0.0003 seed=9001 step 300 loss 1.3187 gn 1.442 | 4959s
+    k=4 lr=0.0003 seed=9001 step 350 loss 0.8714 gn 1.009 | 5782s
+    k=4 lr=0.0003 seed=9001 step 400 loss 0.9427 gn 1.068 | 6603s
+    k=4 lr=0.0003 seed=9001 step 450 loss 0.8505 gn 1.057 | 7423s
+    k=4 lr=0.0003 seed=9001 step 500 loss 0.7259 gn 0.858 | 8244s
+    k=4 lr=0.0003 seed=9001 step 550 loss 0.8048 gn 0.984 | 9067s
+    k=4 lr=0.0003 seed=9001 step 599 loss 0.7532 gn 0.910 | 9873s
+  RUN k=4 lr=0.0003 seed=9001: val 1.1716 / 1.1745, test 1.1678 / 1.1709 (final / exit) | non-finite 3 | 16.5 s/step | peak [13.34, 14.58] GB

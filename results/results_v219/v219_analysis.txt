@@ -1,0 +1,23 @@
+v219 analysis: driver f8543506d909; full LR 0.0001, floor LR 0.0001; 20 runs read
+  seed 2191001: full non-finite 2, diverged False -> valid
+  seed 2191002: full non-finite 3, diverged False -> valid
+  seed 2191003: full non-finite 2, diverged False -> valid
+  seed 2191004: full non-finite 2, diverged False -> valid
+  seed 2191005: full non-finite 3, diverged False -> valid
+  seed 2191006: cells present {4: 0, 2: 0, 1: 0, 0: 0} -> not scored
+  seed 2191007: cells present {4: 0, 2: 0, 1: 0, 0: 0} -> not scored
+seed rule: s.e. of the k=1 cost over the first 3 valid seeds 0.1018 -> N = 5
+test loss, final output, per seed (full / k=2 / k=1 / floor):
+  seed 2191001: 1.0313 / 1.0478 / 1.0600 / 1.0624
+  seed 2191002: 1.0262 / 1.0505 / 1.0693 / 1.0619
+  seed 2191003: 1.0271 / 1.0588 / 1.0711 / 1.0623
+  seed 2191004: 1.0299 / 1.0487 / 1.0654 / 1.0620
+  seed 2191005: 1.0272 / 1.0468 / 1.0683 / 1.0621
+floor gap (final output): 0.0338 (s.e. 0.0009; 90% 0.0318 to 0.0357)
+floor gate (>= 0.03 nats, 90% lower bound > 0): PASS
+cost k=1 (final output): 1.1332 (s.e. 0.0571; 90% 1.0116 to 1.2549) per seed [0.9247, 1.2075, 1.2486, 1.1065, 1.1788] | L 0.258 (extrapolated), KP 0.224, max of the trained models 0.291
+cost k=2 (final output): 0.6519 (s.e. 0.0670; 90% 0.5089 to 0.7948) per seed [0.5299, 0.6799, 0.9007, 0.5862, 0.5626] | L 0.187, KP 0.100, max of the trained models 0.149
+VERDICT (primary): ABOVE-BOTH (MAE L 0.6699, KP 0.7305)
+  k=1: rank of Ouro among the trained models (descriptive): ouro 1.133 > r5 0.291 > parcae 0.224 > pln5 0.162 > smollm2 0.009
+  k=2: rank of Ouro among the trained models (descriptive): ouro 0.652 > r5 0.149 > parcae 0.100 > pln5 0.071 > smollm2 -0.001
+exit-weighted objective (descriptive): floor gap 0.0420; cost k=1 1.3031 (90% 1.2042 to 1.4020), k=2 0.5389 (90% 0.4247 to 0.6532)

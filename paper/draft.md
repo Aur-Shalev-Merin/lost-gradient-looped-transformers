@@ -1,6 +1,6 @@
 # How Much Gradient Does Truncated Backprop Lose in Looped Transformers?
 
-*Draft v16.16, 2026-10-20.*
+*Draft v17.1 (arXiv v2), 2026-10-27.*
 
 ## Abstract
 
@@ -8,15 +8,21 @@ Looped transformers reuse one block of layers many times and are often trained b
 last k loops. We measure how much of the weight gradient this throws away, exactly and for every k from one backward
 pass, on nine looped language models, and report three findings. First, on a trained model this lost gradient is set
 near the output: once the loop count is well above k, it barely changes with the loop count (within about 0.03 from 32
-to 64 loops on the three models we tested, as a pre-registered test predicted for Parcae). Where the backward signal
+to 64 loops on the three models we tested, as a pre-registered test predicted for Parcae; Huginn's moved 0.034 at 48
+loops, and Parcae-370m's 0.032 at 128). Where the backward signal
 shrinks, ρᵏ, with ρ the signal's fitted shrink per loop, approximates it at moderate loop counts but overstates it at
 long ones, because the fitted ρ drifts up as the fit takes in more loops. On Ouro the signal grows, and keeping two of
 four loops still loses 81% of the final output's gradient. Second, the lost gradient falls during fine-tuning, by
-0.07–0.22 within 300 steps on three of four models, on held-out problems too. The fall is not just the read-out's share
-of the gradient; training only the layers outside the loop reproduced up to half of it, and it also falls under
-truncated training. So a trained model's value overstates what truncation removes later. Third, we could not show that
-it predicts the training cost of truncation better than rules that need no measurement: on two new models it tied
-Parcae's cost at the same k, in a test too small to separate them.
+0.07–0.22 within 300 steps on three of four models, on held-out problems from the same dataset too. On unrelated text
+the fall held on Parcae but largely not on the other two models, and 8–26% of it reversed by the end of the run. Most of the
+fall remains when the gradient that gets no credit through the loop is left out, though a fine-tune that never changes
+the loop's weights reproduces about half of it on two of three models. It also occurs under truncated training. So a trained
+model's value overstates what truncation removes later, at least on the kind of text being trained on. Third, on two
+new models the lost gradient predicted the training cost of truncation no better than a rule that needs no
+measurement, in a test too small to separate them. On Ouro, the extreme, truncation took a far larger share of the
+loop's benefit than either rule predicted: at full backprop's learning rate, keeping one of four loops was no better
+than not training the loop. But that benefit was small (0.034 nats), and in absolute terms truncation cost about what
+it did on Parcae (0.04 nats).
 
 ## 1. Introduction
 
@@ -41,7 +47,7 @@ truncation loses at each k has not been measured.
 We measure it on nine looped language models (seven published, two our own conversions), follow it into fine-tuning, and ask what it says about the
 cost of training with truncation. The cost results come from 600-step fine-tunes of already-trained models, where
 truncation costs little in absolute terms (on Parcae, keeping one of 32 loops cost about 0.04 nats and the blended
-settings of S5 0.005–0.016 nats, against a 0.18-nat benefit of training the loop at all). So they are a narrow proxy for choosing k in pretraining. We pre-registered sixteen studies, S1–S16, listed in
+settings of S5 0.005–0.016 nats, against a 0.18-nat benefit of training the loop at all). So they are a narrow proxy for choosing k in pretraining. We pre-registered eighteen studies, S1–S18, listed in
 Appendix B (Table 4). What we find:
 1. **On a trained model, the lost-gradient curve is set near the output, and ρ drifts (Section 3).** One full
    backward pass per held-out sequence gives the lost gradient for every k. Once the loop count is well above k it
@@ -53,19 +59,28 @@ Appendix B (Table 4). What we find:
    form, and its pre-registered extrapolation to 96 and 128 loops held on Parcae-140m (S14), though a trend linear in
    log(loop count) would have passed too. The exception is Ouro, whose backward signal grows: keeping one or two of its
    four loops loses 92% or 81% of its final output's gradient, and keeping two loses 85% under its own training
-   objective without the entropy term (S15). These are statements about the gradient: we did not train Ouro with
-   truncation.
+   objective without the entropy term (S15). Finding 3 gives what that costs in fine-tuning (S18).
 2. **It falls during fine-tuning (Section 4).** After 300 full-backprop steps it was 0.07–0.22 lower per sequence on
-   three of four models, and about as much on held-out GSM8K problems [Cobbe et al. 2021; S12, S13]. Most of the fall remains when the gradient
+   three of four models, and about as much on held-out GSM8K problems [Cobbe et al. 2021; S12, S13]. On unrelated text
+   (WikiText) it fell as much on Parcae but only 0.05 and 0.33 times as much on the two Part II models, and by the end
+   of the 600-step run 8–26% of the step-300 fall had reversed (S17). Most of the fall remains when the gradient
    that gets no credit through the loop is left out (S15). A separate fine-tune that trained only the layers outside
    the loop, with the loop's weights fixed, reproduced about half of that loop-credited fall on two models (0.48 and
    0.50) and little of it on the third (0.14; S16). That compares two runs; it does not split the full run's fall. A fine-tune through only the last 2 loops lowers it too, by 61–98% as much (S15). With the text
    moving it by up to 0.12 as well, the number is a property of a checkpoint and a text, not of the model.
-3. **We could not show that it predicts training cost better than rules that need no measurement (Section 5).** Within
-   one model it is a relabelling of k. Across models, a pre-registered test on two new models found that a cost curve
-   fitted on Parcae did no better than Parcae's own cost at the same k, the better of two such rules fixed in advance
-   (S11), although those two models' costs differed by up to a factor of two. The test was small (six settings on two
-   models) and could not have shown a modest advantage.
+3. **On two new models it predicted training cost no better than a rule that needs no measurement; on Ouro,
+   truncation took a far larger share of a small benefit than either predicted (Section 5).** Within one model it is a relabelling of k. Across models, a
+   pre-registered test on two new models found that a cost curve fitted on Parcae did no better than Parcae's own cost
+   at the same k, the better of two such rules fixed in advance (S11), although those two models' costs differed by up
+   to a factor of two. The test was small (six settings on two models) and could not have shown a modest advantage.
+   On Ouro, the model that loses the most gradient, a second pre-registered test found the cost above both
+   predictions (S18). At full backprop's learning rate, keeping one of four loops was no better than giving the loop
+   no gradient at all (cost 1.13, 90% interval 1.01–1.25), and keeping two cost 0.65 (0.51–0.79), against predictions
+   of at most 0.26. In absolute terms, though, keeping one loop added 0.038 nats, about what it added on Parcae (0.040)
+   and on the fixed-5-loop Part II model (0.041). The share is high mainly because the loop gains Ouro only 0.034 nats
+   in this fine-tune, a denominator neither rule models. So this is weak evidence that a very large lost gradient is
+   costly in itself. It is also one model, with the truncated arms' learning rate not tuned per k, and at k = 1 Ouro's
+   lost gradient lies outside the range the curve was fitted on.
 
 Appendix B keeps the study-by-study record: questions, freeze commits, verdicts, amendments and exclusions. Code,
 pre-registrations, results and the record of when each freeze was pushed are at https://github.com/Aur-Shalev-Merin/lost-gradient-looped-transformers.
@@ -99,9 +114,11 @@ rule below describes. On Parcae-140m at 32 loops and k = 1, the alternatives rea
 - the clipped average over 64 sequences reads 0.97, against 0.80 per sequence;
 - the unclipped expected gradient of Aicher et al. loses 100% at every k, because a few sequences with very large
   gradients dominate it;
-- after 300 fine-tuning steps the clipped averages agree with the per-sequence median within 0.05 (Section 4).
+- after 300 fine-tuning steps the clipped average over 64 sequences agrees with the per-sequence median within 0.05,
+  and the clipped average over 512 reads up to 0.09 below it (Section 4).
 
-Leaving out the gradient that gets no credit through the loop raises the value by 0.01–0.04 on the trained models and
+Appendix L lists every protocol used and which tables and figures use it. Leaving out the gradient that gets no credit
+through the loop raises the value by 0.01–0.05 on the trained models and
 by up to 0.09 after fine-tuning (Appendix I). The text moves it by up to 0.12 (Section 3), and the starred rows of
 Table 1 use a probe over part of the loop. For what truncation removes from a training update, the per-sequence median
 after some fine-tuning is the closest of these. For comparing models, use one protocol throughout.
@@ -180,8 +197,9 @@ implies backprop through all loops, but it does not say so explicitly. Ouro's tr
 output (for the weighted loss, see "Where the rule needs care" below).
 ‡ Ouro's ρ is a fit over 4 loops and is dominated by the last one: the signal grows about fourfold across it, and 1.25–1.37
 times per loop before that ("Where the rule needs care" below). For ρ > 1 the simple ρᵏ is meaningless. The exact finite-loop forms (Appendix A), computed from each sequence's ρᵢ,
-give 0.92–0.99 at k = 1 and 0.78–0.96 at k = 2. The measurement lies at the lower form at k = 1 and between the two at
-k = 2. Every sequence has ρᵢ > 1 (1.55 to 2.27).
+give 0.92–0.99 at k = 1 and 0.78–0.96 at k = 2. The measurement lies at the lower of these two forms at k = 1 and between
+them at k = 2. (Appendix J compares it with a different pair, the measured-profile forms, and there it lies below both
+at k = 1.) Every sequence has ρᵢ > 1 (1.55 to 2.27).
 
 Two other setups appear later and give different numbers for the same models, so we name them where they are used:
 - Section 5 uses SmolLM2 (A)'s lost gradient on GSM8K text (0.36 at k = 1), which is what its predictions were based
@@ -266,9 +284,12 @@ fitted on the 64-loop profiles, predicted ρ at 96 and 128 loops on Parcae-140m 
 and 0.900 [0.875, 0.910], against 0.898 and 0.908 measured, with the paired rise from 64 to 128 loops above zero
 (+0.039 [+0.009, +0.047]; S14). That supports the extrapolation more than the specific mechanism: a trend linear in
 log(loop count), fitted to the 16–64-loop medians after the fact, also lands inside both intervals (0.888 and 0.903),
-while a straight line in the loop count does not (0.921 and 0.969). A ρ fitted on a fixed window of loops next to the
-output would not drift by construction; we did not test whether its ρᵏ is a closer summary. The evidence for the window account itself is the
-window check above.
+while a straight line in the loop count does not (0.921 and 0.969). The evidence for the window account itself is
+the window check above. A ρ fitted only on the 16 loops next to the output does not drift: from 32 to 128 loops it
+stays within 0.005 of 0.785 on both Parcae models. But its ρᵏ understates the lost gradient at every loop count, by
+up to 30% on Parcae-140m and 41% on Parcae-370m (computed after the fact from the stored profiles), because near the
+output the backward signal shrinks faster than the dropped sum does (Appendix J). So no fitting window gives a ρᵏ
+that is accurate across loop counts.
 
 The dial of Section 2 fills the gap between the two clusters (crosses in Figure 2), with mixed results. Blended
 Parcae-140m (R = 32–64, ρ 0.87–0.94) sits on the line, within about 0.03 at every k. Blended SmolLM2 (A) (R = 8,
@@ -284,9 +305,7 @@ smallest at 1.41 and 1.16). With only 4 loops the measurement
 barely constrains ρ, and we take one thing from Ouro: its backward signal grows, and truncation throws away most of
 the gradient of its final output. The same holds for the loss Ouro trains on, a weighted sum of every loop's output
 loss: without its entropy term, keeping 1, 2 or 3 of 4 loops loses 0.94, 0.85 or 0.73 of its gradient, slightly more
-than for the final output alone (0.92, 0.81, 0.71; S15). None of this measures training cost. We did not train
-Ouro with truncation, because it lay outside the range our cost curves were fitted on (Appendix E), and under Adam a
-large lost gradient can cost little (Section 5). We did not record the exit distribution, so we cannot say
+than for the final output alone (0.92, 0.81, 0.71; S15). None of this measures training cost; Section 5 does (S18). We did not record the exit distribution, so we cannot say
 how much of that objective's weight falls on the last loop. Others report that Ouro's loop does not settle in the forward pass
 either [Huang et al. 2026, Sec. 1]; those results concern the forward pass, and their link to a growing backward signal is only suggestive. Its
 accuracy falls past four loops [Yang et al. 2026], and reusing one key-value cache slot across loop steps drops its
@@ -303,7 +322,8 @@ Section 3 describes trained models before any further training, one sequence at 
 averaged over a batch and clipped, on a model that is changing. We followed the lost gradient through fine-tuning on
 the four models whose truncation cost we trained (Section 5): Parcae-140m at 32 loops, SmolLM2 (A) at 8, and the two
 Part II models of Huang et al. [2026] (Appendix H) at 5. Each was measured as trained and after 300 of the 600 steps of
-its fine-tuning recipe, with the deciding comparisons fixed in advance. Table 3 gives the held-out medians;
+its fine-tuning recipe, and all but SmolLM2 again at step 600 and on unrelated text (S17), with the deciding
+comparisons fixed in advance. Table 3 gives the held-out medians;
 Appendix I has the details (Table 10 and Table 11).
 
 **Table 3. The lost gradient during fine-tuning, on held-out problems** (medians over the first 64 GSM8K test
@@ -323,18 +343,33 @@ steps of each fine-tune; S15, S16. Table 11 adds k = 2).
 Parcae-140m, 0.07–0.16 on the Part II models and at most 0.03 on SmolLM2, at k = 1, 2 and 4. By the pre-set
 comparison, the lost share of the clipped update averaged over 64 sequences at step 300 lay 0.06–0.27 below the trained
 model's per-sequence median on Parcae and both Part II models. On those models, then, the frozen-model medians of
-Tables 2 and 8 overstate what truncation removes from the update at step 300 of 600, the only later stage we measured.
+Tables 2 and 8 overstate what truncation removes from the update at step 300 of 600 (step 600 is below).
 The measured sequences had been trained on about once by then, so we repeated the measurement on GSM8K test problems,
 which no run trains on: as many as the split allowed, 56 batches of 8 on Parcae and 48 on the Part II models (on
 Parcae the repeated fine-tune used a pre-listed backup seed, Appendix I). There the fall was
 90–102% as large on average over k (Parcae 0.20 / 0.22 / 0.21; the two Part II models 0.12–0.14 at k = 1 and 2). So the
-fall is not the model fitting the sequences it saw. Those problems are the same kind of text as the fine-tuning data,
-though, and we did not test other text.
+fall is not the model fitting the sequences it saw. Averaged over k, every fall excludes zero in a paired bootstrap
+over sequences (computed after the fact; Appendix I), SmolLM2's small one included. Those problems are the same kind
+of text as the fine-tuning data, though; the next paragraph tests other text.
+
+**On other text, and later in the run (S17).** We repeated the full-backprop fine-tune with the same seed, ran it to
+step 600, and measured the held-out GSM8K problems at steps 300 and 600 and 64 WikiText test chunks [Merity et al.
+2017] at step 300. The step-300 values agree with S15's within 0.003. Averaged over k = 1, 2, 4 (all parameters;
+Table 12). On WikiText the fall was 0.93 times the GSM8K fall on Parcae, but only 0.05 and 0.33 times on the Part II
+models with a sampled loop count and with fixed 5 loops, so on those two it is mostly specific to the kind of text
+being trained on. Most of the fall survives the rest of the run: by step 600, as the learning rate decayed to its
+floor, 8% of it had reversed on Parcae and 20% and 26% on the Part II models. Parcae's change (−0.017 before rounding;
+Table 12's rounded falls give 0.016) fell just short
+of the pre-set 0.02, so the verdict was mixed rather than "recovers".
+
+A frozen-model value therefore overstates what truncation removes later in fine-tuning on the same kind of text. On
+unrelated text that holds for Parcae and only weakly for the Part II models.
 
 **Where it falls (S15, S16).** The lost gradient is over all parameters, so its denominator includes gradient that gets
 no credit through the loop at all, in the layers after it and the read-out, and a growing share of that would lower it
 with no change in the loop. Leaving it out, |g − g_k| / |g − g_0| with g_0 the gradient at k = 0, the loop-only
-held-out fall was 0.80 times the all-parameter one on Parcae and 0.72 and 0.75 times on the Part II models (averaged
+held-out fall was 0.80 times the all-parameter one on Parcae and 0.75 and 0.72 times on the Part II models with fixed 5
+loops and with a sampled loop count (averaged
 over k = 1, 2, 4; the two statistics are related by a product, not a sum, so this split is approximate). That locates
 the fall in the loop's part of the gradient, not its cause: a change after the loop alters the backward signal that
 enters it. So we ran a second fine-tune with no loop credit (k = 0, the baseline of Section 5), which leaves the loop's weights
@@ -355,8 +390,8 @@ truncated fall was 1.00, 0.80 and 0.51 times the full-backprop one (Parcae, samp
 the fixed-5-loop model at k = 4 it did not fall at all (0.400 to 0.399). The truncated gradient is smaller and was
 clipped on only 13–60% of steps, so the two runs' updates differ in size.
 
-**Averaging matters little once training is under way.** At step 300 the averaged, clipped value was within 0.05 of
-the per-sequence median on every model and k. On the trained models averaging mattered more, and not in one direction
+**Averaging matters little once training is under way.** At step 300 the clipped average over 64 sequences was within
+0.05 of the per-sequence median on every model and k; averaging over 512 lowers it further, by up to 0.09 in all. On the trained models averaging mattered more, and not in one direction
 (Appendix I). Without clipping, a few sequences with very large gradients made the averaged gradient, the
 expected-gradient quantity of Aicher et al., lose 100% at every k on Parcae; training clipped 99–100% of steps in all four
 fine-tunes, which limits those sequences' pull.
@@ -411,6 +446,44 @@ lost-gradient curve under-predicted the fixed-5-loop model's costs at k = 1 and 
 direction-after-Adam curve over-predicted both models' costs there by 32–59%. With one pair of models, getting the
 order right is weak evidence.
 
+**At the extreme: Ouro (S18).** Ouro-1.4B loses the most gradient of any model we measured (Section 3), so we trained
+it too, under a separate pre-registration, with S11's recipe at its 4 loops and the token embedding frozen in every arm
+(Appendix K). Two predictions were locked before training. The first is the lost-gradient curve used in S11, fed
+Ouro's measured lost gradient (0.92 at k = 1, outside the curve's fitted range of 0.18–0.88, and 0.84 at k = 2): 0.26
+and 0.19. The second is Parcae's own cost at the same k: 0.22 and 0.10. The baseline with no loop gradient was 0.034 nats
+worse than full backprop (90% interval 0.032–0.036), above the pre-set minimum of 0.03. Over 5 seeds (the pre-set
+rule raised the number from 3, because seed-to-seed spread was large), the cost was (Table 13):
+- **k = 1:** 1.13 (90% interval 1.01–1.25). At full backprop's learning rate, keeping one of four loops was no better
+  than not training the loop; on 4
+  of 5 seeds it was slightly worse.
+- **k = 2:** 0.65 (0.51–0.79).
+
+At both k the interval lies above both predictions, the outcome the pre-registration called "above both", and above
+any other model we trained (at most 0.29 and 0.15). Under Ouro's own exit-weighted objective, scored descriptively,
+the costs were 1.30 and 0.54.
+
+**In nats, Ouro's truncation cost is ordinary** (computed after the fact; the pre-registered verdict is on the share).
+The cost is a share of the loop's benefit, and on Ouro that benefit is small: a baseline that trains only the output
+head comes within 0.034 nats of full backprop, against 0.13–0.18 on the other models. Keeping one loop added 0.038
+nats over full backprop and keeping two 0.022 (Table 13). That is about what truncation added on Parcae (0.040 and
+0.018) and on the fixed-5-loop Part II model (0.041 and 0.021), and more than on the model with a sampled loop count
+(0.021 and 0.009). So the high share comes mainly from the small denominator, which neither rule models. That
+denominator may be small because Ouro has seen GSM8K's training split (below), and the output head alone takes most of
+the fine-tune's gain. Read this way, Ouro does not show that a very large lost gradient is unusually expensive. Its
+loop had little to gain on this task, and truncation lost most of it. The comparison is not like-for-like either:
+one of Ouro's 4 loops is a larger fraction of the loop than one of Parcae's 32 or of the Part II models' 5, and since
+every Ouro layer is inside the loop, its baseline trains only the output head, while the other models' baselines also
+train layers before and after the loop.
+
+Four caveats also apply.
+- It is one model.
+- The truncated arms used full backprop's learning rate, as in every cost test here; only full backprop and the
+  baseline were tuned. A rate tuned for k = 1 might recover part of the loop's benefit, so "no better than not
+  training the loop" holds at that rate, not at every rate.
+- Ouro behaves as though it had seen GSM8K's training split: on our validation problems, which are drawn from that
+  split, its loss is far below its test loss. The learning rates were therefore chosen on test loss (Appendix K).
+- At the freeze we gave this outcome a probability of 6%, and favoured a cost below both predictions.
+
 **The earlier tests.** Before S11 we tested the lost-gradient curve within models, using the dial to change the lost
 gradient at a fixed k.
 - **S5, Parcae-140m (Figure 4, left).** A power law fitted on 25 earlier settings,
@@ -431,33 +504,39 @@ al. 2019, Thm. 2]; our SGD runs could not check that half (Appendix D). A curve 
 models after the fact (Appendix E), but a test within Parcae was uninformative (S8, Appendix G), and on the Part II
 models it did worse than "k alone" (S11).
 
-**What is still open.** S11 compared one pair of small models at a single loop count. Whether the lost gradient
-carries cost information across a wider range of models, for instance in how it orders them, needs more models than
-we trained. The Part II models cannot test the reading above, because blending at k = 1 does not act as a pure shrink
+**What is still open.** S11 compared one pair of small models at a single loop count, and S18 added one model at the
+extreme. Between those, whether the lost gradient carries cost information across a wider range of models, for
+instance in how it orders them, needs more models than we trained. The Part II models cannot test the reading above, because blending at k = 1 does not act as a pure shrink
 on them (Appendix H). And since the lost gradient falls during fine-tuning (S12, S13), a frozen-model measurement is at
 best a proxy for what truncation removes during training.
 
 ## 6. Related work
 
-**Truncated backprop.** Truncated backpropagation through time is standard for recurrent networks. Aicher et al. [2019]
+**Truncated backprop.** Truncated backpropagation through time is standard for recurrent networks. Pascanu et al. [2013]
+bound the gradient through a recurrence by products of Jacobian norms, so it shrinks or grows geometrically with
+distance; our backward signal and its fitted ρ are that quantity in a looped transformer. Aicher et al. [2019]
 bound its bias geometrically (Thm. 1), estimate the decay rate from late lags (Sec. 4.2), choose the truncation length
 adaptively, note that a few slowly decaying directions inflate the estimated rate (Sec. 5.4), and price relative bias
 in SGD (Thm. 2). Tallec and Ollivier [2017] remove the bias by randomising the truncation length and reweighting the
-backward pass, at the price of extra variance. Ajalloeian and Stich [2020] analyse SGD with relative gradient bias. In small recursive
+backward pass, at the price of extra variance. Ajalloeian and Stich [2020] analyse SGD with relative gradient bias. In meta-optimisation,
+Wu et al. [2018] show that a short unroll horizon biases the result toward what is good over that horizon. In small recursive
 reasoning models truncation can even help: on ARC-AGI, leaving the first 2–3 of 8 loops without gradient raised
 pass@1 [Gao et al. 2025, Table 3], and on algorithmic tasks an intermediate gradient horizon generalised best
 [Shakhvalieva et al. 2026, Table 8]. We
 measure the depth-recurrence version of this bias in looped transformers and test whether it predicts training cost.
 
-**Fixed-point models.** For implicit and equilibrium models, a short or one-step gradient often trains well when the
-loop is contractive [Fung et al. 2022; Geng et al. 2021]. Liao et al. [2018, Prop. 3] and Movahedi et al. [2026, Prop. 1] bound
+**Fixed-point models.** Deep equilibrium models [Bai et al. 2019] avoid truncation by differentiating through the
+fixed point implicitly, at constant memory. For implicit and equilibrium models, a short or one-step gradient often
+trains well when the loop is contractive [Fung et al. 2022; Geng et al. 2021]. Liao et al. [2018, Prop. 3] and Movahedi et al. [2026, Prop. 1] bound
 the truncation error geometrically; Movahedi et al. state it for looped transformers but do not measure it, and their
 Theorem 3 (damping removes oscillation around the fixed point) underlies our Appendix C. In bilevel optimisation,
 Shaban et al. [2019] bound the error of truncated backprop by the slowest mode, and Vicol et al. [2022] note that
 truncation diminishes the weight on slow, low-curvature directions. Our dial is the damped iteration behind Geng et al.'s
 phantom gradients.
 
-**Looped language models.** Huginn [Geiping et al. 2025] and Parcae [Prairie et al. 2026] choose their
+**Looped language models.** Universal Transformers [Dehghani et al. 2019] apply one weight-shared block repeatedly in
+depth, and Saunshi et al. [2025] show that a block looped many times can nearly match a deeper unshared model on
+reasoning tasks. Huginn [Geiping et al. 2025] and Parcae [Prairie et al. 2026] choose their
 backprop depth by hand; Ouro [Zhu et al. 2025] states none and apparently backpropagates through all of its loops
 (Table 1). McLeish et al. [2026] convert pretrained models into looped ones.
 - Parcae (App. I) reports training cost against k.
@@ -480,12 +559,16 @@ backprop depth by hand; Ouro [Zhu et al. 2025] states none and apparently backpr
   1.02 and 0.24).
 - Yang et al. [2026] stabilise Ouro's loop past its training depth with a Jacobian penalty; Guo et al. [2026] score a
   partial forward step H + α(F(H) − H) on frozen Ouro and Huginn, which at α = 0.25 is our dial applied once.
+  Shalev Merin [2026] probes Ouro's hidden states for unwritten intermediate results of arithmetic problems and
+  finds a small readable signal that, where tested, is not used for the answer.
 
 What we add: exact measurements of the lost gradient on nine looped language models (seven published, two our own
 conversions), and of how
 fine-tuning changes it; the finding that the curve barely changes with the loop count while the fitted rate drifts (an
 effect known for recurrent networks, measured here in a pre-registered test); and pre-registered tests of what it
-predicts for training cost, which did not separate it from rules that need no measurement.
+predicts for training cost. On two moderate models these did not separate it from rules that need no measurement; on
+Ouro, truncation took a larger share of the loop's benefit than any of them predicted, though in nats it cost about
+what it did on Parcae.
 
 ## 7. Limitations and takeaways
 
@@ -494,16 +577,20 @@ gradient from a rule that needs no measurement: within a model, "k alone" does a
 nearly as well with it (S5); across models, the prediction failed under blending (S6) and, on two new models, did no
 better than Parcae's own cost at the same k (S11). S11 used one pair of small models at 5 loops, with the token
 embedding frozen, so it cannot rule out a cost signal across a wider range of models. The explanation of S6's failure
-was found after the fact. Two choices may also favour truncation's apparent cost either way: the learning rate was
+was found after the fact. On Ouro (S18) both rules under-predicted the share, but the share is high mainly because the
+loop's benefit is small (0.034 nats); in nats truncation cost about what it did on Parcae. That result is also one
+model, its learning rates were chosen on test loss because Ouro appears to have seen GSM8K's training split
+(Appendix K), its truncated arms reused full backprop's rate, and at k = 1 it extrapolates the curve. Two choices may also favour truncation's apparent cost either way: the learning rate was
 tuned for full backprop and not per k, and S11's "k alone" rule took Parcae's cost at the same k (of 32 loops) for
 models run at 5 loops, rather than matching the share of loops kept.
 
 The scope is narrow. All runs were 600-step fine-tunes, compared at the same number of steps rather than the same
 compute. ρ needs a trained model, so it is no help when choosing k for pretraining unless it is tracked during
-training, which we did not do; S2 and S12 show that ρ and the lost gradient both move during fine-tuning. S13's held-out problems come from the fine-tuning
-dataset, so we did not test other text. S12 and S13 follow the full-backprop run; S15 follows one truncated run
-(k = 2) per model on three models and S16 one run with no loop credit, and other k and later stages of truncated runs
-are unmeasured. Every model in Table 1 with ρ < 1 was trained with truncated backprop, and the one apparently trained through all its loops (Ouro) has
+training, which we did not do; S2 and S12 show that ρ and the lost gradient both move during fine-tuning. The fall
+held on unrelated text for Parcae but mostly not for the two Part II models (S17), so how far a fine-tune moves the
+lost gradient on other text depends on the model. S12, S13 and S17 follow the full-backprop run (S17 to step 600, one
+seed); S15 follows one truncated run (k = 2) per model on three models and S16 one run with no loop credit, and other k
+and later stages of truncated runs are unmeasured. Every model in Table 1 with ρ < 1 was trained with truncated backprop, and the one apparently trained through all its loops (Ouro) has
 ρ > 1. Training through all loops does not by itself make the signal grow, though: the two Part II models, trained
 through nearly all or all of their loops, have ρ of 0.80 and 0.85 (Appendix H). Ouro differs from every model whose
 signal shrinks in a way that may matter more: it does not re-inject the input at each loop [Zhu et al. 2025, Eq. 1]. Its prompt reaches later
@@ -520,8 +607,9 @@ looping did as well as the looped one.
 The account of why ρᵏ lands close (Appendix J) rests on per-loop contributions of three frozen models; beyond its
 pre-registered parts (S9, S10, S14) it re-describes the data with an exact identity. On measurement, the starred rows of
 Table 1 come from a different probe, and the lost gradient varies with the text by up to 0.12 (Section 3). Parcae and Huginn start the loop from a
-random state, drawn once per sequence with a fixed seed; we did not measure how much the lost gradient varies across
-draws for a fixed sequence. Last,
+random state, drawn once per sequence with a fixed seed. On the three models we checked (Parcae-140m and the two
+Part II models), redrawing it moved a sequence's lost gradient by at most 0.0004 (median standard deviation over 8
+draws; S17), far below the sampling error across sequences; we did not check Huginn. Last,
 bugs: an earlier study (not reported here) was scored and then invalidated by a precision bug that silently cut the
 gradient to the looped weights. Every later run checks its truncated gradient in the training precision. A second bug,
 in one diagnostic, was caught before scoring (Appendix F).
@@ -533,19 +621,24 @@ in one diagnostic, was caught before scoring (Appendix F).
   for every k (for 32 sequences of Huginn-3.5B on one T4, 52 minutes at 8 loops and 2.6 hours at 64, including the
   truncated comparisons), and once the loop count is well above k the curve measured at one loop count carries over to
   longer ones (to 64 loops on all three models measured, and to 128 on Parcae-140m).
-- Measure it during training too. On three of four models it fell by 0.07–0.22 within 300 full-backprop fine-tuning
-  steps, on held-out problems from the fine-tuning dataset nearly as much as on the ones trained on, and not just
-  through the read-out's share of the gradient; a fine-tune through only the last 2 loops lowered it too.
+- Measure it during training too, on the text you train on. On three of four models it fell by 0.07–0.22 within 300
+  full-backprop fine-tuning steps, on held-out problems from the fine-tuning dataset nearly as much as on the ones
+  trained on, and not just through the read-out's share of the gradient; a fine-tune through only the last 2 loops
+  lowered it too. Most of the fall remained at the end of the run (74–92%). On unrelated text it held on Parcae but
+  mostly not on the Part II models.
 - ρ is a summary, not a shortcut. It needs the same full backward pass as the exact curve and saves only memory (the
   signal's size at each loop instead of a parameter-sized buffer per k). Its main use is flagging a growing signal,
   for single sequences as well as on average; on Ouro, keeping 2 of 4 loops still loses
-  81% of the final output's gradient (85% of its training objective's), though we did not measure what that costs
-  Ouro in training. As an approximation, ρᵏ was within about 20% of the lost gradient at the loop
+  81% of the final output's gradient (85% of its training objective's), and in fine-tuning it lost 0.022 nats, 65% of
+  a small loop benefit. As an approximation, ρᵏ was within about 20% of the lost gradient at the loop
   counts of Table 1 (an observed range, which depends on the loop counts) and overstates it at longer loop counts.
-- In every setting we trained, small lost gradients came with small costs (Figure 3, Table 9); we set no threshold.
-  Above that, we could not show it to be a guide to cost: a curve fitted on Parcae did no better on two other models than assuming Parcae's cost at the same k,
-  and those two models' costs differed by up to a factor of two. So measure the cost with your own model and
-  optimiser. Li et al. [2026] reach the same conclusion for memory gradients in policies trained through a
+- With AdamW, in every setting we trained, small lost gradients came with small costs (Figure 3, Table 9); we set no
+  threshold. Under SGD they did not: on SmolLM2 (A), keeping 2 of 8 loops lost 0.13 of the gradient yet cost 1.27–3.85
+  of the loop's benefit, against a weak baseline tuned at a 10 times higher learning rate (Appendix D, Table 5).
+  On Ouro, with the largest lost gradient, truncation took most of the loop's benefit: at full backprop's learning
+  rate, one kept loop of four was worth nothing. But that benefit was small, and in nats truncation cost about what it
+  did on Parcae (S18). Beyond that we could not show it to be a guide to cost: a curve fitted on Parcae did no better on two other models than assuming Parcae's cost at the same k, and
+  those two models' costs differed by up to a factor of two. So measure the cost with your own model and optimiser. Li et al. [2026] reach the same conclusion for memory gradients in policies trained through a
   differentiable simulator: gradient norms measured on trained policies did not predict which cut cost more, and
   short training runs did. Least certain of all: which part of the gradient is lost may matter more than how much. Under Adam, a
   truncated gradient that was smaller but pointed nearly the same way after Adam's rescaling cost almost nothing in
@@ -643,8 +736,10 @@ All training studies on Parcae-140m used the same recipe; the SmolLM2 studies us
 used it on two other models at R = 5, with the changes listed in Appendix H. Each training study was frozen
 (thresholds, analysis code and predictions committed) before its first truncated run, with one exception: S11 was
 frozen before its first scored run, while a three-seed pilot that included truncated runs was still running (only the
-pilot's seed-to-seed spread was read, to set the number of seeds). S9, S10 and S12–S16, which measure models
-without scoring a training run, were frozen before their first measurement.
+pilot's seed-to-seed spread was read, to set the number of seeds). S18 was frozen after pilots on separate seeds:
+a 40-step feasibility pilot that included one truncated arm (k = 2), and 600-step learning-rate pilots that ran only
+full backprop and the no-loop-gradient baseline (Appendix K). S9, S10 and S12–S17,
+which measure models without scoring a training run, were frozen before their first measurement.
 
 **Table 4. The pre-registered studies.** Internal IDs are experiment numbers in our repository.
 
@@ -666,6 +761,8 @@ without scoring a training run, were frozen before their first measurement.
 | S14 (v204) | does a two-mode model of the backward signal predict the fitted ρ at 96 and 128 loops on Parcae-140m? (Appendix J) | e35d92f (+ amendment f767b13, before any data) | predicted on Parcae-140m (0.898 and 0.908, inside the frozen intervals; paired rise above 0); Parcae-370m descriptive |
 | S15 (v210) | is S13's fall a change in the loop, and does the lost gradient also fall along a truncated fine-tune? On Ouro, does the growth survive normalising for state size, and how much of its training objective's gradient is lost? (Sections 3 and 4, Appendix I) | 5cb861e | in the loop's part of the gradient (loop-only fall 0.72–0.80 of the all-parameter fall); falls along a k = 2 fine-tune (0.61–0.98 as much); Ouro grows scale-free (1.45 and 1.66); its objective loses 0.85 at k = 2 |
 | S16 (v211) | does S15's fall need the loop's weights to change? The same fine-tune with no loop credit, which leaves them fixed (Appendix I) | 07446dd | partial: training only outside the loop gives 0.48 (Parcae), 0.50 and 0.14 (Part II) of the loop-only fall |
+| S17 (v218) | does the fall persist to step 600, does it hold on unrelated text (WikiText), and how much does the random initial state move the lost gradient? (Section 4, Appendix I) | 00549f0 | mixed (8–26% of the fall reverses by step 600); partial (WikiText fall 0.93 times the GSM8K fall on Parcae, 0.05 and 0.33 on Part II); small (draw-to-draw SD at most 0.0004) |
+| S18 (v219) | on Ouro, is the training cost of truncation above, below or between the lost-gradient curve's prediction and Parcae's cost at the same k? (Section 5, Appendix K) | d765356 | above both (1.13 and 0.65 at k = 1 and 2, against at most 0.26 and 0.19); in nats (0.038 and 0.022) about Parcae's, so mainly a small-benefit effect |
 
 Before S1, an earlier study was invalidated by the precision bug in Appendix F.
 
@@ -699,6 +796,12 @@ neither. The two Part II models' costs differed by up to a factor of two at the 
 can produce, and a near-tie on six settings from two models cannot show that the lost gradient adds nothing; the paper
 says instead that we could not show it adds anything (Section 5).
 
+S18's pre-registered outcome mapping, for "above both", said Section 5 and the abstract would call the result cost
+evidence for the lost gradient at the extreme. We did not. Converted to nats after the fact, Ouro's truncation cost
+(0.038 at k = 1, 0.022 at k = 2) is about Parcae's (0.040, 0.018), so the high share comes mainly from the small
+benefit of training Ouro's loop on this task (0.034 nats), not from an unusually expensive truncation. The paper
+reports the verdict and says this instead (Section 5).
+
 S10's pre-registered outcome mapping said Section 3 would state the account as confirmed, and that the paper would
 recommend the summed backward signal's rate if it won the comparison. We did neither: Section 3 and Appendix J separate what S10 tested from
 the rest of the account, and Section 7 recommends measuring the lost gradient itself.
@@ -715,7 +818,7 @@ amendment made before any Parcae stage-300 data.
 
 **Verifiability.** The freezes are commits in our development repository, which we pushed to a private GitHub
 repository; it is available to reviewers on request. FREEZES.md in the code release (Section 1) lists each freeze
-commit with GitHub's record of when it was pushed. Only the freezes of S3, S8 and S9–S16 reached GitHub before their
+commit with GitHub's record of when it was pushed. Only the freezes of S3, S8 and S9–S18 reached GitHub before their
 runs (S3's 3–9 seconds after its kernels were submitted to Kaggle, before any could start computing), so for the others the ordering of freeze and runs is our report
 rather than an externally timestamped record.
 
@@ -775,7 +878,8 @@ pilot baseline gap 0.195 nats), 5 seeds. Its truncation cost was 0.26 / 0.10 / 0
 all parameters, 4 batches of 8 GSM8K validation sequences, each quantity averaged over the batches, sums in float64;
 "after Adam" divides each weight's gradient by the root mean square of that weight's gradients, with statistics from 24
 clipped training batches as in D2 below; training cost as in Section 5). The lost gradient here comes from averaged
-batches, not Section 5's 16 single sequences, and can read higher.
+batches, not Section 5's 16 single sequences, and can read higher. Training cost is a share of the loop's benefit; in
+nats, multiply by the baseline gap, 0.18 on Parcae-140m and 0.08 on SmolLM2 (A).
 
 The lost gradient mixes how much smaller the truncated gradient is (size ratio r) and how far its direction is off
 (cos); for a single batch, lost² = 1 + r² − 2r·cos. The table averages each quantity over batches, so the identity
@@ -851,7 +955,8 @@ converted (A).
   - lost gradient 0.996 / 0.893 / 0.750 at k = 1 / 2 / 3 (Table 1's protocol gives 0.92 / 0.81 / 0.71);
   - agreement of the truncated and full update directions under Adam: 0.44 / 0.66 / 0.84 (Parcae ≥ 0.78; SmolLM2
     ≥ 0.97).
-  - Ouro lies outside the fitted range, so by our pre-set rule we did not train it.
+  - Ouro lies outside the fitted range, so by this diagnostic's pre-set rule we did not train it here. S18 later
+    trained it under its own pre-registration (Section 5, Appendix K).
 - **Diagnostic D4, Parcae-370m (no training; same procedure as D2):** across 9 settings (blending a = 1 / 0.5 / 0.3; k = 2 / 4 / 8
   of 32), the direction and size measures predicted costs within 0.022 of each other, short of the pre-set 0.025
   needed to tell them apart. So this model cannot test the direction measure, and we did not train it.
@@ -964,17 +1069,17 @@ minimum of 0.03.
 **Table 9. Training cost on the two Part II models, and the four predictions locked before training** (S11; cost is
 the mean ± standard error over 5 seeds. Predictions: the lost-gradient and direction-after-Adam curves, both fitted on
 Parcae, and the cost Parcae-140m and SmolLM2 (A) had at the same k. SmolLM2 was not trained at k = 4, so its rule
-predicts 0 there).
+predicts 0 there. "Nats" is the cost times the model's mean baseline gap, 0.1285 and 0.1407 nats, added after the fact).
 
-| model | k | cost | lost gradient | after Adam | Parcae at same k | SmolLM2 at same k |
-|---|---|---|---|---|---|---|
-| sampled loop count | 1 | 0.162 ± 0.002 | 0.138 | 0.258 | 0.224 | 0.009 |
-| sampled loop count | 2 | 0.071 ± 0.001 | 0.058 | 0.102 | 0.100 | −0.001 |
-| sampled loop count | 4 | 0.015 ± 0.001 | 0.005 | 0.008 | 0.024 | 0 |
-| fixed 5 loops | 1 | 0.291 ± 0.002 | 0.182 | 0.412 | 0.224 | 0.009 |
-| fixed 5 loops | 2 | 0.149 ± 0.002 | 0.097 | 0.197 | 0.100 | −0.001 |
-| fixed 5 loops | 4 | 0.023 ± 0.003 | 0.011 | 0.017 | 0.024 | 0 |
-| average error | | | 0.037 | 0.051 | 0.036 | 0.116 |
+| model | k | cost | nats | lost gradient | after Adam | Parcae at same k | SmolLM2 at same k |
+|---|---|---|---|---|---|---|---|
+| sampled loop count | 1 | 0.162 ± 0.002 | 0.021 | 0.138 | 0.258 | 0.224 | 0.009 |
+| sampled loop count | 2 | 0.071 ± 0.001 | 0.009 | 0.058 | 0.102 | 0.100 | −0.001 |
+| sampled loop count | 4 | 0.015 ± 0.001 | 0.002 | 0.005 | 0.008 | 0.024 | 0 |
+| fixed 5 loops | 1 | 0.291 ± 0.002 | 0.041 | 0.182 | 0.412 | 0.224 | 0.009 |
+| fixed 5 loops | 2 | 0.149 ± 0.002 | 0.021 | 0.097 | 0.197 | 0.100 | −0.001 |
+| fixed 5 loops | 4 | 0.023 ± 0.003 | 0.003 | 0.011 | 0.017 | 0.024 | 0 |
+| average error | | | | 0.037 | 0.051 | 0.036 | 0.116 |
 
 By the pre-set rules, "k alone" (Parcae's cost) was as good as the lost-gradient curve, and the two curves tied, both
 on the three settings inside both curves' fitting ranges (k = 2 on both models and k = 4 on the fixed-5-loop model;
@@ -1037,7 +1142,7 @@ fine-tune and measured GSM8K test problems at both stages. On Parcae the repeate
 instability rule (12 unstable steps), and the pre-listed backup seed 2012 was used. The per-sequence fall on the test
 problems was 1.02, 0.90 and 0.95 times the training-sequence fall on Parcae and the two Part II models (pre-set bar
 0.5: GENERAL), and seed 2013 agrees with 2012 within 0.03. The averaged, clipped update on held-out problems falls
-too: on Parcae, from 1.05 / 0.82 / 0.56 to 0.55 / 0.37 / 0.15. We did not test out-of-domain text.
+too: on Parcae, from 1.05 / 0.82 / 0.56 to 0.55 / 0.37 / 0.15. S17 tests out-of-domain text (below).
 
 **In the loop, and along a truncated fine-tune (S15).** S15 repeated the held-out measurement on the first 64 test
 problems with a second statistic, |g − g_k| / |g − g_0|, which leaves out the gradient that gets no credit through the
@@ -1084,6 +1189,44 @@ advance passed on every model: every parameter that changed had a nonzero gradie
 exactly fixed, and the trained model's medians matched S15's exactly. All runs used the first pre-listed seed with no
 unstable steps; a second Parcae seed gives r = 0.44. The runs were clipped on 3–5% of steps.
 
+**Paired intervals for the falls** (computed after the fact). Each fall is the mean over k = 1, 2, 4 of the stage-0
+median minus the stage-300 median, with a paired bootstrap over sequences (4,000 resamples, 90% intervals; sequences
+only, not seeds). Models in the order Parcae, Part II with a sampled loop count, Part II with fixed 5 loops, SmolLM2;
+all parameters unless marked loop only:
+- **S12, training sequences:** Parcae 0.20 [0.19, 0.22]; Part II, sampled loop count 0.12 [0.11, 0.13]; fixed 5
+  loops 0.12 [0.11, 0.13]; SmolLM2 (A) 0.021 [0.017, 0.026].
+- **S13, held-out problems:** 0.21 [0.18, 0.22]; 0.11 [0.10, 0.12]; 0.11 [0.10, 0.12]; 0.023 [0.018, 0.026].
+- **S15 and S16, loop only:** full backprop 0.16 [0.14, 0.17], 0.08 [0.07, 0.09], 0.09 [0.08, 0.09]; last 2 loops
+  0.16 [0.13, 0.17], 0.07 [0.05, 0.08], 0.04 [0.04, 0.05]; no loop credit 0.08 [0.06, 0.09], 0.04 [0.03, 0.05],
+  0.012 [0.003, 0.021].
+
+Every interval excludes zero. The smallest is the fixed-5-loop model's fall with no loop credit, the "little of it"
+of Section 4.
+
+**Step 600, other text and state draws (S17).** Frozen before any run. The full-backprop fine-tune of S15 was repeated
+with the same seed and run to step 600. Its step-0 medians match S15's exactly, and its step-300 values agree within
+0.003. It had 1 unstable step on Parcae and none on the Part II models. Measured:
+- the first 64 GSM8K test problems at steps 0, 300 and 600 (S15's sequences and state draws);
+- the first 64 512-token chunks of WikiText-103's test split, one document per article, at steps 0 and 300;
+- at step 0, the first 16 test problems, each with 8 draws of the random initial state.
+
+**Table 12. The fall at steps 300 and 600, and on unrelated text** (S17; falls from the trained model, averaged over
+k = 1, 2, 4, all parameters, medians over 64 sequences).
+
+| model | GSM8K fall, step 300 | at step 600 | share reversed | WikiText fall, step 300 | WikiText / GSM8K |
+|---|---|---|---|---|---|
+| Parcae-140m | 0.197 | 0.181 | 8% | 0.183 | 0.93 |
+| Part II, sampled loop count | 0.115 | 0.092 | 20% | 0.006 | 0.05 |
+| Part II, fixed 5 loops | 0.115 | 0.085 | 26% | 0.038 | 0.33 |
+
+Pre-set rules: the fall "recovers" if it shrinks by at least 0.02 from step 300 to 600 on all three models, and is
+"general" if the WikiText ratio is at least 0.5 on all three. Parcae's change (−0.017 before rounding) misses the first rule, and the
+Part II ratios miss the second, so both verdicts were the intermediate ones (mixed and partial). On the sampled-loop-count
+model the lost gradient on WikiText also starts lower (0.64 / 0.47 / 0.22 at k = 1 / 2 / 4 against
+0.76 / 0.59 / 0.29 on GSM8K). Across 8 state draws, the median within-sequence standard deviation, maximised over k,
+was 0.0001 on Parcae, 0.0002 and 0.0004 on the Part II models, far below the 0.02–0.05 sampling error across
+sequences.
+
 **Averaging.** Once training is under way it barely matters: at stage 300, clipped B = 64 is within 0.05 of the
 per-sequence median everywhere, and longer averaging lowers it a little more (clipped B = 512 is up to 0.06 below B =
 64). At stage 0 it raises the value on Parcae only, where clipped B = 64 is 0.06–0.17 above the median. Unclipped, a
@@ -1099,7 +1242,7 @@ sequence at stage 0 and by 0.04–0.10 clipped at stage 300. So the batch-level 
 the per-sequence one, and S11 is not re-scored with it.
 
 **Limits.** S12 and S13 follow the full-backprop run, S15 one truncated run per model at k = 2, and S16 one run with
-no loop credit, each to step 300. The plan was amended once before any Part II
+no loop credit, each to step 300; S17 follows the full-backprop run to step 600, one seed per model. The plan of S12 was amended once before any Part II
 data existed, because the frozen code expected a wrong parameter count (205.3M instead of 204.9M), which stopped those
 jobs before they measured anything.
 
@@ -1139,7 +1282,8 @@ small k; Appendix A). If, in addition, every pair of contributions meets at the 
 between the two measured-profile forms of Appendix A, computed from each sequence's measured signal sizes. It does not.
 On every model with a shrinking signal and every loop count for which we stored those sizes (Huginn at 8–64 loops,
 Parcae-1.3B at 8 and 16, Parcae-140m at 8–64, Parcae-370m at 16–64 and SmolLM2 (A)), the lost gradient is above both
-forms, by 0.04–0.18 at k = 1 and 2 (difference of medians). On Ouro, whose signal grows, it lies below both at k = 1.
+forms, by 0.04–0.18 at k = 1 and 2 (difference of medians). On Ouro, whose signal grows, it lies below both measured-profile forms at k = 1 (and at
+the lower of the two geometric forms of Table 1's footnote).
 
 We measured each loop's contribution directly on frozen Parcae-140m and
 Parcae-370m (16 and 32 loops) and Huginn (32 loops), and the backward signal at 48, 64, 96 and 128 loops (S9, S10, S14). Some of the
@@ -1207,6 +1351,91 @@ that the dropped loops add up less coherently than all loops together (Appendix 
 shrink the way the backward signal does; we did not measure which on this model. For this model under blending, ρᵏ
 overestimates the lost gradient.
 
+## Appendix K. Ouro's training cost (S18)
+
+**Setup** (frozen before any scored run, and the freeze pushed to GitHub first; Appendix B). Ouro-1.4B at a fixed
+revision, its 24 layers looped 4 times, run in fp32 with fp16 autocast and split across two T4 GPUs. The recipe is
+Section 5's: GSM8K question-and-answer text in 512-token chunks, 600 steps of batch 8 × 512, AdamW (0.9, 0.95) with
+no weight decay, a 20-step warm-up then cosine decay to 10%, and clipping at 1.0. The loss is the cross-entropy of the
+last loop's output. As in S11, the token embedding is frozen in every arm: Ouro does not tie it to the output head, so
+it gets gradient only through the loop, and only full backprop could otherwise train it. Arms: full backprop (all 4
+loops, 1.33B trained parameters), the last 2 or last 1 loop, and a baseline with no loop gradient in which only the
+output head trains (103M; Ouro's final norm sits inside every loop, so it gets no gradient there either). Every job
+first checked that the split forward pass equals Ouro's own, that checkpointing and the training precision leave the
+truncated gradient intact, that the baseline gives the loop exactly zero gradient, and that the embedding gets none.
+
+**Inputs to the predictions.** Ouro's lost gradient was measured in this setting (embedding frozen, 32 GSM8K test
+chunks): 0.92 at k = 1 and 0.84 at k = 2, against Table 1's 0.92 and 0.81 over all parameters on 16 validation
+sequences. The curve, 0.3418 · (lost gradient)^3.4335, was fitted on lost gradients of 0.18–0.88, so at k = 1 it
+extrapolates.
+
+**Choosing learning rates on test loss, a deviation from S11.** On a pilot seed, each arm's learning rate was chosen
+on GSM8K test loss, not on our validation problems (the last 473 of GSM8K's training split, held out from every
+fine-tune). On Ouro those problems do not behave as unseen text. Before any fine-tuning they are 0.27 nats easier than
+test (0.891 against 1.162), and under full backprop the validation loss moves opposite to test: it is best at the
+lowest learning rate tried (3e-6), where test is worst. The likely reason is that Ouro saw GSM8K's training split in
+its own training. Selecting on validation would have chosen 3e-6, where full backprop does worse on test than the
+baseline (1.124 against 1.062), so no cost could have been measured. Both full backprop and the baseline (tuned
+separately, as in S11) chose 1e-4, inside their grids. The scored seeds are new, and at 40 steps the seed-to-seed
+spread of full backprop's test loss was 0.0003 nats, far below the gaps between the learning rates compared. Truncated
+arms use full backprop's rate, as everywhere in Section 5, and were not tuned. Their gradients are smaller, so a
+higher rate might suit them; the result is a cost at a shared rate, not at each arm's best rate. The baseline alone takes most of the fine-tune's gain on
+test (0.10 of 0.13 nats on the pilot seed), which is why the loop's own benefit is small.
+
+**Rules** (fixed in advance). Cost as in Section 5, on test, final-output loss; means over seeds with 90% t-intervals.
+- **Gate:** the baseline's gap must be at least 0.03 nats with its 90% lower bound above 0, as in S11.
+- **Seeds:** 3, raised to 5 if the standard error of the k = 1 cost over the first 3 exceeded 0.02. It was 0.10, so
+  two more pre-listed seeds ran unchanged. A seed is valid if its full-backprop run has at most 10 unstable steps; all
+  five were valid (at most 3).
+- **Verdict**, first match: below both predictions at both k (upper bounds below the smaller prediction); above both
+  (lower bounds above the larger); the curve closer (its average error at most half that of Parcae's cost); Parcae's
+  cost closer (the reverse); otherwise a tie.
+
+**Table 13. Ouro's test loss and training cost** (final output; per seed, and mean with 90% interval over 5 seeds).
+
+| seed | full backprop | k = 2 | k = 1 | no loop gradient | cost, k = 2 | cost, k = 1 |
+|---|---|---|---|---|---|---|
+| 1 | 1.0313 | 1.0478 | 1.0600 | 1.0624 | 0.53 | 0.92 |
+| 2 | 1.0262 | 1.0505 | 1.0693 | 1.0619 | 0.68 | 1.21 |
+| 3 | 1.0271 | 1.0588 | 1.0711 | 1.0623 | 0.90 | 1.25 |
+| 4 | 1.0299 | 1.0487 | 1.0654 | 1.0620 | 0.59 | 1.11 |
+| 5 | 1.0272 | 1.0468 | 1.0683 | 1.0621 | 0.56 | 1.18 |
+| mean [90%] | | | | gap 0.034 [0.032, 0.036] | 0.65 [0.51, 0.79] | 1.13 [1.01, 1.25] |
+| added nats, mean | | | | | 0.022 | 0.038 |
+| curve / Parcae's cost | | | | | 0.19 / 0.10 | 0.26 / 0.22 |
+
+**Result: above both.** In nats, truncation added 0.038 at k = 1 and 0.022 at k = 2 over full backprop (means of the
+per-seed differences in Table 13; per seed 0.029–0.044 and 0.017–0.032). Section 5 compares these with the other
+models. Under Ouro's own objective, the exit-weighted sum of every loop's loss without its entropy
+term (descriptive, not scored), the gap was 0.042 nats and the costs 0.54 [0.42, 0.65] at k = 2 and 1.30 [1.20, 1.40]
+at k = 1. The seed-to-seed spread of the truncated arms was far larger than in S11 (standard error of the k = 1 cost
+over 3 seeds 0.10, against our expectation of about 0.01), while the baseline's gap barely varied (standard error
+0.0009). On validation, the baseline reaches 0.79 and full backprop 0.98, the reverse of test; this is the same
+anomaly as above. Code: `v219_ouro_cost.py`.
+
+## Appendix L. Which measurement each table uses
+
+The lost gradient depends on how it is aggregated, over which parameters and on which text (Section 2). Table 14 lists
+every protocol in the paper, where it is used, and what it gives for one reference setting.
+
+**Table 14. Lost-gradient protocols** (reference value: Parcae-140m at 32 loops, k = 1, trained model unless stated).
+
+| protocol | sequences | used in | reference value |
+|---|---|---|---|
+| per-sequence median, all parameters (primary) | 16 GSM8K validation sequences of 512 tokens (SmolLM2 rows: web text) | Tables 1, 2, 8; Figure 2; the S5, S6 and S11 curve and its inputs | 0.82 |
+| per-sequence median, all parameters | 64 GSM8K training sequences | Table 10 ("per seq.") | 0.80 |
+| per-sequence median, all parameters | first 64 GSM8K test problems | Tables 3, 11, 12 | 0.80 |
+| per-sequence median, loop only (gradient with no loop credit left out; Section 4) | first 64 GSM8K test problems | Tables 3, 11 | 0.82 |
+| per-sequence median, part of the loop (input-injection layer and first loop layer) | 32 texts of 128 tokens, half WikiText, half GSM8K | starred rows of Table 1; Huginn in Table 2 | not measured on this model; agrees with the primary protocol within 0.03 (Appendix F) |
+| average over 4 batches of 8 | GSM8K validation | Tables 6, 7; Figure 3 | 0.81 |
+| clipped average over 64 (each batch of 8 clipped to norm 1) | GSM8K training sequences | Table 10 | 0.97; 0.58 at step 300 |
+| clipped average over 512 | GSM8K training sequences | Table 10, step 300 only | 0.57 at step 300 |
+| unclipped average over 512 (the expected gradient of Aicher et al.) | GSM8K training sequences | Table 10 | 1.00 |
+| average over clipped training batches | GSM8K training batches | Ouro in Appendix E | Ouro only (0.996 at k = 1) |
+
+Section 5 states SmolLM2 (A)'s value on GSM8K text (0.36 at k = 1, against 0.30 on web text in Table 1), because its
+predictions were based on that. S18's inputs were measured on Ouro as described in Appendix K.
+
 ## References (checked in full text, `docs/looped_truncation_refcheck_2026-10-12.md` and
 `docs/looped_truncation_v16_11_citecheck_2026-10-20.md`; additions of 2026-10-20 from
 `docs/looped_truncation_litcheck_2026-10-20.md`; BibTeX in `tmlr/main.bib`)
@@ -1242,7 +1471,16 @@ overestimates the lost gradient.
 - Yang et al. 2026 (STARS), arXiv 2605.26733.
 - Guo et al. 2026, "Right Direction, Wrong Step: Geometric Analysis of Finite-Step Failure in Looped Transformers",
   arXiv 2609.16665.
+- Shalev Merin 2026, "Present but Hard to Read: Probing Latent Reasoning with Minimal Pairs", arXiv 2610.28498.
 - Schwethelm, Rückert, Kaissis 2026a, "How Much Is One Recurrence Worth? Iso-Depth Scaling Laws for Looped Language
   Models", arXiv 2604.21106 (Sec. 5.1, Tables 2–3 read).
 - Schwethelm, Rückert, Kaissis 2026b, "Depth-adaptive Inference of Looped Language Models via Continuous Depth
   Batching", arXiv 2608.09444 (App. E.1, Table 4 read).
+- Added 2026-10-27 (v17.1), metadata checked against the arXiv API:
+  - Pascanu, Mikolov, Bengio 2013 (ICML), "On the Difficulty of Training Recurrent Neural Networks", arXiv 1211.5063.
+  - Wu, Ren, Liao, Grosse 2018 (ICLR), "Understanding Short-Horizon Bias in Stochastic Meta-Optimization", arXiv
+    1803.02021.
+  - Bai, Kolter, Koltun 2019 (NeurIPS), "Deep Equilibrium Models", arXiv 1909.01377.
+  - Dehghani, Gouws, Vinyals, Uszkoreit, Kaiser 2019 (ICLR), "Universal Transformers", arXiv 1807.03819.
+  - Saunshi, Dikkala, Li, Kumar, Reddi 2025 (ICLR), "Reasoning with Latent Thoughts: On the Power of Looped
+    Transformers", arXiv 2502.17416.

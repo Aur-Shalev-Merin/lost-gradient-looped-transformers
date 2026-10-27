@@ -1,0 +1,24 @@
+A new version of the following files was downloaded from https://huggingface.co/ByteDance/Ouro-1.4B:
+- configuration_ouro.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+A new version of the following files was downloaded from https://huggingface.co/ByteDance/Ouro-1.4B:
+- modeling_ouro.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+/kaggle/working/v219_ouro_cost_pilot.py:172: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  scaler.scale(loss).backward(); tot += float(loss)
+  probe {'opt': 'adamw', 'micro': 2, 'n_params': 1434652673, 'ok': True, 's_per_step': 14.77, 'peak_gb': [14.36, 14.36]}
+/kaggle/working/v219_ouro_cost_pilot.py:172: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  scaler.scale(loss).backward(); tot += float(loss)
+  run k=4 seed=1 obj=final: held-out final 0.9062 -> 0.6399, exit 0.9145 -> 0.6456 | 15.4 s/step | non-finite 0 | peak [14.55, 14.58] GB
+  run k=0 seed=1 obj=final: held-out final 0.9062 -> 0.8945, exit 0.9145 -> 0.9027 | 3.5 s/step | non-finite 0 | peak [11.49, 8.62] GB
+  run k=2 seed=1 obj=final: held-out final 0.9062 -> 0.6616, exit 0.9145 -> 0.6680 | 9.6 s/step | non-finite 0 | peak [13.14, 14.36] GB
+  run k=4 seed=2 obj=final: held-out final 0.9062 -> 0.6396, exit 0.9145 -> 0.6465 | 15.4 s/step | non-finite 1 | peak [14.55, 14.58] GB
+/kaggle/working/v219_ouro_cost_pilot.py:172: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  scaler.scale(loss).backward(); tot += float(loss)
+  run k=4 seed=1 obj=exit: held-out final 0.9062 -> 0.6355, exit 0.9145 -> 0.6371 | 15.9 s/step | non-finite 0 | peak [14.55, 14.6] GB
+  run k=0 seed=1 obj=exit: held-out final 0.9062 -> 0.8946, exit 0.9145 -> 0.9011 | 3.9 s/step | non-finite 0 | peak [11.49, 8.62] GB
+  run k=2 seed=1 obj=exit: held-out final 0.9062 -> 0.6637, exit 0.9145 -> 0.6661 | 9.9 s/step | non-finite 0 | peak [13.14, 14.36] GB
+  run k=4 seed=2 obj=exit: held-out final 0.9062 -> 0.6432, exit 0.9145 -> 0.6450 | 15.8 s/step | non-finite 2 | peak [14.55, 14.6] GB

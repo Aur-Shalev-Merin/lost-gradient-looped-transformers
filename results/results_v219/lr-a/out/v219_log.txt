@@ -1,0 +1,68 @@
+v219 driver cfa83d30682b, phase selftest, cells 
+data: 7000 train examples, 169 val chunks, 489 test chunks
+selftest PASS [] | own forward 1.839788 / 1.839788 | {'ckpt_vs_plain_k2': {'loop': 0.0, 'head': 0.0, 'gate': 0.0}, 'ckpt_vs_plain_k4': {'loop': 0.0, 'head': 0.0, 'gate': 0.0}, 'fp16_vs_fp32_k1': {'loop': 0.00738, 'head': 0.00345}, 'fp16_vs_fp32_k2': {'loop': 0.00927, 'head': 0.00345}, 'fp16_vs_fp32_k4': {'loop': 0.02704, 'head': 0.00345}, 'negative_control_synthetic_k2': {'loop': 1.0, 'head': 0.00345, 'gate': 0.0}}
+v219 driver cfa83d30682b, phase measure, cells 
+data: 7000 train examples, 169 val chunks, 489 test chunks
+  measure seq 0: {1: 0.9703, 2: 0.9326, 3: 0.8621} | 18s
+  measure seq 1: {1: 0.9072, 2: 0.7914, 3: 0.6777} | 36s
+  measure seq 2: {1: 0.9809, 2: 0.9574, 3: 0.9132} | 55s
+  measure seq 3: {1: 0.9647, 2: 0.9248, 3: 0.8747} | 75s
+  measure seq 4: {1: 0.9345, 2: 0.8489, 3: 0.7114} | 94s
+  measure seq 5: {1: 0.9809, 2: 0.9657, 3: 0.9372} | 115s
+  measure seq 6: {1: 0.9304, 2: 0.8684, 3: 0.7883} | 136s
+  measure seq 7: {1: 0.9756, 2: 0.9206, 3: 0.8311} | 157s
+  measure seq 8: {1: 0.9148, 2: 0.8033, 3: 0.7147} | 178s
+  measure seq 9: {1: 0.8559, 2: 0.7561, 3: 0.6749} | 199s
+  measure seq 10: {1: 0.8959, 2: 0.7354, 3: 0.6059} | 220s
+  measure seq 11: {1: 0.9217, 2: 0.8409, 3: 0.7429} | 240s
+  measure seq 12: {1: 0.8848, 2: 0.7147, 3: 0.5655} | 261s
+  measure seq 13: {1: 0.9379, 2: 0.8679, 3: 0.7747} | 282s
+  measure seq 14: {1: 0.8938, 2: 0.7957, 3: 0.6953} | 303s
+  measure seq 15: {1: 0.8908, 2: 0.7429, 3: 0.5917} | 323s
+  measure seq 16: {1: 0.9728, 2: 0.9408, 3: 0.8816} | 344s
+  measure seq 17: {1: 0.8683, 2: 0.7025, 3: 0.5538} | 365s
+  measure seq 18: {1: 0.876, 2: 0.7275, 3: 0.5746} | 386s
+  measure seq 19: {1: 0.9285, 2: 0.8482, 3: 0.7536} | 407s
+  measure seq 20: {1: 0.8005, 2: 0.6343, 3: 0.4874} | 428s
+  measure seq 21: {1: 0.8981, 2: 0.8285, 3: 0.7633} | 448s
+  measure seq 22: {1: 0.9179, 2: 0.8373, 3: 0.7349} | 469s
+  measure seq 23: {1: 0.9443, 2: 0.8699, 3: 0.7747} | 490s
+  measure seq 24: {1: 0.9212, 2: 0.7969, 3: 0.6758} | 511s
+  measure seq 25: {1: 0.9742, 2: 0.9437, 3: 0.896} | 532s
+  measure seq 26: {1: 0.9395, 2: 0.8666, 3: 0.764} | 553s
+  measure seq 27: {1: 0.9353, 2: 0.8787, 3: 0.8301} | 574s
+  measure seq 28: {1: 0.8223, 2: 0.6554, 3: 0.5411} | 594s
+  measure seq 29: {1: 0.8789, 2: 0.7471, 3: 0.6304} | 615s
+  measure seq 30: {1: 0.9601, 2: 0.9169, 3: 0.8729} | 636s
+  measure seq 31: {1: 0.9187, 2: 0.7834, 3: 0.6195} | 657s
+measure: median lost gradient {1: 0.9215, 2: 0.8391, 3: 0.7389}; S6 curve {1: 0.2581, 2: 0.1872}
+v219 driver cfa83d30682b, phase train, cells 4:1e-05:9001,4:3e-06:9001
+data: 7000 train examples, 169 val chunks, 489 test chunks
+    k=4 lr=1e-05 seed=9001 step 0 loss 0.8166 gn 19.202 | 29s
+    k=4 lr=1e-05 seed=9001 step 50 loss 0.6178 gn 7.541 | 815s
+    k=4 lr=1e-05 seed=9001 step 100 loss 0.6568 gn 7.868 | 1601s
+    k=4 lr=1e-05 seed=9001 step 150 loss 0.5931 gn 6.771 | 2386s
+    k=4 lr=1e-05 seed=9001 step 200 loss 0.5370 gn 6.698 | 3172s
+    k=4 lr=1e-05 seed=9001 step 250 loss 0.6889 gn 7.534 | 3957s
+    k=4 lr=1e-05 seed=9001 step 300 loss 0.6179 gn 6.656 | 4743s
+    k=4 lr=1e-05 seed=9001 step 350 loss 0.5118 gn 5.496 | 5528s
+    k=4 lr=1e-05 seed=9001 step 400 loss 0.4979 gn 5.344 | 6313s
+    k=4 lr=1e-05 seed=9001 step 450 loss 0.4613 gn 5.349 | 7098s
+    k=4 lr=1e-05 seed=9001 step 500 loss 0.4312 gn 4.940 | 7883s
+    k=4 lr=1e-05 seed=9001 step 550 loss 0.5004 gn 4.938 | 8668s
+    k=4 lr=1e-05 seed=9001 step 599 loss 0.4495 gn 5.543 | 9437s
+  RUN k=4 lr=1e-05 seed=9001: val 0.5529 / 0.5591, test 1.0979 / 1.1031 (final / exit) | non-finite 1 | 15.7 s/step | peak [13.34, 14.58] GB
+    k=4 lr=3e-06 seed=9001 step 0 loss 0.8166 gn 19.197 | 22s
+    k=4 lr=3e-06 seed=9001 step 50 loss 0.5781 gn 9.755 | 805s
+    k=4 lr=3e-06 seed=9001 step 100 loss 0.5648 gn 7.786 | 1590s
+    k=4 lr=3e-06 seed=9001 step 150 loss 0.5097 gn 7.945 | 2375s
+    k=4 lr=3e-06 seed=9001 step 200 loss 0.4449 gn 6.793 | 3160s
+    k=4 lr=3e-06 seed=9001 step 250 loss 0.5824 gn 8.125 | 3945s
+    k=4 lr=3e-06 seed=9001 step 300 loss 0.5469 gn 6.882 | 4730s
+    k=4 lr=3e-06 seed=9001 step 350 loss 0.4776 gn 5.844 | 5515s
+    k=4 lr=3e-06 seed=9001 step 400 loss 0.4720 gn 5.958 | 6299s
+    k=4 lr=3e-06 seed=9001 step 450 loss 0.4459 gn 4.824 | 7083s
+    k=4 lr=3e-06 seed=9001 step 500 loss 0.4179 gn 4.687 | 7867s
+    k=4 lr=3e-06 seed=9001 step 550 loss 0.4990 gn 5.129 | 8651s
+    k=4 lr=3e-06 seed=9001 step 599 loss 0.4389 gn 4.975 | 9420s
+  RUN k=4 lr=3e-06 seed=9001: val 0.4832 / 0.4907, test 1.1235 / 1.1298 (final / exit) | non-finite 2 | 15.7 s/step | peak [13.34, 14.58] GB

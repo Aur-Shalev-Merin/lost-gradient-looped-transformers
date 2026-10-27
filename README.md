@@ -38,9 +38,11 @@ Internal IDs (vNNN) are experiment numbers in the development repository. S-numb
 | S14 (v204) | two-mode prediction of ρ at 96 and 128 loops | `prereg_v204_*` | `v204_result.md` | `v204_score.py`, `v196_band.py` | `results_v204`, `kaggle-output-v204` | §3, App. J |
 | S15 (v210) | is the fall in the loop's part of the gradient; truncated fine-tune; Ouro checks | `prereg_v210_*` | `v210_result.md` | `v210_followups.py` | `results_v210` | §3, §4, App. I |
 | S16 (v211) | the same fine-tune with the loop's weights fixed | `prereg_v211_*` | `v211_result.md` | `v211_k0_control.py` | `results_v211` | §4, App. I |
+| S17 (v218) | does the fall persist to step 600, hold on WikiText, and vary with the random initial state? | `prereg_v218_*` | `v218_result.md` | `v218_robustness.py` | `results_v218`, `kaggle-output-v218-*` | §4, App. I |
+| S18 (v219) | truncation cost on Ouro-1.4B | `prereg_v219_*` | `v219_result.md` | `v219_ouro_cost.py` | `results_v219`, `kaggle-output-v219-pilot` | §5, App. K |
 
 Unregistered measurements behind Tables 1–2 and the appendices come from `loop_grad_probe.py`
-(`kaggle-output-loopgrad`), `v187`–`v192`, `v197`, `v198`, `v168`, `v171`, `v182` and `retrofit_rho_probe.py`.
+(`kaggle-output-loopgrad`), `v187`–`v192`, `v197`, `v198`, `v168`, `v171`, `v182`, `v217` and `retrofit_rho_probe.py`.
 v161 is the study the paper reports as invalidated by a precision bug (Appendix F).
 
 ## Reproducing

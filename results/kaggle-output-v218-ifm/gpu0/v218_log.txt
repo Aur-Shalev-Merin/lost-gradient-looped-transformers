@@ -1,0 +1,5 @@
+  step 0: GSM8K all [0.764, 0.591, 0.291] loop [0.805, 0.626, 0.308] | WikiText all [0.635, 0.47, 0.224] loop [0.73, 0.538, 0.256] (266s)
+  step 300: GSM8K all [0.63, 0.452, 0.219] loop [0.72, 0.516, 0.252] | WikiText all [0.633, 0.461, 0.217] loop [0.714, 0.517, 0.244] (280s)
+  step 600: GSM8K all [0.65, 0.477, 0.242] loop [0.731, 0.539, 0.271] | WikiText all [0.645, 0.469, 0.222] loop [0.718, 0.524, 0.247] (279s)
+  pln5 fine-tune seed 2011: {'steps': 600, 'schedule_steps': 600, 'lr': 0.0001, 'seed': 2011, 'nonfinite_300': 0, 'nonfinite': 0, 'clipped_frac': 0.9717, 'ok': True, 's': 1263}
+  pln5 draws: median within-sequence SD of all over 8 draws, k = 1/2/4: [0.0001, 0.0002, 0.0002] (269s)

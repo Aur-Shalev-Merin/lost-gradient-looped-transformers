@@ -1,0 +1,8 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  step 0: GSM8K all [0.798, 0.636, 0.408] loop [0.818, 0.657, 0.417] | WikiText all [0.78, 0.618, 0.394] loop [0.803, 0.642, 0.405] (283s)
+/kaggle/working/v218_robustness.py:161: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  if not (nonfinite <= 10 and math.isfinite(float(loss))):
+  step 300: GSM8K all [0.605, 0.43, 0.215] loop [0.687, 0.484, 0.24] | WikiText all [0.614, 0.415, 0.215] loop [0.675, 0.462, 0.239] (291s)
+  step 600: GSM8K all [0.628, 0.45, 0.223] loop [0.699, 0.499, 0.248] | WikiText all [0.608, 0.432, 0.234] loop [0.686, 0.484, 0.264] (292s)
+  parcae fine-tune seed 2011: {'steps': 600, 'schedule_steps': 600, 'lr': 0.0003, 'seed': 2011, 'nonfinite_300': 1, 'nonfinite': 1, 'clipped_frac': 0.8733, 'ok': True, 's': 2159}

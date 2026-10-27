@@ -1,0 +1,61 @@
+v219 driver f8543506d909, phase selftest, cells 
+data: 7000 train examples, 169 val chunks, 489 test chunks
+selftest PASS [] | own forward 1.839788 / 1.839788 | {'ckpt_vs_plain_k2': {'loop': 0.0, 'head': 0.0, 'gate': 0.0}, 'ckpt_vs_plain_k4': {'loop': 0.0, 'head': 0.0, 'gate': 0.0}, 'fp16_vs_fp32_k1': {'loop': 0.00736, 'head': 0.00345}, 'fp16_vs_fp32_k2': {'loop': 0.00921, 'head': 0.00345}, 'fp16_vs_fp32_k4': {'loop': 0.0271, 'head': 0.00345}, 'negative_control_synthetic_k2': {'loop': 1.0, 'head': 0.00345, 'gate': 0.0}}
+v219 driver f8543506d909, phase train, cells 4:0.0001:2191005,2:0.0001:2191005,1:0.0001:2191005,0:0.0001:2191005
+data: 7000 train examples, 169 val chunks, 489 test chunks
+    k=4 lr=0.0001 seed=2191005 step 0 loss 0.9288 gn 21.442 | 26s
+    k=4 lr=0.0001 seed=2191005 step 50 loss 1.0299 gn 5.209 | 861s
+    k=4 lr=0.0001 seed=2191005 step 100 loss 1.0119 gn 1.770 | 1702s
+    k=4 lr=0.0001 seed=2191005 step 150 loss 1.0365 gn 2.120 | 2545s
+    k=4 lr=0.0001 seed=2191005 step 200 loss 0.9614 gn 1.828 | 3387s
+    k=4 lr=0.0001 seed=2191005 step 250 loss 1.0797 gn 5.123 | 4229s
+    k=4 lr=0.0001 seed=2191005 step 300 loss 0.9405 gn 1.527 | 5070s
+    k=4 lr=0.0001 seed=2191005 step 350 loss 0.6086 gn 1.286 | 5911s
+    k=4 lr=0.0001 seed=2191005 step 400 loss 0.6622 gn 1.361 | 6752s
+    k=4 lr=0.0001 seed=2191005 step 450 loss 0.6199 gn 1.567 | 7592s
+    k=4 lr=0.0001 seed=2191005 step 500 loss 0.6822 gn 1.530 | 8433s
+    k=4 lr=0.0001 seed=2191005 step 550 loss 0.6292 gn 1.694 | 9273s
+    k=4 lr=0.0001 seed=2191005 step 599 loss 0.6393 gn 1.482 | 10097s
+  RUN k=4 lr=0.0001 seed=2191005: val 0.9827 / 0.9827, test 1.0272 / 1.0272 (final / exit) | non-finite 3 | 16.8 s/step | peak [13.34, 14.58] GB
+    k=2 lr=0.0001 seed=2191005 step 0 loss 0.9288 gn 8.204 | 16s
+    k=2 lr=0.0001 seed=2191005 step 50 loss 1.0204 gn 1.609 | 541s
+    k=2 lr=0.0001 seed=2191005 step 100 loss 0.9965 gn 1.252 | 1067s
+    k=2 lr=0.0001 seed=2191005 step 150 loss 1.0159 gn 1.220 | 1592s
+    k=2 lr=0.0001 seed=2191005 step 200 loss 0.9905 gn 1.200 | 2117s
+    k=2 lr=0.0001 seed=2191005 step 250 loss 1.1140 gn 1.187 | 2642s
+    k=2 lr=0.0001 seed=2191005 step 300 loss 0.9715 gn 1.054 | 3167s
+    k=2 lr=0.0001 seed=2191005 step 350 loss 0.6303 gn 1.057 | 3692s
+    k=2 lr=0.0001 seed=2191005 step 400 loss 0.6403 gn 1.154 | 4217s
+    k=2 lr=0.0001 seed=2191005 step 450 loss 0.6195 gn 1.207 | 4742s
+    k=2 lr=0.0001 seed=2191005 step 500 loss 0.6415 gn 1.190 | 5267s
+    k=2 lr=0.0001 seed=2191005 step 550 loss 0.5960 gn 1.254 | 5792s
+    k=2 lr=0.0001 seed=2191005 step 599 loss 0.6257 gn 1.245 | 6306s
+  RUN k=2 lr=0.0001 seed=2191005: val 1.0048 / 1.0061, test 1.0468 / 1.0484 (final / exit) | non-finite 0 | 10.5 s/step | peak [13.14, 14.36] GB
+    k=1 lr=0.0001 seed=2191005 step 0 loss 0.9288 gn 3.980 | 13s
+    k=1 lr=0.0001 seed=2191005 step 50 loss 1.0456 gn 1.247 | 380s
+    k=1 lr=0.0001 seed=2191005 step 100 loss 1.0194 gn 0.943 | 747s
+    k=1 lr=0.0001 seed=2191005 step 150 loss 1.0275 gn 0.940 | 1114s
+    k=1 lr=0.0001 seed=2191005 step 200 loss 0.9859 gn 0.911 | 1481s
+    k=1 lr=0.0001 seed=2191005 step 250 loss 1.1193 gn 0.948 | 1849s
+    k=1 lr=0.0001 seed=2191005 step 300 loss 0.9610 gn 0.796 | 2216s
+    k=1 lr=0.0001 seed=2191005 step 350 loss 0.6122 gn 0.862 | 2582s
+    k=1 lr=0.0001 seed=2191005 step 400 loss 0.6286 gn 0.973 | 2949s
+    k=1 lr=0.0001 seed=2191005 step 450 loss 0.6150 gn 0.972 | 3316s
+    k=1 lr=0.0001 seed=2191005 step 500 loss 0.6266 gn 0.990 | 3683s
+    k=1 lr=0.0001 seed=2191005 step 550 loss 0.5930 gn 1.048 | 4049s
+    k=1 lr=0.0001 seed=2191005 step 599 loss 0.6203 gn 1.021 | 4409s
+  RUN k=1 lr=0.0001 seed=2191005: val 1.0271 / 1.0451, test 1.0683 / 1.0843 (final / exit) | non-finite 0 | 7.3 s/step | peak [12.75, 14.36] GB
+    k=0 lr=0.0001 seed=2191005 step 0 loss 0.9288 gn 0.460 | 9s
+    k=0 lr=0.0001 seed=2191005 step 50 loss 0.7982 gn 0.368 | 198s
+    k=0 lr=0.0001 seed=2191005 step 100 loss 0.7804 gn 0.360 | 386s
+    k=0 lr=0.0001 seed=2191005 step 150 loss 0.8453 gn 0.358 | 575s
+    k=0 lr=0.0001 seed=2191005 step 200 loss 0.7611 gn 0.410 | 763s
+    k=0 lr=0.0001 seed=2191005 step 250 loss 0.7873 gn 0.385 | 952s
+    k=0 lr=0.0001 seed=2191005 step 300 loss 0.7958 gn 0.376 | 1140s
+    k=0 lr=0.0001 seed=2191005 step 350 loss 0.7002 gn 0.367 | 1329s
+    k=0 lr=0.0001 seed=2191005 step 400 loss 0.7620 gn 0.382 | 1517s
+    k=0 lr=0.0001 seed=2191005 step 450 loss 0.7057 gn 0.347 | 1706s
+    k=0 lr=0.0001 seed=2191005 step 500 loss 0.7797 gn 0.355 | 1894s
+    k=0 lr=0.0001 seed=2191005 step 550 loss 0.8011 gn 0.384 | 2083s
+    k=0 lr=0.0001 seed=2191005 step 599 loss 0.7991 gn 0.377 | 2267s
+  RUN k=0 lr=0.0001 seed=2191005: val 0.7901 / 0.7998, test 1.0621 / 1.0703 (final / exit) | non-finite 0 | 3.8 s/step | peak [5.76, 4.7] GB

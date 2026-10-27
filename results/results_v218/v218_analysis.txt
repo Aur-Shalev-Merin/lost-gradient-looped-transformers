@@ -1,0 +1,19 @@
+v218 robustness (medians over sequences; falls are means over k = 1, 2, 4 of the all-parameter statistic)
+  parcae step   0  GSM8K all [0.798, 0.636, 0.408] | WikiText all [0.78, 0.618, 0.394]
+  parcae step 300  GSM8K all [0.605, 0.43, 0.215] | WikiText all [0.614, 0.415, 0.215]
+  parcae step 600  GSM8K all [0.628, 0.45, 0.223] | WikiText all [0.608, 0.432, 0.234]
+  parcae fall at 300 0.197, at 600 0.181 (change -0.017) | WikiText fall at 300 0.183 (ratio 0.93) | seed 2011, non-finite 1/1 | step-0 agreement with v210 0.0000 (<= 0.005) VALID
+  parcae state draws: median within-sequence SD over 8 draws, k = 1/2/4: [0.0, 0.0, 0.0001] (max 0.0001)
+  pln5   step   0  GSM8K all [0.764, 0.591, 0.291] | WikiText all [0.635, 0.47, 0.224]
+  pln5   step 300  GSM8K all [0.63, 0.452, 0.219] | WikiText all [0.633, 0.461, 0.217]
+  pln5   step 600  GSM8K all [0.65, 0.477, 0.242] | WikiText all [0.645, 0.469, 0.222]
+  pln5   fall at 300 0.115, at 600 0.092 (change -0.023) | WikiText fall at 300 0.006 (ratio 0.05) | seed 2011, non-finite 0/0 | step-0 agreement with v210 0.0000 (<= 0.005) VALID
+  pln5   state draws: median within-sequence SD over 8 draws, k = 1/2/4: [0.0001, 0.0002, 0.0002] (max 0.0002)
+  r5     step   0  GSM8K all [0.833, 0.702, 0.387] | WikiText all [0.734, 0.59, 0.327]
+  r5     step 300  GSM8K all [0.718, 0.564, 0.297] | WikiText all [0.709, 0.55, 0.279]
+  r5     step 600  GSM8K all [0.746, 0.593, 0.329] | WikiText all [0.714, 0.551, 0.284]
+  r5     fall at 300 0.115, at 600 0.085 (change -0.030) | WikiText fall at 300 0.038 (ratio 0.33) | seed 2011, non-finite 0/0 | step-0 agreement with v210 0.0000 (<= 0.005) VALID
+  r5     state draws: median within-sequence SD over 8 draws, k = 1/2/4: [0.0002, 0.0003, 0.0004] (max 0.0004)
+VERDICT D1 (step 600): MIXED {'parcae': -0.017, 'pln5': -0.023, 'r5': -0.03}
+VERDICT D2 (WikiText): PARTIAL {'parcae': 0.928, 'pln5': 0.052, 'r5': 0.33}
+VERDICT D3 (state draws): SMALL

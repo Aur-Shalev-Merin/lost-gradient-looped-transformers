@@ -1,4 +1,4 @@
-\begin{thebibliography}{29}
+\begin{thebibliography}{35}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -25,6 +25,12 @@ Loubna~Ben Allal, Anton Lozhkov, Elie Bakouch, et~al.
   language model.
 \newblock arXiv preprint arXiv:2502.02737, 2025.
 
+\bibitem[Bai et~al.(2019)Bai, Kolter, and Koltun]{bai2019deq}
+Shaojie Bai, J.~Zico Kolter, and Vladlen Koltun.
+\newblock Deep equilibrium models.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, volume~32, 2019.
+
 \bibitem[Bansal et~al.(2022)Bansal, Schwarzschild, Borgnia, Emam, Huang,
   Goldblum, and Goldstein]{bansal2022}
 Arpit Bansal, Avi Schwarzschild, Eitan Borgnia, Zeyad Emam, Furong Huang, Micah
@@ -38,6 +44,14 @@ Arpit Bansal, Avi Schwarzschild, Eitan Borgnia, Zeyad Emam, Furong Huang, Micah
 Karl Cobbe, Vineet Kosaraju, Mohammad Bavarian, et~al.
 \newblock Training verifiers to solve math word problems.
 \newblock arXiv preprint arXiv:2110.14168, 2021.
+
+\bibitem[Dehghani et~al.(2019)Dehghani, Gouws, Vinyals, Uszkoreit, and
+  Kaiser]{dehghani2019ut}
+Mostafa Dehghani, Stephan Gouws, Oriol Vinyals, Jakob Uszkoreit, and {\L}ukasz
+  Kaiser.
+\newblock Universal transformers.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2019.
 
 \bibitem[Fung et~al.(2022)Fung, Heaton, Li, McKenzie, Osher, and Yin]{fung2022}
 Samy~Wu Fung, Howard Heaton, Qiuwei Li, Daniel McKenzie, Stanley Osher, and
@@ -135,11 +149,26 @@ Sajad Movahedi, Vera Milovanovi{\'c}, Shlomo Libo~Feigin, Alexander Theus,
 \newblock Fixed-point reasoners: Stable and adaptive deep looped transformers.
 \newblock arXiv preprint arXiv:2606.18206, 2026.
 
+\bibitem[Pascanu et~al.(2013)Pascanu, Mikolov, and Bengio]{pascanu2013}
+Razvan Pascanu, Tomas Mikolov, and Yoshua Bengio.
+\newblock On the difficulty of training recurrent neural networks.
+\newblock In \emph{Proceedings of the 30th International Conference on Machine
+  Learning (ICML)}, volume~28 of \emph{Proceedings of Machine Learning
+  Research}, 2013.
+
 \bibitem[Prairie et~al.(2026)Prairie, Novack, Berg-Kirkpatrick, and
   Fu]{prairie2026parcae}
 Hayden Prairie, Zachary Novack, Taylor Berg-Kirkpatrick, and Daniel~Y. Fu.
 \newblock Parcae: Scaling laws for stable looped language models.
 \newblock In \emph{Conference on Language Modeling (COLM)}, 2026.
+
+\bibitem[Saunshi et~al.(2025)Saunshi, Dikkala, Li, Kumar, and
+  Reddi]{saunshi2025looped}
+Nikunj Saunshi, Nishanth Dikkala, Zhiyuan Li, Sanjiv Kumar, and Sashank~J.
+  Reddi.
+\newblock Reasoning with latent thoughts: On the power of looped transformers.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2025.
 
 \bibitem[Schwethelm et~al.(2026{\natexlab{a}})Schwethelm, R{\"u}ckert, and
   Kaissis]{schwethelm2026a}
@@ -171,6 +200,12 @@ Yuliana Shakhvalieva, Dmitrii Kharchev, Viacheslav Bezrukov, Inessa Fedorova,
   and test-time scaling.
 \newblock arXiv preprint arXiv:2609.39967, 2026.
 
+\bibitem[Shalev~Merin(2026)]{shalevmerin2026present}
+Aur Shalev~Merin.
+\newblock {Present but Hard to Read: Probing Latent Reasoning with Minimal
+  Pairs}.
+\newblock arXiv preprint arXiv:2610.28498, 2026.
+
 \bibitem[Tallec \& Ollivier(2017)Tallec and Ollivier]{tallec2017}
 Corentin Tallec and Yann Ollivier.
 \newblock Unbiasing truncated backpropagation through time.
@@ -191,6 +226,12 @@ Guan Wang, Changling Liu, Chenyu Wang, Cai Zhou, Yuhao Sun, Yifei Wu, Shuai
   Zhen, Luca Scimeca, and Yasin Abbasi~Yadkori.
 \newblock {HRM-Text}: Efficient pretraining beyond scaling.
 \newblock arXiv preprint arXiv:2605.20613, 2026.
+
+\bibitem[Wu et~al.(2018)Wu, Ren, Liao, and Grosse]{wu2018shorthorizon}
+Yuhuai Wu, Mengye Ren, Renjie Liao, and Roger Grosse.
+\newblock Understanding short-horizon bias in stochastic meta-optimization.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2018.
 
 \bibitem[Xiong et~al.(2026)Xiong, Chen, Shao, Su, Jin, Luo, Yang, and
   Liu]{xiong2026truncate}

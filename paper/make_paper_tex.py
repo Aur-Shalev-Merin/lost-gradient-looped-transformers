@@ -24,7 +24,9 @@ KEYS = {('Aicher', '2019'): 'aicher2019', ('Ajalloeian', '2020'): 'ajalloeian202
         ('Shaban', '2019'): 'shaban2019', ('Vicol', '2022'): 'vicol2022', ('Allal', '2025'): 'allal2025smollm2',
         ('Cobbe', '2021'): 'cobbe2021gsm8k', ('Merity', '2017'): 'merity2017', ('Loshchilov', '2019'): 'loshchilov2019',
         ('Xiong', '2026'): 'xiong2026truncate', ('Li', '2026'): 'li2026policymemory', ('Shakhvalieva', '2026'): 'shakhvalieva2026',
-        ('Gao', '2025'): 'gao2025urm', ('Marchenko', '2026'): 'marchenko2026'}
+        ('Gao', '2025'): 'gao2025urm', ('Marchenko', '2026'): 'marchenko2026', ('Pascanu', '2013'): 'pascanu2013',
+        ('Wu', '2018'): 'wu2018shorthorizon', ('Bai', '2019'): 'bai2019deq', ('Dehghani', '2019'): 'dehghani2019ut',
+        ('Saunshi', '2025'): 'saunshi2025looped'}
 
 # ---------------------------------------------------------------- inline conversion
 PH = []                                    # protected LaTeX fragments
@@ -141,6 +143,7 @@ def cites(s):
     s = s.replace('Parcae uses about the last half [Sec. 4.2]', 'Parcae uses about the last half ' + prot(r'\citep[Sec.~4.2]{prairie2026parcae}'))
     s = s.replace('Parcae (App. I) reports', 'Parcae ' + prot(r'\citep[App.~I]{prairie2026parcae}') + ' reports')
     s = s.replace("Geng et al.'s", prot(r"\citeauthor{geng2021}'s"))
+    s = s.replace('Shalev Merin [2026]', prot(r'\citet{shalevmerin2026present}'))
 
     def narr(mm):          # Name et al. [2019, Thm. 1]
         key = KEYS[(mm.group(1), mm.group(2))]
@@ -173,7 +176,7 @@ def inline(s):
     s = re.sub(r'\bSections (\d)–(\d)\b', lambda mm: prot(r'Sections~\ref{sec:%s}--\ref{sec:%s}' % mm.groups()), s)
     for word, kind in (('Figure', 'fig'), ('Table', 'tab'), ('Section', 'sec')):
         s = re.sub(r'\b%s (\d+)\b' % word, lambda mm, w=word, k=kind: prot(r'%s~\ref{%s:%s}' % (w, k, mm.group(1))), s)
-    s = re.sub(r'\bAppendix ([A-J])\b', lambda mm: prot(r'Appendix~\ref{app:%s}' % mm.group(1)), s)
+    s = re.sub(r'\bAppendix ([A-L])\b',lambda mm: prot(r'Appendix~\ref{app:%s}' % mm.group(1)), s)
     for a, b in MANUAL:
         s = s.replace(a, prot(b))
     s = EQ.sub(lambda mm: m(mm.group(1)), s)
@@ -445,7 +448,7 @@ if '--preprint' in sys.argv:
     r = subprocess.run([tectonic, '--keep-intermediates', 'main.tex'], cwd=A, capture_output=True, text=True)
     print('[preprint]', r.stderr[-1500:])
     # arXiv does not run BibTeX: ship the .bbl with the sources
-    # tmlr.bst is unused (main.bbl is shipped) but arXiv's scan flags ibliographystyle{tmlr} as missing without it
+    # tmlr.bst is unused (main.bbl is shipped) but arXiv's scan flags \bibliographystyle{tmlr} as missing without it
     src_files = ['main.bbl', 'tmlr.sty', 'tmlr.bst', 'fancyhdr.sty'] + [f for f, _ in FIGS.values()]
     with tarfile.open(os.path.join(A, 'arxiv_source.tar.gz'), 'w:gz') as tf:
         data = ('\\pdfoutput=1\n' + pre).encode('utf-8')            # arXiv: compile with pdfLaTeX
