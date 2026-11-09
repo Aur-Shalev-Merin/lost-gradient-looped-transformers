@@ -1,0 +1,12 @@
+9 runs from 2 files
+
+=== huginn-s-fixed-r5: 9 runs (drivers ['22a56eba93e9'])
+  k=1 lr=3e-05   seed=9001     val 1.4690 test 1.4532 | nonfinite   0 | rho_end 0.744 |  448s (train  423s) peak 7.2 GB
+  k=1 lr=0.0001  seed=9001     val 1.4597 test 1.4410 | nonfinite   0 | rho_end 0.757 |  390s (train  370s) peak 7.2 GB
+  k=1 lr=0.0003  seed=9001     val 1.5816 test 1.5594 | nonfinite   0 | rho_end 0.773 |  448s (train  424s) peak 7.2 GB
+  k=2 lr=3e-05   seed=9001     val 1.4465 test 1.4304 | nonfinite   0 | rho_end 0.742 |  518s (train  493s) peak 7.3 GB
+  k=2 lr=0.0001  seed=9001     val 1.4410 test 1.4210 | nonfinite   0 | rho_end 0.758 |  517s (train  492s) peak 7.3 GB
+  k=2 lr=0.0003  seed=9001     val 1.5807 test 1.5563 | nonfinite   0 | rho_end 0.744 |  450s (train  429s) peak 7.3 GB
+  k=4 lr=3e-05   seed=9001     val 1.4299 test 1.4136 | nonfinite   0 | rho_end 0.747 |  565s (train  545s) peak 7.5 GB
+  k=4 lr=0.0001  seed=9001     val 1.4242 test 1.4040 | nonfinite   0 | rho_end 0.756 |  657s (train  633s) peak 7.5 GB
+  k=4 lr=0.0003  seed=9001     val 1.5393 test 1.5096 | nonfinite   0 | rho_end 0.746 |  565s (train  544s) peak 7.5 GB

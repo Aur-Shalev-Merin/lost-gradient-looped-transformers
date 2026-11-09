@@ -1,0 +1,5 @@
+  pln5: 11 tensors (124.65M params) get a nonzero k = 0 gradient
+  pln5 s0: all [0.764, 0.591, 0.291] | loop [0.805, 0.626, 0.308] (115s)
+  pln5 zero300 fine-tune (k = 0) seed 2013: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0001, 'seed': 2013, 'nonfinite': 0, 'clipped_frac': 0.04, 'ok': True, 's': 130, 'k': 0} | changed 11 tensors, 124.65M params
+  CHECK loop weights fixed: PASS
+  pln5 zero300: all [0.674, 0.511, 0.258] | loop [0.756, 0.573, 0.288] (116s)

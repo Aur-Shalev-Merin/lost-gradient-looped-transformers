@@ -1,0 +1,16 @@
+v226 r5 seed 2013 (driver fa7822fc6c28)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  step 0: GSM8K all [0.833, 0.702, 0.387] loop [0.867, 0.73, 0.4] | WikiText all [0.734, 0.59, 0.327] loop [0.804, 0.65, 0.361] (239s)
+/kaggle/working/v218_robustness.py:161: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  if not (nonfinite <= 10 and math.isfinite(float(loss))):
+  step 300: GSM8K all [0.724, 0.569, 0.301] loop [0.793, 0.623, 0.333] | WikiText all [0.706, 0.541, 0.276] loop [0.764, 0.586, 0.301] (247s)
+  step 600: GSM8K all [0.744, 0.596, 0.334] loop [0.806, 0.645, 0.362] | WikiText all [0.713, 0.55, 0.282] loop [0.767, 0.592, 0.306] (247s)
+  r5 fine-tune seed 2013: {'steps': 600, 'schedule_steps': 600, 'lr': 0.0001, 'seed': 2013, 'nonfinite_300': 0, 'nonfinite': 0, 'clipped_frac': 1.0, 'ok': True, 's': 1114}
+  r5 trunc300 fine-tune seed 2013: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0001, 'seed': 2013, 'nonfinite': 0, 'clipped_frac': 0.4767, 'ok': True, 's': 220, 'k': 2}
+  r5 trunc300: all [0.745, 0.611, 0.381] | loop [0.811, 0.664, 0.415] (125s)
+  r5: 11 tensors (124.65M params) get a nonzero k = 0 gradient
+  r5 s0: all [0.833, 0.702, 0.387] | loop [0.867, 0.73, 0.4] (121s)
+  r5 zero300 fine-tune (k = 0) seed 2013: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0001, 'seed': 2013, 'nonfinite': 0, 'clipped_frac': 0.03, 'ok': True, 's': 138, 'k': 0} | changed 11 tensors, 124.65M params
+  CHECK loop weights fixed: PASS
+  r5 zero300: all [0.792, 0.664, 0.38] | loop [0.847, 0.709, 0.404] (122s)

@@ -33,8 +33,8 @@ def fig(name, cap, n, width):
 
 body = body.replace('**A dial for ρ.**', fig('fig3_fit.png', cap1, 1, '55%') + '**A dial for ρ.**', 1)
 body = body.replace('**Where the rule needs care.**', fig('fig1_rule.png', cap2, 2, '52%') + '**Where the rule needs care.**', 1)
-body = body.replace('**Across models (S11).**', fig('fig4_cost_vs_lost.png', cap3, 3, '52%') + '**Across models (S11).**', 1)
-body = body.replace('**The earlier tests.**', fig('fig2_cost.png', cap4, 4, '92%') + '**The earlier tests.**', 1)
+body = body.replace('**Within one model (S1, S5, S6).**', fig('fig2_cost.png', cap3, 3, '92%') + '**Within one model (S1, S5, S6).**', 1)
+body = body.replace('**Across models (S11).**', fig('fig4_cost_vs_lost.png', cap4, 4, '52%') + '**Across models (S11).**', 1)
 body = body.replace('**Figure 2** plots', 'Figure 2 plots')
 
 lines, out_lines = body.split('\n'), []

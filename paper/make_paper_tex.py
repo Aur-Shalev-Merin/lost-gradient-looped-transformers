@@ -215,7 +215,7 @@ def caption(n):
     return inline(' '.join(c.split()))
 
 
-FIGS = {1: ('fig3_fit.pdf', 0.55), 2: ('fig1_rule.pdf', 0.55), 3: ('fig4_cost_vs_lost.pdf', 0.55), 4: ('fig2_cost.pdf', 0.95)}   # numbered in citation order
+FIGS = {1: ('fig3_fit.pdf', 0.55), 2: ('fig1_rule.pdf', 0.55), 3: ('fig2_cost.pdf', 0.95), 4: ('fig4_cost_vs_lost.pdf', 0.55)}   # numbered in citation order
 
 
 def figure(n):
@@ -312,9 +312,9 @@ while i < len(blocks):
         out.append(figure(1))
     if first.startswith('**Where the rule needs care.**'):
         out.append(figure(2))
-    if first.startswith('**Across models (S11).**'):
+    if first.startswith('**Within one model (S1, S5, S6).**'):
         out.append(figure(3))
-    if first.startswith('**The earlier tests.**'):
+    if first.startswith('**Across models (S11).**'):
         out.append(figure(4))
     if first.startswith('## '):
         h = first[3:].strip()

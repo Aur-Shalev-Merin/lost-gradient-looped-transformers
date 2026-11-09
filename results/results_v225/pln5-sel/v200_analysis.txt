@@ -1,0 +1,12 @@
+9 runs from 2 files
+
+=== huginn-s-fixed-pln5: 9 runs (drivers ['22a56eba93e9'])
+  k=1 lr=3e-05   seed=9001     val 1.4671 test 1.4516 | nonfinite   0 | rho_end 0.717 |  423s (train  400s) peak 7.2 GB
+  k=1 lr=0.0001  seed=9001     val 1.4527 test 1.4312 | nonfinite   0 | rho_end 0.722 |  409s (train  387s) peak 7.2 GB
+  k=1 lr=0.0003  seed=9001     val 1.5543 test 1.5344 | nonfinite   0 | rho_end 0.740 |  421s (train  398s) peak 7.2 GB
+  k=2 lr=3e-05   seed=9001     val 1.4531 test 1.4385 | nonfinite   0 | rho_end 0.718 |  487s (train  464s) peak 7.3 GB
+  k=2 lr=0.0001  seed=9001     val 1.4408 test 1.4194 | nonfinite   0 | rho_end 0.731 |  488s (train  465s) peak 7.3 GB
+  k=2 lr=0.0003  seed=9001     val 1.5461 test 1.5245 | nonfinite   0 | rho_end 0.743 |  471s (train  449s) peak 7.3 GB
+  k=4 lr=3e-05   seed=9001     val 1.4455 test 1.4307 | nonfinite   0 | rho_end 0.730 |  587s (train  565s) peak 7.5 GB
+  k=4 lr=0.0001  seed=9001     val 1.4335 test 1.4127 | nonfinite   0 | rho_end 0.735 |  607s (train  584s) peak 7.5 GB
+  k=4 lr=0.0003  seed=9001     val 1.5334 test 1.5093 | nonfinite   0 | rho_end 0.728 |  590s (train  567s) peak 7.5 GB

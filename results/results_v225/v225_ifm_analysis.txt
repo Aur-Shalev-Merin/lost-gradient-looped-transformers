@@ -1,0 +1,9 @@
+v225 Part P (Part II models): 18 run keys read
+per-k LR selection (seed 9001, val):
+  huginn-s-fixed-pln5 k=1: 3e-05: val 1.4671 test 1.4516  0.0001: val 1.4527 test 1.4312  0.0003: val 1.5543 test 1.5344 -> SELECTED 0.0001
+  huginn-s-fixed-pln5 k=2: 3e-05: val 1.4531 test 1.4385  0.0001: val 1.4408 test 1.4194  0.0003: val 1.5461 test 1.5245 -> SELECTED 0.0001
+  huginn-s-fixed-pln5 k=4: 3e-05: val 1.4455 test 1.4307  0.0001: val 1.4335 test 1.4127  0.0003: val 1.5334 test 1.5093 -> SELECTED 0.0001
+  huginn-s-fixed-r5 k=1: 3e-05: val 1.4690 test 1.4532  0.0001: val 1.4597 test 1.4410  0.0003: val 1.5816 test 1.5594 -> SELECTED 0.0001
+  huginn-s-fixed-r5 k=2: 3e-05: val 1.4465 test 1.4304  0.0001: val 1.4410 test 1.4210  0.0003: val 1.5807 test 1.5563 -> SELECTED 0.0001
+  huginn-s-fixed-r5 k=4: 3e-05: val 1.4299 test 1.4136  0.0001: val 1.4242 test 1.4040  0.0003: val 1.5393 test 1.5096 -> SELECTED 0.0001
+VERDICT P: SAME-LR (every cell selected full backprop's LR 0.0001; S11 stands as scored)

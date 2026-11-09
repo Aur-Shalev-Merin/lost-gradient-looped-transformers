@@ -40,6 +40,8 @@ Internal IDs (vNNN) are experiment numbers in the development repository. S-numb
 | S16 (v211) | the same fine-tune with the loop's weights fixed | `prereg_v211_*` | `v211_result.md` | `v211_k0_control.py` | `results_v211` | §4, App. I |
 | S17 (v218) | does the fall persist to step 600, hold on WikiText, and vary with the random initial state? | `prereg_v218_*` | `v218_result.md` | `v218_robustness.py` | `results_v218`, `kaggle-output-v218-*` | §4, App. I |
 | S18 (v219) | truncation cost on Ouro-1.4B | `prereg_v219_*` | `v219_result.md` | `v219_ouro_cost.py` | `results_v219`, `kaggle-output-v219-pilot` | §5, App. K |
+| S19 (v225) | does tuning each truncated setting's learning rate change the cost tests? (Part II models; the Ouro part was dropped before any run) | `prereg_v225_*` | `v225_result.md`, `v225_v226_cancelled.md` | `v225_lr_per_arm.py` (selection and analysis), `v200_ifm_trunc.py` | `results_v225` | §5 |
+| S20 (v226) | do S15–S17's Part II results hold on two more fine-tune seeds? | `prereg_v226_*` | `v226_result.md` | `v226_ft_seeds.py`, with `v218`, `v210`, `v211` unchanged | `results_v226` | §4, App. I |
 
 Unregistered measurements behind Tables 1–2 and the appendices come from `loop_grad_probe.py`
 (`kaggle-output-loopgrad`), `v187`–`v192`, `v197`, `v198`, `v168`, `v171`, `v182`, `v217` and `retrofit_rho_probe.py`.

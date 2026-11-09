@@ -1,0 +1,2 @@
+  pln5 trunc300 fine-tune seed 2013: {'steps': 300, 'schedule_steps': 600, 'lr': 0.0001, 'seed': 2013, 'nonfinite': 0, 'clipped_frac': 0.15, 'ok': True, 's': 206, 'k': 2}
+  pln5 trunc300: all [0.645, 0.472, 0.244] | loop [0.732, 0.536, 0.277] (119s)
