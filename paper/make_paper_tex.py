@@ -57,6 +57,8 @@ def m(expr):
 
 
 MANUAL = [   # whole formulas, longest first
+    ('Since |D_0|² ≥ |D_k|² + (Q_0 − Q_k) and |D_k| ≤ S_k, the lost gradient is at most S_k / √(S_k² + Q_0 − Q_k); since |D_0| ≤ |D_k| + (S_0 − S_k) and |D_k| ≥ √Q_k, it is at least √Q_k / (√Q_k + S_0 − S_k).',
+     r'Since $|D_0|^2 \geq |D_k|^2 + (Q_0 - Q_k)$ and $|D_k| \leq S_k$, the lost gradient is at most $S_k/\sqrt{S_k^2 + Q_0 - Q_k}$; since $|D_0| \leq |D_k| + (S_0 - S_k)$ and $|D_k| \geq \sqrt{Q_k}$, it is at least $\sqrt{Q_k}/(\sqrt{Q_k} + S_0 - S_k)$.'),
     ('https://github.com/Aur-Shalev-Merin/lost-gradient-looped-transformers', r'\url{https://github.com/Aur-Shalev-Merin/lost-gradient-looped-transformers}'),
     ('√Q_k / S_0 ≤ lost gradient ≤ S_k / √Q_0', r'$\sqrt{Q_k}/S_0 \leq \text{lost gradient} \leq S_k/\sqrt{Q_0}$'),
     ('S_k / √(Q_0 − Q_k + S_k²)', r'$S_k/\sqrt{Q_0 - Q_k + S_k^2}$'),
@@ -215,7 +217,7 @@ def caption(n):
     return inline(' '.join(c.split()))
 
 
-FIGS = {1: ('fig3_fit.pdf', 0.55), 2: ('fig1_rule.pdf', 0.55), 3: ('fig2_cost.pdf', 0.95), 4: ('fig4_cost_vs_lost.pdf', 0.55)}   # numbered in citation order
+FIGS = {1: ('fig3_fit.pdf', 0.55), 2: ('fig1_rule.pdf', 0.55), 3: ('fig4_cost_vs_lost.pdf', 0.55), 4: ('fig2_cost.pdf', 0.95)}   # numbered in citation order
 
 
 def figure(n):
@@ -310,11 +312,11 @@ while i < len(blocks):
     # figures go before these anchors (same placement as the HTML build)
     if first.startswith('**A dial for ρ.**'):
         out.append(figure(1))
-    if first.startswith('**Where the rule needs care.**'):
+    if first.startswith('**Where the signal grows: Ouro.**'):
         out.append(figure(2))
-    if first.startswith('**Within one model (S1, S5, S6).**'):
+    if first.startswith('Table 2 shows the contrast.'):
         out.append(figure(3))
-    if first.startswith('**Across models (S11).**'):
+    if first.startswith('**Within one model (S1, S5, S6).**'):
         out.append(figure(4))
     if first.startswith('## '):
         h = first[3:].strip()

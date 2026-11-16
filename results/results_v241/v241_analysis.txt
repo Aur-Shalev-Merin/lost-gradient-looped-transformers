@@ -1,0 +1,27 @@
+v241 analysis: 60 runs; scored seeds [2411101, 2411102, 2411103, 2411104, 2411105]; invalid or unused {2411106: ['full']}
+G (clip 5): floor gap 0.2268 nats (90% lower 0.2242; per seed 0.2254 0.2278 0.2245 0.2313 0.2251) -> gate PASS
+  trunc1      cost 0.2573 +- 0.0123 (n 5; per seed 0.258 0.302 0.248 0.226 0.252; nonfinite [1, 2, 1, 0, 0]; Mbar 0.799; step 0.692; clipped 0.02)
+  turn1       cost 0.2007 +- 0.0065 (n 5; per seed 0.199 0.186 0.188 0.219 0.212; nonfinite [0, 3, 0, 0, 0]; Mbar 0.794; step 1.000; clipped 0.05)
+  shrink1     cost 0.0386 +- 0.0381 (n 5; per seed 0.047 0.014 -0.070 0.167 0.034; nonfinite [1, 2, 0, 2, 0]; Mbar 0.997; step 0.691; clipped 0.01)
+  trunc2      cost 0.0952 +- 0.0143 (n 5; per seed 0.100 0.068 0.067 0.145 0.095; nonfinite [0, 3, 1, 1, 0]; Mbar 0.906; step 0.833; clipped 0.03)
+  turn2       cost 0.0848 +- 0.0121 (n 5; per seed 0.087 0.097 0.055 0.063 0.122; nonfinite [1, 2, 1, 0, 1]; Mbar 0.915; step 1.000; clipped 0.04)
+  shrink2     cost 0.0124 +- 0.0202 (n 5; per seed 0.031 -0.057 -0.008 0.056 0.040; nonfinite [0, 1, 1, 1, 0]; Mbar 0.999; step 0.835; clipped 0.02)
+k=1: trunc 0.2573 turn 0.2007 shrink 0.0386 | margin 0.0515 | turn share 0.78, shrink share 0.15 -> PARTIAL
+k=2: trunc 0.0952 turn 0.0848 shrink 0.0124 | margin 0.0190 | turn share 0.89, shrink share 0.13 -> TURN
+-- reported, not scored --
+  fullm1      cost 0.0371 +- 0.0527 (n 4; per seed 0.192 -0.044 -0.006 0.007; nonfinite [11, 1, 0, 0]; Mbar 1.000; step 1.000; clipped 0.03)  [G, FULL at lr x R_MATCH {1: 0.702, 2: 0.836}]
+  fullm2      cost -0.0331 +- 0.0125 (n 5; per seed -0.033 -0.008 -0.080 -0.024 -0.022; nonfinite [0, 1, 1, 1, 0]; Mbar 1.000; step 1.000; clipped 0.02)  [G, FULL at lr x R_MATCH {1: 0.702, 2: 0.836}]
+k=1 shrink 0.0386 vs FULL at the matched step 0.0371 (difference 0.0015, margin 0.0515) -> AS-STEP
+k=2 shrink 0.0124 vs FULL at the matched step -0.0331 (difference 0.0456, margin 0.0190) -> BEYOND-STEP
+C1: not run (dropped at the freeze)
+  unstable full        1 of 6 runs; mean nonfinite 98.00
+  unstable floor       0 of 6 runs; mean nonfinite 0.00
+  unstable trunc1      0 of 6 runs; mean nonfinite 0.67
+  unstable turn1       0 of 6 runs; mean nonfinite 0.50
+  unstable shrink1     0 of 6 runs; mean nonfinite 1.50
+  unstable trunc2      0 of 6 runs; mean nonfinite 0.83
+  unstable turn2       0 of 6 runs; mean nonfinite 0.83
+  unstable shrink2     0 of 6 runs; mean nonfinite 0.50
+  unstable fullm1      2 of 6 runs; mean nonfinite 90.00
+  unstable fullm2      0 of 6 runs; mean nonfinite 1.00
+VERDICT: MIXED {1: 'PARTIAL', 2: 'TURN'}

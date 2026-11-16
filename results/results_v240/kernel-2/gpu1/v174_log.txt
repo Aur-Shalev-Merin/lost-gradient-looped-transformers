@@ -1,0 +1,37 @@
+v239 driver ac4e7f8570b8 (v174 17b54eecf438) dev cuda amp True R 32
+selftest mix construction OK (lam 0 = g_R; lam 1 = g_1 direction at |g_R|)
+selftest loop-affected parameters: 29257137 of 144323136
+v239 selftest k=1: |g_k|/|g_R| 0.422 cos(g_k, g_R) 0.557; trunc / turn / shrink constructions OK
+v239 selftest k=2: |g_k|/|g_R| 0.555 cos(g_k, g_R) 0.695; trunc / turn / shrink constructions OK
+v239 selftest k=4: |g_k|/|g_R| 0.707 cos(g_k, g_R) 0.880; trunc / turn / shrink constructions OK
+  k=1 lam=0.000 step 0: A 1.0000 A_loop 1.0000 |gR| 5.90 |gk| 5.90 S 65536 (2s)
+v239 selftest full: 3 steps, Abar 1.0000, nonfinite 0, constructions used {'full': 3}
+  k=1 lam=1.000 step 0: A 0.6995 A_loop 0.4858 |gR| 5.90 |gk| 2.76 S 65536 (3s)
+v239 selftest turn1: 3 steps, Abar 0.7404, nonfinite 0, constructions used {'turn': 3}
+  k=1 lam=1.000 step 0: A 1.0000 A_loop 1.0000 |gR| 5.90 |gk| 2.76 S 65536 (3s)
+v239 selftest shrink1: 3 steps, Abar 1.0000, nonfinite 0, constructions used {'shrink': 3}
+  k=1 lam=1.000 step 0: A 0.6995 A_loop 0.4858 |gR| 5.90 |gk| 2.76 S 65536 (3s)
+v239 selftest trunc1: 3 steps, Abar 0.7404, nonfinite 0, constructions used {'trunc': 3}
+v239 selftest OK (driver ac4e7f8570b8)
+  k=1 lam=1.000 step 0: A 0.6727 A_loop 0.4434 |gR| 6.84 |gk| 3.06 S 65536 (3s)
+  k=1 lam=1.000 step 100: A 0.9075 A_loop 0.7636 |gR| 1.30 |gk| 0.80 S 65536 (361s)
+  k=1 lam=1.000 step 200: A 0.9109 A_loop 0.7785 |gR| 1.23 |gk| 0.88 S 65536 (721s)
+  k=1 lam=1.000 step 300: A 0.8944 A_loop 0.7595 |gR| 1.05 |gk| 0.69 S 65536 (1082s)
+  k=1 lam=1.000 step 400: A 0.8940 A_loop 0.7756 |gR| 1.01 |gk| 0.73 S 65536 (1442s)
+  k=1 lam=1.000 step 500: A 0.8861 A_loop 0.7684 |gR| 1.03 |gk| 0.70 S 65536 (1803s)
+scored trunc1 seed 2401102: test 1.4089 val 1.4311 Abar 0.8951 nonfinite 0 (2210s)
+scored floor seed 2401103: test 1.5379 val 1.5537 Abar - nonfinite 0 (515s)
+  k=1 lam=1.000 step 100: A 0.9987 A_loop 0.9976 |gR| 1.25 |gk| 0.82 S 4096 (362s)
+  k=1 lam=1.000 step 200: A 0.9987 A_loop 0.9990 |gR| 1.19 |gk| 0.81 S 4096 (722s)
+  k=1 lam=1.000 step 300: A 0.9979 A_loop 0.9988 |gR| 1.10 |gk| 0.75 S 4096 (1081s)
+  k=1 lam=1.000 step 400: A 0.9981 A_loop 0.9994 |gR| 1.03 |gk| 0.71 S 4096 (1442s)
+  k=1 lam=1.000 step 500: A 0.9978 A_loop 0.9992 |gR| 0.92 |gk| 0.66 S 4096 (1801s)
+scored shrink1 seed 2401104: test 1.3704 val 1.3953 Abar 0.9979 nonfinite 4 (2208s)
+scored floor seed 2401107: test 1.5369 val 1.5555 Abar - nonfinite 0 (513s)
+  k=1 lam=1.000 step 0: A 0.6829 A_loop 0.4577 |gR| 6.17 |gk| 2.91 S 65536 (3s)
+  k=1 lam=1.000 step 100: A 0.9119 A_loop 0.7759 |gR| 1.37 |gk| 0.97 S 4096 (363s)
+  k=1 lam=1.000 step 200: A 0.9163 A_loop 0.7845 |gR| 1.06 |gk| 0.74 S 4096 (723s)
+  k=1 lam=1.000 step 300: A 0.9018 A_loop 0.7696 |gR| 1.11 |gk| 0.73 S 4096 (1082s)
+  k=1 lam=1.000 step 400: A 0.8695 A_loop 0.7295 |gR| 1.08 |gk| 0.68 S 4096 (1442s)
+  k=1 lam=1.000 step 500: A 0.8936 A_loop 0.7831 |gR| 0.96 |gk| 0.67 S 2048 (1801s)
+scored turn1 seed 2401107: test 1.4095 val 1.4301 Abar 0.8942 nonfinite 5 (2208s)

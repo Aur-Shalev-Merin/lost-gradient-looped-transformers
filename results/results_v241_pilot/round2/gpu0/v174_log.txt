@@ -1,0 +1,25 @@
+v241 driver 87e4cdb665dc (v174 17b54eecf438) dev cuda amp True R 32; G clip 5 lr None / floor None; C1 clip 1 lr 0.1 / floor 0.3; momentum 0.9
+selftest mix construction OK (lam 0 = g_R; lam 1 = g_1 direction at |g_R|)
+selftest loop-affected parameters: 29256786 of 144323136
+v241 selftest k=1: |g_k|/|g_R| 0.422 cos 0.557; constructions OK
+v241 selftest k=2: |g_k|/|g_R| 0.555 cos 0.695; constructions OK
+v241 selftest: below the clip, trunc and shrink keep |g_k| and turn keeps |g_R| (clip 5 and 1)
+  full k=0 lr 0.1 clip 5 step 0: M 1.0000 step 1.000 |gR| 6.40 |gk| 6.40 S 65536 (2s)
+v241 selftest full clip 5: SGD, Mbar 1.000000 (must be 1), step 1.0000 (must be 1)
+  trunc k=1 lr 0.1 clip 5 step 0: M 0.6136 step 0.584 |gR| 6.40 |gk| 2.92 S 65536 (3s)
+v241 selftest trunc1 clip 5: SGD, 3 steps, Mbar 0.5803, step 0.581, nonfinite 0; norms and directions OK
+  turn k=1 lr 0.1 clip 5 step 0: M 0.6136 step 1.000 |gR| 6.40 |gk| 2.92 S 65536 (3s)
+v241 selftest turn1 clip 5: SGD, 3 steps, Mbar 0.5728, step 1.000, nonfinite 0; norms and directions OK
+  shrink k=1 lr 0.1 clip 5 step 0: M 1.0000 step 0.584 |gR| 6.40 |gk| 2.92 S 65536 (3s)
+v241 selftest shrink1 clip 5: SGD, 3 steps, Mbar 0.9997, step 0.557, nonfinite 0; norms and directions OK
+  full k=0 lr 0.1 clip 1 step 0: M 1.0000 step 1.000 |gR| 6.40 |gk| 6.40 S 65536 (2s)
+v241 selftest full clip 1: SGD, Mbar 1.000000 (must be 1), step 1.0000 (must be 1)
+  trunc k=1 lr 0.1 clip 1 step 0: M 0.6136 step 1.000 |gR| 6.40 |gk| 2.92 S 65536 (3s)
+v241 selftest trunc1 clip 1: SGD, 3 steps, Mbar 0.5961, step 1.000, nonfinite 0; norms and directions OK
+  turn k=1 lr 0.1 clip 1 step 0: M 0.6136 step 1.000 |gR| 6.40 |gk| 2.92 S 65536 (3s)
+v241 selftest turn1 clip 1: SGD, 3 steps, Mbar 0.5970, step 1.000, nonfinite 0; norms and directions OK
+  shrink k=1 lr 0.1 clip 1 step 0: M 1.0000 step 1.000 |gR| 6.40 |gk| 2.92 S 65536 (3s)
+v241 selftest shrink1 clip 1: SGD, 3 steps, Mbar 1.0000, step 1.000, nonfinite 0; norms and directions OK
+v241 selftest floor (v170 SGD patch and clip 5, both restored after): test 2.5559
+v241 selftest OK (driver 87e4cdb665dc; LR_G None, LR_G_FLOOR None)
+pilot floor lr 0.0333333: val 1.7472 test 1.7332 nonfinite 0 (484s)

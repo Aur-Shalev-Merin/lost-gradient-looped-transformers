@@ -1,0 +1,16 @@
+v239 analysis: 66 runs; scored seeds [2391101, 2391102, 2391103, 2391104, 2391105]; excluded []
+floor gap 0.1658 nats (90% lower 0.1647; per seed 0.1638 0.1665 0.1656 0.1665 0.1664) -> gate PASS
+  trunc1   cost 0.2261 +- 0.0009 (n 5; per seed 0.228 0.224 0.227 0.228 0.224; nonfinite [4, 2, 0, 2, 1]; Abar 0.893)
+  turn1    cost 0.2249 +- 0.0018 (n 5; per seed 0.223 0.219 0.229 0.228 0.225; nonfinite [2, 3, 2, 2, 2]; Abar 0.892)
+  shrink1  cost 22.8963 +- 22.8954 (n 5; per seed 0.007 0.002 -0.006 0.001 114.478; nonfinite [1, 2, 0, 4, 24]; Abar 0.998)
+  trunc2   cost 0.0938 +- 0.0022 (n 5; per seed 0.095 0.091 0.101 0.093 0.088; nonfinite [1, 2, 0, 3, 2]; Abar 0.945)
+  turn2    cost 0.0933 +- 0.0028 (n 5; per seed 0.094 0.090 0.103 0.093 0.087; nonfinite [1, 2, 0, 1, 1]; Abar 0.945)
+  shrink2  cost -0.0018 +- 0.0017 (n 5; per seed 0.004 -0.002 -0.006 -0.003 -0.003; nonfinite [7, 2, 0, 1, 1]; Abar 0.999)
+  trunc4   cost 0.0156 +- 0.0019 (n 5; per seed 0.021 0.020 0.013 0.011 0.013; nonfinite [1, 2, 0, 1, 0]; Abar 0.983)
+  turn4    cost 0.0152 +- 0.0016 (n 5; per seed 0.021 0.015 0.014 0.012 0.014; nonfinite [1, 2, 0, 1, 0]; Abar 0.983)
+  shrink4  cost -0.0039 +- 0.0025 (n 5; per seed 0.002 -0.004 -0.013 -0.003 -0.002; nonfinite [1, 2, 0, 1, 1]; Abar 1.000)
+k=1: trunc 0.2261 turn 0.2249 shrink 22.8963 | margin 0.0452 | turn share 0.99, shrink share 101.27 -> SHRINK
+k=2: trunc 0.0938 turn 0.0933 shrink -0.0018 | margin 0.0188 | turn share 1.00, shrink share -0.02 -> TURN
+k=4: trunc 0.0156 turn 0.0152 shrink -0.0039 | margin 0.0150 | turn share 0.97, shrink share -0.25 -> TURN (reported, not scored)
+reported: trunc vs S1 (v162/v163 pipeline) 0.224 / 0.100 / 0.024 at k = 1 / 2 / 4: 0.226 / 0.094 / 0.016
+VERDICT: MIXED {1: 'SHRINK', 2: 'TURN'}

@@ -1,0 +1,17 @@
+v243 analysis: 60 runs (combined v241 driver sha ['3b446a33effc']); scored seeds [2431101, 2431106, 2431107, 2431108, 2431109, 2431110, 2431111, 2431112]; invalid or unused {2431102: ['full'], 2431103: ['full', 'shrink1'], 2431104: ['turn1'], 2431105: ['full']}
+floor gap 0.2188 nats (90% lower 0.2037) -> gate PASS
+  trunc1   cost 0.1990 +- 0.0535 (per seed 0.457 0.147 0.197 0.229 0.200 -0.093 0.267 0.187; nonfinite [4, 1, 1, 2, 1, 0, 1, 0]; Mbar 0.786; step 0.686; clipped 0.02)
+  turn1    cost 0.1863 +- 0.0398 (per seed 0.200 0.196 0.202 0.213 0.176 -0.052 0.193 0.362; nonfinite [1, 1, 1, 1, 0, 1, 0, 4]; Mbar 0.805; step 1.000; clipped 0.05)
+  shrink1  cost -0.0199 +- 0.0394 (per seed 0.024 -0.024 0.081 0.013 -0.050 -0.277 0.032 0.043; nonfinite [1, 1, 2, 1, 1, 0, 2, 0]; Mbar 0.996; step 0.694; clipped 0.01)
+PRIMARY D = trunc1 - turn1: mean 0.0127 +- 0.0434 (n 8; one-sided 90% bounds -0.0487 / 0.0742; per seed 0.257 -0.049 -0.005 0.016 0.024 -0.041 0.074 -0.175) -> UNCLEAR
+  share of truncation's cost recovered by the full length: 0.06
+-- secondary (reported, labelled, not deciding) --
+v239 rule at k=1: trunc 0.1990 turn 0.1863 shrink -0.0199 | margin 0.0398 | turn share 0.94, shrink share -0.10 -> TURN
+shrink1 cost: mean -0.0199 +- 0.0394 (n 8; one-sided 90% bounds -0.0757 / 0.0359; per seed 0.024 -0.024 0.081 0.013 -0.050 -0.277 0.032 0.043) -> UNCLEAR
+-- reported --
+  unstable full     3 of 12 runs; mean nonfinite 52.58
+  unstable floor    0 of 12 runs; mean nonfinite 0.08
+  unstable trunc1   0 of 12 runs; mean nonfinite 1.17
+  unstable turn1    1 of 12 runs; mean nonfinite 46.75
+  unstable shrink1  1 of 12 runs; mean nonfinite 44.67
+VERDICT: SIZE-UNCLEAR

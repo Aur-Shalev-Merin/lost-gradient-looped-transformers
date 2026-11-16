@@ -1,0 +1,10 @@
+v197 driver 7f1c32f10bc2 | dev cuda dtype torch.float32 | params 1434.7M (loop 1233.3M, layers[12] (all params) 51.4M) | tied False | 489 chunks of 512 tokens
+  check: repeated full pass vs first, all-param err 0.00e+00
+seq 8: loss 1.110 rho 1.354 adj 0.122 0.105 0.114 0.043 | err all 0.915 / 0.805 / 0.717 | loop 0.917 / 0.805 / 0.716 | layer 0.852 / 0.640 / 0.426 (43s)
+seq 9: loss 1.005 rho 1.309 adj 0.0935 0.0826 0.073 0.0397 | err all 0.857 / 0.757 / 0.676 | loop 0.860 / 0.760 / 0.678 | layer 0.775 / 0.610 / 0.470 (29s)
+seq 10: loss 1.322 rho 1.586 adj 0.212 0.197 0.17 0.0478 | err all 0.897 / 0.737 / 0.609 | loop 0.897 / 0.736 / 0.607 | layer 0.799 / 0.541 / 0.313 (28s)
+seq 11: loss 1.050 rho 1.365 adj 0.114 0.0932 0.0802 0.0426 | err all 0.922 / 0.842 / 0.744 | loop 0.924 / 0.843 / 0.745 | layer 0.836 / 0.679 / 0.470 (29s)
+seq 12: loss 1.033 rho 1.544 adj 0.174 0.172 0.165 0.0414 | err all 0.885 / 0.716 / 0.567 | loop 0.886 / 0.716 / 0.566 | layer 0.845 / 0.662 / 0.388 (29s)
+seq 13: loss 1.143 rho 1.478 adj 0.151 0.125 0.102 0.0439 | err all 0.939 / 0.869 / 0.777 | loop 0.940 / 0.869 / 0.776 | layer 0.880 / 0.762 / 0.519 (29s)
+seq 14: loss 1.204 rho 1.474 adj 0.138 0.134 0.0836 0.0442 | err all 0.894 / 0.797 / 0.697 | loop 0.897 / 0.798 / 0.697 | layer 0.829 / 0.695 / 0.534 (29s)
+seq 15: loss 1.291 rho 1.508 adj 0.183 0.161 0.152 0.0475 | err all 0.891 / 0.744 / 0.594 | loop 0.893 / 0.744 / 0.593 | layer 0.882 / 0.719 / 0.486 (29s)

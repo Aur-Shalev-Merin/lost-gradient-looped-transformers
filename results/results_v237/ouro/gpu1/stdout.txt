@@ -1,0 +1,24 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794258203.061646      84 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+/kaggle/working/v210_followups.py:149: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  stats.append((float(x.float().norm()), float(hn.float().norm())))
+  check: repeated exit-objective pass, rel err 0.00e+00
+seq 8: |x| ['672', '580', '554', '520'] |h| ['720', '892', '935', '951'] | adj_x ['0.0886', '0.081', '0.0887', '0.0929'] adj_h ['0.122', '0.105', '0.114', '0.043'] | exit-objective lost k=3/2/1 ['0.732', '0.825', '0.927'] (45s)
+seq 9: |x| ['648', '577', '548', '512'] |h| ['770', '902', '945', '960'] | adj_x ['0.0653', '0.0615', '0.0613', '0.0875'] adj_h ['0.0935', '0.0826', '0.073', '0.0397'] | exit-objective lost k=3/2/1 ['0.615', '0.738', '0.871'] (34s)
+seq 10: |x| ['686', '589', '542', '504'] |h| ['708', '876', '957', '979'] | adj_x ['0.144', '0.15', '0.155', '0.11'] adj_h ['0.212', '0.197', '0.17', '0.0478'] | exit-objective lost k=3/2/1 ['0.565', '0.706', '0.889'] (36s)
+seq 11: |x| ['669', '592', '549', '524'] |h| ['732', '879', '938', '951'] | adj_x ['0.0845', '0.0715', '0.0744', '0.092'] adj_h ['0.114', '0.0932', '0.0802', '0.0426'] | exit-objective lost k=3/2/1 ['0.674', '0.794', '0.909'] (36s)
+seq 12: |x| ['663', '579', '547', '504'] |h| ['753', '899', '953', '982'] | adj_x ['0.122', '0.141', '0.149', '0.0938'] adj_h ['0.174', '0.172', '0.165', '0.0414'] | exit-objective lost k=3/2/1 ['0.606', '0.745', '0.897'] (36s)
+seq 13: |x| ['663', '572', '553', '527'] |h| ['723', '897', '947', '952'] | adj_x ['0.11', '0.1', '0.0782', '0.0949'] adj_h ['0.151', '0.125', '0.102', '0.0439'] | exit-objective lost k=3/2/1 ['0.825', '0.897', '0.954'] (36s)
+seq 14: |x| ['690', '589', '537', '504'] |h| ['735', '880', '961', '981'] | adj_x ['0.0938', '0.0956', '0.0799', '0.0991'] adj_h ['0.138', '0.134', '0.0836', '0.0442'] | exit-objective lost k=3/2/1 ['0.687', '0.792', '0.900'] (36s)
+seq 15: |x| ['686', '598', '550', '507'] |h| ['708', '881', '958', '991'] | adj_x ['0.128', '0.125', '0.13', '0.109'] adj_h ['0.183', '0.161', '0.152', '0.0475'] | exit-objective lost k=3/2/1 ['0.585', '0.746', '0.895'] (36s)
+v197 driver 7f1c32f10bc2 | dev cuda dtype torch.float32 | params 1434.7M (loop 1233.3M, layers[12] (all params) 51.4M) | tied False | 489 chunks of 512 tokens
+  check: repeated full pass vs first, all-param err 0.00e+00
+seq 8: loss 1.110 rho 1.354 adj 0.122 0.105 0.114 0.043 | err all 0.915 / 0.805 / 0.717 | loop 0.917 / 0.805 / 0.716 | layer 0.852 / 0.640 / 0.426 (43s)
+seq 9: loss 1.005 rho 1.309 adj 0.0935 0.0826 0.073 0.0397 | err all 0.857 / 0.757 / 0.676 | loop 0.860 / 0.760 / 0.678 | layer 0.775 / 0.610 / 0.470 (29s)
+seq 10: loss 1.322 rho 1.586 adj 0.212 0.197 0.17 0.0478 | err all 0.897 / 0.737 / 0.609 | loop 0.897 / 0.736 / 0.607 | layer 0.799 / 0.541 / 0.313 (28s)
+seq 11: loss 1.050 rho 1.365 adj 0.114 0.0932 0.0802 0.0426 | err all 0.922 / 0.842 / 0.744 | loop 0.924 / 0.843 / 0.745 | layer 0.836 / 0.679 / 0.470 (29s)
+seq 12: loss 1.033 rho 1.544 adj 0.174 0.172 0.165 0.0414 | err all 0.885 / 0.716 / 0.567 | loop 0.886 / 0.716 / 0.566 | layer 0.845 / 0.662 / 0.388 (29s)
+seq 13: loss 1.143 rho 1.478 adj 0.151 0.125 0.102 0.0439 | err all 0.939 / 0.869 / 0.777 | loop 0.940 / 0.869 / 0.776 | layer 0.880 / 0.762 / 0.519 (29s)
+seq 14: loss 1.204 rho 1.474 adj 0.138 0.134 0.0836 0.0442 | err all 0.894 / 0.797 / 0.697 | loop 0.897 / 0.798 / 0.697 | layer 0.829 / 0.695 / 0.534 (29s)
+seq 15: loss 1.291 rho 1.508 adj 0.183 0.161 0.152 0.0475 | err all 0.891 / 0.744 / 0.594 | loop 0.893 / 0.744 / 0.593 | layer 0.882 / 0.719 / 0.486 (29s)

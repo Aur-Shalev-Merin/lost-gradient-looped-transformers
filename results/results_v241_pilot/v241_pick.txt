@@ -1,0 +1,13 @@
+  full lr 0.03: val 1.4589 test 1.4422 nonfinite 1; spikes 5, median |gR| 1.29
+  full lr 0.1: val 1.4445 test 1.4249 nonfinite 0; spikes 25, median |gR| 0.92
+  full lr 0.3: val nan test nan nonfinite 587 UNSTABLE; spikes 13, median |gR| 25.46
+full: best 0.1
+  floor lr 0.0333333: val 1.7472 test 1.7332 nonfinite 0
+  floor lr 0.1: val 1.6689 test 1.6522 nonfinite 1
+  floor lr 0.3: val nan test nan nonfinite 554 UNSTABLE
+  floor lr 1: val nan test nan nonfinite 588 UNSTABLE
+floor: best 0.1
+pilot floor gap (test) 0.2273 nats at full 0.1 / floor 0.1
+pilot shrink sizes (full run, steps >= 100): median |g_1|/|g_R| 0.702, |g_2|/|g_R| 0.836; median |g_R| 0.90; share of probes with |g_1| < 5: 1.00
+R_MATCH (median clipped |g_k| / clipped |g_R|, steps >= 100): {1: 0.702, 2: 0.836}
+PICK: LR_G 0.1, LR_G_FLOOR 0.1

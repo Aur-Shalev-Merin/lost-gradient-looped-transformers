@@ -1,0 +1,1 @@
+{"k": 0, "lr": 0.03333333333333333, "clip": 5.0, "seed": 2419901, "steps": 600, "optimizer": "SGD (v170 patch)", "val": 1.7471528309810012, "test": 1.733234125179249, "nonfinite": 0, "s": 484, "arm": "floor", "v241_sha": "87e4cdb665dc"}

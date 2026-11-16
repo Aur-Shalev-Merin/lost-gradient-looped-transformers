@@ -1,0 +1,56 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]
+Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 104558.18 examples/s]
+
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]
+Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 273131.92 examples/s]
+v239 driver ac4e7f8570b8 (v174 17b54eecf438) dev cuda amp True R 32
+/kaggle/working/v163_parcae_damped_trunc.py:155: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  torch.manual_seed(0); x1 = float(v.loss_manual(m, ids, R, k))
+selftest a=1 vs v162 loss_manual R=32 k=32: 2.675809 2.675809
+selftest a=1 vs v162 loss_manual R=32 k=16: 2.675809 2.675809
+selftest a=1 vs v162 loss_manual R=32 k=0: 2.675809 2.675809
+selftest checkpointed vs plain grad (a=0.5, k=4): rel diff 1.34e-06
+selftest truncated grad fp16 vs fp32 a=1.0 k=1: {'rest': 0.0027, 'prelude': 0.0026, 'adapter': 0.0028, 'core_block': 0.0027}
+selftest truncated grad fp16 vs fp32 a=1.0 k=4: {'rest': 0.0027, 'prelude': 0.0027, 'adapter': 0.0032, 'core_block': 0.0026}
+selftest truncated grad fp16 vs fp32 a=0.5 k=1: {'rest': 0.0027, 'prelude': 0.0025, 'adapter': 0.0026, 'core_block': 0.0026}
+selftest truncated grad fp16 vs fp32 a=0.5 k=4: {'rest': 0.0027, 'prelude': 0.0022, 'adapter': 0.0024, 'core_block': 0.0025}
+selftest OK
+selftest mix construction OK (lam 0 = g_R; lam 1 = g_1 direction at |g_R|)
+selftest loop-affected parameters: 29257238 of 144323136
+v239 selftest k=1: |g_k|/|g_R| 0.422 cos(g_k, g_R) 0.557; trunc / turn / shrink constructions OK
+v239 selftest k=2: |g_k|/|g_R| 0.555 cos(g_k, g_R) 0.695; trunc / turn / shrink constructions OK
+v239 selftest k=4: |g_k|/|g_R| 0.707 cos(g_k, g_R) 0.880; trunc / turn / shrink constructions OK
+  k=1 lam=0.000 step 0: A 1.0000 A_loop 1.0000 |gR| 5.90 |gk| 5.90 S 65536 (2s)
+v239 selftest full: 3 steps, Abar 1.0000, nonfinite 0, constructions used {'full': 3}
+  k=1 lam=1.000 step 0: A 0.6995 A_loop 0.4858 |gR| 5.90 |gk| 2.76 S 65536 (3s)
+v239 selftest turn1: 3 steps, Abar 0.7403, nonfinite 0, constructions used {'turn': 3}
+  k=1 lam=1.000 step 0: A 1.0000 A_loop 1.0000 |gR| 5.90 |gk| 2.76 S 65536 (3s)
+v239 selftest shrink1: 3 steps, Abar 1.0000, nonfinite 0, constructions used {'shrink': 3}
+  k=1 lam=1.000 step 0: A 0.6995 A_loop 0.4858 |gR| 5.90 |gk| 2.76 S 65536 (3s)
+v239 selftest trunc1: 3 steps, Abar 0.7403, nonfinite 0, constructions used {'trunc': 3}
+v239 selftest OK (driver ac4e7f8570b8)
+  k=1 lam=1.000 step 0: A 1.0000 A_loop 1.0000 |gR| 6.35 |gk| 2.68 S 65536 (3s)
+  k=1 lam=1.000 step 100: A 0.9993 A_loop 0.9987 |gR| 1.31 |gk| 0.92 S 65536 (354s)
+  k=1 lam=1.000 step 200: A 0.9985 A_loop 0.9982 |gR| 1.14 |gk| 0.79 S 65536 (703s)
+  k=1 lam=1.000 step 300: A 0.9978 A_loop 0.9990 |gR| 1.10 |gk| 0.76 S 65536 (1053s)
+  k=1 lam=1.000 step 400: A 0.9980 A_loop 0.9995 |gR| 1.07 |gk| 0.73 S 65536 (1402s)
+  k=1 lam=1.000 step 500: A 0.9978 A_loop 0.9995 |gR| 0.99 |gk| 0.69 S 32768 (1751s)
+scored shrink1 seed 2401101: test 1.3745 val 1.3973 Abar 0.9979 nonfinite 1 (2144s)
+scored floor seed 2401102: test 1.5375 val 1.5549 Abar - nonfinite 0 (492s)
+  k=1 lam=1.000 step 100: A 0.9029 A_loop 0.7457 |gR| 1.38 |gk| 0.86 S 16384 (351s)
+  k=1 lam=1.000 step 200: A 0.9060 A_loop 0.7674 |gR| 1.14 |gk| 0.76 S 16384 (700s)
+  k=1 lam=1.000 step 300: A 0.9036 A_loop 0.7693 |gR| 1.17 |gk| 0.79 S 16384 (1048s)
+  k=1 lam=1.000 step 400: A 0.8849 A_loop 0.7615 |gR| 1.02 |gk| 0.68 S 8192 (1397s)
+  k=1 lam=1.000 step 500: A 0.8928 A_loop 0.7841 |gR| 0.92 |gk| 0.64 S 8192 (1745s)
+scored turn1 seed 2401104: test 1.4075 val 1.4293 Abar 0.8951 nonfinite 4 (2138s)
+scored floor seed 2401106: test 1.5376 val 1.5570 Abar - nonfinite 0 (492s)
+  k=1 lam=1.000 step 0: A 0.6828 A_loop 0.4576 |gR| 6.17 |gk| 2.91 S 65536 (3s)
+  k=1 lam=1.000 step 100: A 0.9091 A_loop 0.7681 |gR| 1.46 |gk| 0.99 S 2048 (349s)
+  k=1 lam=1.000 step 200: A 0.9153 A_loop 0.7805 |gR| 1.07 |gk| 0.75 S 2048 (697s)
+  k=1 lam=1.000 step 300: A 0.9043 A_loop 0.7762 |gR| 1.08 |gk| 0.73 S 2048 (1044s)
+  k=1 lam=1.000 step 400: A 0.8850 A_loop 0.7617 |gR| 1.05 |gk| 0.68 S 2048 (1391s)
+  k=1 lam=1.000 step 500: A 0.8929 A_loop 0.7817 |gR| 0.97 |gk| 0.67 S 2048 (1739s)
+scored trunc1 seed 2401107: test 1.4097 val 1.4313 Abar 0.8933 nonfinite 5 (2130s)

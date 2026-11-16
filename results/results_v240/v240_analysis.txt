@@ -1,0 +1,7 @@
+v240 analysis: 35 runs; scored seeds [2401101, 2401102, 2401103, 2401104, 2401105]; invalid or unused seeds {2401106: [], 2401107: []}
+floor gap 0.1649 nats (90% lower 0.1630) -> gate PASS
+  trunc1   cost 0.2242 +- 0.0058 (per seed 0.244 0.219 0.229 0.216 0.213; nonfinite [0, 0, 1, 5, 1]; Abar 0.893)
+  turn1    cost 0.2235 +- 0.0054 (per seed 0.242 0.217 0.229 0.218 0.211; nonfinite [0, 0, 1, 4, 1]; Abar 0.894)
+  shrink1  cost 0.0009 +- 0.0013 (per seed 0.003 0.003 -0.000 -0.003 0.002; nonfinite [1, 2, 0, 4, 0]; Abar 0.998)
+k=1: trunc 0.2242 turn 0.2235 shrink 0.0009 | margin 0.0448 | turn share 0.997, shrink share 0.004 -> TURN
+VERDICT: TURN

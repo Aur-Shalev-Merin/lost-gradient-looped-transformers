@@ -1,0 +1,22 @@
+PART A: the fall over fine-tuning steps (GSM8K test, all parameters, mean over k = 1, 2, 4 of per-sequence medians)
+  parcae GSM8K fall by step: 10: 0.161  25: 0.208  50: 0.205  100: 0.212  200: 0.221  300: 0.190  600: 0.177
+  parcae   share of the step-300 fall: 10: 0.85  25: 1.10  50: 1.08  100: 1.12  200: 1.17  300: 1.00  600: 0.93
+  parcae   WikiText fall by step: 10: 0.095  25: 0.186  50: 0.176  100: 0.192  200: 0.167  300: 0.170  600: 0.168 | step-0 WikiText value 0.598, GSM8K value by step: 0: 0.614  10: 0.453  25: 0.406  50: 0.409  100: 0.403  200: 0.393  300: 0.424  600: 0.437
+  parcae   training loss (curve, every 50 steps): [[0, 2.8265, 5.612], [50, 1.7481, 1.519], [100, 1.5341, 1.283], [150, 1.5237, 1.198], [200, 1.4767, 1.161], [250, 1.5327, 1.244], [300, 1.2106, 1.03], [350, 1.2632, 1.144]]
+  parcae   validity: step 0 / 300 / 600 vs v218 max |diff| {0: 0.0, 300: 0.0138, 600: 0.0048} (<= 0.005 / 0.01), fine-tune ok True -> INVALID; label FAST
+  pln5   GSM8K fall by step: 10: 0.107  25: 0.144  50: 0.147  100: 0.147  200: 0.135  300: 0.113  600: 0.089
+  pln5     share of the step-300 fall: 10: 0.95  25: 1.27  50: 1.30  100: 1.30  200: 1.19  300: 1.00  600: 0.79
+  pln5     WikiText fall by step: 10: -0.014  25: -0.004  50: 0.009  100: 0.018  200: 0.019  300: 0.008  600: -0.001 | step-0 WikiText value 0.443, GSM8K value by step: 0: 0.549  10: 0.441  25: 0.405  50: 0.401  100: 0.402  200: 0.414  300: 0.436  600: 0.460
+  pln5     training loss (curve, every 50 steps): [[0, 2.8175, 5.981], [50, 1.5134, 1.219], [100, 1.5081, 1.173], [150, 1.4156, 1.159], [200, 1.4088, 1.077], [250, 1.3451, 1.016], [300, 1.1656, 1.03], [350, 1.1788, 1.051]]
+  pln5     validity: step 0 / 300 / 600 vs v218 max |diff| {0: 0.0, 300: 0.0041, 600: 0.0043} (<= 0.005 / 0.01), fine-tune ok True -> VALID; label FAST
+  r5     GSM8K fall by step: 10: 0.087  25: 0.132  50: 0.131  100: 0.143  200: 0.144  300: 0.114  600: 0.085
+  r5       share of the step-300 fall: 10: 0.76  25: 1.15  50: 1.15  100: 1.25  200: 1.26  300: 1.00  600: 0.75
+  r5       WikiText fall by step: 10: -0.010  25: 0.025  50: 0.030  100: 0.046  200: 0.048  300: 0.037  600: 0.031 | step-0 WikiText value 0.550, GSM8K value by step: 0: 0.641  10: 0.554  25: 0.509  50: 0.509  100: 0.498  200: 0.497  300: 0.526  600: 0.555
+  r5       training loss (curve, every 50 steps): [[0, 2.6516, 5.758], [50, 1.4918, 1.377], [100, 1.5047, 1.349], [150, 1.4019, 1.309], [200, 1.4004, 1.223], [250, 1.3231, 1.15], [300, 1.152, 1.235], [350, 1.1506, 1.255]]
+  r5       validity: step 0 / 300 / 600 vs v218 max |diff| {0: 0.0, 300: 0.0018, 600: 0.0026} (<= 0.005 / 0.01), fine-tune ok True -> VALID; label FAST
+VERDICT A: INVALID (a validity check failed)
+PART B: Ouro on 16 GSM8K test chunks
+  rho of |dL/dh| 1.493 (min 1.309) | scale-free on h 1.353 (min 1.213), on pre-norm x 1.153 (min 0.988) (medians)
+  exit-weighted objective lost gradient k = 1 / 2 / 3: 0.934 / 0.838 / 0.722
+  final-output lost gradient (all parameters) k = 1/2/3: 0.926 / 0.846 / 0.730 (16 chunks; Table 1 on validation text: 0.92 / 0.81)
+VERDICT B: GROWS

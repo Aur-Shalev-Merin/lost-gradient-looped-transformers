@@ -1,0 +1,49 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+v241 driver 87e4cdb665dc (v174 17b54eecf438) dev cuda amp True R 32; G clip 5 lr None / floor None; C1 clip 1 lr 0.1 / floor 0.3; momentum 0.9
+/kaggle/working/v163_parcae_damped_trunc.py:155: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  torch.manual_seed(0); x1 = float(v.loss_manual(m, ids, R, k))
+selftest a=1 vs v162 loss_manual R=32 k=32: 2.675809 2.675809
+selftest a=1 vs v162 loss_manual R=32 k=16: 2.675809 2.675809
+selftest a=1 vs v162 loss_manual R=32 k=0: 2.675809 2.675809
+selftest checkpointed vs plain grad (a=0.5, k=4): rel diff 6.16e-07
+selftest truncated grad fp16 vs fp32 a=1.0 k=1: {'rest': 0.0027, 'prelude': 0.0026, 'adapter': 0.0028, 'core_block': 0.0027}
+selftest truncated grad fp16 vs fp32 a=1.0 k=4: {'rest': 0.0027, 'prelude': 0.0027, 'adapter': 0.0031, 'core_block': 0.0026}
+selftest truncated grad fp16 vs fp32 a=0.5 k=1: {'rest': 0.0027, 'prelude': 0.0025, 'adapter': 0.0027, 'core_block': 0.0026}
+selftest truncated grad fp16 vs fp32 a=0.5 k=4: {'rest': 0.0027, 'prelude': 0.0022, 'adapter': 0.0024, 'core_block': 0.0025}
+selftest OK
+selftest mix construction OK (lam 0 = g_R; lam 1 = g_1 direction at |g_R|)
+selftest loop-affected parameters: 29257180 of 144323136
+v241 selftest k=1: |g_k|/|g_R| 0.422 cos 0.557; constructions OK
+v241 selftest k=2: |g_k|/|g_R| 0.555 cos 0.695; constructions OK
+v241 selftest: below the clip, trunc and shrink keep |g_k| and turn keeps |g_R| (clip 5 and 1)
+  full k=0 lr 0.1 clip 5 step 0: M 1.0000 step 1.000 |gR| 6.40 |gk| 6.40 S 65536 (2s)
+v241 selftest full clip 5: SGD, Mbar 1.000000 (must be 1), step 1.0000 (must be 1)
+  trunc k=1 lr 0.1 clip 5 step 0: M 0.6136 step 0.584 |gR| 6.40 |gk| 2.92 S 65536 (3s)
+v241 selftest trunc1 clip 5: SGD, 3 steps, Mbar 0.5829, step 0.581, nonfinite 0; norms and directions OK
+  turn k=1 lr 0.1 clip 5 step 0: M 0.6136 step 1.000 |gR| 6.40 |gk| 2.92 S 65536 (3s)
+v241 selftest turn1 clip 5: SGD, 3 steps, Mbar 0.5710, step 1.000, nonfinite 0; norms and directions OK
+  shrink k=1 lr 0.1 clip 5 step 0: M 1.0000 step 0.584 |gR| 6.40 |gk| 2.92 S 65536 (3s)
+v241 selftest shrink1 clip 5: SGD, 3 steps, Mbar 0.9997, step 0.557, nonfinite 0; norms and directions OK
+  full k=0 lr 0.1 clip 1 step 0: M 1.0000 step 1.000 |gR| 6.40 |gk| 6.40 S 65536 (2s)
+v241 selftest full clip 1: SGD, Mbar 1.000000 (must be 1), step 1.0000 (must be 1)
+  trunc k=1 lr 0.1 clip 1 step 0: M 0.6136 step 1.000 |gR| 6.40 |gk| 2.92 S 65536 (3s)
+v241 selftest trunc1 clip 1: SGD, 3 steps, Mbar 0.5955, step 1.000, nonfinite 0; norms and directions OK
+  turn k=1 lr 0.1 clip 1 step 0: M 0.6136 step 1.000 |gR| 6.40 |gk| 2.92 S 65536 (3s)
+v241 selftest turn1 clip 1: SGD, 3 steps, Mbar 0.5959, step 1.000, nonfinite 0; norms and directions OK
+  shrink k=1 lr 0.1 clip 1 step 0: M 1.0000 step 1.000 |gR| 6.40 |gk| 2.92 S 65536 (3s)
+v241 selftest shrink1 clip 1: SGD, 3 steps, Mbar 1.0000, step 1.000, nonfinite 0; norms and directions OK
+v170: optimizer = SGD(lr 0.3, momentum 0.9, wd 0)
+v241 selftest floor (v170 SGD patch and clip 5, both restored after): test 2.5559
+v241 selftest OK (driver 87e4cdb665dc; LR_G None, LR_G_FLOOR None)
+  full k=0 lr 0.03 clip 5 step 0: M 1.0000 step 1.000 |gR| 6.40 |gk| 6.40 S 65536 (4s)
+  full k=0 lr 0.03 clip 5 step 100: M 1.0000 step 1.000 |gR| 1.35 |gk| 1.35 S 32768 (282s)
+  full k=0 lr 0.03 clip 5 step 200: M 1.0000 step 1.000 |gR| 1.39 |gk| 1.39 S 32768 (558s)
+  full k=0 lr 0.03 clip 5 step 300: M 1.0000 step 1.000 |gR| 1.74 |gk| 1.74 S 32768 (834s)
+  full k=0 lr 0.03 clip 5 step 400: M 1.0000 step 1.000 |gR| 1.27 |gk| 1.27 S 32768 (1110s)
+  full k=0 lr 0.03 clip 5 step 500: M 1.0000 step 1.000 |gR| 1.14 |gk| 1.14 S 32768 (1386s)
+pilot full lr 0.03: val 1.4589 test 1.4422 nonfinite 1; spikes 5, median |gR| 1.29 (1708s)
+v170: optimizer = SGD(lr 0.3, momentum 0.9, wd 0)
+pilot floor lr 0.3: val nan test nan nonfinite 554 (492s)
+v170: optimizer = SGD(lr 1, momentum 0.9, wd 0)
+pilot floor lr 1: val nan test nan nonfinite 588 (492s)

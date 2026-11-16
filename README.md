@@ -42,6 +42,11 @@ Internal IDs (vNNN) are experiment numbers in the development repository. S-numb
 | S18 (v219) | truncation cost on Ouro-1.4B | `prereg_v219_*` | `v219_result.md` | `v219_ouro_cost.py` | `results_v219`, `kaggle-output-v219-pilot` | §5, App. K |
 | S19 (v225) | does tuning each truncated setting's learning rate change the cost tests? (Part II models; the Ouro part was dropped before any run) | `prereg_v225_*` | `v225_result.md`, `v225_v226_cancelled.md` | `v225_lr_per_arm.py` (selection and analysis), `v200_ifm_trunc.py` | `results_v225` | §5 |
 | S20 (v226) | do S15–S17's Part II results hold on two more fine-tune seeds? | `prereg_v226_*` | `v226_result.md` | `v226_ft_seeds.py`, with `v218`, `v210`, `v211` unchanged | `results_v226` | §4, App. I |
+| S21 (v237) | when during fine-tuning does the fall happen (checkpoints at steps 10–200)? does Ouro's signal grow on GSM8K test text? | `prereg_v237_*` | `v237_result.md` | `v237_early_ft.py`, with `v218`, `v201` unchanged | `results_v237` | §3, §4, App. I |
+| S22 (v239) | is truncation's cost in the truncated gradient's turn (direction) or its shrink (size)? AdamW, k = 1, 2, 4 | `prereg_v239_*` | `v239_result.md` | `v239_shrink_turn.py` | `results_v239` | §5, App. G |
+| S23 (v240) | S22 at k = 1 on new seeds, every run held to the exclusion rule | `prereg_v240_*` | `v240_result.md` | `v240_k1_cleanup.py`, `v239_shrink_turn.py` | `results_v240` | App. G |
+| S24 (v241) | S22's split under SGD with clipping only as a spike guard, k = 1, 2 | `prereg_v241_*` | `v241_result.md` | `v241_sgd_split.py` | `results_v241`, `results_v241_pilot` | §5, App. G |
+| S25 (v243) | S24 at k = 1 on new seeds: does the truncated direction at full length recover part of truncation's cost? | `prereg_v243_*` | `v243_result.md` | `v243_sgd_k1_cleanup.py`, `v241_sgd_split.py` | `results_v243` | §5, App. G |
 
 Unregistered measurements behind Tables 1–2 and the appendices come from `loop_grad_probe.py`
 (`kaggle-output-loopgrad`), `v187`–`v192`, `v197`, `v198`, `v168`, `v171`, `v182`, `v217` and `retrofit_rho_probe.py`.

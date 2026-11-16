@@ -1,0 +1,82 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+v241 driver 3b446a33effc (v174 17b54eecf438) dev cuda amp True R 32; G clip 5 lr 0.1 / floor 0.1; C1 clip 1 lr 0.1 / floor 0.3; momentum 0.9
+/kaggle/working/v163_parcae_damped_trunc.py:155: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  torch.manual_seed(0); x1 = float(v.loss_manual(m, ids, R, k))
+selftest a=1 vs v162 loss_manual R=32 k=32: 2.675809 2.675809
+selftest a=1 vs v162 loss_manual R=32 k=16: 2.675809 2.675809
+selftest a=1 vs v162 loss_manual R=32 k=0: 2.675809 2.675809
+selftest checkpointed vs plain grad (a=0.5, k=4): rel diff 6.33e-07
+selftest truncated grad fp16 vs fp32 a=1.0 k=1: {'rest': 0.0027, 'prelude': 0.0026, 'adapter': 0.0028, 'core_block': 0.0027}
+selftest truncated grad fp16 vs fp32 a=1.0 k=4: {'rest': 0.0027, 'prelude': 0.0027, 'adapter': 0.0032, 'core_block': 0.0026}
+selftest truncated grad fp16 vs fp32 a=0.5 k=1: {'rest': 0.0027, 'prelude': 0.0025, 'adapter': 0.0026, 'core_block': 0.0026}
+selftest truncated grad fp16 vs fp32 a=0.5 k=4: {'rest': 0.0027, 'prelude': 0.0023, 'adapter': 0.0025, 'core_block': 0.0025}
+selftest OK
+selftest mix construction OK (lam 0 = g_R; lam 1 = g_1 direction at |g_R|)
+selftest loop-affected parameters: 29257180 of 144323136
+v241 selftest k=1: |g_k|/|g_R| 0.422 cos 0.557; constructions OK
+v241 selftest k=2: |g_k|/|g_R| 0.555 cos 0.695; constructions OK
+v241 selftest: below the clip, trunc and shrink keep |g_k| and turn keeps |g_R| (clip 5 and 1)
+  full k=0 lr 0.1 clip 5 step 0: M 1.0000 step 1.000 |gR| 6.40 |gk| 6.40 S 65536 (2s)
+v241 selftest full clip 5: SGD, Mbar 1.000000 (must be 1), step 1.0000 (must be 1)
+  trunc k=1 lr 0.1 clip 5 step 0: M 0.6136 step 0.584 |gR| 6.40 |gk| 2.92 S 65536 (3s)
+v241 selftest trunc1 clip 5: SGD, 3 steps, Mbar 0.5802, step 0.581, nonfinite 0; norms and directions OK
+  turn k=1 lr 0.1 clip 5 step 0: M 0.6136 step 1.000 |gR| 6.40 |gk| 2.92 S 65536 (3s)
+v241 selftest turn1 clip 5: SGD, 3 steps, Mbar 0.5721, step 1.000, nonfinite 0; norms and directions OK
+  shrink k=1 lr 0.1 clip 5 step 0: M 1.0000 step 0.584 |gR| 6.40 |gk| 2.92 S 65536 (3s)
+v241 selftest shrink1 clip 5: SGD, 3 steps, Mbar 0.9997, step 0.557, nonfinite 0; norms and directions OK
+  full k=0 lr 0.1 clip 1 step 0: M 1.0000 step 1.000 |gR| 6.40 |gk| 6.40 S 65536 (2s)
+v241 selftest full clip 1: SGD, Mbar 1.000000 (must be 1), step 1.0000 (must be 1)
+  trunc k=1 lr 0.1 clip 1 step 0: M 0.6136 step 1.000 |gR| 6.40 |gk| 2.92 S 65536 (3s)
+v241 selftest trunc1 clip 1: SGD, 3 steps, Mbar 0.5953, step 1.000, nonfinite 0; norms and directions OK
+  turn k=1 lr 0.1 clip 1 step 0: M 0.6136 step 1.000 |gR| 6.40 |gk| 2.92 S 65536 (3s)
+v241 selftest turn1 clip 1: SGD, 3 steps, Mbar 0.5968, step 1.000, nonfinite 0; norms and directions OK
+  shrink k=1 lr 0.1 clip 1 step 0: M 1.0000 step 1.000 |gR| 6.40 |gk| 2.92 S 65536 (3s)
+v241 selftest shrink1 clip 1: SGD, 3 steps, Mbar 1.0000, step 1.000, nonfinite 0; norms and directions OK
+v170: optimizer = SGD(lr 0.1, momentum 0.9, wd 0)
+v241 selftest floor (v170 SGD patch and clip 5, both restored after): test 2.5844
+v241 selftest OK (driver 3b446a33effc; LR_G 0.1, LR_G_FLOOR 0.1)
+  turn k=1 lr 0.1 clip 5 step 0: M 0.6044 step 1.000 |gR| 7.34 |gk| 2.99 S 65536 (3s)
+  turn k=1 lr 0.1 clip 5 step 100: M 0.8197 step 1.000 |gR| 1.17 |gk| 0.89 S 32768 (343s)
+  turn k=1 lr 0.1 clip 5 step 200: M 0.8235 step 1.000 |gR| 0.90 |gk| 0.66 S 32768 (685s)
+  turn k=1 lr 0.1 clip 5 step 300: M 0.7449 step 1.000 |gR| 1.09 |gk| 0.70 S 32768 (1027s)
+  turn k=1 lr 0.1 clip 5 step 400: M 0.8256 step 1.000 |gR| 0.91 |gk| 0.64 S 32768 (1368s)
+  turn k=1 lr 0.1 clip 5 step 500: M 0.8102 step 1.000 |gR| 0.94 |gk| 0.61 S 32768 (1710s)
+scored turn1 seed 2431101: test 1.4690 val 1.4873 Mbar 0.8108 step 1.000 nonfinite 1 (2097s)
+  trunc k=1 lr 0.1 clip 5 step 0: M 0.4991 step 0.577 |gR| 7.79 |gk| 2.89 S 65536 (3s)
+  trunc k=1 lr 0.1 clip 5 step 100: M 0.7913 step 0.731 |gR| 1.13 |gk| 0.82 S 16384 (344s)
+  trunc k=1 lr 0.1 clip 5 step 200: M 0.7319 step 0.661 |gR| 1.05 |gk| 0.70 S 16384 (687s)
+  trunc k=1 lr 0.1 clip 5 step 300: M 0.7954 step 0.679 |gR| 0.99 |gk| 0.67 S 16384 (1029s)
+  trunc k=1 lr 0.1 clip 5 step 400: M 0.8217 step 0.702 |gR| 0.91 |gk| 0.64 S 16384 (1372s)
+  trunc k=1 lr 0.1 clip 5 step 500: M 0.7946 step 0.675 |gR| 1.01 |gk| 0.68 S 16384 (1715s)
+scored trunc1 seed 2431104: test 1.4858 val 1.5051 Mbar 0.7947 step 0.696 nonfinite 2 (2103s)
+v170: optimizer = SGD(lr 0.1, momentum 0.9, wd 0)
+scored floor seed 2431106: test 1.6466 val 1.6627 Mbar - step - nonfinite 0 (496s)
+  shrink k=1 lr 0.1 clip 5 step 0: M 1.0000 step 0.584 |gR| 6.35 |gk| 2.92 S 65536 (3s)
+  shrink k=1 lr 0.1 clip 5 step 100: M 0.9991 step 0.712 |gR| 1.05 |gk| 0.75 S 32768 (347s)
+  shrink k=1 lr 0.1 clip 5 step 200: M 0.9997 step 0.676 |gR| 0.96 |gk| 0.65 S 32768 (690s)
+  shrink k=1 lr 0.1 clip 5 step 300: M 0.9986 step 0.664 |gR| 1.08 |gk| 0.71 S 32768 (1034s)
+  shrink k=1 lr 0.1 clip 5 step 400: M 0.9998 step 0.693 |gR| 0.97 |gk| 0.67 S 32768 (1378s)
+  shrink k=1 lr 0.1 clip 5 step 500: M 0.9987 step 0.700 |gR| 0.98 |gk| 0.69 S 32768 (1722s)
+scored shrink1 seed 2431106: test 1.4168 val 1.4330 Mbar 0.9992 step 0.697 nonfinite 1 (2111s)
+  turn k=1 lr 0.1 clip 5 step 0: M 0.6301 step 1.000 |gR| 6.20 |gk| 2.92 S 65536 (3s)
+  turn k=1 lr 0.1 clip 5 step 100: M 0.8065 step 1.000 |gR| 1.04 |gk| 0.78 S 65536 (346s)
+  turn k=1 lr 0.1 clip 5 step 200: M 0.8129 step 1.000 |gR| 0.89 |gk| 0.63 S 65536 (690s)
+  turn k=1 lr 0.1 clip 5 step 300: M 0.8178 step 1.000 |gR| 0.92 |gk| 0.63 S 65536 (1034s)
+  turn k=1 lr 0.1 clip 5 step 400: M 0.8174 step 1.000 |gR| 0.92 |gk| 0.63 S 65536 (1378s)
+  turn k=1 lr 0.1 clip 5 step 500: M 0.8240 step 1.000 |gR| 0.93 |gk| 0.61 S 65536 (1721s)
+scored turn1 seed 2431109: test 1.4668 val 1.4825 Mbar 0.8130 step 1.000 nonfinite 0 (2111s)
+  full k=0 lr 0.1 clip 5 step 0: M 1.0000 step 1.000 |gR| 6.61 |gk| 6.61 S 65536 (2s)
+  full k=0 lr 0.1 clip 5 step 100: M 1.0000 step 1.000 |gR| 1.19 |gk| 1.19 S 16384 (263s)
+  full k=0 lr 0.1 clip 5 step 200: M 1.0000 step 1.000 |gR| 1.13 |gk| 1.13 S 512 (524s)
+  full k=0 lr 0.1 clip 5 step 300: M 1.0000 step 1.000 |gR| 0.92 |gk| 0.92 S 512 (784s)
+  full k=0 lr 0.1 clip 5 step 400: M 1.0000 step 1.000 |gR| 0.92 |gk| 0.92 S 512 (1045s)
+  full k=0 lr 0.1 clip 5 step 500: M 1.0000 step 1.000 |gR| 0.95 |gk| 0.95 S 512 (1306s)
+scored full seed 2431110: test 1.4806 val 1.4939 Mbar 1.0000 step 1.000 nonfinite 7 (1613s)
+  trunc k=1 lr 0.1 clip 5 step 0: M 0.6042 step 0.594 |gR| 6.55 |gk| 2.97 S 65536 (3s)
+  trunc k=1 lr 0.1 clip 5 step 100: M 0.7789 step 0.690 |gR| 1.10 |gk| 0.76 S 65536 (345s)
+  trunc k=1 lr 0.1 clip 5 step 200: M 0.7900 step 0.653 |gR| 1.13 |gk| 0.74 S 65536 (689s)
+  trunc k=1 lr 0.1 clip 5 step 300: M 0.7846 step 0.648 |gR| 1.17 |gk| 0.76 S 65536 (1032s)
+  trunc k=1 lr 0.1 clip 5 step 400: M 0.7975 step 0.679 |gR| 1.02 |gk| 0.69 S 65536 (1375s)
+  trunc k=1 lr 0.1 clip 5 step 500: M 0.7861 step 0.652 |gR| 0.94 |gk| 0.62 S 65536 (1718s)
+scored trunc1 seed 2431112: test 1.4585 val 1.4763 Mbar 0.7787 step 0.678 nonfinite 0 (2107s)
