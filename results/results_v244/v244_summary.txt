@@ -1,0 +1,16 @@
+seed 2441101: 2 probes (steps >= 100 where available), test nan, nonfinite 583, loop-affected 104407680 of 144323136
+  share of |g_R|^2 on loop-affected parameters: median 0.952
+  k=1: r_all 0.445  r_loop 0.396  r_rest 1.0000  cos_all 0.729  cos_loop 0.736  max rest_diff 1.98e-05
+        step vs full backprop -- truncation: loop 0.396, other 1.000 | turn-only: loop 0.890, other 2.249 | shrink-only: loop 0.445, other 0.445
+        by group (|g_k|/|g_R|; share of |g_R|^2): transformer.wte 0.938 (0.000); transformer.prelude 0.373 (0.096); transformer.adapter 0.425 (0.001); transformer.core_block 0.401 (0.841); transformer.C 1.000 (0.002); transformer.coda 1.000 (0.041); transformer.ln_f 1.000 (0.005); transformer.ln_prelude 0.387 (0.014); value_embeds 0.461 (0.000)
+  k=2: r_all 0.619  r_loop 0.594  r_rest 1.0000  cos_all 0.864  cos_loop 0.862  max rest_diff 1.98e-05
+        step vs full backprop -- truncation: loop 0.594, other 1.000 | turn-only: loop 0.958, other 1.615 | shrink-only: loop 0.619, other 0.619
+        by group (|g_k|/|g_R|; share of |g_R|^2): transformer.wte 0.945 (0.000); transformer.prelude 0.574 (0.096); transformer.adapter 0.654 (0.001); transformer.core_block 0.596 (0.841); transformer.C 1.000 (0.002); transformer.coda 1.000 (0.041); transformer.ln_f 1.000 (0.005); transformer.ln_prelude 0.624 (0.014); value_embeds 0.603 (0.000)
+seed 2441102: 50 probes (steps >= 100 where available), test 1.4212, nonfinite 4, loop-affected 104407680 of 144323136
+  share of |g_R|^2 on loop-affected parameters: median 0.747
+  k=1: r_all 0.699  r_loop 0.560  r_rest 1.0000  cos_all 0.837  cos_loop 0.789  max rest_diff 1.14e-04
+        step vs full backprop -- truncation: loop 0.560, other 1.000 | turn-only: loop 0.801, other 1.431 | shrink-only: loop 0.699, other 0.699
+        by group (|g_k|/|g_R|; share of |g_R|^2): transformer.wte 0.973 (0.003); transformer.prelude 0.525 (0.172); transformer.adapter 0.515 (0.002); transformer.core_block 0.564 (0.551); transformer.C 1.000 (0.007); transformer.coda 1.000 (0.206); transformer.ln_f 1.000 (0.034); transformer.ln_prelude 0.566 (0.013); value_embeds 0.640 (0.000)
+  k=2: r_all 0.833  r_loop 0.764  r_rest 1.0000  cos_all 0.931  cos_loop 0.909  max rest_diff 8.30e-05
+        step vs full backprop -- truncation: loop 0.764, other 1.000 | turn-only: loop 0.918, other 1.200 | shrink-only: loop 0.833, other 0.833
+        by group (|g_k|/|g_R|; share of |g_R|^2): transformer.wte 0.982 (0.003); transformer.prelude 0.749 (0.172); transformer.adapter 0.744 (0.002); transformer.core_block 0.768 (0.551); transformer.C 1.000 (0.007); transformer.coda 1.000 (0.206); transformer.ln_f 1.000 (0.034); transformer.ln_prelude 0.801 (0.013); value_embeds 0.809 (0.000)

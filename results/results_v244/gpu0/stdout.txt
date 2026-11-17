@@ -1,0 +1,19 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]
+Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 81308.32 examples/s]
+
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]
+Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 326427.13 examples/s]
+v244 seed 2441101: v241 driver 3b446a33effc; lr 0.1 clip 5 momentum 0.9; loop-affected parameters 104407680 of 144323136 (41 of 61 tensors; v174 element mask 29256816); other tensors: transformer.C.weight, transformer.coda.0.norm_1.weight, transformer.coda.0.attn.c_q.weight, transformer.coda.0.attn.c_k.weight, transformer.coda.0.attn.c_v.weight, transformer.coda.0.attn.c_proj.weight, transformer.coda.0.norm_2.weight, transformer.coda.0.mlp.fc.weight, transformer.coda.0.mlp.proj.weight, transformer.coda.1.norm_1.weight, transformer.coda.1.attn.c_q.weight, transformer.coda.1.attn.c_k.weight, transformer.coda.1.attn.c_v.weight, transformer.coda.1.attn.c_proj.weight, transformer.coda.1.attn.ve_gate.weight, transformer.coda.1.norm_2.weight, transformer.coda.1.mlp.fc.weight, transformer.coda.1.mlp.proj.weight, transformer.ln_f.weight, value_embeds.5.weight
+groups: transformer.wte 25165824, transformer.prelude 14159040, transformer.adapter 591360, transformer.core_block 14159040, transformer.C 589824, transformer.coda 14159040, transformer.ln_f 768, transformer.ln_prelude 768, value_embeds 75497472
+  seed 2441101 step 0: |gR| 6.23 k1 r_all 0.485 r_loop 0.442 cos_loop 0.613 k2 r_all 0.641 r_loop 0.617 cos_loop 0.780 S 65536 (5s)
+v244 seed 2441101 done: test nan nonfinite 583 (1482s) -> /kaggle/working/gpu0/v244_seed2441101.json
+seed 2441101: 2 probes (steps >= 100 where available), test nan, nonfinite 583, loop-affected 104407680 of 144323136
+  share of |g_R|^2 on loop-affected parameters: median 0.952
+  k=1: r_all 0.445  r_loop 0.396  r_rest 1.0000  cos_all 0.729  cos_loop 0.736  max rest_diff 1.98e-05
+        step vs full backprop -- truncation: loop 0.396, other 1.000 | turn-only: loop 0.890, other 2.249 | shrink-only: loop 0.445, other 0.445
+        by group (|g_k|/|g_R|; share of |g_R|^2): transformer.wte 0.938 (0.000); transformer.prelude 0.373 (0.096); transformer.adapter 0.425 (0.001); transformer.core_block 0.401 (0.841); transformer.C 1.000 (0.002); transformer.coda 1.000 (0.041); transformer.ln_f 1.000 (0.005); transformer.ln_prelude 0.387 (0.014); value_embeds 0.461 (0.000)
+  k=2: r_all 0.619  r_loop 0.594  r_rest 1.0000  cos_all 0.864  cos_loop 0.862  max rest_diff 1.98e-05
+        step vs full backprop -- truncation: loop 0.594, other 1.000 | turn-only: loop 0.958, other 1.615 | shrink-only: loop 0.619, other 0.619
+        by group (|g_k|/|g_R|; share of |g_R|^2): transformer.wte 0.945 (0.000); transformer.prelude 0.574 (0.096); transformer.adapter 0.654 (0.001); transformer.core_block 0.596 (0.841); transformer.C 1.000 (0.002); transformer.coda 1.000 (0.041); transformer.ln_f 1.000 (0.005); transformer.ln_prelude 0.624 (0.014); value_embeds 0.603 (0.000)

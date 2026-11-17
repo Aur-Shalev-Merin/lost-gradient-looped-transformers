@@ -1,6 +1,6 @@
 # How Much Gradient Does Truncated Backprop Lose in Looped Transformers?
 
-*Draft v18.3, 2026-11-16.*
+*Draft v18.4, 2026-11-16.*
 
 ## Abstract
 
@@ -14,11 +14,11 @@ signal grows instead, and keeping two of four loops discards 81% of the output's
 number is a poor guide to what truncation costs in training. In fine-tuning, keeping 4 of 32 loops on Parcae-140m
 discarded 44% of the gradient and cost 2% of what training the loop gained; keeping one discarded 82% and cost 22%.
 One reason is that the trained model's number is not what training sees: 300 fine-tuning steps lowered it by
-0.07–0.22 on three of four models, on held-out problems too. Another is that the optimiser ignores part of what is
-lost: on Parcae-140m under AdamW, the full gradient shrunk to the truncated gradient's length cost almost nothing,
-while the truncated direction at full length cost as much as truncation, as Adam's insensitivity to the gradient's
-scale predicts. Under SGD the split was mixed: the direction still carried most of the cost, and whether the lost size
-costs anything there is unclear. In pre-registered tests the lost gradient did not
+0.07–0.22 on three of four models, on held-out problems too. Another is that losing size is cheap: on
+Parcae-140m under AdamW, the full gradient shrunk to the truncated gradient's length cost almost nothing, while the
+truncated direction at full length cost as much as truncation. Adam's insensitivity to the gradient's scale predicts
+this, but it is not the whole reason: under SGD, where a shorter gradient is a shorter step, truncation cost about as
+much, the direction again carried most of the cost, and whether the lost size cost anything is unclear. In pre-registered tests the lost gradient did not
 reliably predict the training cost of truncation better than rules that need no measurement. It shows what a given k
 discards on a checkpoint, and whether the backward signal grows, but to choose k the cost has to be measured.
 
@@ -70,9 +70,9 @@ their runs; for the others the order of freeze and run is our report. What we fi
    S20). That accounts for only part of the contrast. Splitting the truncated gradient into its size and its direction
    on Parcae-140m under AdamW, the direction alone at full length cost as much as truncation at k = 1 and 2, and the
    full gradient at the truncated length cost almost nothing (S22, S23; S22's own verdict was mixed because of one
-   diverged run). Adam's insensitivity to scale predicts this; the test confirms it holds through training. Under
-   SGD the outcome was mixed: the direction alone carried 78% of truncation's cost at k = 1 and 89% at k = 2, the
-   size alone cost no clear amount, and whether size costs under SGD is unclear (S24).
+   diverged run). Adam's insensitivity to scale predicts this, but it is not the whole reason: under SGD truncation
+   cost about as much, the direction alone carried 78% of it at k = 1 and 89% at k = 2, and whether size costs is
+   unclear (S24, S25). The shrink is mild (0.70 of the full length at k = 1).
 4. **It did not reliably predict the cost (Section 6).** Within one model a cost curve predicted new settings (S5),
    but a rule found after the fact did nearly as well, and the curve failed on a second model (S6). Across two new
    models it did no better than Parcae's own cost at the same k (S11).
@@ -367,7 +367,7 @@ uninformative within Parcae (S8) and tied the lost-gradient curve across models 
 
 **Under SGD (S24, S25).** Without Adam a shorter gradient is a shorter step, so we repeated the split with SGD
 (momentum 0.9) and clipping only as a guard against spikes, at norm 5, at a learning rate of 0.1 chosen by a pilot of
-full backprop and the floor alone. In training, the truncated gradient was 0.70 (k = 1) and 0.84 (k = 2) of the full
+full backprop and the floor alone. Every arm used that rate; none was tuned on its own. In training, the truncated gradient was 0.70 (k = 1) and 0.84 (k = 2) of the full
 gradient's length, so truncation and the shrink-only arm took steps that much shorter. The pre-set labels were mixed.
 At k = 2 the reading held: truncation cost 0.095, the turn alone 0.085 and the shrink alone 0.012 ("turn"). At k = 1
 the turn alone cost 0.201 against 0.257 for truncation, 0.005 short of the bar for "turn", and the shrink alone
@@ -377,6 +377,16 @@ direction back its full length looked to recover 0.057 ± 0.018 of the cost at k
 difference on new seeds (S25) was inconclusive: 0.013 ± 0.043 on the 8 of 12 seeds that stayed stable (one-sided 90%
 bounds −0.049 and 0.074), and the turn alone again carried nearly all of truncation's cost (0.186 of 0.199). A
 control for a plainly shorter step settled nothing (Appendix G).
+
+Two things limit the SGD reading. With one shared rate, a shrink acts as a lower learning rate, and 0.1 sat near
+the edge of stability (0.3 diverged; full backprop crossed the stability limit in 4 of 18 runs) with a flat curve
+below it (in the pilot, 0.03 cost 0.08 of the loop's benefit). And the split rescales the whole gradient, though
+truncation leaves the gradient of the parameters used only after the loop unchanged (40M of 144M, a quarter of the
+squared norm). At k = 1 it shortened the rest to 0.56 of its length and the whole to 0.70 (Appendix G), so under SGD
+the turn-only arm stepped 1.43 times as far as full backprop after the loop and 0.80 as far on the rest, a shift
+Adam's per-weight scaling would undo. Truncation itself cost about the same under both optimisers (pooled over S24
+and S25, 0.221 at k = 1 against AdamW's 0.224; 0.095 at k = 2 against 0.094), so the lost size seems cheap here
+because the shrink is mild, not only because Adam ignores scale.
 
 **What remains.** At step 300 the averaged update on Parcae still discards 58% of the gradient at k = 1, while the
 cost at that setting is 22% of the loop's benefit. S22–S25 say that the part of the lost gradient that is only a
@@ -498,8 +508,10 @@ loops) for models run at 5 loops. Ouro's result is one model, with learning rate
 truncated arms and, at k = 1, an extrapolated curve (Appendix K). The shrink-versus-turn reading of Section 5 was
 found after the fact and then tested on one model, at k = 1 and 2, under AdamW with clipping (S22, S23). S22's own
 verdict was mixed because of one diverged run, S23 is a clean-up rather than an independent test, and the outcome is
-largely what Adam's insensitivity to scale predicts. Under SGD on the same model (S24) the outcome was mixed, and whether the
-lost size costs anything there is unclear; its control for a plainly shorter step settled nothing either.
+largely what Adam's insensitivity to scale predicts. Under SGD on the same model (S24, S25) the outcome was mixed, and whether the
+lost size costs anything there is unclear; its control for a plainly shorter step settled nothing either. The SGD arms
+shared one untuned learning rate near the edge of stability, and the split rescales parameters truncation leaves
+unchanged (Section 5).
 
 The scope is narrow in other ways. ρ needs a trained model, so it is no help when choosing k for pretraining unless it
 is tracked during training, which we did not do. The fine-tuning studies follow one full-backprop run, one truncated
@@ -531,10 +543,9 @@ to the looped weights; every later run checks its truncated gradient in the trai
   choose k, measure the cost with your own model and optimiser. Li et al. [2026] reach the same conclusion for memory
   gradients in policies trained through a differentiable simulator: gradient norms measured on trained policies did
   not predict which cut cost more, and short training runs did.
-- Under Adam, which part of the gradient is lost matters more than how much. On Parcae-140m under AdamW with
-  clipping, the truncated gradient's change of direction carried all of truncation's cost and its loss of size
-  carried none (S22, S23), as Adam's insensitivity to scale predicts. That is one model. Under SGD the direction
-  still carried most of the cost, and whether the loss of size costs anything there is unclear (S24). A cost curve built on a related measure did not beat k alone on the Part II models
+- Which part of the gradient is lost matters more than how much. On Parcae-140m under AdamW, the change of
+  direction carried all of truncation's cost and the loss of size none (S22, S23); under SGD the direction carried
+  most of it, and whether size costs is unclear (S24, S25). That is one model, with a mild shrink (0.70 at k = 1). A cost curve built on a related measure did not beat k alone on the Part II models
   (S11).
 
 ## Figure captions
@@ -734,6 +745,13 @@ before the pilot ran. After the pilot and before the freeze we dropped a planned
 because the pilot showed the shrink would be mild (0.70 and 0.84 of full length). S24's mapping for a mixed verdict
 changed Section 5 and the abstract. Section 1's third finding, Section 7 and Section 8 had said or implied that the
 split was untested without Adam; each now cites S24 in a sentence.
+
+Draft v18.4 changed wording in the abstract, Section 1's third finding, Section 5, Section 7 and Section 8 after we
+re-read our earlier work on training with truncated gradients in recurrent networks, where results first credited
+to Adam later turned out to depend on untuned learning rates and clipping. The changes say that Adam's insensitivity to
+scale is not the whole reason the lost size is cheap (truncation cost about as much under SGD), that S24 and S25 shared
+one untuned learning rate near the edge of stability, and that the split rescales parameters that truncation leaves
+unchanged. The last point rests on an unregistered check (Appendix G). No verdict changed.
 
 S25 tests a quantity chosen after S24's results (truncation minus turn only, paired by seed) on new seeds with S24's
 frozen code. Its mapping for an unclear verdict leaves the abstract and Section 1 as they were and adds one sentence to
@@ -1028,6 +1046,21 @@ that.
 
 Truncation's own cost was close to S7's under SGD with clipping at norm 1 (0.257 and 0.095 against 0.263 and 0.104;
 Appendix D), though S7's clipping acted on most steps.
+
+**Where the shrink falls (after the fact).** S24 and S25 measured size over all parameters. To see where
+truncation's shrink falls under SGD, we reran S24's full-backprop setting on two new seeds and, every 10 steps, also
+computed the truncated gradients on the same batch (not used for training), split by parameter. One run diverged
+after a few steps, so the figures come from the other (59 probes; its test loss was normal). The parameters used only
+after the loop (the two coda blocks, the layer that feeds the loop's output into them, the final norm and one value
+embedding table: 40.0M of 144.3M) got the same gradient under truncation as under full backprop (largest difference
+1e-4 of the largest gradient entry, at the level of fp16 noise). They carried 25% of the full gradient's squared norm
+(median over steps 100–600). On the other 104.4M parameters, the truncated gradient was 0.56 of the full gradient's
+length at k = 1 and 0.76 at k = 2 (cosines 0.79 and 0.91), against 0.70 and 0.83 over all parameters, which matches
+S24's pilot. Relative to full backprop, the turn-only arm therefore stepped 1.43 / 1.20 times as far on the
+parameters after the loop and 0.80 / 0.92 as far on the rest at k = 1 / 2; truncation stepped 1.00 and 0.56 / 0.76;
+the shrink-only arm 0.70 / 0.83 on both. An earlier count of 29.3M loop-affected parameters (S8's pilot) came from an
+element-wise mask on one sequence, which leaves out the embedding rows of tokens that sequence does not contain; the
+per-tensor count here is the one to use.
 
 Stability reversed from AdamW. None of the 36 two-gradient runs crossed the limit, against 3 of 18 single-gradient
 runs at learning rates 0.07–0.1 (full backprop 1 of 6, the k = 1 control 2 of 6, the k = 2 control 0 of 6) and none of

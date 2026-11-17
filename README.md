@@ -49,7 +49,8 @@ Internal IDs (vNNN) are experiment numbers in the development repository. S-numb
 | S25 (v243) | S24 at k = 1 on new seeds: does the truncated direction at full length recover part of truncation's cost? | `prereg_v243_*` | `v243_result.md` | `v243_sgd_k1_cleanup.py`, `v241_sgd_split.py` | `results_v243` | §5, App. G |
 
 Unregistered measurements behind Tables 1–2 and the appendices come from `loop_grad_probe.py`
-(`kaggle-output-loopgrad`), `v187`–`v192`, `v197`, `v198`, `v168`, `v171`, `v182`, `v217` and `retrofit_rho_probe.py`.
+(`kaggle-output-loopgrad`), `v187`–`v192`, `v197`, `v198`, `v168`, `v171`, `v182`, `v217`, `v244` (where truncation's shrink falls under SGD; `results_v244`) and
+`retrofit_rho_probe.py`.
 v161 is the study the paper reports as invalidated by a precision bug (Appendix F).
 
 ## Reproducing
